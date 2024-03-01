@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -36,11 +38,29 @@ namespace WPF_Market
         private void btnMini_Click(object sender, RoutedEventArgs e)
         {
             WindowState = WindowState.Minimized;
+            
         }
 
         private void btnExit_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
+        }
+
+        private void btn_login_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+      
+
+        private void txb_signUp_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            MessageBox.Show("sign up");
+        }
+
+        private void txb_signUp_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+
         }
     }
 }

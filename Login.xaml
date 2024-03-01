@@ -20,7 +20,7 @@
                         Stretch="None"/>
         </Border.Background>
 
-    <Border CornerRadius="20"
+    <Border CornerRadius="18"
             Opacity="0.8"
             Background="#A0A0A0"
             BorderBrush="#555555"
@@ -118,7 +118,103 @@
                             Margin="0,20,0,0">
                     <Image Source="/images/logoC.png"
                            Height="100"/>
-                    
+                    <TextBlock Text="Slogan"
+                               FontSize="25"
+                               FontFamily="Montserrat"
+                               HorizontalAlignment="Center">
+                        
+                    </TextBlock>
+                    <TextBlock Text="User Name"
+                               FontSize="15"
+                               Foreground="Black">
+                        
+                    </TextBlock>
+                    <TextBox x:Name="txt_user"
+                             BorderThickness="0,0,0,1"
+                             BorderBrush="Black"
+                             VerticalAlignment="Center"
+                             Padding="15,0,0,0">
+                        <TextBox.Background>
+                            <ImageBrush ImageSource="/images/user.png"
+                                        Stretch="Uniform"
+                                        
+                                        AlignmentX="Left"/>
+                        </TextBox.Background>
+                    </TextBox>
+
+                    <TextBlock Text="Password"
+                               FontSize="15"                            
+                               Foreground="Black"                              
+                               Margin="0,20,0,0">
+                    </TextBlock>
+                    <PasswordBox x:Name="txt_password"
+                                 BorderBrush="Black"
+                                 BorderThickness="0,0,0,1"
+                                 VerticalAlignment="Center"
+                                 Padding="15,0,0,0">
+                        <PasswordBox.Background>
+                            <ImageBrush ImageSource="/images/password.png"
+                                        Stretch="Uniform"
+                                        AlignmentX="Left"/>
+                        </PasswordBox.Background>
+
+
+                    </PasswordBox>
+
+                    <Button x:Name="btn_login"
+                            Content="LOGIN"                         
+                            Margin="0,30,0,0"
+                            Cursor="Hand"
+                            HorizontalAlignment="Center"
+                            Click="btn_login_Click">
+                            
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="#AD2A28"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#767676"/>
+
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Width="150" Height ="30"
+                                        CornerRadius="15"
+                                        Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center"
+                                                      VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+
+                    </Button>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition Height="10"/>
+                            <RowDefinition Height="20"/>
+                        </Grid.RowDefinitions>
+
+                        <TextBlock Text="Don't have an account?"
+                                   Grid.Row="2"
+                                   FontSize="15"
+                                   HorizontalAlignment="Left">
+                            
+                        </TextBlock>
+                        <TextBlock x:Name="txb_signUp"
+                                   Text="Sign up"
+                                   Foreground="Purple"
+                                   FontSize="15"
+                                   Grid.Row="2"
+                                   HorizontalAlignment="Right"
+                                   Cursor="Hand"
+                                   >
+                            
+                        </TextBlock>
+                    </Grid>
 
                 </StackPanel>
             </Grid>
