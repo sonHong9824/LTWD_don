@@ -51,16 +51,11 @@ namespace WPF_Market
 
         }
 
-      
 
-        private void txb_signUp_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+
+        private void txb_signUp_MouseDown(object sender, MouseButtonEventArgs e)
         {
             MessageBox.Show("sign up");
-        }
-
-        private void txb_signUp_MouseUp(object sender, MouseButtonEventArgs e)
-        {
-
         }
     }
 }

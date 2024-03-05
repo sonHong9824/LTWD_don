@@ -12,7 +12,7 @@
         MouseDown="Window_MouseDown"    
         Background="Transparent"
         AllowsTransparency="True">
-    
+
 
     <Border CornerRadius="20">
         <Border.Background>
@@ -20,8 +20,8 @@
                         Stretch="None"/>
         </Border.Background>
 
-    <Border CornerRadius="18"
-            Opacity="0.8"
+        <Border CornerRadius="18"
+            Opacity="0.75"
             Background="#A0A0A0"
             BorderBrush="#555555"
             BorderThickness="3">
@@ -46,7 +46,7 @@
                            Margin="15,0,0,0">
                 </TextBlock>
 
-         
+
                 <Button x:Name="btnMini"
                         Grid.Column="1"
                         HorizontalAlignment="Center"
@@ -78,8 +78,8 @@
                         </ControlTemplate>
                     </Button.Template>
                 </Button>
-                    
-         
+
+
                 <Button Grid.Column="2"
                         x:Name="btnExit"
                         BorderThickness="0"
@@ -110,24 +110,24 @@
                     </Button.Template>
 
                 </Button>
-                
-                
+
+
                 <StackPanel Width="250"
                             Grid.Row="1"
                             Orientation="Vertical"
                             Margin="0,20,0,0">
                     <Image Source="/images/logoC.png"
                            Height="100"/>
-                    <TextBlock Text="Slogan"
+                    <TextBlock Text="Login to App"
                                FontSize="25"
                                FontFamily="Montserrat"
                                HorizontalAlignment="Center">
-                        
+
                     </TextBlock>
                     <TextBlock Text="User Name"
                                FontSize="15"
                                Foreground="Black">
-                        
+
                     </TextBlock>
                     <TextBox x:Name="txt_user"
                              BorderThickness="0,0,0,1"
@@ -167,7 +167,7 @@
                             Cursor="Hand"
                             HorizontalAlignment="Center"
                             Click="btn_login_Click">
-                            
+
                         <Button.Style>
                             <Style TargetType="Button">
                                 <Setter Property="Background" Value="#AD2A28"/>
@@ -202,23 +202,23 @@
                                    Grid.Row="2"
                                    FontSize="15"
                                    HorizontalAlignment="Left">
-                            
+
                         </TextBlock>
                         <TextBlock x:Name="txb_signUp"
                                    Text="Sign up"
                                    Foreground="Purple"
                                    FontSize="15"
                                    Grid.Row="2"
-                                   HorizontalAlignment="Right"
-                                   Cursor="Hand"
+                                   HorizontalAlignment="Left"
+                                   Cursor="Hand" Height="20" Margin="200,0,0,0" VerticalAlignment="Top" MouseDown="txb_signUp_MouseDown"
                                    >
-                            
+
                         </TextBlock>
                     </Grid>
 
                 </StackPanel>
             </Grid>
-            
-    </Border>
+
+        </Border>
     </Border>
 </Window>
