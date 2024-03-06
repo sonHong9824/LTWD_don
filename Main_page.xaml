@@ -15,7 +15,7 @@
         >
     <Border CornerRadius="10">
         <Border.Background>
-            <ImageBrush ImageSource="D:\LTWD\Do_An\LTWD_don\images\Dat_test_background.jpg"
+            <ImageBrush ImageSource="\images\Dat_test_background.jpg"
                         Stretch="UniformToFill">
             </ImageBrush>
         </Border.Background>
@@ -65,7 +65,7 @@
                             HorizontalAlignment="Left"
                             Foreground= "DarkCyan"
                             ></TextBlock>
-                    <Image Source="D:\LTWD\Do_An\LTWD_don\images\Line_edit.png"
+                    <Image Source="images\Line_edit.png"
                            Stretch="UniformToFill" HorizontalAlignment="Stretch"
                            Height="5"
                            
