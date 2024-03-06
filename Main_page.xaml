@@ -11,11 +11,10 @@
         Background="Transparent"
         AllowsTransparency="True"
         WindowStartupLocation="CenterScreen"
-        MouseDown="Window_MouseDown"
-        >
+        MouseDown="Window_MouseDown">
     <Border CornerRadius="10">
         <Border.Background>
-            <ImageBrush ImageSource="D:\LTWD\Do_An\LTWD_don\images\Dat_test_background.jpg"
+            <ImageBrush ImageSource="\images\Dat_test_background.jpg"
                         Stretch="UniformToFill">
             </ImageBrush>
         </Border.Background>
@@ -38,44 +37,236 @@
             </Border.BorderBrush>
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="10" x:Name="btn_row"></RowDefinition>
-                    <RowDefinition Height="40" x:Name="Logo_slogan_searchbar_row"></RowDefinition>
-                    
+                    <!--<RowDefinition Height="10" x:Name="btn_row"></RowDefinition>-->
+                    <RowDefinition Height="70"></RowDefinition>
+                    <RowDefinition Height="60"></RowDefinition>
                     <RowDefinition></RowDefinition>
                 </Grid.RowDefinitions>
-
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="30"></ColumnDefinition>
-                    <ColumnDefinition Width="150"></ColumnDefinition>
-                    <ColumnDefinition Width="40"></ColumnDefinition>
-                </Grid.ColumnDefinitions>
-                <Image Source="/images/logoC.png"
-                       Grid.Column="0"
-                       Grid.Row="1"
-                       Stretch="Uniform"></Image>
-                <StackPanel Orientation="Vertical"
-                            Grid.Row="1"
-                            Grid.Column="1"
-                            Margin="5,0,0,0">
-                 
-                    <TextBlock Text="Son - Dat business"
-                            FontSize="16"
-                            FontFamily="Montserrat"     
-                            VerticalAlignment="Bottom"
-                            HorizontalAlignment="Left"
-                            Foreground= "DarkCyan"
-                            ></TextBlock>
-                    <Image Source="D:\LTWD\Do_An\LTWD_don\images\Line_edit.png"
-                           Stretch="UniformToFill" HorizontalAlignment="Stretch"
-                           Height="5"
-                           
-                            ></Image>
-                    <TextBlock Text="All for our beloved customers!"
-                               FontSize="11"
-                               VerticalAlignment="Top"
-                               HorizontalAlignment="Left"></TextBlock>
-                </StackPanel>
                 
+                <Grid Grid.Row="0"
+                      Background="Black">
+                    <Grid.ColumnDefinitions >
+                        <ColumnDefinition Width="70"></ColumnDefinition>
+                        <ColumnDefinition Width="250"></ColumnDefinition>
+                        <ColumnDefinition Width="700"></ColumnDefinition>
+                        <ColumnDefinition Width="100"></ColumnDefinition>
+                        <ColumnDefinition Width="70"></ColumnDefinition>
+                        <ColumnDefinition Width="70"></ColumnDefinition>
+                        <ColumnDefinition ></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Image Source="/images/logoC.png"
+                           Grid.Column="0"
+                           Margin="10"
+                           Stretch="Uniform"></Image>
+                    <StackPanel Orientation="Vertical"
+                                Grid.Column="1"                    
+                                Margin="10"
+                                HorizontalAlignment="Left">
+                 
+                        <TextBlock Text="Son - Dat business"
+                                FontSize="16"
+                                FontFamily="Montserrat"     
+                                VerticalAlignment="Bottom"
+                                HorizontalAlignment="Left"
+                                Foreground= "Wheat"
+                            
+                                ></TextBlock>
+                        <Image Source="\images\Line_edit.png"
+                               Stretch="UniformToFill" HorizontalAlignment="Stretch"
+                               Height="2"
+                               Width="140"
+                           
+                                ></Image>
+                        <TextBlock Text="All for our beloved customers!"
+                                   FontSize="11"
+                                   VerticalAlignment="Top"
+                                   Foreground="Wheat"
+                                   HorizontalAlignment="Left"></TextBlock>
+                    </StackPanel>
+                    <TextBox x:Name="txt_search"
+                             Grid.Column="2"                              
+                             Margin="15,15,0,15"
+                             Height="40"
+                             Text=""
+                             VerticalAlignment="Center"></TextBox>
+                    <Button x:Name="btn_search"
+                            Background="#FAA50A"
+                            Grid.Column="3"
+                            Width="40"
+                            Height="42"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Left">
+                        <Image Source="/images/search-white.png"
+                               Margin="5"></Image>
+                    </Button>
+
+                    <Border Grid.Column="4"
+                            CornerRadius="8"
+                            Margin="15,15,0,15"
+                            Width="40"
+                            Background="White">
+                        <Button x:Name="btn_fav"
+                                Background="Transparent"
+                                BorderThickness="0">
+                            <Image Source="/images/heart.png"
+                                   Margin="5"></Image>
+                        </Button>
+                    </Border>
+                    <Border Grid.Column="4"
+                            Width="25"
+                            Height="25"
+                            CornerRadius="10"
+                            VerticalAlignment="Top"
+                            HorizontalAlignment="Right"
+                            Background="#FBA110">
+                        <TextBlock x:Name="txbl_fav"
+                                   Background="Transparent"
+                                   Text="0"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Center"
+                                   FontSize="18"
+                                   Foreground="White"></TextBlock>
+                    </Border>
+
+                    <Border Grid.Column="5"
+                            CornerRadius="8"
+                            Margin="15,15,0,15"
+                            Width="40"
+                            Background="White">
+                        <Button x:Name="btn_cart"
+                                Background="Transparent"
+                                BorderThickness="0">
+                            <Image Source="/images/cart2.png"
+                                   Margin="2"></Image>
+                        </Button>
+                    </Border>
+                    <Border Grid.Column="5"
+                            Width="25"
+                            Height="25"
+                            CornerRadius="10"
+                            VerticalAlignment="Top"
+                            HorizontalAlignment="Right"
+                            Background="#FBA110">
+                        <TextBlock x:Name="txbl_cart"
+                                   Background="Transparent"
+                                   Text="0"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Center"
+                                   FontSize="18"
+                                   Foreground="White"></TextBlock>
+                    </Border>
+                </Grid>
+
+                <Grid Grid.Row="1"
+                      Background="#2A5BB7">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="60"></ColumnDefinition>
+                        <ColumnDefinition Width="170"></ColumnDefinition>
+                        <ColumnDefinition Width="100"></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Border CornerRadius="6"
+                            Background="White"
+                            Grid.Column="1"
+                            Margin="5,8,5,8">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Categoty"
+                                       FontSize="23"
+                                       VerticalAlignment="Center"
+                                       FontWeight="DemiBold"
+                                       Margin="20,0,0,0"></TextBlock>
+                            <ComboBox x:Name="Menu"
+                                      Margin="20,0,0,0"
+                                      Width="300">
+                                <Image Source="/images/menu.png"></Image>
+                                <StackPanel Orientation="Horizontal">
+                                    <Button x:Name="btn_acces"
+                                            >
+                                        <Image Source="/images/menu.png"></Image>
+                                    </Button>
+                                </StackPanel>
+                            </ComboBox>
+                                        
+                        </StackPanel>
+                        
+                    </Border>
+                    <StackPanel Orientation="Horizontal"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Left"
+                                Grid.Column="4">
+                        <StackPanel.Resources>
+                            <Style x:Key="ButtonStyle" TargetType="Button">
+                                <Setter Property="Foreground" Value="Black"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Foreground" Value="Red"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </StackPanel.Resources>
+                        <Button x:Name="btn_home"
+                                Background="Transparent"
+                                Content="Home"
+                                Margin="10"
+                                Foreground="White"
+                                FontSize="20"
+                                FontWeight="Bold"
+                                BorderThickness="0"
+                                FontFamily="Montserrat" 
+                                MouseEnter="btn_MouseEnter"
+                                MouseLeave="btn_MouseLeave"></Button>
+                        <Button x:Name="btn_shop"
+                                Background="Transparent"
+                                Content="Shop"
+                                Margin="10"
+                                Foreground="White"
+                                FontSize="20"
+                                FontWeight="Bold"
+                                BorderThickness="0"
+                                FontFamily="Montserrat"
+                                MouseEnter="btn_MouseEnter"
+                                MouseLeave="btn_MouseLeave"></Button>
+                        <Button x:Name="btn_bestSell"
+                                Background="Transparent"
+                                Content="Best Sellers"
+                                Margin="10"
+                                Foreground="White"
+                                FontSize="20"
+                                FontWeight="Bold"
+                                BorderThickness="0"
+                                MouseEnter="btn_MouseEnter"
+                                MouseLeave="btn_MouseLeave"
+                                FontFamily="Montserrat"></Button>
+                        <Button x:Name="btn_checkout"
+                                Background="Transparent"
+                                Content="Checkout"
+                                Margin="10"
+                                Foreground="White"
+                                FontSize="20"
+                                FontWeight="Bold"
+                                BorderThickness="0"
+                                MouseEnter="btn_MouseEnter"
+                                MouseLeave="btn_MouseLeave"
+                                FontFamily="Montserrat"></Button>
+                        <Button x:Name="btn_acc"
+                                Background="Transparent"
+                                Content="My account"
+                                Margin="10"
+                                Foreground="White"
+                                FontSize="20"
+                                FontWeight="Bold"
+                                BorderThickness="0"
+                                MouseEnter="btn_MouseEnter"
+                                MouseLeave="btn_MouseLeave"
+                                FontFamily="Montserrat"></Button>
+                        
+                    </StackPanel>
+                    
+                </Grid>
+                <Grid Grid.Row="2">
+                    <Frame Name="frame"/>
+                </Grid>
                 
             </Grid>
         </Border>

@@ -22,6 +22,7 @@ namespace WPF_Market
         public Main_page()
         {
             InitializeComponent();
+            Window
         }
 
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
@@ -29,6 +30,24 @@ namespace WPF_Market
             if (e.LeftButton == MouseButtonState.Pressed)
             {
                 DragMove();
+            }
+        }
+
+        private void btn_MouseEnter(object sender, System.Windows.Input.MouseEventArgs e)
+        {
+            if (sender is Button)
+            {
+                Button? button = sender as Button;
+                button.Foreground = Brushes.Orange; // Đặt màu chữ là màu cam khi rê chuột vào
+                button.Background = Brushes.Transparent;
+            }
+        }
+        private void btn_MouseLeave(object sender, System.Windows.Input.MouseEventArgs e)
+        {
+            if (sender is Button)
+            {
+                Button? button = sender as Button;
+                button.Foreground = Brushes.White; // Đặt màu chữ là màu đen khi rời chuột khỏi
             }
         }
     }
