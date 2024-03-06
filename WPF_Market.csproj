@@ -8,6 +8,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="NewFolder1\**" />
+    <EmbeddedResource Remove="NewFolder1\**" />
+    <None Remove="NewFolder1\**" />
+    <Page Remove="NewFolder1\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="MainWindow.xaml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="images\back.jpg" />
     <None Remove="images\bell.png" />
     <None Remove="images\cart.png" />
@@ -20,6 +31,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Page Remove="MainWindow.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="images\back.jpg" />
     <Resource Include="images\bell.png" />
     <Resource Include="images\cart.png" />
@@ -29,6 +44,12 @@
     <Resource Include="images\password.png" />
     <Resource Include="images\setting.png" />
     <Resource Include="images\user.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Model\" />
+    <Folder Include="ViewModel\" />
+    <Folder Include="View\" />
   </ItemGroup>
 
 </Project>

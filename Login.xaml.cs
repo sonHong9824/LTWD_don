@@ -48,7 +48,9 @@ namespace WPF_Market
 
         private void btn_login_Click(object sender, RoutedEventArgs e)
         {
-
+            Main_page main_Page = new Main_page();
+            main_Page.Show();
+            this.Hide();
         }
 
 

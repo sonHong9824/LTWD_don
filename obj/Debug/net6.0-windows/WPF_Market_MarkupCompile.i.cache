@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\HK2_23-24_LTwindows\WPF_Market\obj\Debug\net6.0-windows\
+D:\LTWD\Do_An\LTWD_don\obj\Debug\net6.0-windows\
 WPF_Market
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-D:\HK2_23-24_LTwindows\WPF_Market\App.xaml
-2-1376777318
+D:\LTWD\Do_An\LTWD_don\App.xaml
+2-1064042690
 
-6-1674391210
-194183970531
-Login.xaml;MainWindow.xaml;
+6-643258966
+194-428966090
+Login.xaml;Main_page.xaml;
 
 True
 
