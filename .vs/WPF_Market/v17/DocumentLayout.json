@@ -15,16 +15,16 @@
       "RelativeMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|solutionrelative:main_page.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|d:\\ltwd\\do_an\\ltwd_don\\images\\dat_test_background.png||{58961B49-13E0-48C0-9258-13CBC4D40279}",
-      "RelativeMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|solutionrelative:images\\dat_test_background.png||{58961B49-13E0-48C0-9258-13CBC4D40279}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|d:\\ltwd\\do_an\\ltwd_don\\images\\line_edit.png||{58961B49-13E0-48C0-9258-13CBC4D40279}",
       "RelativeMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|solutionrelative:images\\line_edit.png||{58961B49-13E0-48C0-9258-13CBC4D40279}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|d:\\ltwd\\do_an\\ltwd_don\\images\\line.png||{58961B49-13E0-48C0-9258-13CBC4D40279}",
       "RelativeMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|solutionrelative:images\\line.png||{58961B49-13E0-48C0-9258-13CBC4D40279}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|d:\\ltwd\\do_an\\ltwd_don\\images\\dat_test_background.jpg||{58961B49-13E0-48C0-9258-13CBC4D40279}",
+      "RelativeMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|solutionrelative:images\\dat_test_background.jpg||{58961B49-13E0-48C0-9258-13CBC4D40279}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|d:\\ltwd\\do_an\\ltwd_don\\login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -62,32 +62,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Main_page.g.i.cs",
-              "DocumentMoniker": "D:\\LTWD\\Do_An\\LTWD_don\\obj\\Debug\\net6.0-windows\\Main_page.g.i.cs",
-              "RelativeDocumentMoniker": "obj\\Debug\\net6.0-windows\\Main_page.g.i.cs",
-              "ToolTip": "D:\\LTWD\\Do_An\\LTWD_don\\obj\\Debug\\net6.0-windows\\Main_page.g.i.cs",
-              "RelativeToolTip": "obj\\Debug\\net6.0-windows\\Main_page.g.i.cs",
-              "ViewState": "AQIAADUAAAAAAAAAAAAEwEcAAAB5AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-06T09:50:33.115Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Main_page.xaml",
-              "DocumentMoniker": "D:\\LTWD\\Do_An\\LTWD_don\\Main_page.xaml",
-              "RelativeDocumentMoniker": "Main_page.xaml",
-              "ToolTip": "D:\\LTWD\\Do_An\\LTWD_don\\Main_page.xaml",
-              "RelativeToolTip": "Main_page.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-03-06T07:47:29.933Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "Line.png",
               "DocumentMoniker": "D:\\LTWD\\Do_An\\LTWD_don\\images\\Line.png",
               "RelativeDocumentMoniker": "images\\Line.png",
@@ -98,7 +73,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "Line_edit.png",
               "DocumentMoniker": "D:\\LTWD\\Do_An\\LTWD_don\\images\\Line_edit.png",
               "RelativeDocumentMoniker": "images\\Line_edit.png",
@@ -106,6 +81,17 @@
               "RelativeToolTip": "images\\Line_edit.png",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
               "WhenOpened": "2024-03-06T09:55:01.56Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Dat_test_background.jpg",
+              "DocumentMoniker": "D:\\LTWD\\Do_An\\LTWD_don\\images\\Dat_test_background.jpg",
+              "RelativeDocumentMoniker": "images\\Dat_test_background.jpg",
+              "ToolTip": "D:\\LTWD\\Do_An\\LTWD_don\\images\\Dat_test_background.jpg",
+              "RelativeToolTip": "images\\Dat_test_background.jpg",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2024-03-06T09:54:57.989Z"
             },
             {
               "$type": "Document",
@@ -144,32 +130,39 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Main_page.xaml",
+              "DocumentMoniker": "D:\\LTWD\\Do_An\\LTWD_don\\Main_page.xaml",
+              "RelativeDocumentMoniker": "Main_page.xaml",
+              "ToolTip": "D:\\LTWD\\Do_An\\LTWD_don\\Main_page.xaml",
+              "RelativeToolTip": "Main_page.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-03-06T07:47:29.933Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Main_page.xaml.cs",
               "DocumentMoniker": "D:\\LTWD\\Do_An\\LTWD_don\\Main_page.xaml.cs",
               "RelativeDocumentMoniker": "Main_page.xaml.cs",
               "ToolTip": "D:\\LTWD\\Do_An\\LTWD_don\\Main_page.xaml.cs",
               "RelativeToolTip": "Main_page.xaml.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAmwBcAAAAMAAAA",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAlwBcAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-06T07:56:56.365Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Dat_test_background.png",
-              "DocumentMoniker": "D:\\LTWD\\Do_An\\LTWD_don\\images\\Dat_test_background.png",
-              "RelativeDocumentMoniker": "images\\Dat_test_background.png",
-              "ToolTip": "D:\\LTWD\\Do_An\\LTWD_don\\images\\Dat_test_background.png",
-              "RelativeToolTip": "images\\Dat_test_background.png",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
-              "WhenOpened": "2024-03-06T10:07:35.579Z",
-              "EditorCaption": ""
+              "DocumentIndex": 1,
+              "Title": "Main_page.g.i.cs",
+              "DocumentMoniker": "D:\\LTWD\\Do_An\\LTWD_don\\obj\\Debug\\net6.0-windows\\Main_page.g.i.cs",
+              "RelativeDocumentMoniker": "obj\\Debug\\net6.0-windows\\Main_page.g.i.cs",
+              "ToolTip": "D:\\LTWD\\Do_An\\LTWD_don\\obj\\Debug\\net6.0-windows\\Main_page.g.i.cs",
+              "RelativeToolTip": "obj\\Debug\\net6.0-windows\\Main_page.g.i.cs",
+              "ViewState": "AQIAADMAAAAAAAAAAAAhwEgAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-06T09:50:33.115Z"
             }
           ]
         },
