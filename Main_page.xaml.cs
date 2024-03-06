@@ -22,7 +22,6 @@ namespace WPF_Market
         public Main_page()
         {
             InitializeComponent();
-            Window
         }
 
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
