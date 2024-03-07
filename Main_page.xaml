@@ -12,7 +12,7 @@
         AllowsTransparency="True"
         WindowStartupLocation="CenterScreen"
         MouseDown="Window_MouseDown"
-        >
+        Loaded="Window_Loaded">
     <Border CornerRadius="10">
         <Border.Background>
             <ImageBrush ImageSource="\images\Dat_test_background.jpg"
@@ -38,48 +38,389 @@
             </Border.BorderBrush>
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="10" x:Name="btn_row"></RowDefinition>
-                    <RowDefinition Height="40" x:Name="Logo_slogan_searchbar_row"></RowDefinition>
-                    
+                    <RowDefinition Height="20" x:Name="btn_row"></RowDefinition>
+                    <RowDefinition Height="70"></RowDefinition>
+                    <RowDefinition Height="60"></RowDefinition>
                     <RowDefinition></RowDefinition>
                 </Grid.RowDefinitions>
 
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="30"></ColumnDefinition>
-                    <ColumnDefinition Width="150"></ColumnDefinition>
-                    <ColumnDefinition Width="40"></ColumnDefinition>
-                </Grid.ColumnDefinitions>
-                <Image Source="/images/logoC.png"
-                       Grid.Column="0"
-                       Grid.Row="1"
-                       Stretch="Uniform"></Image>
-                <StackPanel Orientation="Vertical"
-                            Grid.Row="1"
+                <Border Background="Black"
+                        Grid.Row="0"
+                        BorderBrush="Black"
+                        BorderThickness="0,0,0,1"></Border>
+                <Grid Grid.Row="0"
+                      Background="Black">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1200"></ColumnDefinition>
+                        <ColumnDefinition Width="30"></ColumnDefinition>
+                        <ColumnDefinition Width="30"></ColumnDefinition>
+                        <ColumnDefinition Width="30"></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="btnMini"
                             Grid.Column="1"
-                            Margin="5,0,0,0">
-                 
-                    <TextBlock Text="Son - Dat business"
-                            FontSize="16"
-                            FontFamily="Montserrat"     
-                            VerticalAlignment="Bottom"
-                            HorizontalAlignment="Left"
-                            Foreground= "DarkCyan"
-                            ></TextBlock>
-                    <Image Source="images\Line_edit.png"
-                           Stretch="UniformToFill" HorizontalAlignment="Stretch"
-                           Height="5"
+                            HorizontalAlignment="Center"
+                            Background="#787878"
+                            BorderThickness="0"
+                            Content="-"
+                            FontSize="12"
+                            Cursor="Hand"
+                            Click="btnMini_Click">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="#767676"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#767676"/>
+
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Width="19" Height ="19"
+                    CornerRadius="9"
+                    Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center"
+                                  VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+
+                    <Button Grid.Column="3"
+                           x:Name="btnExit"
+                           BorderThickness="0"
+                           Content="X"
+                           FontSize="12"
+                           Cursor="Hand" Click="btnExit_Click"
+       >
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="#6A6A6A"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#767676"/>
+
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Width="19" Height ="19"
+                                   CornerRadius="9"
+                                   Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center"
+                                                 VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+
+                    </Button>
+
+                    <Button Grid.Column="2"
+                          x:Name="btnmaximized"
+                          BorderThickness="0"
+                          Content="[]"
+                          FontSize="12"
+                          Cursor="Hand" Click="btnmaximized_Click"
+                          >
+                        <Button.Style>
+                            <Style TargetType="Button">
+
+                                <Setter Property="Background" Value="#6A6A6A"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#767676"/>
+
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Width="19" Height ="19"
+                                  CornerRadius="9"
+                                  Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+
+
+
+
+                    </Button>
+                </Grid>
+
+
+                <Grid Grid.Row="1"
+                      Background="Black">
+                    <Grid.ColumnDefinitions >
+                        <ColumnDefinition Width="70"></ColumnDefinition>
+                        <ColumnDefinition Width="250"></ColumnDefinition>
+                        <ColumnDefinition Width="700"></ColumnDefinition>
+                        <ColumnDefinition Width="100"></ColumnDefinition>
+                        <ColumnDefinition Width="70"></ColumnDefinition>
+                        <ColumnDefinition Width="70"></ColumnDefinition>
+                        <ColumnDefinition ></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Image Source="/images/logoC.png"
+                           Grid.Column="0"
+                           Margin="10"
+                           Stretch="Uniform"></Image>
+                    <StackPanel Orientation="Vertical"
+                                Grid.Column="1" 
+                                Grid.Row="1"
+                                Margin="10"
+                                HorizontalAlignment="Left">
+
+                        <TextBlock Text="Son - Dat business"
+                                FontSize="16"
+                                FontFamily="Montserrat"     
+                                VerticalAlignment="Bottom"
+                                HorizontalAlignment="Left"
+                                Foreground= "Wheat"
+                            
+                                ></TextBlock>
+                        <Image Source="\images\Line_edit.png"
+                               Stretch="UniformToFill" HorizontalAlignment="Stretch"
+                               Height="2"
+                               Width="140"
                            
-                            ></Image>
-                    <TextBlock Text="All for our beloved customers!"
-                               FontSize="11"
-                               VerticalAlignment="Top"
-                               HorizontalAlignment="Left"></TextBlock>
-                </StackPanel>
+                                ></Image>
+                        <TextBlock Text="All for our beloved customers!"
+                                   FontSize="11"
+                                   VerticalAlignment="Top"
+                                   Foreground="Wheat"
+                                   HorizontalAlignment="Left"></TextBlock>
+                    </StackPanel>
+                    <TextBox x:Name="txt_search"
+                             Grid.Column="2"     
+                             Grid.Row="1"
+                             Margin="15,15,0,15"
+                             Height="40"
+                             Text=""
+                             VerticalAlignment="Center" TextChanged="txt_search_TextChanged"
+                             TextAlignment="Left"  
+                             VerticalContentAlignment="Center"
+                             FontSize="24"></TextBox>
+                    <Button x:Name="btn_search"
+                            Background="#FAA50A"
+                            Grid.Column="3"
+                            Width="40"
+                            Height="42"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Left">
+                        <Image Source="/images/search-white.png"
+                               Margin="5"></Image>
+                    </Button>
+
+                    <Border Grid.Column="4"
+               
+                            CornerRadius="8"
+                            Margin="15,15,0,15"
+                            Width="40"
+                            Background="White">
+                        <Button x:Name="btn_fav"
+                                Background="Transparent"
+                                BorderThickness="0">
+                            <Image Source="/images/heart.png"
+                                   Margin="5"></Image>
+                        </Button>
+                    </Border>
+                    <Border Grid.Column="4"
+                            Width="25"
+                            Height="25"
+                            CornerRadius="10"
+                            VerticalAlignment="Top"
+                            HorizontalAlignment="Right"
+                            Background="#FBA110">
+                        <TextBlock x:Name="txbl_fav"
+                                   Background="Transparent"
+                                   Text="0"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Center"
+                                   FontSize="18"
+                                   Foreground="White"></TextBlock>
+                    </Border>
+
+                    <Border Grid.Column="5"
+                            CornerRadius="8"
+                            Margin="15,15,0,15"
+                            Width="40"
+                            Background="White">
+                        <Button x:Name="btn_cart"
+                                Background="Transparent"
+                                BorderThickness="0">
+                            <Image Source="/images/cart2.png"
+                                   Margin="2"></Image>
+                        </Button>
+                    </Border>
+                    <Border Grid.Column="5"
+                            Width="25"
+                            Height="25"
+                            CornerRadius="10"
+                            VerticalAlignment="Top"
+                            HorizontalAlignment="Right"
+                            Background="#FBA110">
+                        <TextBlock x:Name="txbl_cart"
+                                   Background="Transparent"
+                                   Text="0"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Center"
+                                   FontSize="18"
+                                   Foreground="White"></TextBlock>
+                    </Border>
+                </Grid>
+
+                <Grid Grid.Row="2"
+                      Background="#2A5BB7">
+                    <Grid.ColumnDefinitions>
+                        <!--<ColumnDefinition Width="60"></ColumnDefinition>-->
+                        <ColumnDefinition Width="500"></ColumnDefinition>
+                        <!--<ColumnDefinition Width="100"></ColumnDefinition>-->
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Border Grid.Row="2"
+                            Grid.Column='0'
+                            CornerRadius="6"
+                            Background="White"
+
+                            Margin="30,8,5,8"
+                            Width="250"
+                            HorizontalAlignment="Left"
+                            >
+                       
+                        <Grid x:Name="Category">
+                            <ComboBox x:Name="cb_Menu">
+                                <ComboBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Grid Width="20"
+                                                  Height="20">
+                                                <Image Source="{Binding Source1}"
+                                                       Stretch="Fill"></Image>
+                                            </Grid>
+                                            <TextBlock Text= "{Binding Text}"
+                                                    FontSize="20"
+                                                    Foreground="Black"
+                                                    Margin="10,0,0,0"></TextBlock>                            
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </ComboBox.ItemTemplate>
+                                
+                            </ComboBox>
+                            <Image x:Name="Icon_category" Source="/images/menu.png"
+                                  VerticalAlignment="Center"
+                                  Margin="10,0,0,0"
+                                  Stretch="None" MouseEnter="Icon_category_MouseEnter"
+                                  Opacity="1" HorizontalAlignment="Left">
+
+                            </Image>
+                            <TextBlock Text="Category"
+                                FontSize="23"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Center"
+                                FontWeight="DemiBold" Width="100"
+                                Margin="0,0,0,0"/>
+                        </Grid>
+                    </Border>
+                    <StackPanel Orientation="Horizontal"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Left"
+                                Grid.Column="4">
+                        <StackPanel.Resources>
+                            <Style x:Key="ButtonStyle" TargetType="Button">
+                                <Setter Property="Foreground" Value="Black"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Foreground" Value="Red"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </StackPanel.Resources>
+                        <Button x:Name="btn_home"
+                                Background="Transparent"
+                                Content="Home"
+                                Margin="10"
+                                Foreground="White"
+                                FontSize="20"
+                                FontWeight="Bold"
+                                BorderThickness="0"
+                                FontFamily="Montserrat" 
+                                MouseEnter="btn_MouseEnter"
+                                MouseLeave="btn_MouseLeave"></Button>
+                        <Button x:Name="btn_shop"
+                                Background="Transparent"
+                                Content="Shop"
+                                Margin="10"
+                                Foreground="White"
+                                FontSize="20"
+                                FontWeight="Bold"
+                                BorderThickness="0"
+                                FontFamily="Montserrat"
+                                MouseEnter="btn_MouseEnter"
+                                MouseLeave="btn_MouseLeave"></Button>
+                        <Button x:Name="btn_bestSell"
+                                Background="Transparent"
+                                Content="Best Sellers"
+                                Margin="10"
+                                Foreground="White"
+                                FontSize="20"
+                                FontWeight="Bold"
+                                BorderThickness="0"
+                                MouseEnter="btn_MouseEnter"
+                                MouseLeave="btn_MouseLeave"
+                                FontFamily="Montserrat"></Button>
+                        <Button x:Name="btn_checkout"
+                                Background="Transparent"
+                                Content="Checkout"
+                                Margin="10"
+                                Foreground="White"
+                                FontSize="20"
+                                FontWeight="Bold"
+                                BorderThickness="0"
+                                MouseEnter="btn_MouseEnter"
+                                MouseLeave="btn_MouseLeave"
+                                FontFamily="Montserrat"></Button>
+                        <Button x:Name="btn_acc"
+                                Background="Transparent"
+                                Content="My account"
+                                Margin="10"
+                                Foreground="White"
+                                FontSize="20"
+                                FontWeight="Bold"
+                                BorderThickness="0"
+                                MouseEnter="btn_MouseEnter"
+                                MouseLeave="btn_MouseLeave"
+                                FontFamily="Montserrat"></Button>
+
+                    </StackPanel>
+
+                </Grid>
                 
                 
+                <Grid Grid.Row="2">
+                    <!--Frame Name="frame"/-->
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition x:Name="cl_category"
+                        Width="300"></ColumnDefinition>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+
+
+
+
+                </Grid>
+
+
             </Grid>
         </Border>
-
-        
     </Border>
 </Window>

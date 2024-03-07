@@ -3,40 +3,28 @@
   "WorkspaceRootPath": "D:\\LTWD\\Do_An\\LTWD_don\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|d:\\ltwd\\do_an\\ltwd_don\\obj\\debug\\net6.0-windows\\main_page.g.i.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|solutionrelative:obj\\debug\\net6.0-windows\\main_page.g.i.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|d:\\ltwd\\do_an\\ltwd_don\\main_page.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|solutionrelative:main_page.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|d:\\ltwd\\do_an\\ltwd_don\\main_page.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|solutionrelative:main_page.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|d:\\ltwd\\do_an\\ltwd_don\\main_page.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|solutionrelative:main_page.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|d:\\ltwd\\do_an\\ltwd_don\\images\\line_edit.png||{58961B49-13E0-48C0-9258-13CBC4D40279}",
-      "RelativeMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|solutionrelative:images\\line_edit.png||{58961B49-13E0-48C0-9258-13CBC4D40279}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|d:\\ltwd\\do_an\\ltwd_don\\images\\line.png||{58961B49-13E0-48C0-9258-13CBC4D40279}",
-      "RelativeMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|solutionrelative:images\\line.png||{58961B49-13E0-48C0-9258-13CBC4D40279}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|d:\\ltwd\\do_an\\ltwd_don\\images\\dat_test_background.jpg||{58961B49-13E0-48C0-9258-13CBC4D40279}",
-      "RelativeMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|solutionrelative:images\\dat_test_background.jpg||{58961B49-13E0-48C0-9258-13CBC4D40279}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|d:\\ltwd\\do_an\\ltwd_don\\login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|solutionrelative:login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|d:\\ltwd\\do_an\\ltwd_don\\cb_menu_item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|solutionrelative:cb_menu_item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|d:\\ltwd\\do_an\\ltwd_don\\login.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|solutionrelative:login.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|d:\\ltwd\\do_an\\ltwd_don\\hello.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|solutionrelative:hello.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\LTWD\\Do_An\\LTWD_don\\obj\\Debug\\net6.0-windows\\Login.g.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:obj\\Debug\\net6.0-windows\\Login.g.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\LTWD\\Do_An\\LTWD_don\\obj\\Debug\\net6.0-windows\\Main_page.g.i.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:obj\\Debug\\net6.0-windows\\Main_page.g.i.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,8 +34,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 475,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 7,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Login.xaml",
+              "DocumentMoniker": "D:\\LTWD\\Do_An\\LTWD_don\\Login.xaml",
+              "RelativeDocumentMoniker": "Login.xaml",
+              "ToolTip": "D:\\LTWD\\Do_An\\LTWD_don\\Login.xaml",
+              "RelativeToolTip": "Login.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-03-07T08:50:42.606Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:130:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
@@ -62,91 +63,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Main_page.g.i.cs",
-              "DocumentMoniker": "D:\\LTWD\\Do_An\\LTWD_don\\obj\\Debug\\net6.0-windows\\Main_page.g.i.cs",
-              "RelativeDocumentMoniker": "obj\\Debug\\net6.0-windows\\Main_page.g.i.cs",
-              "ToolTip": "D:\\LTWD\\Do_An\\LTWD_don\\obj\\Debug\\net6.0-windows\\Main_page.g.i.cs*",
-              "RelativeToolTip": "obj\\Debug\\net6.0-windows\\Main_page.g.i.cs*",
-              "ViewState": "AQIAADMAAAAAAAAAAAAhwEgAAAAMAAAA",
+              "DocumentIndex": 2,
+              "Title": "Cb_menu_item.cs",
+              "DocumentMoniker": "D:\\LTWD\\Do_An\\LTWD_don\\Cb_menu_item.cs",
+              "RelativeDocumentMoniker": "Cb_menu_item.cs",
+              "ToolTip": "D:\\LTWD\\Do_An\\LTWD_don\\Cb_menu_item.cs",
+              "RelativeToolTip": "Cb_menu_item.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAswBIAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-06T09:50:33.115Z",
+              "WhenOpened": "2024-03-07T08:22:49.158Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Line.png",
-              "DocumentMoniker": "D:\\LTWD\\Do_An\\LTWD_don\\images\\Line.png",
-              "RelativeDocumentMoniker": "images\\Line.png",
-              "ToolTip": "D:\\LTWD\\Do_An\\LTWD_don\\images\\Line.png",
-              "RelativeToolTip": "images\\Line.png",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
-              "WhenOpened": "2024-03-06T09:55:03.868Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Line_edit.png",
-              "DocumentMoniker": "D:\\LTWD\\Do_An\\LTWD_don\\images\\Line_edit.png",
-              "RelativeDocumentMoniker": "images\\Line_edit.png",
-              "ToolTip": "D:\\LTWD\\Do_An\\LTWD_don\\images\\Line_edit.png",
-              "RelativeToolTip": "images\\Line_edit.png",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
-              "WhenOpened": "2024-03-06T09:55:01.56Z",
+              "Title": "Login.g.cs",
+              "DocumentMoniker": "D:\\LTWD\\Do_An\\LTWD_don\\obj\\Debug\\net6.0-windows\\Login.g.cs",
+              "RelativeDocumentMoniker": "obj\\Debug\\net6.0-windows\\Login.g.cs",
+              "ToolTip": "D:\\LTWD\\Do_An\\LTWD_don\\obj\\Debug\\net6.0-windows\\Login.g.cs",
+              "RelativeToolTip": "obj\\Debug\\net6.0-windows\\Login.g.cs",
+              "ViewState": "AQIAAFoAAAAAAAAAAAAAAGcAAABZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-07T03:34:27.801Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Dat_test_background.jpg",
-              "DocumentMoniker": "D:\\LTWD\\Do_An\\LTWD_don\\images\\Dat_test_background.jpg",
-              "RelativeDocumentMoniker": "images\\Dat_test_background.jpg",
-              "ToolTip": "D:\\LTWD\\Do_An\\LTWD_don\\images\\Dat_test_background.jpg",
-              "RelativeToolTip": "images\\Dat_test_background.jpg",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
-              "WhenOpened": "2024-03-06T09:54:57.989Z",
+              "Title": "Main_page.g.i.cs",
+              "DocumentMoniker": "D:\\LTWD\\Do_An\\LTWD_don\\obj\\Debug\\net6.0-windows\\Main_page.g.i.cs",
+              "RelativeDocumentMoniker": "obj\\Debug\\net6.0-windows\\Main_page.g.i.cs",
+              "ToolTip": "D:\\LTWD\\Do_An\\LTWD_don\\obj\\Debug\\net6.0-windows\\Main_page.g.i.cs",
+              "RelativeToolTip": "obj\\Debug\\net6.0-windows\\Main_page.g.i.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAEQAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-07T03:11:58.545Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Login.xaml.cs",
-              "DocumentMoniker": "D:\\LTWD\\Do_An\\LTWD_don\\Login.xaml.cs",
-              "RelativeDocumentMoniker": "Login.xaml.cs",
-              "ToolTip": "D:\\LTWD\\Do_An\\LTWD_don\\Login.xaml.cs",
-              "RelativeToolTip": "Login.xaml.cs",
-              "ViewState": "AQIAACQAAAAAAAAAAAASwDIAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-06T09:47:44.224Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Login.xaml",
-              "DocumentMoniker": "D:\\LTWD\\Do_An\\LTWD_don\\Login.xaml",
-              "RelativeDocumentMoniker": "Login.xaml",
-              "ToolTip": "D:\\LTWD\\Do_An\\LTWD_don\\Login.xaml",
-              "RelativeToolTip": "Login.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-03-06T08:49:28.661Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Hello.txt",
-              "DocumentMoniker": "D:\\LTWD\\Do_An\\LTWD_don\\Hello.txt",
-              "RelativeDocumentMoniker": "Hello.txt",
-              "ToolTip": "D:\\LTWD\\Do_An\\LTWD_don\\Hello.txt",
-              "RelativeToolTip": "Hello.txt",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2024-03-06T07:59:58.65Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Main_page.xaml",
               "DocumentMoniker": "D:\\LTWD\\Do_An\\LTWD_don\\Main_page.xaml",
               "RelativeDocumentMoniker": "Main_page.xaml",
@@ -164,7 +120,7 @@
               "RelativeDocumentMoniker": "Main_page.xaml.cs",
               "ToolTip": "D:\\LTWD\\Do_An\\LTWD_don\\Main_page.xaml.cs",
               "RelativeToolTip": "Main_page.xaml.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAADgvxcAAAAfAAAA",
+              "ViewState": "AQIAAGUAAAAAAAAAAAAMwHIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-06T07:56:56.365Z",
               "EditorCaption": ""

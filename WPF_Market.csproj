@@ -8,10 +8,22 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Model\**" />
     <Compile Remove="NewFolder1\**" />
+    <Compile Remove="ViewModel\**" />
+    <Compile Remove="View\**" />
+    <EmbeddedResource Remove="Model\**" />
     <EmbeddedResource Remove="NewFolder1\**" />
+    <EmbeddedResource Remove="ViewModel\**" />
+    <EmbeddedResource Remove="View\**" />
+    <None Remove="Model\**" />
     <None Remove="NewFolder1\**" />
+    <None Remove="ViewModel\**" />
+    <None Remove="View\**" />
+    <Page Remove="Model\**" />
     <Page Remove="NewFolder1\**" />
+    <Page Remove="ViewModel\**" />
+    <Page Remove="View\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -22,12 +34,25 @@
     <None Remove="images\back.jpg" />
     <None Remove="images\bell.png" />
     <None Remove="images\cart.png" />
+    <None Remove="images\cart2.png" />
+    <None Remove="images\Dat_test_background.jpg" />
+    <None Remove="images\heart.png" />
+    <None Remove="images\Line.png" />
+    <None Remove="images\Line_edit.png" />
     <None Remove="images\logo.png" />
     <None Remove="images\logo2.png" />
     <None Remove="images\logoC.png" />
+    <None Remove="images\menu.png" />
     <None Remove="images\password.png" />
+    <None Remove="images\search-white.png" />
+    <None Remove="images\search.png" />
     <None Remove="images\setting.png" />
     <None Remove="images\user.png" />
+    <None Remove="Image_shopping\coupon.png" />
+    <None Remove="Image_shopping\laundry.png" />
+    <None Remove="Image_shopping\restaurant.png" />
+    <None Remove="Image_shopping\technology.png" />
+    <None Remove="Image_shopping\vegetables.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -35,21 +60,34 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="images\back.jpg" />
-    <Resource Include="images\bell.png" />
-    <Resource Include="images\cart.png" />
-    <Resource Include="images\logo.png" />
-    <Resource Include="images\logo2.png" />
-    <Resource Include="images\logoC.png" />
-    <Resource Include="images\password.png" />
-    <Resource Include="images\setting.png" />
-    <Resource Include="images\user.png" />
+    <Resource Include="Image_shopping\laundry.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Model\" />
-    <Folder Include="ViewModel\" />
-    <Folder Include="View\" />
+    <Resource Include="images\back.jpg" />
+    <Resource Include="images\bell.png" />
+    <Resource Include="images\cart.png" />
+    <Resource Include="images\cart2.png" />
+    <Resource Include="images\Dat_test_background.jpg" />
+    <Resource Include="images\heart.png" />
+    <Resource Include="images\Line.png" />
+    <Resource Include="images\Line_edit.png" />
+    <Resource Include="images\logo.png" />
+    <Resource Include="images\logo2.png" />
+    <Resource Include="images\logoC.png" />
+    <Resource Include="images\menu.png" />
+    <Resource Include="images\password.png" />
+    <Resource Include="images\search-white.png" />
+    <Resource Include="images\search.png" />
+    <Resource Include="images\setting.png" />
+    <Resource Include="images\user.png" />
+    <Resource Include="Image_shopping\coupon.png" />
+    <Resource Include="Image_shopping\technology.png" />
+    <Resource Include="Image_shopping\vegetables.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Image_shopping\restaurant.png" />
   </ItemGroup>
 
 </Project>
