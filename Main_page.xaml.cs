@@ -94,7 +94,7 @@ namespace WPF_Market
             cb_Menu.ItemsSource = cb_Menu_Items;
 
             cb_Menu.SelectionChanged += Cb_Menu_SelectionChanged;
-
+            F_Display_current_content.Content = new Sale_Product_page();
         }
 
 

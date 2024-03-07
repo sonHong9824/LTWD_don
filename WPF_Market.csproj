@@ -49,10 +49,14 @@
     <None Remove="images\setting.png" />
     <None Remove="images\user.png" />
     <None Remove="Image_shopping\coupon.png" />
+    <None Remove="Image_shopping\Lambogini.jpg" />
+    <None Remove="Image_shopping\laptop_sale.png" />
     <None Remove="Image_shopping\laundry.png" />
     <None Remove="Image_shopping\restaurant.png" />
+    <None Remove="Image_shopping\Sale_picture.jpg" />
     <None Remove="Image_shopping\technology.png" />
     <None Remove="Image_shopping\vegetables.png" />
+    <None Remove="Image_shopping\vegetables_sale.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -60,6 +64,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Image_shopping\Lambogini.jpg" />
+    <Resource Include="Image_shopping\laptop_sale.png" />
     <Resource Include="Image_shopping\laundry.png" />
   </ItemGroup>
 
@@ -82,12 +88,14 @@
     <Resource Include="images\setting.png" />
     <Resource Include="images\user.png" />
     <Resource Include="Image_shopping\coupon.png" />
+    <Resource Include="Image_shopping\Sale_picture.jpg" />
     <Resource Include="Image_shopping\technology.png" />
     <Resource Include="Image_shopping\vegetables.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="Image_shopping\restaurant.png" />
+    <Resource Include="Image_shopping\vegetables_sale.png" />
   </ItemGroup>
 
 </Project>

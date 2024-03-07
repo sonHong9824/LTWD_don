@@ -41,7 +41,7 @@
                     <RowDefinition Height="20" x:Name="btn_row"></RowDefinition>
                     <RowDefinition Height="70"></RowDefinition>
                     <RowDefinition Height="60"></RowDefinition>
-                    <RowDefinition></RowDefinition>
+                    <RowDefinition Height="540"></RowDefinition>
                 </Grid.RowDefinitions>
 
                 <Border Background="Black"
@@ -280,7 +280,7 @@
                 <Grid Grid.Row="2"
                       Background="#2A5BB7">
                     <Grid.ColumnDefinitions>
-                        <!--<ColumnDefinition Width="60"></ColumnDefinition>-->
+                        <ColumnDefinition Width="100"></ColumnDefinition>
                         <ColumnDefinition Width="500"></ColumnDefinition>
                         <!--<ColumnDefinition Width="100"></ColumnDefinition>-->
                         <ColumnDefinition></ColumnDefinition>
@@ -296,7 +296,8 @@
                             HorizontalAlignment="Left"
                             >
                        
-                        <Grid x:Name="Category">
+                        <Grid x:Name="Category"
+                              Grid.Row="2">
                             <ComboBox x:Name="cb_Menu">
                                 <ComboBox.ItemTemplate>
                                     <DataTemplate>
@@ -405,15 +406,35 @@
                 </Grid>
                 
                 
-                <Grid Grid.Row="2">
-                    <!--Frame Name="frame"/-->
+                <Grid Grid.Row="3">
+                   
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup x:Name="PageTransitions">
+                            <VisualState x:Name="Normal"/>
+                            <VisualState x:Name="SlideLeft">
+                                <Storyboard>
+                                    <DoubleAnimation Storyboard.TargetName="ContentGrid"
+                                                     Storyboard.TargetProperty="RenderTransform.(TranslateTransform.X)"
+                                                     To="-500" Duration="0:0:0.5"/>
+                                </Storyboard>
+                            </VisualState>
+                            <!-- Add other visual states for different transitions -->
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition x:Name="cl_category"
-                        Width="300"></ColumnDefinition>
-                        <ColumnDefinition/>
+                        <ColumnDefinition x:Name="Free_space"
+                                          ></ColumnDefinition>
+                        <ColumnDefinition x:Name="Main_moving_page"
+                                          Width="850"></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
                     </Grid.ColumnDefinitions>
-
-
+                  
+                    <Frame Grid.Column="1"
+                           Name="F_Display_current_content"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center"
+                           Margin="10"/>
+                    
 
 
 

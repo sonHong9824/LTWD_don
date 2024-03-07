@@ -13,12 +13,24 @@
     <Compile Update="Main_page.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Sale_Product_page.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Static_advertise_picture.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Login.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Main_page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Sale_Product_page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Static_advertise_picture.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

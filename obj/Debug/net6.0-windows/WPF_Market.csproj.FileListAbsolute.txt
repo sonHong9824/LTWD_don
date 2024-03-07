@@ -50,11 +50,13 @@ D:\LTWD\Do_An\LTWD_don\bin\Debug\net6.0-windows\WPF_Market.dll
 D:\LTWD\Do_An\LTWD_don\bin\Debug\net6.0-windows\WPF_Market.pdb
 D:\LTWD\Do_An\LTWD_don\obj\Debug\net6.0-windows\Login.g.cs
 D:\LTWD\Do_An\LTWD_don\obj\Debug\net6.0-windows\Main_page.g.cs
+D:\LTWD\Do_An\LTWD_don\obj\Debug\net6.0-windows\Sale_Product_page.g.cs
 D:\LTWD\Do_An\LTWD_don\obj\Debug\net6.0-windows\App.g.cs
 D:\LTWD\Do_An\LTWD_don\obj\Debug\net6.0-windows\WPF_Market_MarkupCompile.cache
 D:\LTWD\Do_An\LTWD_don\obj\Debug\net6.0-windows\WPF_Market_MarkupCompile.lref
 D:\LTWD\Do_An\LTWD_don\obj\Debug\net6.0-windows\Login.baml
 D:\LTWD\Do_An\LTWD_don\obj\Debug\net6.0-windows\Main_page.baml
+D:\LTWD\Do_An\LTWD_don\obj\Debug\net6.0-windows\Sale_Product_page.baml
 D:\LTWD\Do_An\LTWD_don\obj\Debug\net6.0-windows\WPF_Market.g.resources
 D:\LTWD\Do_An\LTWD_don\obj\Debug\net6.0-windows\WPF_Market.GeneratedMSBuildEditorConfig.editorconfig
 D:\LTWD\Do_An\LTWD_don\obj\Debug\net6.0-windows\WPF_Market.AssemblyInfoInputs.cache
@@ -66,3 +68,5 @@ D:\LTWD\Do_An\LTWD_don\obj\Debug\net6.0-windows\refint\WPF_Market.dll
 D:\LTWD\Do_An\LTWD_don\obj\Debug\net6.0-windows\WPF_Market.pdb
 D:\LTWD\Do_An\LTWD_don\obj\Debug\net6.0-windows\WPF_Market.genruntimeconfig.cache
 D:\LTWD\Do_An\LTWD_don\obj\Debug\net6.0-windows\ref\WPF_Market.dll
+D:\LTWD\Do_An\LTWD_don\obj\Debug\net6.0-windows\Static_advertise_picture.g.cs
+D:\LTWD\Do_An\LTWD_don\obj\Debug\net6.0-windows\Static_advertise_picture.baml
