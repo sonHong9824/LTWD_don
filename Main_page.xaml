@@ -203,11 +203,13 @@
                              Grid.Row="1"
                              Margin="15,15,0,15"
                              Height="40"
-                             Text=""
+                             Text="Search for product"
+                             Foreground ="#B2B1B3"
                              VerticalAlignment="Center" TextChanged="txt_search_TextChanged"
                              TextAlignment="Left"  
                              VerticalContentAlignment="Center"
-                             FontSize="24"></TextBox>
+                             FontSize="24"
+                             Padding="10,0,0,0" MouseLeftButtonDown="txt_search_MouseLeftButtonDown" MouseEnter="txt_search_MouseEnter"></TextBox>
                     <Button x:Name="btn_search"
                             Background="#FAA50A"
                             Grid.Column="3"
@@ -278,57 +280,56 @@
                 </Grid>
 
                 <Grid Grid.Row="2"
-                      Background="#2A5BB7">
+         Background="#2A5BB7">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="100"></ColumnDefinition>
+                        <!--<ColumnDefinition Width="60"></ColumnDefinition>-->
                         <ColumnDefinition Width="500"></ColumnDefinition>
                         <!--<ColumnDefinition Width="100"></ColumnDefinition>-->
                         <ColumnDefinition></ColumnDefinition>
                     </Grid.ColumnDefinitions>
 
                     <Border Grid.Row="2"
-                            Grid.Column='0'
-                            CornerRadius="6"
-                            Background="White"
+               Grid.Column='0'
+               CornerRadius="6"
+               Background="White"
 
-                            Margin="30,8,5,8"
-                            Width="250"
-                            HorizontalAlignment="Left"
-                            >
-                       
-                        <Grid x:Name="Category"
-                              Grid.Row="2">
+               Margin="30,8,5,8"
+               Width="250"
+               HorizontalAlignment="Left"
+               >
+
+                        <Grid x:Name="Category">
                             <ComboBox x:Name="cb_Menu">
                                 <ComboBox.ItemTemplate>
                                     <DataTemplate>
                                         <StackPanel Orientation="Horizontal">
                                             <Grid Width="20"
-                                                  Height="20">
+                                     Height="20">
                                                 <Image Source="{Binding Source1}"
-                                                       Stretch="Fill"></Image>
+                                          Stretch="Fill"></Image>
                                             </Grid>
                                             <TextBlock Text= "{Binding Text}"
-                                                    FontSize="20"
-                                                    Foreground="Black"
-                                                    Margin="10,0,0,0"></TextBlock>                            
+                                       FontSize="20"
+                                       Foreground="Black"
+                                       Margin="10,0,0,0"></TextBlock>
                                         </StackPanel>
                                     </DataTemplate>
                                 </ComboBox.ItemTemplate>
-                                
+
                             </ComboBox>
                             <Image x:Name="Icon_category" Source="/images/menu.png"
-                                  VerticalAlignment="Center"
-                                  Margin="10,0,0,0"
-                                  Stretch="None" MouseEnter="Icon_category_MouseEnter"
-                                  Opacity="1" HorizontalAlignment="Left">
+                     VerticalAlignment="Center"
+                     Margin="10,0,0,0"
+                     Stretch="None" MouseEnter="Icon_category_MouseEnter"
+                     Opacity="1" HorizontalAlignment="Left">
 
                             </Image>
                             <TextBlock Text="Category"
-                                FontSize="23"
-                                VerticalAlignment="Center"
-                                HorizontalAlignment="Center"
-                                FontWeight="DemiBold" Width="100"
-                                Margin="0,0,0,0"/>
+                   FontSize="23"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   FontWeight="DemiBold" Width="100"
+                   Margin="0,0,0,0"/>
                         </Grid>
                     </Border>
                     <StackPanel Orientation="Horizontal"

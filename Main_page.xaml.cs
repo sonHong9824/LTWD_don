@@ -112,7 +112,17 @@ namespace WPF_Market
 
         private void txt_search_TextChanged(object sender, TextChangedEventArgs e)
         {
+            txt_search.Foreground = Brushes.Black;
+        }
 
+        private void txt_search_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+           
+        }
+
+        private void txt_search_MouseEnter(object sender, MouseEventArgs e)
+        {
+            txt_search.SelectAll();
         }
     }
 }
