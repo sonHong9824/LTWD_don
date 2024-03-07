@@ -31,17 +31,24 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="images\account.png" />
+    <None Remove="images\address.png" />
     <None Remove="images\back.jpg" />
     <None Remove="images\bell.png" />
+    <None Remove="images\bg_mount.jpg" />
+    <None Remove="images\bg_myAcc.png" />
     <None Remove="images\cart.png" />
     <None Remove="images\cart2.png" />
     <None Remove="images\Dat_test_background.jpg" />
+    <None Remove="images\Dat_test_background.png" />
     <None Remove="images\heart.png" />
     <None Remove="images\Line.png" />
     <None Remove="images\Line_edit.png" />
     <None Remove="images\logo.png" />
     <None Remove="images\logo2.png" />
     <None Remove="images\logoC.png" />
+    <None Remove="images\logout.png" />
+    <None Remove="images\Maximized.png" />
     <None Remove="images\menu.png" />
     <None Remove="images\password.png" />
     <None Remove="images\search-white.png" />
@@ -49,6 +56,7 @@
     <None Remove="images\setting.png" />
     <None Remove="images\user.png" />
     <None Remove="Image_shopping\coupon.png" />
+    <None Remove="Image_shopping\keyboard1.jpg" />
     <None Remove="Image_shopping\Lambogini.jpg" />
     <None Remove="Image_shopping\laptop_sale.png" />
     <None Remove="Image_shopping\laundry.png" />
@@ -64,29 +72,37 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Image_shopping\Lambogini.jpg" />
-    <Resource Include="Image_shopping\laptop_sale.png" />
-    <Resource Include="Image_shopping\laundry.png" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <Resource Include="images\account.png" />
+    <Resource Include="images\address.png" />
     <Resource Include="images\back.jpg" />
     <Resource Include="images\bell.png" />
+    <Resource Include="images\bg_mount.jpg" />
+    <Resource Include="images\bg_myAcc.png" />
     <Resource Include="images\cart.png" />
     <Resource Include="images\cart2.png" />
     <Resource Include="images\Dat_test_background.jpg" />
+    <Resource Include="images\Dat_test_background.png" />
     <Resource Include="images\heart.png" />
     <Resource Include="images\Line.png" />
     <Resource Include="images\Line_edit.png" />
     <Resource Include="images\logo.png" />
     <Resource Include="images\logo2.png" />
     <Resource Include="images\logoC.png" />
+    <Resource Include="images\logout.png" />
+    <Resource Include="images\Maximized.png" />
     <Resource Include="images\menu.png" />
     <Resource Include="images\password.png" />
     <Resource Include="images\search-white.png" />
     <Resource Include="images\search.png" />
     <Resource Include="images\setting.png" />
     <Resource Include="images\user.png" />
+    <Resource Include="Image_shopping\keyboard1.jpg" />
+    <Resource Include="Image_shopping\Lambogini.jpg" />
+    <Resource Include="Image_shopping\laptop_sale.png" />
+    <Resource Include="Image_shopping\laundry.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="Image_shopping\coupon.png" />
     <Resource Include="Image_shopping\Sale_picture.jpg" />
     <Resource Include="Image_shopping\technology.png" />

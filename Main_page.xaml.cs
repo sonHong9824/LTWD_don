@@ -124,5 +124,15 @@ namespace WPF_Market
         {
             txt_search.SelectAll();
         }
+
+        private void btn_checkout_Click(object sender, RoutedEventArgs e)
+        {
+            F_Display_current_content.Content = new Checkout();
+        }
+
+        private void btn_acc_Click(object sender, RoutedEventArgs e)
+        {
+            F_Display_current_content.Content = new myAccount_page();
+        }
     }
 }

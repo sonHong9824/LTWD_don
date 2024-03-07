@@ -289,47 +289,50 @@
                     </Grid.ColumnDefinitions>
 
                     <Border Grid.Row="2"
-               Grid.Column='0'
-               CornerRadius="6"
-               Background="White"
+                           Grid.Column='0'
+                           CornerRadius="6"
+                           Background="White"
 
-               Margin="30,8,5,8"
-               Width="250"
-               HorizontalAlignment="Left"
-               >
+                           Margin="30,8,5,8"
+                           Width="250"
+                           HorizontalAlignment="Left">
 
                         <Grid x:Name="Category">
-                            <ComboBox x:Name="cb_Menu">
+                            
+                            <Image x:Name="Icon_category" Source="/images/menu.png"
+                                    VerticalAlignment="Center"
+                                    Margin="10,0,0,0"
+                                    Stretch="None" MouseEnter="Icon_category_MouseEnter"
+                                    Opacity="1" HorizontalAlignment="Left">
+
+                            </Image>
+                            <TextBlock Text="Category"
+                                       FontSize="23"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Center"
+                                       FontWeight="DemiBold" Width="100"
+                                       Margin="0,0,0,0"/>
+                            <ComboBox x:Name="cb_Menu"
+                                      Foreground="Transparent"
+                                      Background="Transparent"
+                                      Opacity="0.1">
                                 <ComboBox.ItemTemplate>
                                     <DataTemplate>
                                         <StackPanel Orientation="Horizontal">
                                             <Grid Width="20"
-                                     Height="20">
+                                                Height="20">
                                                 <Image Source="{Binding Source1}"
-                                          Stretch="Fill"></Image>
+                                                Stretch="Fill"></Image>
                                             </Grid>
                                             <TextBlock Text= "{Binding Text}"
-                                       FontSize="20"
-                                       Foreground="Black"
-                                       Margin="10,0,0,0"></TextBlock>
+                                                       FontSize="20"
+                                                       Foreground="Black"
+                                                       Margin="10,0,0,0"></TextBlock>   
                                         </StackPanel>
                                     </DataTemplate>
                                 </ComboBox.ItemTemplate>
 
                             </ComboBox>
-                            <Image x:Name="Icon_category" Source="/images/menu.png"
-                     VerticalAlignment="Center"
-                     Margin="10,0,0,0"
-                     Stretch="None" MouseEnter="Icon_category_MouseEnter"
-                     Opacity="1" HorizontalAlignment="Left">
-
-                            </Image>
-                            <TextBlock Text="Category"
-                   FontSize="23"
-                   VerticalAlignment="Center"
-                   HorizontalAlignment="Center"
-                   FontWeight="DemiBold" Width="100"
-                   Margin="0,0,0,0"/>
                         </Grid>
                     </Border>
                     <StackPanel Orientation="Horizontal"
@@ -389,7 +392,7 @@
                                 BorderThickness="0"
                                 MouseEnter="btn_MouseEnter"
                                 MouseLeave="btn_MouseLeave"
-                                FontFamily="Montserrat"></Button>
+                                FontFamily="Montserrat" Click="btn_checkout_Click"></Button>
                         <Button x:Name="btn_acc"
                                 Background="Transparent"
                                 Content="My account"
@@ -400,7 +403,7 @@
                                 BorderThickness="0"
                                 MouseEnter="btn_MouseEnter"
                                 MouseLeave="btn_MouseLeave"
-                                FontFamily="Montserrat"></Button>
+                                FontFamily="Montserrat" Click="btn_acc_Click"></Button>
 
                     </StackPanel>
 
