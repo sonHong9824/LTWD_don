@@ -8,19 +8,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Model\**" />
     <Compile Remove="NewFolder1\**" />
     <Compile Remove="ViewModel\**" />
     <Compile Remove="View\**" />
-    <EmbeddedResource Remove="Model\**" />
     <EmbeddedResource Remove="NewFolder1\**" />
     <EmbeddedResource Remove="ViewModel\**" />
     <EmbeddedResource Remove="View\**" />
-    <None Remove="Model\**" />
     <None Remove="NewFolder1\**" />
     <None Remove="ViewModel\**" />
     <None Remove="View\**" />
-    <Page Remove="Model\**" />
     <Page Remove="NewFolder1\**" />
     <Page Remove="ViewModel\**" />
     <Page Remove="View\**" />
@@ -72,6 +68,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="MaterialDesignColors" Version="3.0.0" />
+    <PackageReference Include="MaterialDesignThemes" Version="5.0.0" />
+    <PackageReference Include="MaterialDesignThemes.MahApps" Version="1.0.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="images\account.png" />
     <Resource Include="images\address.png" />
     <Resource Include="images\back.jpg" />
@@ -112,6 +115,33 @@
   <ItemGroup>
     <Resource Include="Image_shopping\restaurant.png" />
     <Resource Include="Image_shopping\vegetables_sale.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
 
 </Project>

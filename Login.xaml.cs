@@ -13,6 +13,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WPF_Market.DAO;
 
 namespace WPF_Market
 {
@@ -50,6 +51,15 @@ namespace WPF_Market
 
         private void btn_login_Click(object sender, RoutedEventArgs e)
         {
+            /*Main_page main_Page = new Main_page();
+            main_Page.Show();
+            this.Hide();*/
+            if (!Login_DAO.check_valid_input(txt_user.Text, txt_password.Password))
+            {
+               MessageBox.Show("Your account is not exist!", "Notice");
+                return;
+            }
+            MessageBox.Show("Login successfully!", "Notification");
             Main_page main_Page = new Main_page();
             main_Page.Show();
             this.Hide();
@@ -60,6 +70,11 @@ namespace WPF_Market
         private void txb_signUp_MouseDown(object sender, MouseButtonEventArgs e)
         {
             MessageBox.Show("sign up");
+        }
+
+        private void btn_signUp_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

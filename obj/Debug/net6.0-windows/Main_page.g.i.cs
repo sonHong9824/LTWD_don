@@ -245,7 +245,7 @@ namespace WPF_Market {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/WPF_Market;component/main_page.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/WPF_Market;V1.0.0.0;component/main_page.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Main_page.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
