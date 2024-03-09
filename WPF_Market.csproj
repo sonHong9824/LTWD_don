@@ -144,4 +144,8 @@
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Sample_product\" />
+  </ItemGroup>
+
 </Project>

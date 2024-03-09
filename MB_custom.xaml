@@ -1,0 +1,29 @@
+﻿<Window x:Class="WPF_Market.MB_custom"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Market"
+        mc:Ignorable="d"
+        Title="MB_custom" Height="200" Width="350"
+        WindowStyle="None"
+        ResizeMode ="NoResize"
+        WindowStartupLocation="CenterScreen"
+        MouseDown="Window_MouseDown"    
+        Background="Transparent"
+        AllowsTransparency="True">
+
+    <Border CornerRadius="20"
+            BorderThickness="10"
+            Background="White"
+            Margin="0,0,0,0" DragEnter="Border_DragEnter">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            
+        </Grid>
+    </Border>
+</Window>

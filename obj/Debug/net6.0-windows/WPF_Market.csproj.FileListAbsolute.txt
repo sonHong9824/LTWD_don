@@ -87,3 +87,11 @@ D:\LTWD\Do_An\LTWD_don\obj\Debug\net6.0-windows\refint\WPF_Market.dll
 D:\LTWD\Do_An\LTWD_don\obj\Debug\net6.0-windows\WPF_Market.pdb
 D:\LTWD\Do_An\LTWD_don\obj\Debug\net6.0-windows\WPF_Market.genruntimeconfig.cache
 D:\LTWD\Do_An\LTWD_don\obj\Debug\net6.0-windows\ref\WPF_Market.dll
+D:\LTWD\Do_An\LTWD_don\bin\Debug\net6.0-windows\ControlzEx.dll
+D:\LTWD\Do_An\LTWD_don\bin\Debug\net6.0-windows\MahApps.Metro.dll
+D:\LTWD\Do_An\LTWD_don\bin\Debug\net6.0-windows\MaterialDesignColors.dll
+D:\LTWD\Do_An\LTWD_don\bin\Debug\net6.0-windows\MaterialDesignThemes.Wpf.dll
+D:\LTWD\Do_An\LTWD_don\bin\Debug\net6.0-windows\MaterialDesignThemes.MahApps.dll
+D:\LTWD\Do_An\LTWD_don\bin\Debug\net6.0-windows\Microsoft.Xaml.Behaviors.dll
+D:\LTWD\Do_An\LTWD_don\obj\Debug\net6.0-windows\MB_custom.g.cs
+D:\LTWD\Do_An\LTWD_don\obj\Debug\net6.0-windows\MB_custom.baml
