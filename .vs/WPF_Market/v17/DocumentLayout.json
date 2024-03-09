@@ -3,6 +3,13 @@
   "WorkspaceRootPath": "D:\\LTWD\\Do_An\\LTWD_don\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\LTWD\\Do_An\\LTWD_don\\WPF_Market.csproj.user||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:WPF_Market.csproj.user||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|d:\\ltwd\\do_an\\ltwd_don\\db_connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|solutionrelative:db_connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -67,6 +74,29 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Microsoft.Common.CurrentVersion.targets",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ViewState": "AQIAAGcWAAAAAAAAAAAqwHEWAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2024-03-09T07:22:28.648Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "WPF_Market.csproj.user",
+              "DocumentMoniker": "D:\\LTWD\\Do_An\\LTWD_don\\WPF_Market.csproj.user",
+              "RelativeDocumentMoniker": "WPF_Market.csproj.user",
+              "ToolTip": "D:\\LTWD\\Do_An\\LTWD_don\\WPF_Market.csproj.user",
+              "RelativeToolTip": "WPF_Market.csproj.user",
+              "ViewState": "AQIAABMAAAAAAAAAAAAqwB0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003464|",
+              "WhenOpened": "2024-03-09T07:21:48.391Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Db_Connection.cs",
               "DocumentMoniker": "D:\\LTWD\\Do_An\\LTWD_don\\Db_Connection.cs",
               "RelativeDocumentMoniker": "Db_Connection.cs",
@@ -74,12 +104,11 @@
               "RelativeToolTip": "Db_Connection.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-09T00:40:36.8Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-09T00:40:36.8Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Settings.Designer.cs",
               "DocumentMoniker": "D:\\LTWD\\Do_An\\LTWD_don\\Properties\\Settings.Designer.cs",
               "RelativeDocumentMoniker": "Properties\\Settings.Designer.cs",
@@ -87,12 +116,11 @@
               "RelativeToolTip": "Properties\\Settings.Designer.cs",
               "ViewState": "AQIAAAwAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-09T00:38:17.167Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-09T00:38:17.167Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "detail_product.xaml",
               "DocumentMoniker": "D:\\LTWD\\Do_An\\LTWD_don\\detail_product.xaml",
               "RelativeDocumentMoniker": "detail_product.xaml",
@@ -103,19 +131,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "product.xaml",
               "DocumentMoniker": "D:\\LTWD\\Do_An\\LTWD_don\\product.xaml",
               "RelativeDocumentMoniker": "product.xaml",
               "ToolTip": "D:\\LTWD\\Do_An\\LTWD_don\\product.xaml",
               "RelativeToolTip": "product.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-03-09T00:36:44.257Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-09T00:36:44.257Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "Login_DAO.cs",
               "DocumentMoniker": "D:\\LTWD\\Do_An\\LTWD_don\\DAO\\Login_DAO.cs",
               "RelativeDocumentMoniker": "DAO\\Login_DAO.cs",
@@ -127,19 +154,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "App.xaml",
               "DocumentMoniker": "D:\\LTWD\\Do_An\\LTWD_don\\App.xaml",
               "RelativeDocumentMoniker": "App.xaml",
               "ToolTip": "D:\\LTWD\\Do_An\\LTWD_don\\App.xaml",
               "RelativeToolTip": "App.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-03-09T00:24:56.785Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-09T00:24:56.785Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "Product.cs",
               "DocumentMoniker": "D:\\LTWD\\Do_An\\LTWD_don\\Model\\Product.cs",
               "RelativeDocumentMoniker": "Model\\Product.cs",
@@ -151,7 +177,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "Checkout.xaml.cs",
               "DocumentMoniker": "D:\\LTWD\\Do_An\\LTWD_don\\Checkout.xaml.cs",
               "RelativeDocumentMoniker": "Checkout.xaml.cs",
@@ -163,7 +189,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "Checkout.xaml",
               "DocumentMoniker": "D:\\LTWD\\Do_An\\LTWD_don\\Checkout.xaml",
               "RelativeDocumentMoniker": "Checkout.xaml",
@@ -174,7 +200,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Checkout_DAO.cs",
               "DocumentMoniker": "D:\\LTWD\\Do_An\\LTWD_don\\DAO\\Checkout_DAO.cs",
               "RelativeDocumentMoniker": "DAO\\Checkout_DAO.cs",
