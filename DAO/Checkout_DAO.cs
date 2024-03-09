@@ -8,9 +8,9 @@ namespace WPF_Market.DAO
 {
     public static class Checkout_DAO
     {
-       public static List<> Loaded_item()
+       /*public static List<> Loaded_item()
        {
 
-       }
+       }*/
     }
 }

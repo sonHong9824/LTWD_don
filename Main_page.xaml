@@ -359,7 +359,7 @@
                                 BorderThickness="0"
                                 FontFamily="Montserrat" 
                                 MouseEnter="btn_MouseEnter"
-                                MouseLeave="btn_MouseLeave"></Button>
+                                MouseLeave="btn_MouseLeave" Click="btn_home_Click"></Button>
                         <Button x:Name="btn_shop"
                                 Background="Transparent"
                                 Content="Shop"
