@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace WPF_Market
 {
     /// <summary>
-    /// Interaction logic for Product.xaml
+    /// Interaction logic for product.xaml
     /// </summary>
-    public partial class Product : Page
+    public partial class product : Page
     {
-        public Product()
+        public product()
         {
             InitializeComponent();
         }
