@@ -134,5 +134,10 @@ namespace WPF_Market
         {
             F_Display_current_content.Content = new myAccount_page();
         }
+
+        private void btn_home_Click(object sender, RoutedEventArgs e)
+        {
+            F_Display_current_content.Content = new product();
+        }
     }
 }
