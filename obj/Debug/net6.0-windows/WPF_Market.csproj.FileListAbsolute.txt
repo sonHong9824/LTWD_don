@@ -18,14 +18,17 @@ D:\LTWD\Do_An\LTWD_don\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\
 D:\LTWD\Do_An\LTWD_don\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 D:\LTWD\Do_An\LTWD_don\obj\Debug\net6.0-windows\WPF_Market.csproj.AssemblyReference.cache
 D:\LTWD\Do_An\LTWD_don\obj\Debug\net6.0-windows\Custom_mb.baml
+D:\LTWD\Do_An\LTWD_don\obj\Debug\net6.0-windows\Login_new.baml
+D:\LTWD\Do_An\LTWD_don\obj\Debug\net6.0-windows\Signup.baml
 D:\LTWD\Do_An\LTWD_don\obj\Debug\net6.0-windows\Checkout.g.cs
 D:\LTWD\Do_An\LTWD_don\obj\Debug\net6.0-windows\Custom_mb.g.cs
 D:\LTWD\Do_An\LTWD_don\obj\Debug\net6.0-windows\detail_product.g.cs
-D:\LTWD\Do_An\LTWD_don\obj\Debug\net6.0-windows\Login.g.cs
+D:\LTWD\Do_An\LTWD_don\obj\Debug\net6.0-windows\Login_new.g.cs
 D:\LTWD\Do_An\LTWD_don\obj\Debug\net6.0-windows\Main_page.g.cs
 D:\LTWD\Do_An\LTWD_don\obj\Debug\net6.0-windows\myAccount_page.g.cs
 D:\LTWD\Do_An\LTWD_don\obj\Debug\net6.0-windows\Product.g.cs
 D:\LTWD\Do_An\LTWD_don\obj\Debug\net6.0-windows\Sale_Product_page.g.cs
+D:\LTWD\Do_An\LTWD_don\obj\Debug\net6.0-windows\Signup.g.cs
 D:\LTWD\Do_An\LTWD_don\obj\Debug\net6.0-windows\Static_advertise_picture.g.cs
 D:\LTWD\Do_An\LTWD_don\obj\Debug\net6.0-windows\App.g.cs
 D:\LTWD\Do_An\LTWD_don\obj\Debug\net6.0-windows\WPF_Market_MarkupCompile.cache
@@ -33,7 +36,6 @@ D:\LTWD\Do_An\LTWD_don\obj\Debug\net6.0-windows\WPF_Market_MarkupCompile.lref
 D:\LTWD\Do_An\LTWD_don\obj\Debug\net6.0-windows\App.baml
 D:\LTWD\Do_An\LTWD_don\obj\Debug\net6.0-windows\Checkout.baml
 D:\LTWD\Do_An\LTWD_don\obj\Debug\net6.0-windows\detail_product.baml
-D:\LTWD\Do_An\LTWD_don\obj\Debug\net6.0-windows\Login.baml
 D:\LTWD\Do_An\LTWD_don\obj\Debug\net6.0-windows\Main_page.baml
 D:\LTWD\Do_An\LTWD_don\obj\Debug\net6.0-windows\myAccount_page.baml
 D:\LTWD\Do_An\LTWD_don\obj\Debug\net6.0-windows\Product.baml
