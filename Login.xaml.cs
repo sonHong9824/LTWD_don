@@ -50,16 +50,14 @@ namespace WPF_Market
 
         private void btn_login_Click(object sender, RoutedEventArgs e)
         {
-            /*Main_page main_Page = new Main_page();
-            main_Page.Show();
-            this.Hide();*/
+          
             if (!Login_DAO.check_valid_input(txt_user.Text, txt_password.Password))
             {
-                Custom_mb mb = new Custom_mb("Your accout is not exist!", MessageType.Error, MessageButtons.Ok);
-                mb.ShowDialog();
+                new Custom_mb("Your accout is not exist!", MessageType.Error, MessageButtons.Ok).ShowDialog();
                 return;
             }
-            MessageBox.Show("Login successfully!", "Notification");
+            new Custom_mb("Operation succesfully", MessageType.Success, MessageButtons.Ok).ShowDialog();
+ 
             Main_page main_Page = new Main_page();
             main_Page.Show();
             this.Hide();

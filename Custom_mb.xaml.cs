@@ -28,22 +28,26 @@ namespace WPF_Market
             {
 
                 case MessageType.Info:
-                    cardHeader.Background = "";
+                    change_backround_color(Colors.BlueViolet);
                     txtTitle.Text = "Info";
                     break;
                 case MessageType.Confirmation:
+                    change_backround_color(Colors.Purple);
                     txtTitle.Text = "Confirmation";
                     break;
                 case MessageType.Success:
                     {
+                        change_backround_color(Colors.Green);
                         txtTitle.Text = "Success";
                     }
                     break;
                 case MessageType.Warning:
+                    change_backround_color(Colors.Red);
                     txtTitle.Text = "Warning";
                     break;
                 case MessageType.Error:
                     {
+                        change_backround_color(Colors.Red);
                         txtTitle.Text = "Error";
                     }
                     break;
@@ -60,6 +64,7 @@ namespace WPF_Market
                     btnOk.Visibility = Visibility.Visible;
                     btnCancel.Visibility = Visibility.Collapsed;
                     btnYes.Visibility = Visibility.Collapsed; btnNo.Visibility = Visibility.Collapsed;
+                    btnOk.HorizontalAlignment = HorizontalAlignment.Center;
                     break;
             }
         }
@@ -77,6 +82,12 @@ namespace WPF_Market
             YesNo,
             Ok,
         }*/
+        private void change_backround_color(Color backround_color)
+        {
+            cardHeader.Background = new SolidColorBrush(backround_color);
+           
+
+        }
         private void btnYes_Click(object sender, RoutedEventArgs e)
         {
             this.DialogResult = true;

@@ -213,7 +213,7 @@
                                    Cursor="Hand" Height="20" 
                                    VerticalAlignment="Top" 
                                    MouseDown="txb_signUp_MouseDown"
-                                   Margin="205,0,0,0"
+                                   Margin="180,0,0,0"
                                    Background="Transparent"
                                    BorderThickness="0" Click="btn_signUp_Click">
 

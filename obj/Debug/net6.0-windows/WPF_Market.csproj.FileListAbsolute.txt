@@ -23,7 +23,6 @@ D:\LTWD\Do_An\LTWD_don\obj\Debug\net6.0-windows\Custom_mb.g.cs
 D:\LTWD\Do_An\LTWD_don\obj\Debug\net6.0-windows\detail_product.g.cs
 D:\LTWD\Do_An\LTWD_don\obj\Debug\net6.0-windows\Login.g.cs
 D:\LTWD\Do_An\LTWD_don\obj\Debug\net6.0-windows\Main_page.g.cs
-D:\LTWD\Do_An\LTWD_don\obj\Debug\net6.0-windows\MB_custom.g.cs
 D:\LTWD\Do_An\LTWD_don\obj\Debug\net6.0-windows\myAccount_page.g.cs
 D:\LTWD\Do_An\LTWD_don\obj\Debug\net6.0-windows\Product.g.cs
 D:\LTWD\Do_An\LTWD_don\obj\Debug\net6.0-windows\Sale_Product_page.g.cs
@@ -36,7 +35,6 @@ D:\LTWD\Do_An\LTWD_don\obj\Debug\net6.0-windows\Checkout.baml
 D:\LTWD\Do_An\LTWD_don\obj\Debug\net6.0-windows\detail_product.baml
 D:\LTWD\Do_An\LTWD_don\obj\Debug\net6.0-windows\Login.baml
 D:\LTWD\Do_An\LTWD_don\obj\Debug\net6.0-windows\Main_page.baml
-D:\LTWD\Do_An\LTWD_don\obj\Debug\net6.0-windows\MB_custom.baml
 D:\LTWD\Do_An\LTWD_don\obj\Debug\net6.0-windows\myAccount_page.baml
 D:\LTWD\Do_An\LTWD_don\obj\Debug\net6.0-windows\Product.baml
 D:\LTWD\Do_An\LTWD_don\obj\Debug\net6.0-windows\Sale_Product_page.baml
