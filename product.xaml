@@ -195,10 +195,10 @@
                     </Button>
 
                     <Button 
-                        Background="#F5F5F5"
-                        Width="160"
-                        Height="240"
-                        Margin="15">    
+    Background="#F5F5F5"
+    Width="160"
+    Height="240"
+    Margin="15">
                         <StackPanel Height="240">
                             <Grid>
                                 <Image Source="/Image_shopping/keyboard1.jpg"

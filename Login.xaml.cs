@@ -14,7 +14,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using WPF_Market.DAO;
-
 namespace WPF_Market
 {
     /// <summary>
@@ -56,7 +55,8 @@ namespace WPF_Market
             this.Hide();*/
             if (!Login_DAO.check_valid_input(txt_user.Text, txt_password.Password))
             {
-               MessageBox.Show("Your account is not exist!", "Notice");
+                Custom_mb mb = new Custom_mb("Your accout is not exist!", MessageType.Error, MessageButtons.Ok);
+                mb.ShowDialog();
                 return;
             }
             MessageBox.Show("Login successfully!", "Notification");

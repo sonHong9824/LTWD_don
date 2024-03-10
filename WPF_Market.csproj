@@ -8,15 +8,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="MaterialDesignInXamlToolkit-master\**" />
     <Compile Remove="NewFolder1\**" />
     <Compile Remove="ViewModel\**" />
     <Compile Remove="View\**" />
+    <EmbeddedResource Remove="MaterialDesignInXamlToolkit-master\**" />
     <EmbeddedResource Remove="NewFolder1\**" />
     <EmbeddedResource Remove="ViewModel\**" />
     <EmbeddedResource Remove="View\**" />
+    <None Remove="MaterialDesignInXamlToolkit-master\**" />
     <None Remove="NewFolder1\**" />
     <None Remove="ViewModel\**" />
     <None Remove="View\**" />
+    <Page Remove="MaterialDesignInXamlToolkit-master\**" />
     <Page Remove="NewFolder1\**" />
     <Page Remove="ViewModel\**" />
     <Page Remove="View\**" />
@@ -38,6 +42,7 @@
     <None Remove="images\Dat_test_background.jpg" />
     <None Remove="images\Dat_test_background.png" />
     <None Remove="images\dollar.png" />
+    <None Remove="images\error.jpg" />
     <None Remove="images\heart.png" />
     <None Remove="images\Line.png" />
     <None Remove="images\Line_edit.png" />
@@ -88,6 +93,7 @@
     <Resource Include="images\Dat_test_background.jpg" />
     <Resource Include="images\Dat_test_background.png" />
     <Resource Include="images\dollar.png" />
+    <Resource Include="images\error.jpg" />
     <Resource Include="images\heart.png" />
     <Resource Include="images\Line.png" />
     <Resource Include="images\Line_edit.png" />
