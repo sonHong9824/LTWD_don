@@ -26,12 +26,13 @@ namespace WPF_Market
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            new Signup().ShowDialog();
+            new Signup().Show();
+            this.Close();
         }
 
         private void btnClose_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Close();
         }
 
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
