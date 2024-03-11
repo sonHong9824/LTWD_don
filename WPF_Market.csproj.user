@@ -1,25 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup />
-  <ItemGroup>
-    <ApplicationDefinition Update="App.xaml">
-      <SubType>Designer</SubType>
-    </ApplicationDefinition>
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Compile Update="Checkout.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Custom_mb.xaml.cs">
+    <Compile Update="View\Custom_mb.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="detail_product.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Login_new.xaml.cs">
+    <Compile Update="View\Login_new.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Main_page.xaml.cs">
+    <Compile Update="View\Main_page.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="myAccount_page.xaml.cs">
@@ -31,28 +27,30 @@
     <Compile Update="Sale_Product_page.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Signup.xaml.cs">
+    <Compile Update="View\Signup.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Static_advertise_picture.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Page Update="Checkout.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Custom_mb.xaml">
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Custom_mb.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="detail_product.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Login_new.xaml">
+    <Page Update="View\Login_new.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Main_page.xaml">
+    <Page Update="View\Main_page.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="myAccount_page.xaml">
@@ -64,7 +62,7 @@
     <Page Update="Sale_Product_page.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Signup.xaml">
+    <Page Update="View\Signup.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Static_advertise_picture.xaml">
