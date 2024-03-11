@@ -19,6 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Remove="App.xaml.cs" />
     <Compile Remove="AssemblyInfo.cs" />
     <Compile Remove="Login.xaml.cs" />
   </ItemGroup>
@@ -64,6 +65,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Page Remove="App.xaml" />
     <Page Remove="Login.xaml" />
   </ItemGroup>
 

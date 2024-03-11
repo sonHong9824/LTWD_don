@@ -1,41 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\LTWD\\LTWD_Doan\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\Microsoft.Xaml.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\dotnet\\sdk\\8.0.200\\Sdks\\Microsoft.NET.Sdk.WindowsDesktop\\targets\\Microsoft.WinFX.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|d:\\ltwd\\ltwd_doan\\checkout.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|solutionrelative:checkout.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|d:\\ltwd\\ltwd_doan\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|d:\\ltwd\\ltwd_doan\\myaccount_page.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|solutionrelative:myaccount_page.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LAPTOP\\AppData\\Local\\Temp\\.vsdbgsrc\\eb92e277c464108612c0a4b5e2252fce96abde584950a65087ada459b840fe37\\ResourcePart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|d:\\ltwd\\ltwd_doan\\view\\login_new.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|solutionrelative:view\\login_new.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|d:\\ltwd\\ltwd_doan\\view\\login_new.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|solutionrelative:view\\login_new.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\LTWD\\LTWD_Doan\\View\\App.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:View\\App.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -43,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 571,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -52,113 +18,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Checkout.xaml",
-              "DocumentMoniker": "D:\\LTWD\\LTWD_Doan\\Checkout.xaml",
-              "RelativeDocumentMoniker": "Checkout.xaml",
-              "ToolTip": "D:\\LTWD\\LTWD_Doan\\Checkout.xaml",
-              "RelativeToolTip": "Checkout.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-03-11T11:03:02.952Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Microsoft.Xaml.targets",
-              "DocumentMoniker": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\Microsoft.Xaml.targets",
-              "ToolTip": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\Microsoft.Xaml.targets",
-              "ViewState": "AQIAAGUAAAAAAAAAAAAcwGkAAAAEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
-              "WhenOpened": "2024-03-11T11:02:45.245Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Microsoft.WinFX.targets",
-              "DocumentMoniker": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\Sdks\\Microsoft.NET.Sdk.WindowsDesktop\\targets\\Microsoft.WinFX.targets",
-              "ToolTip": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\Sdks\\Microsoft.NET.Sdk.WindowsDesktop\\targets\\Microsoft.WinFX.targets",
-              "ViewState": "AQIAAMUAAAAAAAAAAAAcwNIAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
-              "WhenOpened": "2024-03-11T10:59:02.422Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "D:\\LTWD\\LTWD_Doan\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "MainWindow.xaml",
-              "ToolTip": "D:\\LTWD\\LTWD_Doan\\MainWindow.xaml",
-              "RelativeToolTip": "MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-03-11T10:54:45.196Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "myAccount_page.xaml",
-              "DocumentMoniker": "D:\\LTWD\\LTWD_Doan\\myAccount_page.xaml",
-              "RelativeDocumentMoniker": "myAccount_page.xaml",
-              "ToolTip": "D:\\LTWD\\LTWD_Doan\\myAccount_page.xaml",
-              "RelativeToolTip": "myAccount_page.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-03-11T10:54:34.566Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Login_new.xaml",
-              "DocumentMoniker": "D:\\LTWD\\LTWD_Doan\\View\\Login_new.xaml",
-              "RelativeDocumentMoniker": "View\\Login_new.xaml",
-              "ToolTip": "D:\\LTWD\\LTWD_Doan\\View\\Login_new.xaml",
-              "RelativeToolTip": "View\\Login_new.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-03-11T10:24:30.653Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "App.xaml",
-              "DocumentMoniker": "D:\\LTWD\\LTWD_Doan\\View\\App.xaml",
-              "RelativeDocumentMoniker": "View\\App.xaml",
-              "ToolTip": "D:\\LTWD\\LTWD_Doan\\View\\App.xaml",
-              "RelativeToolTip": "View\\App.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-03-11T10:22:11.04Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ResourcePart.cs",
-              "DocumentMoniker": "C:\\Users\\LAPTOP\\AppData\\Local\\Temp\\.vsdbgsrc\\eb92e277c464108612c0a4b5e2252fce96abde584950a65087ada459b840fe37\\ResourcePart.cs",
-              "ToolTip": "C:\\Users\\LAPTOP\\AppData\\Local\\Temp\\.vsdbgsrc\\eb92e277c464108612c0a4b5e2252fce96abde584950a65087ada459b840fe37\\ResourcePart.cs [Read Only]",
-              "ViewState": "AQIAABQAAAAAAAAAAAAkwCcAAAAEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-11T10:22:01.69Z",
-              "EditorCaption": " [Read Only]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Login_new.xaml.cs",
-              "DocumentMoniker": "D:\\LTWD\\LTWD_Doan\\View\\Login_new.xaml.cs",
-              "RelativeDocumentMoniker": "View\\Login_new.xaml.cs",
-              "ToolTip": "D:\\LTWD\\LTWD_Doan\\View\\Login_new.xaml.cs",
-              "RelativeToolTip": "View\\Login_new.xaml.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAABAAAAALAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-11T10:21:43.873Z"
             }
           ]
         },

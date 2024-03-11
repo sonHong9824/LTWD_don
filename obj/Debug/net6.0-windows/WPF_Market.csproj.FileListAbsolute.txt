@@ -1,17 +1,1 @@
 D:\LTWD\LTWD_Doan\obj\Debug\net6.0-windows\WPF_Market.csproj.AssemblyReference.cache
-D:\LTWD\LTWD_Doan\obj\Debug\net6.0-windows\View\Custom_mb.baml
-D:\LTWD\LTWD_Doan\obj\Debug\net6.0-windows\View\Login_new.baml
-D:\LTWD\LTWD_Doan\obj\Debug\net6.0-windows\View\Signup.baml
-D:\LTWD\LTWD_Doan\obj\Debug\net6.0-windows\Checkout.g.cs
-D:\LTWD\LTWD_Doan\obj\Debug\net6.0-windows\detail_product.g.cs
-D:\LTWD\LTWD_Doan\obj\Debug\net6.0-windows\MainWindow.g.cs
-D:\LTWD\LTWD_Doan\obj\Debug\net6.0-windows\myAccount_page.g.cs
-D:\LTWD\LTWD_Doan\obj\Debug\net6.0-windows\product.g.cs
-D:\LTWD\LTWD_Doan\obj\Debug\net6.0-windows\Sale_Product_page.g.cs
-D:\LTWD\LTWD_Doan\obj\Debug\net6.0-windows\Static_advertise_picture.g.cs
-D:\LTWD\LTWD_Doan\obj\Debug\net6.0-windows\View\Custom_mb.g.cs
-D:\LTWD\LTWD_Doan\obj\Debug\net6.0-windows\View\Login_new.g.cs
-D:\LTWD\LTWD_Doan\obj\Debug\net6.0-windows\View\Main_page.g.cs
-D:\LTWD\LTWD_Doan\obj\Debug\net6.0-windows\View\Signup.g.cs
-D:\LTWD\LTWD_Doan\obj\Debug\net6.0-windows\WPF_Market_MarkupCompile.cache
-D:\LTWD\LTWD_Doan\obj\Debug\net6.0-windows\WPF_Market_MarkupCompile.lref
