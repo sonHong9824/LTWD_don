@@ -45,7 +45,7 @@ namespace WPF_Market
 
         private void btn_signup_Click(object sender, RoutedEventArgs e)
         {
-            if (!Signup_DAO.Add_account(txt_email.Text,txt_user_name.Text,txt_password.Password,txt_repeat_password.Password))
+            if (!Signup_DAO.Add_account(txt_user_name.Text, txt_email.Text, txt_password.Password.ToString(),txt_repeat_password.Password.ToString()))
             {
                 new Custom_mb("An error has occured during your sign up process!\nPlease check your informations carefully again~~"
                     ,Custom_mb.MessageType.Error, Custom_mb.MessageButtons.Ok).ShowDialog();
@@ -53,6 +53,8 @@ namespace WPF_Market
             }
             new Custom_mb("Successfully sign up! Turning back to login page!"
                  , Custom_mb.MessageType.Success, Custom_mb.MessageButtons.Ok).ShowDialog();
+            new Login_new().Show();
+            this.Close();
             return;
         }
     }

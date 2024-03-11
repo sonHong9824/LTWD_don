@@ -19,9 +19,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Remove="App.xaml.cs" />
-    <Compile Remove="AssemblyInfo.cs" />
     <Compile Remove="Login.xaml.cs" />
+    <Compile Remove="MainWindow.xaml.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -65,12 +64,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Page Remove="App.xaml" />
     <Page Remove="Login.xaml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ApplicationDefinition Include="AssemblyInfo.cs" />
+    <Page Remove="MainWindow.xaml" />
   </ItemGroup>
 
   <ItemGroup>

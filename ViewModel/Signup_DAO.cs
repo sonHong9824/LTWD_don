@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -20,6 +21,10 @@ namespace WPF_Market.ViewModel
 
             while (reader.Read())
             {
+                if (reader.IsDBNull(0))
+                {
+                    break;
+                }
                 Acccount acccount = new Acccount(reader["email"].ToString(), reader["user_name"].ToString(), reader["password"].ToString());
                 if (acccount.User_name == txt_user_name)
                 {
