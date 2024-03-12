@@ -259,7 +259,8 @@
                                 Background="Transparent"
                                 BorderThickness="0">
                             <Image Source="/images/cart2.png"
-                                   Margin="2"></Image>
+                                   Margin="2"
+                                   ></Image>
                         </Button>
                     </Border>
                     <Border Grid.Column="5"

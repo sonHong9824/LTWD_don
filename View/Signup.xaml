@@ -57,7 +57,8 @@
                         <PasswordBox Name="txt_password" BorderThickness="0 0 0 1.5" BorderBrush="#C5C8CC" materialDesign:HintAssist.FloatingOffset="0,-18" materialDesign:HintAssist.Hint="Password" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" />
                         <PasswordBox x:Name="txt_repeat_password" BorderThickness="0 0 0 1.5" BorderBrush="#C5C8CC" materialDesign:HintAssist.FloatingOffset="0,-18" materialDesign:HintAssist.Hint="Repeat Password" Margin="0 27 0 0" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" />
 
-                        <CheckBox Margin="0 40 0 20" FontSize="13">
+                        <CheckBox x:Name="cb_condition"
+                            Margin="0 40 0 20" FontSize="13">
                             <TextBlock>
                 <Run Foreground="#b6b6b6">By signing up I agree with</Run>
                 <Run Foreground="#07BF96">terms and conditions</Run>

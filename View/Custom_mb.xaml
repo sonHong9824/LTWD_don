@@ -68,8 +68,10 @@
                         </materialDesign:TransitioningContent.OpeningEffects>
                         <TextBox x:Name="txtMessage" HorizontalAlignment="Center" 
                                  IsReadOnly="True" Grid.Row="0" Margin="5"
-                                 materialDesign:HintAssist.Hint="" FontSize="18" 
-                                 Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                                 materialDesign:HintAssist.Hint="" FontSize="14" 
+                                 Style="{StaticResource MaterialDesignFloatingHintTextBox}" 
+                                 FontStretch="ExtraExpanded"
+                                 />
                     </materialDesign:TransitioningContent>
 
                 </Grid>
