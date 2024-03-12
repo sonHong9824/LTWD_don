@@ -26,10 +26,11 @@ namespace WPF_Market.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\mssqllocaldb;Integrated Security=True;Encrypt=True")]
-        public string TraoDoiMuban {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=LTWD_Final_Project;Integrated " +
+            "Security=True")]
+        public string TraoDoiMuaBan {
             get {
-                return ((string)(this["TraoDoiMuban"]));
+                return ((string)(this["TraoDoiMuaBan"]));
             }
         }
     }

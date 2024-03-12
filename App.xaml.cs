@@ -11,20 +11,6 @@ namespace WPF_Market
     /// <summary>
     /// Interaction logic for App.xaml
     /// </summary>
-    public enum MessageType
-    {
-        Info,
-        Confirmation,
-        Success,
-        Warning,
-        Error,
-    }
-    public enum MessageButtons
-    {
-        OkCancel,
-        YesNo,
-        Ok,
-    }
     public partial class App : Application
     {
     }

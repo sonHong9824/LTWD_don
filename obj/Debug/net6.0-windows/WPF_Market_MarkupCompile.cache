@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\LTWD\Do_An\LTWD_don\obj\Debug\net6.0-windows\
+D:\LTWD\LTWD_Doan\obj\Debug\net6.0-windows\
 WPF_Market
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-D:\LTWD\Do_An\LTWD_don\App.xaml
-10-964935708
+D:\LTWD\LTWD_Doan\App.xaml
+101470330535
 
-27-1026722643
+26238426905
 201-2036738670
-Checkout.xaml;Custom_mb.xaml;detail_product.xaml;Login_new.xaml;Main_page.xaml;myAccount_page.xaml;Product.xaml;Sale_Product_page.xaml;Signup.xaml;Static_advertise_picture.xaml;
+Checkout.xaml;detail_product.xaml;myAccount_page.xaml;product.xaml;Sale_Product_page.xaml;Static_advertise_picture.xaml;View\Custom_mb.xaml;View\Login_new.xaml;View\Main_page.xaml;View\Signup.xaml;
 
 False
 

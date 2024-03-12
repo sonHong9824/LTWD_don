@@ -33,16 +33,15 @@
             <Grid Grid.Row="0" Margin="0,0,0,292">
                 <Image Source="/Image_shopping/Cat1.jpg"
                    Stretch="Fill"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center"
-                       Margin="0,30,0,0"/>
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Top" Margin="19,49,0,0" Width="234"/>
             </Grid>
             <Grid Grid.Row="1" Margin="0,0,0,292">
                 <Image Source="/Image_shopping/Cat1.jpg"
                  Stretch="Fill"
                HorizontalAlignment="Center"
                VerticalAlignment="Bottom"
-               Margin="0,30,0,0"/>  
+               Margin="0,30,0,0"/>
             </Grid>
         </Grid>
     </Border>

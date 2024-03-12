@@ -21,18 +21,11 @@
       <FileName>Model\User.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WPF_Market.Shop">
-    <Position X="4.25" Y="0.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>gAAEAAAAAAAAAAAAAgQAAAAQAAAgAAAEAAAAEAAAAAA=</HashCode>
-      <FileName>Shop.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="WPF_Market.Model.Inventory">
     <Position X="8" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>IAAAAIAAAAAAAAAAAAAAAIAAAAAAABAAAACAACBAABA=</HashCode>
-      <FileName>Model\Kho_Hang.cs</FileName>
+      <FileName>Model\Iventory.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="WPF_Market.Model.Product">
@@ -42,11 +35,25 @@
       <FileName>Model\Product.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WPF_Market.Cart">
-    <Position X="2.25" Y="1.5" Width="1.5" />
+  <Class Name="WPF_Market.Model.Acccount" Collapsed="true">
+    <Position X="4.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAgAAAAAAAAgAAAAIACAAAAAgAAAAA=</HashCode>
+      <FileName>Model\Account.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WPF_Market.Model.Cart" Collapsed="true">
+    <Position X="3" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ggAAAAAkAAAAQAAAAEAAAQAAAAAAAABAAAAAEAAAACA=</HashCode>
-      <FileName>Cart.cs</FileName>
+      <FileName>Model\Cart.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WPF_Market.Model.Cb_menu_item" Collapsed="true">
+    <Position X="4" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAIAAAACAQAAAA=</HashCode>
+      <FileName>Model\Cb_menu_item.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

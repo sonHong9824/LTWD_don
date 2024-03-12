@@ -10,20 +10,12 @@
   <ItemGroup>
     <Compile Remove="MaterialDesignInXamlToolkit-master\**" />
     <Compile Remove="NewFolder1\**" />
-    <Compile Remove="ViewModel\**" />
-    <Compile Remove="View\**" />
     <EmbeddedResource Remove="MaterialDesignInXamlToolkit-master\**" />
     <EmbeddedResource Remove="NewFolder1\**" />
-    <EmbeddedResource Remove="ViewModel\**" />
-    <EmbeddedResource Remove="View\**" />
     <None Remove="MaterialDesignInXamlToolkit-master\**" />
     <None Remove="NewFolder1\**" />
-    <None Remove="ViewModel\**" />
-    <None Remove="View\**" />
     <Page Remove="MaterialDesignInXamlToolkit-master\**" />
     <Page Remove="NewFolder1\**" />
-    <Page Remove="ViewModel\**" />
-    <Page Remove="View\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -81,6 +73,8 @@
     <PackageReference Include="MaterialDesignThemes" Version="5.0.0" />
     <PackageReference Include="MaterialDesignThemes.MahApps" Version="1.0.0" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
+    <PackageReference Include="System.Linq" Version="4.3.0" />
+    <PackageReference Include="System.Linq.Expressions" Version="4.3.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -158,6 +152,10 @@
 
   <ItemGroup>
     <Folder Include="Sample_product\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Service Include="{3259aa49-8aa1-44d3-9025-a0b520596a8c}" />
   </ItemGroup>
 
 </Project>
