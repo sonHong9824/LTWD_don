@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\LTWD\\Do_An\\LTWD_don\\WPF_Market.csproj": {}
+    "D:\\LTWD\\LTWD_Doan\\WPF_Market.csproj": {}
   },
   "projects": {
-    "D:\\LTWD\\Do_An\\LTWD_don\\WPF_Market.csproj": {
+    "D:\\LTWD\\LTWD_Doan\\WPF_Market.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\LTWD\\Do_An\\LTWD_don\\WPF_Market.csproj",
+        "projectUniqueName": "D:\\LTWD\\LTWD_Doan\\WPF_Market.csproj",
         "projectName": "WPF_Market",
-        "projectPath": "D:\\LTWD\\Do_An\\LTWD_don\\WPF_Market.csproj",
+        "projectPath": "D:\\LTWD\\LTWD_Doan\\WPF_Market.csproj",
         "packagesPath": "C:\\Users\\LAPTOP\\.nuget\\packages\\",
-        "outputPath": "D:\\LTWD\\Do_An\\LTWD_don\\obj\\",
+        "outputPath": "D:\\LTWD\\LTWD_Doan\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

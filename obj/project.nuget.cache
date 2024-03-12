@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UmoJ2sagKvteXbO3BJ/Jaspl39q8+9RYcYAdkQXGR43x6ZOdJ6vrnuTqESzSCUuVGcSMMFK1JcTxU9rlK8AKUA==",
+  "dgSpecHash": "gEtRjAF+XBRosR7vexPq/43/Zlvb44jVQSZrEFHqHYFlroD13N3KCAaiBc8fW1GDGYnfHs79LmTQwBsO4TJUiA==",
   "success": true,
-  "projectFilePath": "D:\\LTWD\\Do_An\\LTWD_don\\WPF_Market.csproj",
+  "projectFilePath": "D:\\LTWD\\LTWD_Doan\\WPF_Market.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LAPTOP\\.nuget\\packages\\controlzex\\4.3.0\\controlzex.4.3.0.nupkg.sha512",
     "C:\\Users\\LAPTOP\\.nuget\\packages\\mahapps.metro\\2.0.0\\mahapps.metro.2.0.0.nupkg.sha512",

@@ -1,37 +1,41 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\LTWD\\Do_An\\LTWD_don\\",
+  "WorkspaceRootPath": "D:\\LTWD\\LTWD_Doan\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|d:\\ltwd\\do_an\\ltwd_don\\login_new.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|d:\\ltwd\\ltwd_doan\\product.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|solutionrelative:product.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|d:\\ltwd\\ltwd_doan\\login_new.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|solutionrelative:login_new.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|d:\\ltwd\\do_an\\ltwd_don\\main_page.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|d:\\ltwd\\ltwd_doan\\main_page.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|solutionrelative:main_page.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|d:\\ltwd\\do_an\\ltwd_don\\main_page.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|d:\\ltwd\\ltwd_doan\\main_page.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|solutionrelative:main_page.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|d:\\ltwd\\do_an\\ltwd_don\\login_new.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "AbsoluteMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|d:\\ltwd\\ltwd_doan\\login_new.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
       "RelativeMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|solutionrelative:login_new.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|d:\\ltwd\\do_an\\ltwd_don\\signup.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|d:\\ltwd\\ltwd_doan\\signup.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|solutionrelative:signup.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|d:\\ltwd\\do_an\\ltwd_don\\signup.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|d:\\ltwd\\ltwd_doan\\signup.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|solutionrelative:signup.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|d:\\ltwd\\do_an\\ltwd_don\\enum_for_mbcustom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|d:\\ltwd\\ltwd_doan\\enum_for_mbcustom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|solutionrelative:enum_for_mbcustom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|d:\\ltwd\\do_an\\ltwd_don\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|d:\\ltwd\\ltwd_doan\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|solutionrelative:app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -42,19 +46,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 571,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Signup.xaml",
-              "DocumentMoniker": "D:\\LTWD\\Do_An\\LTWD_don\\Signup.xaml",
+              "DocumentMoniker": "D:\\LTWD\\LTWD_Doan\\Signup.xaml",
               "RelativeDocumentMoniker": "Signup.xaml",
-              "ToolTip": "D:\\LTWD\\Do_An\\LTWD_don\\Signup.xaml",
+              "ToolTip": "D:\\LTWD\\LTWD_Doan\\Signup.xaml",
               "RelativeToolTip": "Signup.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-03-10T09:14:12.968Z",
-              "IsPinned": true,
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "product.xaml",
+              "DocumentMoniker": "D:\\LTWD\\LTWD_Doan\\product.xaml",
+              "RelativeDocumentMoniker": "product.xaml",
+              "ToolTip": "D:\\LTWD\\LTWD_Doan\\product.xaml",
+              "RelativeToolTip": "product.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-03-12T07:58:40.62Z",
               "EditorCaption": ""
             },
             {
@@ -66,80 +81,71 @@
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Login_new.xaml.cs",
-              "DocumentMoniker": "D:\\LTWD\\Do_An\\LTWD_don\\Login_new.xaml.cs",
+              "DocumentMoniker": "D:\\LTWD\\LTWD_Doan\\Login_new.xaml.cs",
               "RelativeDocumentMoniker": "Login_new.xaml.cs",
-              "ToolTip": "D:\\LTWD\\Do_An\\LTWD_don\\Login_new.xaml.cs",
+              "ToolTip": "D:\\LTWD\\LTWD_Doan\\Login_new.xaml.cs",
               "RelativeToolTip": "Login_new.xaml.cs",
               "ViewState": "AQIAAAEAAAAAAAAAAAAqwBUAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-10T10:46:42.656Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Signup.xaml.cs",
-              "DocumentMoniker": "D:\\LTWD\\Do_An\\LTWD_don\\Signup.xaml.cs",
-              "RelativeDocumentMoniker": "Signup.xaml.cs",
-              "ToolTip": "D:\\LTWD\\Do_An\\LTWD_don\\Signup.xaml.cs",
-              "RelativeToolTip": "Signup.xaml.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAACUAAAAZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-10T09:44:49.645Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Main_page.xaml.cs",
-              "DocumentMoniker": "D:\\LTWD\\Do_An\\LTWD_don\\Main_page.xaml.cs",
-              "RelativeDocumentMoniker": "Main_page.xaml.cs",
-              "ToolTip": "D:\\LTWD\\Do_An\\LTWD_don\\Main_page.xaml.cs",
-              "RelativeToolTip": "Main_page.xaml.cs",
-              "ViewState": "AQIAAF4AAAAAAAAAAAAcwGoAAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-10T09:44:38.502Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Main_page.xaml",
-              "DocumentMoniker": "D:\\LTWD\\Do_An\\LTWD_don\\Main_page.xaml",
-              "RelativeDocumentMoniker": "Main_page.xaml",
-              "ToolTip": "D:\\LTWD\\Do_An\\LTWD_don\\Main_page.xaml",
-              "RelativeToolTip": "Main_page.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-03-10T09:15:47.473Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-10T10:46:42.656Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "Enum_for_MBCustom.cs",
-              "DocumentMoniker": "D:\\LTWD\\Do_An\\LTWD_don\\Enum_for_MBCustom.cs",
-              "RelativeDocumentMoniker": "Enum_for_MBCustom.cs",
-              "ToolTip": "D:\\LTWD\\Do_An\\LTWD_don\\Enum_for_MBCustom.cs",
-              "RelativeToolTip": "Enum_for_MBCustom.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAJAAAA",
+              "Title": "Signup.xaml.cs",
+              "DocumentMoniker": "D:\\LTWD\\LTWD_Doan\\Signup.xaml.cs",
+              "RelativeDocumentMoniker": "Signup.xaml.cs",
+              "ToolTip": "D:\\LTWD\\LTWD_Doan\\Signup.xaml.cs",
+              "RelativeToolTip": "Signup.xaml.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAACUAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-10T06:50:32.837Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-10T09:44:49.645Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Main_page.xaml.cs",
+              "DocumentMoniker": "D:\\LTWD\\LTWD_Doan\\Main_page.xaml.cs",
+              "RelativeDocumentMoniker": "Main_page.xaml.cs",
+              "ToolTip": "D:\\LTWD\\LTWD_Doan\\Main_page.xaml.cs",
+              "RelativeToolTip": "Main_page.xaml.cs",
+              "ViewState": "AQIAAF4AAAAAAAAAAAAcwGoAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-10T09:44:38.502Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Main_page.xaml",
+              "DocumentMoniker": "D:\\LTWD\\LTWD_Doan\\Main_page.xaml",
+              "RelativeDocumentMoniker": "Main_page.xaml",
+              "ToolTip": "D:\\LTWD\\LTWD_Doan\\Main_page.xaml",
+              "RelativeToolTip": "Main_page.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-03-10T09:15:47.473Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "Enum_for_MBCustom.cs",
+              "DocumentMoniker": "D:\\LTWD\\LTWD_Doan\\Enum_for_MBCustom.cs",
+              "RelativeDocumentMoniker": "Enum_for_MBCustom.cs",
+              "ToolTip": "D:\\LTWD\\LTWD_Doan\\Enum_for_MBCustom.cs",
+              "RelativeToolTip": "Enum_for_MBCustom.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-10T06:50:32.837Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "App.xaml.cs",
-              "DocumentMoniker": "D:\\LTWD\\Do_An\\LTWD_don\\App.xaml.cs",
+              "DocumentMoniker": "D:\\LTWD\\LTWD_Doan\\App.xaml.cs",
               "RelativeDocumentMoniker": "App.xaml.cs",
-              "ToolTip": "D:\\LTWD\\Do_An\\LTWD_don\\App.xaml.cs",
+              "ToolTip": "D:\\LTWD\\LTWD_Doan\\App.xaml.cs",
               "RelativeToolTip": "App.xaml.cs",
               "ViewState": "AQIAAAoAAAAAAAAAAAAAwBcAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -147,11 +153,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Login_new.xaml",
-              "DocumentMoniker": "D:\\LTWD\\Do_An\\LTWD_don\\Login_new.xaml",
+              "DocumentMoniker": "D:\\LTWD\\LTWD_Doan\\Login_new.xaml",
               "RelativeDocumentMoniker": "Login_new.xaml",
-              "ToolTip": "D:\\LTWD\\Do_An\\LTWD_don\\Login_new.xaml",
+              "ToolTip": "D:\\LTWD\\LTWD_Doan\\Login_new.xaml",
               "RelativeToolTip": "Login_new.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-03-10T08:47:15.25Z",
