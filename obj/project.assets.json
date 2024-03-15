@@ -2432,11 +2432,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\LTWD\\LTWD_Doan\\WPF_Market.csproj",
+      "projectUniqueName": "C:\\Users\\LAPTOP\\OneDrive\\Desktop\\LTWD\\WPF_Market.csproj",
       "projectName": "WPF_Market",
-      "projectPath": "D:\\LTWD\\LTWD_Doan\\WPF_Market.csproj",
+      "projectPath": "C:\\Users\\LAPTOP\\OneDrive\\Desktop\\LTWD\\WPF_Market.csproj",
       "packagesPath": "C:\\Users\\LAPTOP\\.nuget\\packages\\",
-      "outputPath": "D:\\LTWD\\LTWD_Doan\\obj\\",
+      "outputPath": "C:\\Users\\LAPTOP\\OneDrive\\Desktop\\LTWD\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

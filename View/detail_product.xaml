@@ -1,0 +1,217 @@
+﻿<Page x:Class="WPF_Market.View.detail_product"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d" 
+      d:DesignHeight="670" d:DesignWidth="1280"
+      ShowsNavigationUI="False"
+      IsEnabled="True"
+      MinHeight="670"
+      MinWidth="1280"
+      Title="detail_product">
+
+
+    <Grid>
+        <Grid Background="Transparent">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="100"/>
+            </Grid.RowDefinitions>
+            <Border CornerRadius="5" BorderThickness="1"
+                    Background="#EEEEEE">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="550"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    
+                    <Grid Grid.Column="0">
+                        <Image Source="/images/Dat_test_background.jpg"
+                               VerticalAlignment="Top"
+                               Margin="10 20 10 0"></Image>
+                        <ScrollViewer VerticalAlignment="Bottom" Height="120" HorizontalScrollBarVisibility="Visible"
+                                      VerticalScrollBarVisibility="Hidden">
+
+                            <StackPanel VerticalAlignment="Bottom" Height="120" Orientation="Horizontal">
+                                <Image Source="/img/moto.jpg"
+                                            Height="120"
+                                            Width="120"
+                                            Margin="5 0"
+                                            Stretch="Uniform"/>
+                                <Image Source="/img/moto.jpg"
+                                            Height="120"
+                                            Width="120"
+                                            Margin="5 0"
+                                            Stretch="Uniform"/>
+                                <Image Source="/img/moto.jpg"
+                                            Height="120"
+                                            Width="120"
+                                            Margin="5 0"
+                                            Stretch="Uniform"/>
+                                <Image Source="/img/moto.jpg"
+                                            Height="120"
+                                            Width="120"
+                                            Margin="5 0"
+                                            Stretch="Uniform"/>
+                                <Image Source="/img/moto.jpg"
+                                            Height="120"
+                                            Width="120"
+                                            Margin="5 0"
+                                            Stretch="Uniform"/>
+                            </StackPanel>
+
+                        </ScrollViewer>
+                        
+                    </Grid>
+                   
+                    <Grid Grid.Column="1">
+                        <StackPanel Orientation="Vertical" HorizontalAlignment="Left"  Margin="20 0 0 0" >
+                            <TextBlock Text="CBR1000RR-R Fireblade SP"
+                                       FontSize="30"
+                                       FontWeight="DemiBold"
+                                       Margin="20 20 0 0"
+                                       Foreground="#5F5D5C"
+                                       FontFamily="Dubai"/>
+                            
+                            <materialDesign:RatingBar
+                                x:Name="ReadOnlyRatingBar"
+                                IsReadOnly="True"
+                                Value="3.5"
+                                Margin="20 0 "/>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock x:Name="tbl_review"
+                                           Text="999 reviews"
+                                           Margin="20 0"
+                                           FontSize="20"
+                                           Foreground="#B6A0B3"
+                                           />
+                                <Button Background="Transparent">
+                                    <materialDesign:PackIcon Kind="CommentEye"
+                                                             Height="25"
+                                                             Width="25"
+                                                             Foreground="Black"/>
+                                </Button>
+                            </StackPanel>
+                            <TextBlock x:Name="Tong_quan"
+                                       Text="Mẫu Fireblade được thiết kế mới với một ngoại hình dữ dằn, mạnh mẽ hơn cùng với tính khí động học thừa hưởng từ mẫu xe đua MotoGP RC213V"
+                                       Margin="20"
+                                       FontSize="20"
+                                       Foreground="#A6A0A1"
+                                       TextWrapping="Wrap"/>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="PRICE: "
+                                           FontSize="25"
+                                           VerticalAlignment="Center"
+                                           FontFamily="Dubai"
+                                           Margin="20 0"
+                                           Foreground="#6B605E"
+                                           FontWeight="Bold"/>
+                                <TextBlock x:Name="price"
+                                           FontSize="25"
+                                           Text="1.050.500.000 VND"
+                                           Foreground="#0FC20F"
+                                           VerticalAlignment="Center"
+                                           FontFamily="Dubai"
+                                           FontWeight="Bold"/>
+                                
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="SIZES: "
+                                           FontSize="25"
+                                           VerticalAlignment="Center"
+                                           FontFamily="Dubai"
+                                           Foreground="#6B605E"
+                                           Margin="20 0"
+                                           FontWeight="Bold"/>
+                                <Button Content="S"
+                                        VerticalContentAlignment="Center"
+                                        Foreground="Black"
+                                        FontFamily="Dubai"
+                                        materialDesign:ButtonAssist.CornerRadius="22" 
+                                        FontSize="25" Height="45" Width="55" 
+                                        HorizontalContentAlignment="Center" 
+                                        Style="{StaticResource MaterialDesignFlatButton}" />
+                                <Button Content="M"
+                                        Foreground="Black"
+                                        materialDesign:ButtonAssist.CornerRadius="22" 
+                                        FontSize="25" Height="45" Width="55" 
+                                        HorizontalContentAlignment="Center" 
+                                        Style="{StaticResource MaterialDesignFlatButton}" />
+                                <Button Content="L"
+                                        Foreground="Black"
+                                        materialDesign:ButtonAssist.CornerRadius="22" 
+                                        FontSize="25" Height="45" Width="55" 
+                                        HorizontalContentAlignment="Center" 
+                                        Style="{StaticResource MaterialDesignFlatButton}" />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="COLORS: "
+                                           FontSize="25"
+                                           Foreground="#6B605E"
+                                           VerticalAlignment="Center"
+                                           FontFamily="Dubai"
+                                           Margin="20 0"
+                                           FontWeight="Bold"/>
+                                <Button Background="Blue" Margin="20 0"/>
+                                <Button Background="Yellow" Margin="20 0"/>
+                                <Button Background="Red" Margin ="20 0"/>
+
+
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Number of Products: "
+                                           FontSize="25"
+                                           VerticalAlignment="Center"
+                                           FontFamily="Dubai"
+                                           Foreground="#6B605E"
+                                           Margin="20 0"
+                                           FontWeight="Bold"/>
+                                <ComboBox x:Name="cbb_num"
+                                          Height="27"
+                                          Width="150"
+                                          materialDesign:HintAssist.Hint="How many do you want?"
+                                          materialDesign:HintAssist.FontFamily="Dubai"
+                                          materialDesign:HintAssist.HintOpacity=".26"
+                                          IsEditable="True">
+                                    
+                                    <ComboBoxItem Content="1" />
+                                    <ComboBoxItem Content="2" />
+                                    <ComboBoxItem Content="3" />
+                                    <ComboBoxItem Content="4" />
+                                </ComboBox>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                                <Button 
+                                        Background="#FE9E1A" 
+                                        Foreground="#645A4C" 
+                                        FontSize="20" 
+                                        materialDesign:ButtonAssist.CornerRadius="15" 
+                                        Height="70" Width="70">
+                                    <materialDesign:PackIcon Kind="Heart"
+                                                             Height="40"
+                                                             Width="40"/>
+                                </Button>
+                                <Button Content="Add to the cart" 
+                                        Background="#FE9E1A" 
+                                        Foreground="#645A4C" 
+                                        FontSize="20" 
+                                        Margin="10 45"
+                                        FontFamily="Dubai"
+                                        FontWeight="Bold"
+                                        materialDesign:ButtonAssist.CornerRadius="15" 
+                                        Height="70" Width="200"/>
+                                
+                            </StackPanel>
+                        </StackPanel>
+                    </Grid>
+                </Grid>
+            </Border>
+            <Border CornerRadius="5" BorderThickness="1"
+                    Background="#EEEEEE" Grid.Row="1">
+                
+            </Border>
+        </Grid>
+    </Grid>
+</Page>

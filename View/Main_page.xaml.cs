@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using WPF_Market.Model;
 
-namespace WPF_Market
+namespace WPF_Market.View
 {
     /// <summary>
     /// Interaction logic for Main_page.xaml

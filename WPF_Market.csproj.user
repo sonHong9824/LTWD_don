@@ -16,7 +16,13 @@
     <Compile Update="detail_product.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\Frame_Home.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\Login_new.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Main_Board.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\Main_page.xaml.cs">
@@ -48,7 +54,13 @@
     <Page Update="detail_product.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="View\Frame_Home.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="View\Login_new.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Main_Board.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\Main_page.xaml">

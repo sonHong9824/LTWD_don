@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using static MaterialDesignThemes.Wpf.Theme;
 
-namespace WPF_Market
+namespace WPF_Market.View
 {
     /// <summary>
     /// Interaction logic for Custom_mb.xaml

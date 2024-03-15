@@ -10,21 +10,9 @@
       MinHeight="450"
       Title="product">
     <Border CornerRadius="10"
-            BorderThickness="3">
-        <Border.BorderBrush>
-            <LinearGradientBrush>
-                <GradientStop Color="AliceBlue" Offset="0"></GradientStop>
-                <GradientStop Color= "DeepSkyBlue" Offset="0.5"></GradientStop>
-                <GradientStop Color="LightSeaGreen" Offset="1"></GradientStop>
-            </LinearGradientBrush>
-        </Border.BorderBrush>
-        <Border.Background>
-            <LinearGradientBrush>
-                <GradientStop Color="AliceBlue" Offset="0"></GradientStop>
-                <GradientStop Color= "DeepSkyBlue" Offset="0.5"></GradientStop>
-                <GradientStop Color="LightSeaGreen" Offset="1"></GradientStop>
-            </LinearGradientBrush>
-        </Border.Background>
+            BorderThickness="3"
+            Background="White">
+       
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="40"/>
@@ -154,10 +142,10 @@
                         </StackPanel>
                     </Button>
                     <Button 
-    Background="#F5F5F5"
-    Width="160"
-    Height="240"
-    Margin="15">
+                        Background="#F5F5F5"
+                        Width="160"
+                        Height="240"
+                        Margin="15">    
                         <StackPanel Height="240">
                             <Grid>
                                 <Image Source="/Image_shopping/keyboard1.jpg"

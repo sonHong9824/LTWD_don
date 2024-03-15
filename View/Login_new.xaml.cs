@@ -14,7 +14,7 @@ using System.Windows.Shapes;
 using WPF_Market.Model;
 using WPF_Market.ViewModel;
 
-namespace WPF_Market
+namespace WPF_Market.View
 {
     /// <summary>
     /// Interaction logic for Login_new.xaml
@@ -49,7 +49,7 @@ namespace WPF_Market
             if (acccount != null) 
             {
                 new Custom_mb("Login successfully!\nWelcome back, " + acccount.User_name, Custom_mb.MessageType.Success, Custom_mb.MessageButtons.Ok).ShowDialog();
-                new Main_page().Show();
+                new Main_Board().ShowDialog();
                 this.Close();
                 return;
             }
