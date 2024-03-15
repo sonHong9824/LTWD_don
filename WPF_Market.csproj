@@ -47,6 +47,7 @@
     <None Remove="images\logout.png" />
     <None Remove="images\Maximized.png" />
     <None Remove="images\menu.png" />
+    <None Remove="images\moto.jpg" />
     <None Remove="images\password.png" />
     <None Remove="images\search-white.png" />
     <None Remove="images\search.png" />
@@ -107,6 +108,7 @@
     <Resource Include="images\logout.png" />
     <Resource Include="images\Maximized.png" />
     <Resource Include="images\menu.png" />
+    <Resource Include="images\moto.jpg" />
     <Resource Include="images\password.png" />
     <Resource Include="images\search-white.png" />
     <Resource Include="images\search.png" />

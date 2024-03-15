@@ -117,6 +117,7 @@ C:\Users\LAPTOP\OneDrive\Desktop\LTWD\obj\Debug\net6.0-windows\WPF_Market.pdb
 C:\Users\LAPTOP\OneDrive\Desktop\LTWD\obj\Debug\net6.0-windows\WPF_Market.genruntimeconfig.cache
 C:\Users\LAPTOP\OneDrive\Desktop\LTWD\obj\Debug\net6.0-windows\ref\WPF_Market.dll
 D:\HK2_23-24_LTwindows\15-3\bin\Debug\net6.0-windows\WPF_Market.exe
+D:\HK2_23-24_LTwindows\15-3\bin\Debug\net6.0-windows\WPF_Market.dll.config
 D:\HK2_23-24_LTwindows\15-3\bin\Debug\net6.0-windows\WPF_Market.deps.json
 D:\HK2_23-24_LTwindows\15-3\bin\Debug\net6.0-windows\WPF_Market.runtimeconfig.json
 D:\HK2_23-24_LTwindows\15-3\bin\Debug\net6.0-windows\WPF_Market.dll
