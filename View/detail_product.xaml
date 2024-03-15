@@ -5,20 +5,21 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       mc:Ignorable="d" 
-      d:DesignHeight="670" d:DesignWidth="1280"
+      d:DesignWidth="1280"
       ShowsNavigationUI="False"
       IsEnabled="True"
       MinHeight="670"
       MinWidth="1280"
       Title="detail_product">
 
-
+    <ScrollViewer >
     <Grid>
         <Grid Background="Transparent">
             <Grid.RowDefinitions>
                 <RowDefinition />
-                <RowDefinition Height="100"/>
-            </Grid.RowDefinitions>
+                    <RowDefinition MinHeight="120"/>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
             <Border CornerRadius="5" BorderThickness="1"
                     Background="#EEEEEE">
                 <Grid>
@@ -28,34 +29,34 @@
                     </Grid.ColumnDefinitions>
                     
                     <Grid Grid.Column="0">
-                        <Image Source="/images/Dat_test_background.jpg"
+                        <Image Source="/images/moto.jpg"
                                VerticalAlignment="Top"
                                Margin="10 20 10 0"></Image>
                         <ScrollViewer VerticalAlignment="Bottom" Height="120" HorizontalScrollBarVisibility="Visible"
                                       VerticalScrollBarVisibility="Hidden">
 
                             <StackPanel VerticalAlignment="Bottom" Height="120" Orientation="Horizontal">
-                                <Image Source="/images/Dat_test_background.jpg"
+                                <Image Source="/images/moto.jpg"
                                             Height="120"
                                             Width="120"
                                             Margin="5 0"
                                             Stretch="Uniform"/>
-                                <Image Source="/images/Dat_test_background.jpg"
+                                <Image Source="/images/moto.jpg"
                                             Height="120"
                                             Width="120"
                                             Margin="5 0"
                                             Stretch="Uniform"/>
-                                <Image Source="/images/Dat_test_background.jpg"
+                                <Image Source="/images/moto.jpg"
                                             Height="120"
                                             Width="120"
                                             Margin="5 0"
                                             Stretch="Uniform"/>
-                                <Image Source="/images/Dat_test_background.jpg"
+                                <Image Source="/images/moto.jpg"
                                             Height="120"
                                             Width="120"
                                             Margin="5 0"
                                             Stretch="Uniform"/>
-                                <Image Source="/images/Dat_test_background.jpg"
+                                <Image Source="/images/moto.jpg"
                                             Height="120"
                                             Width="120"
                                             Margin="5 0"
@@ -100,6 +101,20 @@
                                        FontSize="20"
                                        Foreground="#A6A0A1"
                                        TextWrapping="Wrap"/>
+                            <TextBlock x:Name="txlb_addShop"
+                                       FontSize="25"
+                                        Margin="20 0"
+                                        FontWeight="Bold">
+                                <Run Foreground="#5F5D5C">Shop:</Run>
+                                <Run Foreground="#A6A0A1">diachi</Run>
+                            </TextBlock>
+                            <TextBlock x:Name="like_new"
+                                       FontSize="25"
+                                       Margin="20 0"
+                                       FontWeight="Bold">
+                                <Run Foreground="#5F5D5C">Like New: </Run>
+                                <Run Foreground="#A6A0A1">100%</Run>
+                            </TextBlock>
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock Text="PRICE: "
                                            FontSize="25"
@@ -210,8 +225,30 @@
             </Border>
             <Border CornerRadius="5" BorderThickness="1"
                     Background="#EEEEEE" Grid.Row="1">
-                
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="Detail Information"
+                               FontSize="30"
+                               FontFamily="Dubai"
+                               Margin="20 0"
+                               FontWeight="Bold">
+                        
+                    </TextBlock>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Status"
+                                   FontSize="20"
+                                   Margin="20 0"></TextBlock>
+                        <TextBlock x:Name="txbl_status"
+                                   TextWrapping="Wrap"
+                                   FontSize="50"
+                                   Margin="20 0"
+                                   Width="1100"
+                                   
+                                   Text="sklfhashfasdhausdhausdhaiaishduaihsahsudhaiusdhaiushdaushdiuashdasuihdaiuhdaiuhsduahdaiushdiuahsiuahduiahsuidhaiushduahsduahdahsduashdsfhsdofhsoifhasoifhasoifhsofhsiodfhsoidfasfsfsodifjsdoifsofishdfoishfoishfoishfsihfsihfosdhfoishdfsoidfhsiofhsoiihfsoihfsoihfsoifhhsdiofhsdo"></TextBlock>
+                    </StackPanel>
+                </StackPanel>
             </Border>
+            
         </Grid>
     </Grid>
+    </ScrollViewer>
 </Page>

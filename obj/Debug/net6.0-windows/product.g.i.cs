@@ -53,7 +53,7 @@ namespace WPF_Market {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/WPF_Market;component/product.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/WPF_Market;V1.0.0.0;component/product.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\product.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
