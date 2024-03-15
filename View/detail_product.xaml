@@ -35,27 +35,27 @@
                                       VerticalScrollBarVisibility="Hidden">
 
                             <StackPanel VerticalAlignment="Bottom" Height="120" Orientation="Horizontal">
-                                <Image Source="/img/moto.jpg"
+                                <Image Source="/images/Dat_test_background.jpg"
                                             Height="120"
                                             Width="120"
                                             Margin="5 0"
                                             Stretch="Uniform"/>
-                                <Image Source="/img/moto.jpg"
+                                <Image Source="/images/Dat_test_background.jpg"
                                             Height="120"
                                             Width="120"
                                             Margin="5 0"
                                             Stretch="Uniform"/>
-                                <Image Source="/img/moto.jpg"
+                                <Image Source="/images/Dat_test_background.jpg"
                                             Height="120"
                                             Width="120"
                                             Margin="5 0"
                                             Stretch="Uniform"/>
-                                <Image Source="/img/moto.jpg"
+                                <Image Source="/images/Dat_test_background.jpg"
                                             Height="120"
                                             Width="120"
                                             Margin="5 0"
                                             Stretch="Uniform"/>
-                                <Image Source="/img/moto.jpg"
+                                <Image Source="/images/Dat_test_background.jpg"
                                             Height="120"
                                             Width="120"
                                             Margin="5 0"
