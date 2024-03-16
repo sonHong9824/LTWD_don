@@ -79,7 +79,7 @@
                             <materialDesign:RatingBar
                                 x:Name="ReadOnlyRatingBar"
                                 IsReadOnly="True"
-                                Value="3.5"
+                                Value="3"
                                 Margin="20 0 "/>
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock x:Name="tbl_review"
