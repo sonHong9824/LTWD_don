@@ -14,6 +14,7 @@
     <Page.DataContext>
         <local:ProductModel></local:ProductModel>
     </Page.DataContext>
+    
     <Border CornerRadius="10"
             BorderThickness="3"
             Background="White">
@@ -31,7 +32,8 @@
                             <Border BorderBrush="#37B89C"
                                     CornerRadius="10"
                                     BorderThickness="2"
-                                    Margin="5,5,5,5">
+                                    Margin="5,5,5,5"
+                                    >
                                 
                           
                             <Button BorderThickness="0"
@@ -39,7 +41,10 @@
                                 Background="Transparent"
                                 Width="160"
                                 Height="260"
-                                Margin="0">
+                                Margin="0"
+                                    Command="{Binding SeeDetailCommand}"
+                                    CommandParameter="{Binding}"
+                                    >
                                 <StackPanel>
                                     <Grid>
                                         <Image x:Name="Illustration"

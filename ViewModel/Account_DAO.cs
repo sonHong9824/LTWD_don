@@ -15,7 +15,7 @@ namespace WPF_Market.ViewModel
         {
             if (string.IsNullOrEmpty(user_name) || string.IsNullOrEmpty(password)) { return null; }
             SQLConnection.conn.Open();
-            string cmd = string.Format("Select * from Account where user_name = '{0}'", user_name);
+            string cmd = string.Format("Select * from Account where user_name = '{0}' and password = '{1}'", user_name,password);
             SqlCommand sqlCommand = new SqlCommand(cmd,SQLConnection.conn);
             SqlDataReader reader = sqlCommand.ExecuteReader();
             Acccount account = null;
