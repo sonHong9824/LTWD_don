@@ -13,9 +13,6 @@
     <Compile Update="View\Custom_mb.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="detail_product.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="View\Frame_Home.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -31,7 +28,7 @@
     <Compile Update="myAccount_page.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="product.xaml.cs">
+    <Compile Update="View\product.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Sale_Product_page.xaml.cs">
@@ -51,9 +48,6 @@
     <Page Update="View\Custom_mb.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="detail_product.xaml">
-      <SubType>Designer</SubType>
-    </Page>
     <Page Update="View\Frame_Home.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -69,7 +63,7 @@
     <Page Update="myAccount_page.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="product.xaml">
+    <Page Update="View\product.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Sale_Product_page.xaml">

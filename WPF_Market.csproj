@@ -46,6 +46,7 @@
     <None Remove="images\logoC.png" />
     <None Remove="images\logout.png" />
     <None Remove="images\Maximized.png" />
+    <None Remove="images\MayTinh1.jpg" />
     <None Remove="images\menu.png" />
     <None Remove="images\moto.jpg" />
     <None Remove="images\password.png" />
@@ -68,6 +69,56 @@
     <None Remove="Image_shopping\technology.png" />
     <None Remove="Image_shopping\vegetables.png" />
     <None Remove="Image_shopping\vegetables_sale.png" />
+    <None Remove="SanPham\10\Images\mypham1.jpg" />
+    <None Remove="SanPham\10\Images\mypham2.jpg" />
+    <None Remove="SanPham\10\Images\mypham3.jpg" />
+    <None Remove="SanPham\10\Images\mypham4.jpg" />
+    <None Remove="SanPham\10\Images\mypham5.jpg" />
+    <None Remove="SanPham\1\Images\maytinh1.jpg" />
+    <None Remove="SanPham\1\Images\maytinh2.jpg" />
+    <None Remove="SanPham\1\Images\maytinh3.jpg" />
+    <None Remove="SanPham\1\Images\maytinh4.jpg" />
+    <None Remove="SanPham\1\Images\maytinh5.jpg" />
+    <None Remove="SanPham\2\Images\maytinh1.jpg" />
+    <None Remove="SanPham\2\Images\maytinh2.jpg" />
+    <None Remove="SanPham\2\Images\maytinh3.jpg" />
+    <None Remove="SanPham\2\Images\maytinh4.jpg" />
+    <None Remove="SanPham\2\Images\maytinh5.jpg" />
+    <None Remove="SanPham\3\Images\sach1.jpg" />
+    <None Remove="SanPham\3\Images\sach2.jpg" />
+    <None Remove="SanPham\3\Images\sach3.jpg" />
+    <None Remove="SanPham\3\Images\sach4.jpg" />
+    <None Remove="SanPham\3\Images\sach5.jpg" />
+    <None Remove="SanPham\4\Images\sach1.jpg" />
+    <None Remove="SanPham\4\Images\sach2.jpg" />
+    <None Remove="SanPham\4\Images\sach3.jpg" />
+    <None Remove="SanPham\4\Images\sach4.jpg" />
+    <None Remove="SanPham\4\Images\sach5.jpg" />
+    <None Remove="SanPham\5\Images\ao1.jpg" />
+    <None Remove="SanPham\5\Images\ao2.jpg" />
+    <None Remove="SanPham\5\Images\ao3.jpg" />
+    <None Remove="SanPham\5\Images\ao4.jpg" />
+    <None Remove="SanPham\5\Images\ao5.jpg" />
+    <None Remove="SanPham\6\Images\quanao1.jpg" />
+    <None Remove="SanPham\6\Images\quanao2.jpg" />
+    <None Remove="SanPham\6\Images\quanao3.jpg" />
+    <None Remove="SanPham\6\Images\quanao4.jpg" />
+    <None Remove="SanPham\6\Images\quanao5.jpg" />
+    <None Remove="SanPham\7\Images\trangsuc1.jpg" />
+    <None Remove="SanPham\7\Images\trangsuc2.jpg" />
+    <None Remove="SanPham\7\Images\trangsuc3.jpg" />
+    <None Remove="SanPham\7\Images\trangsuc4.jpg" />
+    <None Remove="SanPham\7\Images\trangsuc5.jpg" />
+    <None Remove="SanPham\8\Images\trangsuc1.jpg" />
+    <None Remove="SanPham\8\Images\trangsuc2.jpg" />
+    <None Remove="SanPham\8\Images\trangsuc3.jpg" />
+    <None Remove="SanPham\8\Images\trangsuc4.jpg" />
+    <None Remove="SanPham\8\Images\trangsuc5.jpg" />
+    <None Remove="SanPham\9\Images\mypham1.jpg" />
+    <None Remove="SanPham\9\Images\mypham2.jpg" />
+    <None Remove="SanPham\9\Images\mypham3.jpg" />
+    <None Remove="SanPham\9\Images\mypham4.jpg" />
+    <None Remove="SanPham\9\Images\mypham5.jpg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -75,6 +126,10 @@
     <Page Remove="MainWindow.xaml" />
     <Page Remove="View\Silde2.xaml" />
     <Page Remove="View\Slide1.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="SanPham\9\Images\mypham1.jpg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -107,6 +162,7 @@
     <Resource Include="images\logoC.png" />
     <Resource Include="images\logout.png" />
     <Resource Include="images\Maximized.png" />
+    <Resource Include="images\MayTinh1.jpg" />
     <Resource Include="images\menu.png" />
     <Resource Include="images\moto.jpg" />
     <Resource Include="images\password.png" />
@@ -135,6 +191,55 @@
   <ItemGroup>
     <Resource Include="Image_shopping\restaurant.png" />
     <Resource Include="Image_shopping\vegetables_sale.png" />
+    <Resource Include="SanPham\10\Images\mypham1.jpg" />
+    <Resource Include="SanPham\10\Images\mypham2.jpg" />
+    <Resource Include="SanPham\10\Images\mypham3.jpg" />
+    <Resource Include="SanPham\10\Images\mypham4.jpg" />
+    <Resource Include="SanPham\10\Images\mypham5.jpg" />
+    <Resource Include="SanPham\1\Images\maytinh1.jpg" />
+    <Resource Include="SanPham\1\Images\maytinh2.jpg" />
+    <Resource Include="SanPham\1\Images\maytinh3.jpg" />
+    <Resource Include="SanPham\1\Images\maytinh4.jpg" />
+    <Resource Include="SanPham\1\Images\maytinh5.jpg" />
+    <Resource Include="SanPham\2\Images\maytinh1.jpg" />
+    <Resource Include="SanPham\2\Images\maytinh2.jpg" />
+    <Resource Include="SanPham\2\Images\maytinh3.jpg" />
+    <Resource Include="SanPham\2\Images\maytinh4.jpg" />
+    <Resource Include="SanPham\2\Images\maytinh5.jpg" />
+    <Resource Include="SanPham\3\Images\sach1.jpg" />
+    <Resource Include="SanPham\3\Images\sach2.jpg" />
+    <Resource Include="SanPham\3\Images\sach3.jpg" />
+    <Resource Include="SanPham\3\Images\sach4.jpg" />
+    <Resource Include="SanPham\3\Images\sach5.jpg" />
+    <Resource Include="SanPham\4\Images\sach1.jpg" />
+    <Resource Include="SanPham\4\Images\sach2.jpg" />
+    <Resource Include="SanPham\4\Images\sach3.jpg" />
+    <Resource Include="SanPham\4\Images\sach4.jpg" />
+    <Resource Include="SanPham\4\Images\sach5.jpg" />
+    <Resource Include="SanPham\5\Images\ao1.jpg" />
+    <Resource Include="SanPham\5\Images\ao2.jpg" />
+    <Resource Include="SanPham\5\Images\ao3.jpg" />
+    <Resource Include="SanPham\5\Images\ao4.jpg" />
+    <Resource Include="SanPham\5\Images\ao5.jpg" />
+    <Resource Include="SanPham\6\Images\quanao1.jpg" />
+    <Resource Include="SanPham\6\Images\quanao2.jpg" />
+    <Resource Include="SanPham\6\Images\quanao3.jpg" />
+    <Resource Include="SanPham\6\Images\quanao4.jpg" />
+    <Resource Include="SanPham\6\Images\quanao5.jpg" />
+    <Resource Include="SanPham\7\Images\trangsuc1.jpg" />
+    <Resource Include="SanPham\7\Images\trangsuc2.jpg" />
+    <Resource Include="SanPham\7\Images\trangsuc3.jpg" />
+    <Resource Include="SanPham\7\Images\trangsuc4.jpg" />
+    <Resource Include="SanPham\7\Images\trangsuc5.jpg" />
+    <Resource Include="SanPham\8\Images\trangsuc1.jpg" />
+    <Resource Include="SanPham\8\Images\trangsuc2.jpg" />
+    <Resource Include="SanPham\8\Images\trangsuc3.jpg" />
+    <Resource Include="SanPham\8\Images\trangsuc4.jpg" />
+    <Resource Include="SanPham\8\Images\trangsuc5.jpg" />
+    <Resource Include="SanPham\9\Images\mypham2.jpg" />
+    <Resource Include="SanPham\9\Images\mypham3.jpg" />
+    <Resource Include="SanPham\9\Images\mypham4.jpg" />
+    <Resource Include="SanPham\9\Images\mypham5.jpg" />
   </ItemGroup>
 
   <ItemGroup>

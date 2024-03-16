@@ -23,7 +23,7 @@ namespace WPF_Market.View
         public Main_Board()
         {
             InitializeComponent();
-            F_display.Content = new detail_product();
+            F_display.Content = new product();
         }
 
         private void Window_MouseEnter(object sender, MouseEventArgs e)

@@ -49,7 +49,7 @@ namespace WPF_Market.View
             if (acccount != null) 
             {
                 new Custom_mb("Login successfully!\nWelcome back, " + acccount.User_name, Custom_mb.MessageType.Success, Custom_mb.MessageButtons.Ok).ShowDialog();
-                new Main_Board().ShowDialog();
+                new Main_Board().Show();
                 this.Close();
                 return;
             }
