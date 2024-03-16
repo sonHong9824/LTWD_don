@@ -177,3 +177,5 @@ C:\Users\LAPTOP\OneDrive\Desktop\LTWD\obj\Debug\net6.0-windows\ref\WPF_Market.dl
 D:\HK2_23-24_LTwindows\15-3\obj\Debug\net6.0-windows\View\product.g.cs
 D:\HK2_23-24_LTwindows\15-3\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
 D:\HK2_23-24_LTwindows\15-3\obj\Debug\net6.0-windows\View\product.baml
+D:\HK2_23-24_LTwindows\15-3\obj\Debug\net6.0-windows\View\Manage_Product.baml
+D:\HK2_23-24_LTwindows\15-3\obj\Debug\net6.0-windows\View\Manage_Product.g.cs

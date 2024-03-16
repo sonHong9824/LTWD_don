@@ -45,7 +45,7 @@ namespace WPF_Market.View
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            Acccount acccount = Account_DAO.Return_account(txt_user.Text,txt_password.ToString());
+            Acccount acccount = Account_DAO.Return_account(txt_user.Text,txt_password.Password.ToString());
             if (acccount != null) 
             {
                 new Custom_mb("Login successfully!\nWelcome back, " + acccount.User_name, Custom_mb.MessageType.Success, Custom_mb.MessageButtons.Ok).ShowDialog();

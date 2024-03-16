@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MaterialDesignThemes.Wpf;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.IO;
@@ -30,11 +31,11 @@ namespace WPF_Market.View
         {
             InitializeComponent();
 
-            this.DataContext = new ProductModel("/images/Shopee1.jpg", "Ten san pham: May tinh de ban", "Gia 10000", "Da ban 100", "Dia Diem: HCM", 4.5);
+          
             Button myButton = new Button();
             Container.Children.Add(myButton);
             myButton.SetValue(Control.TemplateProperty, Container.FindResource("ProductTemplate"));
-
+            this.DataContext = new ProductModel("/images/Shopee1.jpg", "Ten san pham: May tinh de ban", "Gia 10000", "Da ban 100", "Dia Diem: HCM", 4.5,myButton);
             SQLConnection.conn.Open();
             string cmd = string.Format("Select * from Kho");
             SqlCommand sqlCommand = new SqlCommand(cmd, SQLConnection.conn);
@@ -46,7 +47,7 @@ namespace WPF_Market.View
                 if (count == 10)
                 {
                     SQLConnection.conn.Close();
-                    this.DataContext = new ProductModel("/images/MayTinh1.jpg", "Ten san pham: May tinh de ban", "Gia 10000", "Da ban 100", "Dia Diem: HCM", 4.5);
+                    this.DataContext = new ProductModel("/images/MayTinh1.jpg", "Ten san pham: May tinh de ban", "Gia 10000", "Da ban 100", "Dia Diem: HCM", 4.5, myButton);
                     myButton = new Button();
                     Container.Children.Add(myButton);
                     myButton.SetValue(Control.TemplateProperty, Container.FindResource("ProductTemplate"));
@@ -83,15 +84,21 @@ namespace WPF_Market.View
                 string diadiem = "HCM";
                 double rating = Convert.ToDouble(reader["Rate"]);
                 count++;
-                ProductModel l_model = new ProductModel(linkImage, nameProduct, price, sold, diadiem, rating);
+
+              
                 // Tạo Button mới và gán ProductModel làm DataContext của nó
                 Button button = new Button();
-                button.DataContext = l_model;
+               
                 button.Template = Container.FindResource("ProductTemplate") as ControlTemplate;
+                ProductModel l_model = new ProductModel(linkImage, nameProduct, price, sold, diadiem, rating, button);
+
+               /* button.Command = l_model.SeeDetailCommand ; // Thay YourViewModel và YourCommand bằng ViewModel và ICommand thực tế của bạn
+                
+                button.CommandParameter = l_model;*/
+                button.DataContext = l_model;
                 // Thêm Button vào Container
                 Container.Children.Add(button);
             }
-          
         }
         public void SetDataContextProduct(product model)
         {
