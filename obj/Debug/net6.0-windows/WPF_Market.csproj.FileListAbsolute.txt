@@ -79,9 +79,7 @@ D:\HK2_23-24_LTwindows\15-3\obj\Debug\net6.0-windows\View\Login_new.baml
 D:\HK2_23-24_LTwindows\15-3\obj\Debug\net6.0-windows\View\Main_Board.baml
 D:\HK2_23-24_LTwindows\15-3\obj\Debug\net6.0-windows\View\Signup.baml
 D:\HK2_23-24_LTwindows\15-3\obj\Debug\net6.0-windows\Checkout.g.cs
-D:\HK2_23-24_LTwindows\15-3\obj\Debug\net6.0-windows\detail_product.g.cs
 D:\HK2_23-24_LTwindows\15-3\obj\Debug\net6.0-windows\myAccount_page.g.cs
-D:\HK2_23-24_LTwindows\15-3\obj\Debug\net6.0-windows\product.g.cs
 D:\HK2_23-24_LTwindows\15-3\obj\Debug\net6.0-windows\Sale_Product_page.g.cs
 D:\HK2_23-24_LTwindows\15-3\obj\Debug\net6.0-windows\Static_advertise_picture.g.cs
 D:\HK2_23-24_LTwindows\15-3\obj\Debug\net6.0-windows\View\Custom_mb.g.cs
@@ -96,9 +94,7 @@ D:\HK2_23-24_LTwindows\15-3\obj\Debug\net6.0-windows\WPF_Market_MarkupCompile.ca
 D:\HK2_23-24_LTwindows\15-3\obj\Debug\net6.0-windows\WPF_Market_MarkupCompile.lref
 D:\HK2_23-24_LTwindows\15-3\obj\Debug\net6.0-windows\App.baml
 D:\HK2_23-24_LTwindows\15-3\obj\Debug\net6.0-windows\Checkout.baml
-D:\HK2_23-24_LTwindows\15-3\obj\Debug\net6.0-windows\detail_product.baml
 D:\HK2_23-24_LTwindows\15-3\obj\Debug\net6.0-windows\myAccount_page.baml
-D:\HK2_23-24_LTwindows\15-3\obj\Debug\net6.0-windows\product.baml
 D:\HK2_23-24_LTwindows\15-3\obj\Debug\net6.0-windows\Sale_Product_page.baml
 D:\HK2_23-24_LTwindows\15-3\obj\Debug\net6.0-windows\Static_advertise_picture.baml
 D:\HK2_23-24_LTwindows\15-3\obj\Debug\net6.0-windows\View\Frame_Home.baml
@@ -178,3 +174,10 @@ C:\Users\LAPTOP\OneDrive\Desktop\LTWD\obj\Debug\net6.0-windows\refint\WPF_Market
 C:\Users\LAPTOP\OneDrive\Desktop\LTWD\obj\Debug\net6.0-windows\WPF_Market.pdb
 C:\Users\LAPTOP\OneDrive\Desktop\LTWD\obj\Debug\net6.0-windows\WPF_Market.genruntimeconfig.cache
 C:\Users\LAPTOP\OneDrive\Desktop\LTWD\obj\Debug\net6.0-windows\ref\WPF_Market.dll
+D:\HK2_23-24_LTwindows\15-3\obj\Debug\net6.0-windows\View\product.g.cs
+D:\HK2_23-24_LTwindows\15-3\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
+D:\HK2_23-24_LTwindows\15-3\obj\Debug\net6.0-windows\View\product.baml
+D:\HK2_23-24_LTwindows\15-3\obj\Debug\net6.0-windows\View\Manage_Product.baml
+D:\HK2_23-24_LTwindows\15-3\obj\Debug\net6.0-windows\View\Manage_Product.g.cs
+C:\Users\LAPTOP\OneDrive\Desktop\LTWD\obj\Debug\net6.0-windows\View\Manage_Product.g.cs
+C:\Users\LAPTOP\OneDrive\Desktop\LTWD\obj\Debug\net6.0-windows\View\Manage_Product.baml
