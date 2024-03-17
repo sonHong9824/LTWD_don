@@ -1,6 +1,7 @@
 ﻿using MaterialDesignThemes.Wpf;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
@@ -23,86 +24,52 @@ namespace WPF_Market.View
     /// <summary>
     /// Interaction logic for product.xaml
     /// </summary>
-    public delegate void DSetDataContextProduct(product product);
+
     public partial class product : Page
     {
-        
+        private ObservableCollection<ProductModel> listComponent;
+        private Dictionary<ProductModel, ICommand> productCommandPair;
         public product()
         {
+
             InitializeComponent();
+            IShowProductDetail showProductDetail = new DisplayDetailProduct();
+            ProductViewModel productViewModel = new ProductViewModel(showProductDetail);
+            listComponent = productViewModel.ProductList;
+            GenerateComponent();
+        }
 
-          
-            Button myButton = new Button();
-            Container.Children.Add(myButton);
-            myButton.SetValue(Control.TemplateProperty, Container.FindResource("ProductTemplate"));
-            this.DataContext = new ProductModel("/images/Shopee1.jpg", "Ten san pham: May tinh de ban", "Gia 10000", "Da ban 100", "Dia Diem: HCM", 4.5,myButton);
-            SQLConnection.conn.Open();
-            string cmd = string.Format("Select * from Kho");
-            SqlCommand sqlCommand = new SqlCommand(cmd, SQLConnection.conn);
-            SqlDataReader reader = sqlCommand.ExecuteReader();
-            ProductModel model;
-            int count = 0;
-            while (reader.Read())
+        public void GenerateComponent()
+        {
+            foreach (var item in listComponent)
             {
-                if (count == 10)
-                {
-                    SQLConnection.conn.Close();
-                    this.DataContext = new ProductModel("/images/MayTinh1.jpg", "Ten san pham: May tinh de ban", "Gia 10000", "Da ban 100", "Dia Diem: HCM", 4.5, myButton);
-                    myButton = new Button();
-                    Container.Children.Add(myButton);
-                    myButton.SetValue(Control.TemplateProperty, Container.FindResource("ProductTemplate"));
-                    myButton = new Button();
-                    Container.Children.Add(myButton);
-                    myButton.SetValue(Control.TemplateProperty, Container.FindResource("ProductTemplate"));
-                    myButton = new Button();
-                    Container.Children.Add(myButton);
-                    myButton.SetValue(Control.TemplateProperty, Container.FindResource("ProductTemplate"));
-                    myButton = new Button();
-                    Container.Children.Add(myButton);
-                    myButton.SetValue(Control.TemplateProperty, Container.FindResource("ProductTemplate"));
-                    myButton = new Button();
-                    Container.Children.Add(myButton);
-                    myButton.SetValue(Control.TemplateProperty, Container.FindResource("ProductTemplate"));
-                    myButton = new Button();
-                    Container.Children.Add(myButton);
-                    myButton.SetValue(Control.TemplateProperty, Container.FindResource("ProductTemplate"));
-                    myButton = new Button();
-                    Container.Children.Add(myButton);
-                    myButton.SetValue(Control.TemplateProperty, Container.FindResource("ProductTemplate"));
-                    myButton = new Button();
-                    Container.Children.Add(myButton);
-                    myButton.SetValue(Control.TemplateProperty, Container.FindResource("ProductTemplate"));
-                    return;
-                }
-                string filePath = @"C:\Users\LAPTOP\OneDrive\Desktop\LTWD\SanPham";
-                string nameProduct = "Ten san pham: " + reader["Ten"].ToString();
-                filePath += "/" + reader["Id_sanpham"].ToString().Trim()+"/Images.txt";
-                StreamReader stream = new StreamReader(filePath);
-                string linkImage = "/SanPham/" + reader["Id_sanpham"].ToString().Trim() + "/Images/"+ stream.ReadLine().Trim();
-                string price = "Gia: " + (Convert.ToDouble(reader["Gia"]) * (1- Convert.ToDouble(reader["Discount"]))).ToString("N2").Trim();
-                string sold = "Da ban: " + reader["NumberSold"].ToString().Trim();
-                string diadiem = "HCM";
-                double rating = Convert.ToDouble(reader["Rate"]);
-                count++;
-
-              
-                // Tạo Button mới và gán ProductModel làm DataContext của nó
                 Button button = new Button();
-               
+                button.Tag = item.Id_sanpham;
+                button.DataContext = item;
                 button.Template = Container.FindResource("ProductTemplate") as ControlTemplate;
-                ProductModel l_model = new ProductModel(linkImage, nameProduct, price, sold, diadiem, rating, button);
-
-               /* button.Command = l_model.SeeDetailCommand ; // Thay YourViewModel và YourCommand bằng ViewModel và ICommand thực tế của bạn
-                
-                button.CommandParameter = l_model;*/
-                button.DataContext = l_model;
-                // Thêm Button vào Container
+                button.CommandParameter = item;
+                //button.Command = productCommandPair[item];
+                button.Click += Button_Click;
                 Container.Children.Add(button);
             }
         }
-        public void SetDataContextProduct(product model)
+
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            this.DataContext = model;
+            Window window = Window.GetWindow(this);
+            detail_product product = new detail_product();
+            product.Owner = window;
+            product.ShowDialog();
+            
+        }
+        public class DisplayDetailProduct : IShowProductDetail
+        {
+            public void ShowProductDetail(ProductModel productModel)
+            {
+                MessageBox.Show(productModel.Id_sanpham.ToString());
+                detail_product product = new detail_product();
+                product.ShowDialog();
+            }
         }
     }
 }

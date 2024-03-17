@@ -13,47 +13,51 @@ namespace WPF_Market.Model
 {
     public class ProductModel 
     {
-        private string image_link;
+        private int id_sanpham;
+        private int id_shop;
         private string txt_NameProduct;
-        private string txt_Price;
-        private string txt_Sold;
-        private string txt_DiaDiem;
+        private double txt_Price;
+        private double discount;
+        private string like_New;
+        private string type;
         private double rating;
-        private bool execute;
-        private object diaglogHost;
+        private int number_Of_Product;
+        private int number_Sold;
+        private List<string> imageList;
+        string firstImage;
         public ProductModel()
         {
         }
 
-        public ProductModel(string image_link, string txt_NameProduct, string txt_Price, string txt_Sold, string txt_DiaDiem, double rating, object button)
+        public ProductModel(int id_sanpham, int id_shop, string txt_NameProduct, 
+            double txt_Price, double discount, string like_New, string type, double rating, 
+            int number_Of_Product, int number_Sold, List<string> imageList = null)
         {
-            this.image_link = image_link;
-            this.txt_NameProduct = txt_NameProduct;
-            this.txt_Price = txt_Price;
-            this.txt_Sold = txt_Sold;
-            this.txt_DiaDiem = txt_DiaDiem;
-            this.rating = rating;
-            SeeDetailCommand = new BaseViewModelCommand(ExecuteSeeDetailCommand);
-            this.DiaglogHost = button;
+            this.Id_sanpham = id_sanpham;
+            this.Id_shop = id_shop;
+            this.Txt_NameProduct = txt_NameProduct;
+            this.Txt_Price = txt_Price;
+            this.Discount = discount;
+            this.Like_New = like_New;
+            this.Type = type;
+            this.Rating = rating;
+            this.Number_Of_Product = number_Of_Product;
+            this.Number_Sold = number_Sold;
+            this.ImageList = imageList;
+            firstImage = imageList[0];
         }
 
-        public string Image_link { get => image_link; set => image_link = value; }
+        public int Id_sanpham { get => id_sanpham; set => id_sanpham = value; }
+        public int Id_shop { get => id_shop; set => id_shop = value; }
         public string Txt_NameProduct { get => txt_NameProduct; set => txt_NameProduct = value; }
-        public string Txt_Price { get => txt_Price; set => txt_Price = value; }
-        public string Txt_Sold { get => txt_Sold; set => txt_Sold = value; }
-        public string Txt_DiaDiem { get => txt_DiaDiem; set => txt_DiaDiem = value; }
+        public double Txt_Price { get => txt_Price/24000; set => txt_Price = value; }
+        public double Discount { get => discount; set => discount = value; }
+        public string Like_New { get => like_New; set => like_New = value; }
+        public string Type { get => type; set => type = value; }
         public double Rating { get => rating; set => rating = value; }
-
-        //Commands
-        public ICommand SeeDetailCommand {  get; }
-        public object DiaglogHost { get => diaglogHost; set => diaglogHost = value; }
-
-        private void ExecuteSeeDetailCommand(object obj)
-        {
-            Button button = (Button)this.DiaglogHost;
-            detail_product dp = new detail_product();
-            
-            MessageBox.Show("Heloo");
-        }
+        public int Number_Of_Product { get => number_Of_Product; set => number_Of_Product = value; }
+        public int Number_Sold { get => number_Sold; set => number_Sold = value; }
+        public List<string> ImageList { get => imageList; set => imageList = value; }
+        public string FirstImage { get => firstImage; set => firstImage = value; }
     }
 }

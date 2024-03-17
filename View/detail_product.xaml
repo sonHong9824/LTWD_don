@@ -1,4 +1,4 @@
-﻿<Page x:Class="WPF_Market.View.detail_product"
+﻿<Window x:Class="WPF_Market.View.detail_product"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -6,7 +6,7 @@
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       mc:Ignorable="d" 
       d:DesignWidth="1280"
-      ShowsNavigationUI="False"
+      WindowStartupLocation="CenterScreen"
       IsEnabled="True"
       MinHeight="670"
       MinWidth="1280"
@@ -251,4 +251,4 @@
         </Grid>
     </Grid>
     </ScrollViewer>
-</Page>
+</Window>

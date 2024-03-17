@@ -18,7 +18,7 @@ namespace WPF_Market.View
     /// <summary>
     /// Interaction logic for detail_product.xaml
     /// </summary>
-    public partial class detail_product : Page
+    public partial class detail_product : Window
     {
         public detail_product()
         {

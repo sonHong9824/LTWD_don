@@ -4,7 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-      xmlns:local="clr-namespace:WPF_Market.Model"
+      xmlns:local="clr-namespace:WPF_Market.ViewModel"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       MinWidth="800"
@@ -12,7 +12,7 @@
       Title="product"
       ShowsNavigationUI="False">
     <Page.DataContext>
-        <local:ProductModel></local:ProductModel>
+        <local:ProductViewModel></local:ProductViewModel>
     </Page.DataContext>
     
     <Border CornerRadius="10"
@@ -34,21 +34,19 @@
                                     BorderThickness="2"
                                     Margin="5,5,5,5"
                                     >
-                                
-                          
-                            <Button BorderThickness="0"
+                                <Button BorderThickness="0"
                                     BorderBrush="Transparent"
-                                Background="Transparent"
-                                Width="160"
-                                Height="260"
-                                Margin="0"
-                                    Command="{Binding SeeDetailCommand}"
+                                    Background="Transparent"
+                                    Width="160"
+                                    Height="260"
+                                    Margin="0"
+                                    Command="{Binding GetCommand}"
                                     CommandParameter="{Binding}"
                                     >
                                 <StackPanel>
                                     <Grid>
                                         <Image x:Name="Illustration"
-                                              Source="{Binding Image_link}"
+                                              Source="{Binding FirstImage}"
                                                MaxHeight="155"
                                                MaxWidth="160"
                                             Stretch="Fill"/>
@@ -59,14 +57,16 @@
                                             VerticalAlignment="Center"
                                             HorizontalAlignment="Center"
                                             FontSize="15"></TextBlock>
-                                    <TextBlock 
-                                            Text="{Binding Txt_Price}"
+                                        <TextBlock 
                                             TextTrimming="WordEllipsis"
                                             FontWeight="Medium"
                                             FontSize="18"
                                             Foreground="#EE4D2D"
-                                            HorizontalAlignment="Center"></TextBlock>
-                                    <materialDesign:RatingBar               
+                                            HorizontalAlignment="Center">
+                                            <Run Text="Price:"></Run>
+                                            <Run Text="{Binding Txt_Price, StringFormat='c'}"></Run>
+                                        </TextBlock>
+                                        <materialDesign:RatingBar               
                                            HorizontalAlignment="Center"  
                                            materialDesign:ColorZoneAssist.Foreground="Yellow"
                                            Foreground="LightYellow"                                  
@@ -77,18 +77,24 @@
                                            Value="{Binding Rating}"  
                                      />
                                     <TextBlock x:Name="txt_soluongdaban"
-                                            Text="{Binding Txt_Sold}"
+                                            
                                             TextTrimming="WordEllipsis"
                                             Margin="0,0,0,0"
-                                            HorizontalAlignment="Center"></TextBlock>
+                                            HorizontalAlignment="Center">
+                                        <Run Text="Sold:"></Run>
+                                        <Run Text="{Binding Number_Sold}"></Run>
+                                    </TextBlock>
                                     <StackPanel Orientation="Horizontal"
                                                 HorizontalAlignment="Center">
                                         <materialDesign:PackIcon Kind="MapMarker" 
                                                                  Foreground="Green"/>
-                                        <TextBlock Text="{Binding Txt_DiaDiem}"
+                                        <TextBlock 
                                                 TextTrimming="WordEllipsis"
                                                 HorizontalAlignment="Center"
-                                                Foreground="#696969"></TextBlock>
+                                                Foreground="#696969">
+                                            <!--<Run Text="{Binding Txt_DiaDiem}"></Run>-->
+                                            <Run Text="HCM"></Run>
+                                        </TextBlock>
                                     </StackPanel>
                                 </StackPanel>
                             </Button>
