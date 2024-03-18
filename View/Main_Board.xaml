@@ -51,30 +51,52 @@
                     materialDesign:ElevationAssist.Elevation="Dp4"
                     ClipToBounds="False"
                     CornerRadius="5"
-Background ="#07BF96">
+                    Background ="#07BF96">
                 <DockPanel>
                     <materialDesign:PopupBox
                           DockPanel.Dock="Right"
                           PlacementMode="BottomAndAlignRightEdges">
                         <ListBox>
-                            <ListBoxItem Content="Hello World" />
-                            <ListBoxItem Content="Nice Popup" />
-                            <ListBoxItem Content="Goodbye" />
-                            <ListBoxItem Content="Log out"/>
+                            <ListBoxItem Content="Log out" />
+                            <ListBoxItem Content="Exit"/>
                         </ListBox>
                     </materialDesign:PopupBox>
                     <StackPanel Orientation="Horizontal">
                         <Button x:Name="ButtonOpen" Background="Transparent" BorderThickness="0">
                             <materialDesign:PackIcon Kind="Menu" 
                                                      FontSize="50"/>
-
                         </Button>
-
                     </StackPanel>
                     <TextBlock
                         Margin="-5,0,0,0"
                         VerticalAlignment="Center"
                         Text="Category" />
+                    <StackPanel Orientation="Horizontal" Width="900">
+                        <Button Content="Home" 
+                                Background="Transparent" 
+                                Foreground="#ffffff" FontSize="18" 
+                                materialDesign:ButtonAssist.CornerRadius="15" 
+                                BorderThickness="0"
+                                Height="45" Margin="30 0" />
+                        <Button Content="Shop" 
+                                Background="Transparent" 
+                                Foreground="#ffffff" FontSize="18" 
+                                materialDesign:ButtonAssist.CornerRadius="15" 
+                                BorderThickness="0"
+                                Height="45" Margin="30 0" />
+                        <Button Content="My Cart" 
+                                Background="Transparent" 
+                                Foreground="#ffffff" FontSize="18" 
+                                materialDesign:ButtonAssist.CornerRadius="15" 
+                                BorderThickness="0"
+                                Height="45" Margin="30 0" />
+                        <Button Content="My Account" 
+                                Background="Transparent" 
+                                Foreground="#ffffff" FontSize="18" 
+                                materialDesign:ButtonAssist.CornerRadius="15" 
+                                BorderThickness="0"
+                                Height="45" Margin="30 0" />
+                    </StackPanel>
                 </DockPanel>
             </materialDesign:ColorZone>
 

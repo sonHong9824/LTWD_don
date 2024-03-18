@@ -112,13 +112,24 @@
                     
                 </Grid>
             </ScrollViewer>
-            <Grid Grid.Row="2">
-                <StackPanel Orientation="Horizontal" Margin="20">
-                    <Button x:Name="ADD" Content="ADD" Width="50" Height="50" Margin="10 0"></Button>
-                    <Button x:Name="Edit" Content="Edit" Width="50" Height="50" Margin="10 0"></Button>
-                    <Button x:Name="Delete" Width="50" Content="Del" Height="50" Margin="10 0"></Button>
-                </StackPanel>
-            </Grid>
+            <Border BorderThickness="0 2 0 0" Grid.Row="2"
+                    BorderBrush="#05B790"
+                    CornerRadius="10 10 0 0">
+                <Grid>
+                    <Button x:Name="btn_submitAdd"
+                            Content="Submit Add" 
+                            Background="#05B790" 
+                            Foreground="#ffffff" FontSize="18" 
+                            materialDesign:ButtonAssist.CornerRadius="15" 
+                            Height="45" Width="160" />
+                    <Button x:Name="btn_submitEdit"
+                            Content="Submit Edit" 
+                            Background="#05B790" 
+                            Foreground="#ffffff" FontSize="18" 
+                            materialDesign:ButtonAssist.CornerRadius="15" 
+                            Height="45" Width="160" />
+                </Grid>
+            </Border>
         </Grid>
     </Border>
 </Window>

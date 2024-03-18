@@ -54,7 +54,7 @@ namespace WPF_Market.ViewModel
                 count++;
                 if (count == 11)
                     break;
-                string filePath = @"C:\Users\LAPTOP\OneDrive\Desktop\LTWD\SanPham";
+                string filePath = @"D:\HK2_23-24_LTwindows\15-3\SanPham";
 
                 int idSanPham = Convert.ToInt32(reader["Id_sanpham"]);
                 int idShop = 1; // Se thay doi sau khi co database cua shop
