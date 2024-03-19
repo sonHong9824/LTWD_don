@@ -14,6 +14,7 @@ using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using WPF_Market.ViewModel;
+
 namespace WPF_Market.View
 {
     /// <summary>

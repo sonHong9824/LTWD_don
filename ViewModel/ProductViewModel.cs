@@ -80,7 +80,7 @@ namespace WPF_Market.ViewModel
                 stream.Close();
                 ProductModel model = new ProductModel(idSanPham, idShop, nameProduct, price, discount, domoi, type, rating, number, sold, imageList);
                 productList.Add(model);
-
+                
                 ICommand command = new BaseViewModelCommand(p => ExecuteClickCommand(model));
                 ProductCommandPair.Add(model, command);        
             }

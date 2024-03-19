@@ -112,6 +112,11 @@ D:\HK2_23-24_LTwindows\15-3\obj\Debug\net6.0-windows\refint\WPF_Market.dll
 D:\HK2_23-24_LTwindows\15-3\obj\Debug\net6.0-windows\WPF_Market.pdb
 D:\HK2_23-24_LTwindows\15-3\obj\Debug\net6.0-windows\WPF_Market.genruntimeconfig.cache
 D:\HK2_23-24_LTwindows\15-3\obj\Debug\net6.0-windows\ref\WPF_Market.dll
+D:\HK2_23-24_LTwindows\15-3\obj\Debug\net6.0-windows\View\product.g.cs
+D:\HK2_23-24_LTwindows\15-3\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
+D:\HK2_23-24_LTwindows\15-3\obj\Debug\net6.0-windows\View\product.baml
+D:\HK2_23-24_LTwindows\15-3\obj\Debug\net6.0-windows\View\Manage_Product.baml
+D:\HK2_23-24_LTwindows\15-3\obj\Debug\net6.0-windows\View\Manage_Product.g.cs
 C:\Users\LAPTOP\OneDrive\Desktop\LTWD\bin\Debug\net6.0-windows\WPF_Market.exe
 C:\Users\LAPTOP\OneDrive\Desktop\LTWD\bin\Debug\net6.0-windows\WPF_Market.dll.config
 C:\Users\LAPTOP\OneDrive\Desktop\LTWD\bin\Debug\net6.0-windows\WPF_Market.deps.json
@@ -146,6 +151,7 @@ C:\Users\LAPTOP\OneDrive\Desktop\LTWD\obj\Debug\net6.0-windows\View\Frame_Home.g
 C:\Users\LAPTOP\OneDrive\Desktop\LTWD\obj\Debug\net6.0-windows\View\Login_new.g.cs
 C:\Users\LAPTOP\OneDrive\Desktop\LTWD\obj\Debug\net6.0-windows\View\Main_Board.g.cs
 C:\Users\LAPTOP\OneDrive\Desktop\LTWD\obj\Debug\net6.0-windows\View\Main_page.g.cs
+C:\Users\LAPTOP\OneDrive\Desktop\LTWD\obj\Debug\net6.0-windows\View\Manage_Product.g.cs
 C:\Users\LAPTOP\OneDrive\Desktop\LTWD\obj\Debug\net6.0-windows\View\product.g.cs
 C:\Users\LAPTOP\OneDrive\Desktop\LTWD\obj\Debug\net6.0-windows\View\Signup.g.cs
 C:\Users\LAPTOP\OneDrive\Desktop\LTWD\obj\Debug\net6.0-windows\App.g.cs
@@ -159,6 +165,7 @@ C:\Users\LAPTOP\OneDrive\Desktop\LTWD\obj\Debug\net6.0-windows\Sale_Product_page
 C:\Users\LAPTOP\OneDrive\Desktop\LTWD\obj\Debug\net6.0-windows\Static_advertise_picture.baml
 C:\Users\LAPTOP\OneDrive\Desktop\LTWD\obj\Debug\net6.0-windows\View\Frame_Home.baml
 C:\Users\LAPTOP\OneDrive\Desktop\LTWD\obj\Debug\net6.0-windows\View\Main_page.baml
+C:\Users\LAPTOP\OneDrive\Desktop\LTWD\obj\Debug\net6.0-windows\View\Manage_Product.baml
 C:\Users\LAPTOP\OneDrive\Desktop\LTWD\obj\Debug\net6.0-windows\View\product.baml
 C:\Users\LAPTOP\OneDrive\Desktop\LTWD\obj\Debug\net6.0-windows\WPF_Market.g.resources
 C:\Users\LAPTOP\OneDrive\Desktop\LTWD\obj\Debug\net6.0-windows\WPF_Market.Properties.Resources.resources
@@ -174,10 +181,3 @@ C:\Users\LAPTOP\OneDrive\Desktop\LTWD\obj\Debug\net6.0-windows\refint\WPF_Market
 C:\Users\LAPTOP\OneDrive\Desktop\LTWD\obj\Debug\net6.0-windows\WPF_Market.pdb
 C:\Users\LAPTOP\OneDrive\Desktop\LTWD\obj\Debug\net6.0-windows\WPF_Market.genruntimeconfig.cache
 C:\Users\LAPTOP\OneDrive\Desktop\LTWD\obj\Debug\net6.0-windows\ref\WPF_Market.dll
-D:\HK2_23-24_LTwindows\15-3\obj\Debug\net6.0-windows\View\product.g.cs
-D:\HK2_23-24_LTwindows\15-3\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
-D:\HK2_23-24_LTwindows\15-3\obj\Debug\net6.0-windows\View\product.baml
-D:\HK2_23-24_LTwindows\15-3\obj\Debug\net6.0-windows\View\Manage_Product.baml
-D:\HK2_23-24_LTwindows\15-3\obj\Debug\net6.0-windows\View\Manage_Product.g.cs
-C:\Users\LAPTOP\OneDrive\Desktop\LTWD\obj\Debug\net6.0-windows\View\Manage_Product.g.cs
-C:\Users\LAPTOP\OneDrive\Desktop\LTWD\obj\Debug\net6.0-windows\View\Manage_Product.baml

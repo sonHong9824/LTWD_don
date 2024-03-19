@@ -47,8 +47,8 @@ namespace WPF_Market.View
                 button.Tag = item.Id_sanpham;
                 button.DataContext = item;
                 button.Template = Container.FindResource("ProductTemplate") as ControlTemplate;
-                button.CommandParameter = item;
-                //button.Command = productCommandPair[item];
+                /*button.CommandParameter = item;
+                //button.Command = productCommandPair[item];*/
                 button.Click += Button_Click;
                 Container.Children.Add(button);
             }

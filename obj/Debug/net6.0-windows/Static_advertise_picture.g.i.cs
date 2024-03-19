@@ -53,7 +53,7 @@ namespace WPF_Market {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/WPF_Market;V1.0.0.0;component/static_advertise_picture.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/WPF_Market;component/static_advertise_picture.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Static_advertise_picture.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
