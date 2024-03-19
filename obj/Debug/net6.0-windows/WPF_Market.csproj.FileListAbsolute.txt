@@ -137,7 +137,6 @@ C:\Users\LAPTOP\OneDrive\Desktop\LTWD\bin\Debug\net6.0-windows\runtimes\unix\lib
 C:\Users\LAPTOP\OneDrive\Desktop\LTWD\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\LAPTOP\OneDrive\Desktop\LTWD\obj\Debug\net6.0-windows\WPF_Market.csproj.AssemblyReference.cache
 C:\Users\LAPTOP\OneDrive\Desktop\LTWD\obj\Debug\net6.0-windows\View\Custom_mb.baml
-C:\Users\LAPTOP\OneDrive\Desktop\LTWD\obj\Debug\net6.0-windows\View\detail_product.baml
 C:\Users\LAPTOP\OneDrive\Desktop\LTWD\obj\Debug\net6.0-windows\View\Login_new.baml
 C:\Users\LAPTOP\OneDrive\Desktop\LTWD\obj\Debug\net6.0-windows\View\Main_Board.baml
 C:\Users\LAPTOP\OneDrive\Desktop\LTWD\obj\Debug\net6.0-windows\View\Signup.baml
@@ -163,6 +162,7 @@ C:\Users\LAPTOP\OneDrive\Desktop\LTWD\obj\Debug\net6.0-windows\Checkout.baml
 C:\Users\LAPTOP\OneDrive\Desktop\LTWD\obj\Debug\net6.0-windows\myAccount_page.baml
 C:\Users\LAPTOP\OneDrive\Desktop\LTWD\obj\Debug\net6.0-windows\Sale_Product_page.baml
 C:\Users\LAPTOP\OneDrive\Desktop\LTWD\obj\Debug\net6.0-windows\Static_advertise_picture.baml
+C:\Users\LAPTOP\OneDrive\Desktop\LTWD\obj\Debug\net6.0-windows\View\detail_product.baml
 C:\Users\LAPTOP\OneDrive\Desktop\LTWD\obj\Debug\net6.0-windows\View\Frame_Home.baml
 C:\Users\LAPTOP\OneDrive\Desktop\LTWD\obj\Debug\net6.0-windows\View\Main_page.baml
 C:\Users\LAPTOP\OneDrive\Desktop\LTWD\obj\Debug\net6.0-windows\View\Manage_Product.baml

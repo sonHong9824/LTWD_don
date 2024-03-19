@@ -18,6 +18,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WPF_Market.Model;
 using WPF_Market.ViewModel;
+using static MaterialDesignThemes.Wpf.Theme;
 
 namespace WPF_Market.View
 {
@@ -38,13 +39,12 @@ namespace WPF_Market.View
             listComponent = productViewModel.ProductList;
             GenerateComponent();
         }
-
         public void GenerateComponent()
         {
             foreach (var item in listComponent)
             {
-                Button button = new Button();
-                button.Tag = item.Id_sanpham;
+                System.Windows.Controls.Button button = new System.Windows.Controls.Button();
+                button.Tag = item;
                 button.DataContext = item;
                 button.Template = Container.FindResource("ProductTemplate") as ControlTemplate;
                 /*button.CommandParameter = item;
@@ -53,21 +53,20 @@ namespace WPF_Market.View
                 Container.Children.Add(button);
             }
         }
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Window window = Window.GetWindow(this);
-            detail_product product = new detail_product();
+            System.Windows.Controls.Button button = sender as System.Windows.Controls.Button;
+            detail_product product = new detail_product(button.Tag);
             product.Owner = window;
             product.ShowDialog();
-            
         }
         public class DisplayDetailProduct : IShowProductDetail
         {
             public void ShowProductDetail(ProductModel productModel)
             {
                 MessageBox.Show(productModel.Id_sanpham.ToString());
-                detail_product product = new detail_product();
+                detail_product product = new detail_product(productModel);
                 product.ShowDialog();
             }
         }

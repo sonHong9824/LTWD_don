@@ -4,6 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:local="clr-namespace:WPF_Market.ViewModel"
       mc:Ignorable="d" 
       d:DesignWidth="1280"
       WindowStartupLocation="CenterScreen"
@@ -11,7 +12,9 @@
       MinHeight="670"
       MinWidth="1280"
       Title="detail_product">
-
+    <Window.DataContext>
+        <local:DetailProductViewModel></local:DetailProductViewModel>
+    </Window.DataContext>
     <ScrollViewer >
     <Grid>
         <Grid Background="Transparent">
@@ -29,47 +32,71 @@
                     </Grid.ColumnDefinitions>
                     
                     <Grid Grid.Column="0">
-                        <Image Source="/images/moto.jpg"
-                               VerticalAlignment="Top"
-                               Margin="10 20 10 0"></Image>
-                        <ScrollViewer VerticalAlignment="Bottom" Height="120" HorizontalScrollBarVisibility="Visible"
-                                      VerticalScrollBarVisibility="Hidden">
+                            <StackPanel Orientation="Vertical">
+                                <Border BorderThickness="2">
+                                    <Image Source="{Binding DefaultImage}"
+                                            VerticalAlignment="Top"
+                                    ></Image>
+                                </Border>
+                                <ScrollViewer VerticalAlignment="Bottom" Height="120" HorizontalScrollBarVisibility="Visible"
+                                        VerticalScrollBarVisibility="Hidden"
+                                        Margin="0 5 0 0">
+                                    <ItemsControl x:Name="ListImage"
+                                ItemsSource="{Binding Imagelist}">
+                                        <ItemsControl.ItemTemplate>
+                                            <DataTemplate>
+                                                <Image Source="{Binding}"
+                                                    Height="120"
+                                                    Width="120"
+                                                    Margin="5 0 0 10"
+                                                    Stretch="Uniform"
+                                                ></Image>
+                                            </DataTemplate>
 
-                            <StackPanel VerticalAlignment="Bottom" Height="120" Orientation="Horizontal">
-                                <Image Source="/images/moto.jpg"
-                                            Height="120"
-                                            Width="120"
-                                            Margin="5 0"
-                                            Stretch="Uniform"/>
-                                <Image Source="/images/moto.jpg"
-                                            Height="120"
-                                            Width="120"
-                                            Margin="5 0"
-                                            Stretch="Uniform"/>
-                                <Image Source="/images/moto.jpg"
-                                            Height="120"
-                                            Width="120"
-                                            Margin="5 0"
-                                            Stretch="Uniform"/>
-                                <Image Source="/images/moto.jpg"
-                                            Height="120"
-                                            Width="120"
-                                            Margin="5 0"
-                                            Stretch="Uniform"/>
-                                <Image Source="/images/moto.jpg"
-                                            Height="120"
-                                            Width="120"
-                                            Margin="5 0"
-                                            Stretch="Uniform"/>
+                                        </ItemsControl.ItemTemplate>
+                                        <ItemsControl.ItemsPanel>
+                                            <ItemsPanelTemplate>
+                                                <WrapPanel/>
+                                            </ItemsPanelTemplate>
+                                        </ItemsControl.ItemsPanel>
+
+                                    </ItemsControl>
+                                    <!--<Image Source="/images/moto.jpg"
+                    Height="120"
+                    Width="120"
+                    Margin="5 0"
+                    Stretch="Uniform"/>
+        <Image Source="/images/moto.jpg"
+                    Height="120"
+                    Width="120"
+                    Margin="5 0"
+                    Stretch="Uniform"/>
+        <Image Source="/images/moto.jpg"
+                    Height="120"
+                    Width="120"
+                    Margin="5 0"
+                    Stretch="Uniform"/>
+        <Image Source="/images/moto.jpg"
+                    Height="120"
+                    Width="120"
+                    Margin="5 0"
+                    Stretch="Uniform"/>
+        <Image Source="/images/moto.jpg"
+                    Height="120"
+                    Width="120"
+                    Margin="5 0"
+                    Stretch="Uniform"/>-->
+
+
+                                </ScrollViewer>
                             </StackPanel>
-
-                        </ScrollViewer>
+                            
                         
                     </Grid>
                    
                     <Grid Grid.Column="1">
                         <StackPanel Orientation="Vertical" HorizontalAlignment="Left"  Margin="20 0 0 0" >
-                            <TextBlock Text="CBR1000RR-R Fireblade SP"
+                            <TextBlock Text="{Binding TenSanPham}"
                                        FontSize="30"
                                        FontWeight="DemiBold"
                                        Margin="20 20 0 0"
@@ -77,10 +104,13 @@
                                        FontFamily="Dubai"/>
                             
                             <materialDesign:RatingBar
-                                x:Name="ReadOnlyRatingBar"
+                                x:Name="BasicRatingBarFractional"
+                                Max="5"
+                                Min="1"
+                                
+                                Value="{Binding RatingValue}"
                                 IsReadOnly="True"
-                                Value="3"
-                                Margin="20 0 "/>
+                                Margin="15 5 0 5"/>
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock x:Name="tbl_review"
                                            Text="999 reviews"
@@ -96,7 +126,7 @@
                                 </Button>
                             </StackPanel>
                             <TextBlock x:Name="Tong_quan"
-                                       Text="Mẫu Fireblade được thiết kế mới với một ngoại hình dữ dằn, mạnh mẽ hơn cùng với tính khí động học thừa hưởng từ mẫu xe đua MotoGP RC213V"
+                                       Text="{Binding TongQuan}"
                                        Margin="20"
                                        FontSize="20"
                                        Foreground="#A6A0A1"
@@ -106,14 +136,15 @@
                                         Margin="20 0"
                                         FontWeight="Bold">
                                 <Run Foreground="#5F5D5C">Shop:</Run>
-                                <Run Foreground="#A6A0A1">diachi</Run>
+                                <Run Foreground="#A6A0A1">HCM</Run> 
                             </TextBlock>
                             <TextBlock x:Name="like_new"
                                        FontSize="25"
                                        Margin="20 0"
                                        FontWeight="Bold">
-                                <Run Foreground="#5F5D5C">Like New: </Run>
-                                <Run Foreground="#A6A0A1">100%</Run>
+                                <Run Foreground="#5F5D5C">Like New:</Run>
+                                <Run Foreground="#A6A0A1"
+                                     Text="{Binding LikeNew}"></Run>
                             </TextBlock>
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock Text="PRICE: "
@@ -125,7 +156,7 @@
                                            FontWeight="Bold"/>
                                 <TextBlock x:Name="price"
                                            FontSize="25"
-                                           Text="1.050.500.000 VND"
+                                           Text="{Binding Price, StringFormat='c'}"
                                            Foreground="#0FC20F"
                                            VerticalAlignment="Center"
                                            FontFamily="Dubai"
@@ -236,16 +267,45 @@
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="Status"
                                    FontSize="20"
-                                   Margin="20 0"></TextBlock>
-                        <TextBlock x:Name="txbl_status"
-                                   TextWrapping="Wrap"
-                                   FontSize="50"
                                    Margin="20 0"
-                                   Width="1100"
-                                   
-                                   Text="sklfhashfasdhausdhausdhaiaishduaihsahsudhaiusdhaiushdaushdiuashdasuihdaiuhdaiuhsduahdaiushdiuahsiuahduiahsuidhaiushduahsduahdahsduashdsfhsdofhsoifhasoifhasoifhsofhsiodfhsoidfasfsfsodifjsdoifsofishdfoishfoishfoishfsihfsihfosdhfoishdfsoidfhsiofhsoiihfsoihfsoihfsoifhhsdiofhsdo"></TextBlock>
+                                   VerticalAlignment="Center"></TextBlock>
+                            <Expander
+                                Margin="28,0,0,0"
+                                HorizontalAlignment="Stretch"
+                                Header="More detail"
+                                Width="1100">
+                                <StackPanel
+                                    Margin="24,8,24,16"
+                                    Orientation="Vertical"
+                                    TextBlock.Foreground="{DynamicResource MaterialDesignBody}">
+                                    <TextBlock
+                                        Text="{Binding TTThem}"/>
+                                    <TextBlock
+                                         />
+                                </StackPanel>
+                            </Expander>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Gurantee"
+                                FontSize="20"
+                                Margin="20 0"
+                                VerticalAlignment="Center"></TextBlock>
+                            <Expander
+                                HorizontalAlignment="Stretch"
+                                 Header="More detail"
+                                Width="1100">
+                                <StackPanel
+                                    Margin="24,8,24,16"
+                                    Orientation="Vertical"
+                                    TextBlock.Foreground="{DynamicResource MaterialDesignBody}">
+                                    <TextBlock
+                                Text="{Binding BaoHanh}"/>
+                                    <TextBlock
+                                    />
+                                </StackPanel>
+                            </Expander>
+                        </StackPanel>
                     </StackPanel>
-                </StackPanel>
             </Border>
             
         </Grid>

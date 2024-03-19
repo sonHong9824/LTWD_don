@@ -61,7 +61,7 @@ namespace WPF_Market.ViewModel
                 string nameProduct = "Product's name: " + reader["Ten"].ToString();
                 double price = Convert.ToDouble(reader["Gia"]);
                 double discount = Convert.ToDouble(reader["Discount"]);
-                string domoi = reader["Domoi"] as string + "%";
+                string domoi = (reader["Domoi"] as string).Trim() + "%";
                 string type = reader["Type"] as string;
                 double rating = Convert.ToDouble(reader["Rate"]);
                 int number = Convert.ToInt32(reader["Number"]);
@@ -70,10 +70,11 @@ namespace WPF_Market.ViewModel
                 string linkImage = filePath + "/" +idSanPham.ToString().Trim()+ "/Images/";
                 filePath += "/" + reader["Id_sanpham"].ToString().Trim() + "/Images.txt";
                 StreamReader stream = new StreamReader(filePath);
-                List<string> imageList = new List<string>();
+                ObservableCollection<string> imageList = new ObservableCollection<string>();
                 while (!stream.EndOfStream)
                 {
                     var temp = linkImage + stream.ReadLine().Trim();
+                    
                     imageList.Add(temp);
                   
                 }

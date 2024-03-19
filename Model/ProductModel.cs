@@ -1,6 +1,7 @@
 ﻿using MaterialDesignThemes.Wpf;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,7 +24,7 @@ namespace WPF_Market.Model
         private double rating;
         private int number_Of_Product;
         private int number_Sold;
-        private List<string> imageList;
+        private ObservableCollection<string> imageList;
         string firstImage;
         public ProductModel()
         {
@@ -31,7 +32,7 @@ namespace WPF_Market.Model
 
         public ProductModel(int id_sanpham, int id_shop, string txt_NameProduct, 
             double txt_Price, double discount, string like_New, string type, double rating, 
-            int number_Of_Product, int number_Sold, List<string> imageList = null)
+            int number_Of_Product, int number_Sold, ObservableCollection<string> imageList = null)
         {
             this.Id_sanpham = id_sanpham;
             this.Id_shop = id_shop;
@@ -57,7 +58,7 @@ namespace WPF_Market.Model
         public double Rating { get => rating; set => rating = value; }
         public int Number_Of_Product { get => number_Of_Product; set => number_Of_Product = value; }
         public int Number_Sold { get => number_Sold; set => number_Sold = value; }
-        public List<string> ImageList { get => imageList; set => imageList = value; }
+        public ObservableCollection<string> ImageList { get => imageList; set => imageList = value; }
         public string FirstImage { get => firstImage; set => firstImage = value; }
     }
 }

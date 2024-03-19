@@ -23,6 +23,7 @@ namespace WPF_Market.View
         public Manage_Product()
         {
             InitializeComponent();
+            btn_submitEdit.Visibility = Visibility.Collapsed;
         }
 
         private void btnClose_Click(object sender, RoutedEventArgs e)

@@ -11,9 +11,9 @@
       MinHeight="450"
       Title="product"
       ShowsNavigationUI="False">
-    <Page.DataContext>
+    <!--<Page.DataContext>
         <local:ProductViewModel></local:ProductViewModel>
-    </Page.DataContext>
+    </Page.DataContext>-->
     
     <Border CornerRadius="10"
             BorderThickness="3"
