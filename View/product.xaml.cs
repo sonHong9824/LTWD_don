@@ -18,8 +18,8 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WPF_Market.Model;
 using WPF_Market.ViewModel;
+using WPF_Market.ViewModel.ProductViewModel;
 using static MaterialDesignThemes.Wpf.Theme;
-
 namespace WPF_Market.View
 {
     /// <summary>
@@ -28,46 +28,51 @@ namespace WPF_Market.View
 
     public partial class product : Page
     {
-        private ObservableCollection<ProductModel> listComponent;
-        private Dictionary<ProductModel, ICommand> productCommandPair;
-        public product()
+        private ObservableCollection<ProductModel> listProduct;
+        Window parentWindow;
+        IShowProductDetail showProductDetai;
+        public product(Window parentWindow)
         {
 
             InitializeComponent();
-            IShowProductDetail showProductDetail = new DisplayDetailProduct();
-            ProductViewModel productViewModel = new ProductViewModel(showProductDetail);
-            listComponent = productViewModel.ProductList;
+            this.parentWindow = parentWindow;
+            // Get list Product
+            ListProductViewModel listProduct = new ListProductViewModel();
+            this.ListProduct = listProduct.ProductList;
             GenerateComponent();
         }
+
+        public ObservableCollection<ProductModel> ListProduct { get => listProduct; set => listProduct = value; }
+
         public void GenerateComponent()
         {
-            foreach (var item in listComponent)
+            foreach (var item in ListProduct)
             {
+                // Tao buttom
                 System.Windows.Controls.Button button = new System.Windows.Controls.Button();
-                button.Tag = item;
-                button.DataContext = item;
+                showProductDetai = new DisplayDetailProduct(parentWindow);
+                button.DataContext = new SpecificProductViewModel(item, showProductDetai, parentWindow);
                 button.Template = Container.FindResource("ProductTemplate") as ControlTemplate;
-                /*button.CommandParameter = item;
-                //button.Command = productCommandPair[item];*/
-                button.Click += Button_Click;
                 Container.Children.Add(button);
             }
         }
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            Window window = Window.GetWindow(this);
-            System.Windows.Controls.Button button = sender as System.Windows.Controls.Button;
-            detail_product product = new detail_product(button.Tag);
-            product.Owner = window;
-            product.ShowDialog();
-        }
         public class DisplayDetailProduct : IShowProductDetail
         {
-            public void ShowProductDetail(ProductModel productModel)
+            private Window parentWindow;
+            public DisplayDetailProduct(Window parentWindow)
             {
-                MessageBox.Show(productModel.Id_sanpham.ToString());
+                ParentWindow = parentWindow;
+            }
+
+            public Window ParentWindow { get => parentWindow; set => parentWindow = value; }
+
+            public void ShowProductDetail(ProductModel productModel, Window parentWindow)
+            {
                 detail_product product = new detail_product(productModel);
+                product.Owner = parentWindow;
+                parentWindow.Hide();
                 product.ShowDialog();
+                parentWindow.Show();
             }
         }
     }

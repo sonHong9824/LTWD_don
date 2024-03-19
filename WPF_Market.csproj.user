@@ -13,9 +13,6 @@
     <Compile Update="View\Custom_mb.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="View\Frame_Home.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="View\Login_new.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -49,9 +46,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\Custom_mb.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="View\Frame_Home.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\Login_new.xaml">

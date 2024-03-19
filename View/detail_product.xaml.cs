@@ -30,7 +30,6 @@ namespace WPF_Market.View
             model = (ProductModel)productdetail;
             DetailProductViewModel viewModel = new DetailProductViewModel(model);
             this.DataContext = viewModel;
-           
         }
 
     }

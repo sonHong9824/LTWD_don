@@ -146,7 +146,6 @@ C:\Users\LAPTOP\OneDrive\Desktop\LTWD\obj\Debug\net6.0-windows\Sale_Product_page
 C:\Users\LAPTOP\OneDrive\Desktop\LTWD\obj\Debug\net6.0-windows\Static_advertise_picture.g.cs
 C:\Users\LAPTOP\OneDrive\Desktop\LTWD\obj\Debug\net6.0-windows\View\Custom_mb.g.cs
 C:\Users\LAPTOP\OneDrive\Desktop\LTWD\obj\Debug\net6.0-windows\View\detail_product.g.cs
-C:\Users\LAPTOP\OneDrive\Desktop\LTWD\obj\Debug\net6.0-windows\View\Frame_Home.g.cs
 C:\Users\LAPTOP\OneDrive\Desktop\LTWD\obj\Debug\net6.0-windows\View\Login_new.g.cs
 C:\Users\LAPTOP\OneDrive\Desktop\LTWD\obj\Debug\net6.0-windows\View\Main_Board.g.cs
 C:\Users\LAPTOP\OneDrive\Desktop\LTWD\obj\Debug\net6.0-windows\View\Main_page.g.cs
@@ -163,7 +162,6 @@ C:\Users\LAPTOP\OneDrive\Desktop\LTWD\obj\Debug\net6.0-windows\myAccount_page.ba
 C:\Users\LAPTOP\OneDrive\Desktop\LTWD\obj\Debug\net6.0-windows\Sale_Product_page.baml
 C:\Users\LAPTOP\OneDrive\Desktop\LTWD\obj\Debug\net6.0-windows\Static_advertise_picture.baml
 C:\Users\LAPTOP\OneDrive\Desktop\LTWD\obj\Debug\net6.0-windows\View\detail_product.baml
-C:\Users\LAPTOP\OneDrive\Desktop\LTWD\obj\Debug\net6.0-windows\View\Frame_Home.baml
 C:\Users\LAPTOP\OneDrive\Desktop\LTWD\obj\Debug\net6.0-windows\View\Main_page.baml
 C:\Users\LAPTOP\OneDrive\Desktop\LTWD\obj\Debug\net6.0-windows\View\Manage_Product.baml
 C:\Users\LAPTOP\OneDrive\Desktop\LTWD\obj\Debug\net6.0-windows\View\product.baml

@@ -11,7 +11,6 @@ namespace WPF_Market.ViewModel
 {
     class DetailProductViewModel: BaseViewModel
     {
-      
         private ProductModel _product;
         private ObservableCollection<string> imagelist;
         private string defaultImage;
@@ -28,8 +27,8 @@ namespace WPF_Market.ViewModel
 
         public DetailProductViewModel(ProductModel productViewModel)
         {
-           Product = productViewModel;
-           Imagelist = productViewModel.ImageList;
+            Product = productViewModel;
+            Imagelist = productViewModel.ImageList;
             defaultImage = imagelist[0];
             ratingValue = productViewModel.Rating;
             tenSanPham = productViewModel.Txt_NameProduct;

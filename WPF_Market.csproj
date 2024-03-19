@@ -21,6 +21,9 @@
   <ItemGroup>
     <Compile Remove="Login.xaml.cs" />
     <Compile Remove="MainWindow.xaml.cs" />
+    <Compile Remove="ViewModel\Frame_Home_DAO.cs" />
+    <Compile Remove="ViewModel\SQLProcessViewModel.cs" />
+    <Compile Remove="View\Frame_Home.xaml.cs" />
     <Compile Remove="View\Silde2.xaml.cs" />
     <Compile Remove="View\Slide1.xaml.cs" />
   </ItemGroup>
@@ -124,6 +127,7 @@
   <ItemGroup>
     <Page Remove="Login.xaml" />
     <Page Remove="MainWindow.xaml" />
+    <Page Remove="View\Frame_Home.xaml" />
     <Page Remove="View\Silde2.xaml" />
     <Page Remove="View\Slide1.xaml" />
   </ItemGroup>

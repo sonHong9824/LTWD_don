@@ -11,9 +11,6 @@
       MinHeight="450"
       Title="product"
       ShowsNavigationUI="False">
-    <!--<Page.DataContext>
-        <local:ProductViewModel></local:ProductViewModel>
-    </Page.DataContext>-->
     
     <Border CornerRadius="10"
             BorderThickness="3"
@@ -35,13 +32,13 @@
                                     Margin="5,5,5,5"
                                     >
                                 <Button BorderThickness="0"
+                                    x:Name="btn_Chitietsanpham"
                                     BorderBrush="Transparent"
                                     Background="Transparent"
                                     Width="160"
                                     Height="260"
                                     Margin="0"
-                                    Command="{Binding GetCommand}"
-                                    CommandParameter="{Binding}"
+                                    Command="{Binding SeeDetailCommand}"                                  
                                     >
                                 <StackPanel>
                                     <Grid>
@@ -51,7 +48,7 @@
                                                MaxWidth="160"
                                             Stretch="Fill"/>
                                     </Grid>
-                                    <TextBlock Text="{Binding Txt_NameProduct}"
+                                    <TextBlock Text="{Binding NameProduct}"
                                             TextTrimming="WordEllipsis"
                                             FontWeight="SemiBold"
                                             VerticalAlignment="Center"
@@ -64,7 +61,7 @@
                                             Foreground="#EE4D2D"
                                             HorizontalAlignment="Center">
                                             <Run Text="Price:"></Run>
-                                            <Run Text="{Binding Txt_Price, StringFormat='c'}"></Run>
+                                            <Run Text="{Binding Price, StringFormat='c'}"></Run>
                                         </TextBlock>
                                         <materialDesign:RatingBar               
                                            HorizontalAlignment="Center"  
@@ -82,7 +79,7 @@
                                             Margin="0,0,0,0"
                                             HorizontalAlignment="Center">
                                         <Run Text="Sold:"></Run>
-                                        <Run Text="{Binding Number_Sold}"></Run>
+                                        <Run Text="{Binding NumberSold}"></Run>
                                     </TextBlock>
                                     <StackPanel Orientation="Horizontal"
                                                 HorizontalAlignment="Center">

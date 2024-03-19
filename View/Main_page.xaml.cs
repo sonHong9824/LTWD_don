@@ -137,7 +137,7 @@ namespace WPF_Market.View
 
         private void btn_home_Click(object sender, RoutedEventArgs e)
         {
-            F_Display_current_content.Content = new product();
+            //F_Display_current_content.Content = new product();
         }
     }
 }

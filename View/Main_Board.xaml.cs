@@ -22,8 +22,10 @@ namespace WPF_Market.View
     {
         public Main_Board()
         {
+           
             InitializeComponent();
-            F_display.Content = new product();
+            Window parentWindow = Window.GetWindow(this);
+            F_display.Content = new product(parentWindow);
         }
 
         private void Window_MouseEnter(object sender, MouseEventArgs e)
