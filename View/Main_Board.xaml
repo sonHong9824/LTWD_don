@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:vm="clr-namespace:WPF_Market.ViewModel"
         mc:Ignorable="d"
         Title="Main" Height="720" Width="1280"
         MouseEnter="Window_MouseEnter"
@@ -39,6 +40,9 @@
         </EventTrigger>
     </Window.Triggers>
 
+    <Window.DataContext>
+        <vm:MainBoardViewModel></vm:MainBoardViewModel>
+    </Window.DataContext>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>

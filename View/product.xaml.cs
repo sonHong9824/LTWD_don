@@ -18,7 +18,6 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WPF_Market.Model;
 using WPF_Market.ViewModel;
-using WPF_Market.ViewModel.ProductViewModel;
 using static MaterialDesignThemes.Wpf.Theme;
 namespace WPF_Market.View
 {
@@ -28,52 +27,14 @@ namespace WPF_Market.View
 
     public partial class product : Page
     {
-        private ObservableCollection<ProductModel> listProduct;
         Window parentWindow;
-        IShowProductDetail showProductDetai;
         public product(Window parentWindow)
         {
 
             InitializeComponent();
             this.parentWindow = parentWindow;
-            // Get list Product
-            ListProductViewModel listProduct = new ListProductViewModel();
-            this.ListProduct = listProduct.ProductList;
-            GenerateComponent();
+            this.DataContext = new ListProductViewModel(parentWindow);
         }
-
-        public ObservableCollection<ProductModel> ListProduct { get => listProduct; set => listProduct = value; }
-
-        public void GenerateComponent()
-        {
-            foreach (var item in ListProduct)
-            {
-                // Tao buttom
-                System.Windows.Controls.Button button = new System.Windows.Controls.Button();
-                showProductDetai = new DisplayDetailProduct(parentWindow);
-                button.DataContext = new SpecificProductViewModel(item, showProductDetai, parentWindow);
-                button.Template = Container.FindResource("ProductTemplate") as ControlTemplate;
-                Container.Children.Add(button);
-            }
-        }
-        public class DisplayDetailProduct : IShowProductDetail
-        {
-            private Window parentWindow;
-            public DisplayDetailProduct(Window parentWindow)
-            {
-                ParentWindow = parentWindow;
-            }
-
-            public Window ParentWindow { get => parentWindow; set => parentWindow = value; }
-
-            public void ShowProductDetail(ProductModel productModel, Window parentWindow)
-            {
-                detail_product product = new detail_product(productModel);
-                product.Owner = parentWindow;
-                parentWindow.Hide();
-                product.ShowDialog();
-                parentWindow.Show();
-            }
-        }
+      
     }
 }
