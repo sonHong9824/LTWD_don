@@ -69,10 +69,12 @@
                         <TextBox x:Name="txt_overview"
                             MinHeight="50"
                             Width="820" Margin="0 0 0 10"
+                                 AcceptsReturn="True"
+                                 
                             materialDesign:HintAssist.Hint="Overview"
                             Style="{StaticResource MaterialDesignOutlinedTextBox}"
                             TextWrapping="Wrap"
-                            VerticalScrollBarVisibility="Auto" />
+                            VerticalScrollBarVisibility="Auto" KeyDown="txt_overview_KeyDown" />
                         <TextBox x:Name="txt_configuration"
                             MinHeight="50"
                             Width="820" Margin="0 0 0 10"
@@ -121,7 +123,7 @@
                             Background="#05B790" 
                             Foreground="#ffffff" FontSize="18" 
                             materialDesign:ButtonAssist.CornerRadius="15" 
-                            Height="45" Width="160" />
+                            Height="45" Width="160" Click="btn_submitAdd_Click" />
                     <Button x:Name="btn_submitEdit"
                             Content="Submit Edit" 
                             Background="#05B790" 

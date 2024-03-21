@@ -36,4 +36,5 @@ namespace WPF_Market.View
             }
         }
     }
+    
 }

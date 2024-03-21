@@ -1,103 +1,39 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\LAPTOP\\OneDrive\\Desktop\\LTWD\\",
+  "WorkspaceRootPath": "D:\\LTWD\\LTWD_FinalProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|c:\\users\\laptop\\onedrive\\desktop\\ltwd\\viewmodel\\type_viewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|solutionrelative:viewmodel\\type_viewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|d:\\ltwd\\ltwd_finalproject\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|c:\\users\\laptop\\onedrive\\desktop\\ltwd\\viewmodel\\sqlprocessviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|solutionrelative:viewmodel\\sqlprocessviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|d:\\ltwd\\ltwd_finalproject\\model\\productmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|solutionrelative:model\\productmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|c:\\users\\laptop\\onedrive\\desktop\\ltwd\\viewmodel\\signup_dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|solutionrelative:viewmodel\\signup_dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|c:\\users\\laptop\\onedrive\\desktop\\ltwd\\viewmodel\\account_dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|solutionrelative:viewmodel\\account_dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|c:\\users\\laptop\\onedrive\\desktop\\ltwd\\view\\signup.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|solutionrelative:view\\signup.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|c:\\users\\laptop\\onedrive\\desktop\\ltwd\\view\\product.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|solutionrelative:view\\product.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|c:\\users\\laptop\\onedrive\\desktop\\ltwd\\view\\manage_product.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|solutionrelative:view\\manage_product.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|c:\\users\\laptop\\onedrive\\desktop\\ltwd\\view\\main_board.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
-      "RelativeMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|solutionrelative:view\\main_board.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|c:\\users\\laptop\\onedrive\\desktop\\ltwd\\view\\main_board.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|d:\\ltwd\\ltwd_finalproject\\view\\main_board.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|solutionrelative:view\\main_board.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|c:\\users\\laptop\\onedrive\\desktop\\ltwd\\view\\custom_mb.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|solutionrelative:view\\custom_mb.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|c:\\users\\laptop\\onedrive\\desktop\\ltwd\\view\\detail_product.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|solutionrelative:view\\detail_product.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LAPTOP\\OneDrive\\Desktop\\LTWD\\obj\\Debug\\net6.0-windows\\View\\Frame_Home.g.i.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:obj\\Debug\\net6.0-windows\\View\\Frame_Home.g.i.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|c:\\users\\laptop\\onedrive\\desktop\\ltwd\\viewmodel\\frame_home_dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|solutionrelative:viewmodel\\frame_home_dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|c:\\users\\laptop\\onedrive\\desktop\\ltwd\\viewmodel\\detailproductviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|solutionrelative:viewmodel\\detailproductviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|c:\\users\\laptop\\onedrive\\desktop\\ltwd\\viewmodel\\baseviewmodelproperty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|solutionrelative:viewmodel\\baseviewmodelproperty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|c:\\users\\laptop\\onedrive\\desktop\\ltwd\\viewmodel\\baseviewmodelcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|solutionrelative:viewmodel\\baseviewmodelcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|c:\\users\\laptop\\onedrive\\desktop\\ltwd\\sale_product_page.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|solutionrelative:sale_product_page.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|c:\\users\\laptop\\onedrive\\desktop\\ltwd\\myaccount_page.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|solutionrelative:myaccount_page.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|c:\\users\\laptop\\onedrive\\desktop\\ltwd\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|solutionrelative:assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|c:\\users\\laptop\\onedrive\\desktop\\ltwd\\view\\detail_product.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|solutionrelative:view\\detail_product.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|c:\\users\\laptop\\onedrive\\desktop\\ltwd\\viewmodel\\productviewmodel\\specificproductviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|solutionrelative:viewmodel\\productviewmodel\\specificproductviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|c:\\users\\laptop\\onedrive\\desktop\\ltwd\\view\\product.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "AbsoluteMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|d:\\ltwd\\ltwd_finalproject\\view\\product.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
       "RelativeMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|solutionrelative:view\\product.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|d:\\ltwd\\ltwd_finalproject\\view\\main_board.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|solutionrelative:view\\main_board.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|d:\\ltwd\\ltwd_finalproject\\view\\product.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|solutionrelative:view\\product.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
     {
-      "Orientation": 0,
+      "Orientation": 1,
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 571,
+          "DockedHeight": 99,
           "SelectedChildIndex": -1,
           "Children": [
             {
@@ -111,21 +47,12 @@
           ]
         },
         {
-          "DockedWidth": 115,
-          "SelectedChildIndex": 8,
+          "DockedHeight": 23,
+          "SelectedChildIndex": 2,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "product.xaml",
-              "DocumentMoniker": "C:\\Users\\LAPTOP\\OneDrive\\Desktop\\LTWD\\View\\product.xaml",
-              "RelativeDocumentMoniker": "View\\product.xaml",
-              "ToolTip": "C:\\Users\\LAPTOP\\OneDrive\\Desktop\\LTWD\\View\\product.xaml",
-              "RelativeToolTip": "View\\product.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-03-19T10:00:58.857Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
             },
             {
               "$type": "Bookmark",
@@ -133,268 +60,77 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "App.xaml",
+              "DocumentMoniker": "D:\\LTWD\\LTWD_FinalProject\\App.xaml",
+              "RelativeDocumentMoniker": "App.xaml",
+              "ToolTip": "D:\\LTWD\\LTWD_FinalProject\\App.xaml",
+              "RelativeToolTip": "App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-03-21T05:39:39.368Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "SQLProcessViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\LAPTOP\\OneDrive\\Desktop\\LTWD\\ViewModel\\SQLProcessViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModel\\SQLProcessViewModel.cs",
-              "ToolTip": "C:\\Users\\LAPTOP\\OneDrive\\Desktop\\LTWD\\ViewModel\\SQLProcessViewModel.cs",
-              "RelativeToolTip": "ViewModel\\SQLProcessViewModel.cs",
+              "Title": "ProductModel.cs",
+              "DocumentMoniker": "D:\\LTWD\\LTWD_FinalProject\\Model\\ProductModel.cs",
+              "RelativeDocumentMoniker": "Model\\ProductModel.cs",
+              "ToolTip": "D:\\LTWD\\LTWD_FinalProject\\Model\\ProductModel.cs",
+              "RelativeToolTip": "Model\\ProductModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-19T11:12:39.203Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Signup.xaml",
-              "DocumentMoniker": "C:\\Users\\LAPTOP\\OneDrive\\Desktop\\LTWD\\View\\Signup.xaml",
-              "RelativeDocumentMoniker": "View\\Signup.xaml",
-              "ToolTip": "C:\\Users\\LAPTOP\\OneDrive\\Desktop\\LTWD\\View\\Signup.xaml",
-              "RelativeToolTip": "View\\Signup.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-03-19T11:12:27.877Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Manage_Product.xaml",
-              "DocumentMoniker": "C:\\Users\\LAPTOP\\OneDrive\\Desktop\\LTWD\\View\\Manage_Product.xaml",
-              "RelativeDocumentMoniker": "View\\Manage_Product.xaml",
-              "ToolTip": "C:\\Users\\LAPTOP\\OneDrive\\Desktop\\LTWD\\View\\Manage_Product.xaml",
-              "RelativeToolTip": "View\\Manage_Product.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-03-19T11:12:24.654Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Main_Board.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\LAPTOP\\OneDrive\\Desktop\\LTWD\\View\\Main_Board.xaml.cs",
-              "RelativeDocumentMoniker": "View\\Main_Board.xaml.cs",
-              "ToolTip": "C:\\Users\\LAPTOP\\OneDrive\\Desktop\\LTWD\\View\\Main_Board.xaml.cs",
-              "RelativeToolTip": "View\\Main_Board.xaml.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-19T11:12:20.211Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Main_Board.xaml",
-              "DocumentMoniker": "C:\\Users\\LAPTOP\\OneDrive\\Desktop\\LTWD\\View\\Main_Board.xaml",
-              "RelativeDocumentMoniker": "View\\Main_Board.xaml",
-              "ToolTip": "C:\\Users\\LAPTOP\\OneDrive\\Desktop\\LTWD\\View\\Main_Board.xaml",
-              "RelativeToolTip": "View\\Main_Board.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-03-19T11:12:18.612Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Account_DAO.cs",
-              "DocumentMoniker": "C:\\Users\\LAPTOP\\OneDrive\\Desktop\\LTWD\\ViewModel\\Account_DAO.cs",
-              "RelativeDocumentMoniker": "ViewModel\\Account_DAO.cs",
-              "ToolTip": "C:\\Users\\LAPTOP\\OneDrive\\Desktop\\LTWD\\ViewModel\\Account_DAO.cs",
-              "RelativeToolTip": "ViewModel\\Account_DAO.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-19T11:07:28.827Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Type_ViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\LAPTOP\\OneDrive\\Desktop\\LTWD\\ViewModel\\Type_ViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModel\\Type_ViewModel.cs",
-              "ToolTip": "C:\\Users\\LAPTOP\\OneDrive\\Desktop\\LTWD\\ViewModel\\Type_ViewModel.cs",
-              "RelativeToolTip": "ViewModel\\Type_ViewModel.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-19T11:07:08.394Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Custom_mb.xaml",
-              "DocumentMoniker": "C:\\Users\\LAPTOP\\OneDrive\\Desktop\\LTWD\\View\\Custom_mb.xaml",
-              "RelativeDocumentMoniker": "View\\Custom_mb.xaml",
-              "ToolTip": "C:\\Users\\LAPTOP\\OneDrive\\Desktop\\LTWD\\View\\Custom_mb.xaml",
-              "RelativeToolTip": "View\\Custom_mb.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-03-19T11:12:17.074Z",
+              "WhenOpened": "2024-03-21T05:35:49.299Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Signup_DAO.cs",
-              "DocumentMoniker": "C:\\Users\\LAPTOP\\OneDrive\\Desktop\\LTWD\\ViewModel\\Signup_DAO.cs",
-              "RelativeDocumentMoniker": "ViewModel\\Signup_DAO.cs",
-              "ToolTip": "C:\\Users\\LAPTOP\\OneDrive\\Desktop\\LTWD\\ViewModel\\Signup_DAO.cs",
-              "RelativeToolTip": "ViewModel\\Signup_DAO.cs",
-              "ViewState": "AQIAAB8AAAAAAAAAAAAQwCsAAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-19T11:07:04.116Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "detail_product.xaml",
-              "DocumentMoniker": "C:\\Users\\LAPTOP\\OneDrive\\Desktop\\LTWD\\View\\detail_product.xaml",
-              "RelativeDocumentMoniker": "View\\detail_product.xaml",
-              "ToolTip": "C:\\Users\\LAPTOP\\OneDrive\\Desktop\\LTWD\\View\\detail_product.xaml",
-              "RelativeToolTip": "View\\detail_product.xaml",
+              "Title": "Main_Board.xaml",
+              "DocumentMoniker": "D:\\LTWD\\LTWD_FinalProject\\View\\Main_Board.xaml",
+              "RelativeDocumentMoniker": "View\\Main_Board.xaml",
+              "ToolTip": "D:\\LTWD\\LTWD_FinalProject\\View\\Main_Board.xaml",
+              "RelativeToolTip": "View\\Main_Board.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-03-19T11:12:16.169Z",
+              "WhenOpened": "2024-03-21T05:34:56.195Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Frame_Home.g.i.cs",
-              "DocumentMoniker": "C:\\Users\\LAPTOP\\OneDrive\\Desktop\\LTWD\\obj\\Debug\\net6.0-windows\\View\\Frame_Home.g.i.cs",
-              "RelativeDocumentMoniker": "obj\\Debug\\net6.0-windows\\View\\Frame_Home.g.i.cs",
-              "ToolTip": "C:\\Users\\LAPTOP\\OneDrive\\Desktop\\LTWD\\obj\\Debug\\net6.0-windows\\View\\Frame_Home.g.i.cs",
-              "RelativeToolTip": "obj\\Debug\\net6.0-windows\\View\\Frame_Home.g.i.cs",
-              "ViewState": "AQIAABwAAAAAAAAAAAAawC0AAAAEAAAA",
+              "DocumentIndex": 4,
+              "Title": "Main_Board.xaml.cs",
+              "DocumentMoniker": "D:\\LTWD\\LTWD_FinalProject\\View\\Main_Board.xaml.cs",
+              "RelativeDocumentMoniker": "View\\Main_Board.xaml.cs",
+              "ToolTip": "D:\\LTWD\\LTWD_FinalProject\\View\\Main_Board.xaml.cs",
+              "RelativeToolTip": "View\\Main_Board.xaml.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAArwBoAAAA5AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-19T11:12:05.243Z",
+              "WhenOpened": "2024-03-21T05:32:32.856Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Frame_Home_DAO.cs",
-              "DocumentMoniker": "C:\\Users\\LAPTOP\\OneDrive\\Desktop\\LTWD\\ViewModel\\Frame_Home_DAO.cs",
-              "RelativeDocumentMoniker": "ViewModel\\Frame_Home_DAO.cs",
-              "ToolTip": "C:\\Users\\LAPTOP\\OneDrive\\Desktop\\LTWD\\ViewModel\\Frame_Home_DAO.cs",
-              "RelativeToolTip": "ViewModel\\Frame_Home_DAO.cs",
-              "ViewState": "AQIAAB0AAAAAAAAAAADgvzAAAABAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-19T11:11:13.495Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "DetailProductViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\LAPTOP\\OneDrive\\Desktop\\LTWD\\ViewModel\\DetailProductViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModel\\DetailProductViewModel.cs",
-              "ToolTip": "C:\\Users\\LAPTOP\\OneDrive\\Desktop\\LTWD\\ViewModel\\DetailProductViewModel.cs",
-              "RelativeToolTip": "ViewModel\\DetailProductViewModel.cs",
-              "ViewState": "AQIAAD8AAAAAAAAAAAAowBEAAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-19T11:07:42.262Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "BaseViewModelProperty.cs",
-              "DocumentMoniker": "C:\\Users\\LAPTOP\\OneDrive\\Desktop\\LTWD\\ViewModel\\BaseViewModelProperty.cs",
-              "RelativeDocumentMoniker": "ViewModel\\BaseViewModelProperty.cs",
-              "ToolTip": "C:\\Users\\LAPTOP\\OneDrive\\Desktop\\LTWD\\ViewModel\\BaseViewModelProperty.cs",
-              "RelativeToolTip": "ViewModel\\BaseViewModelProperty.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAABOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-19T11:07:40.684Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "BaseViewModelCommand.cs",
-              "DocumentMoniker": "C:\\Users\\LAPTOP\\OneDrive\\Desktop\\LTWD\\ViewModel\\BaseViewModelCommand.cs",
-              "RelativeDocumentMoniker": "ViewModel\\BaseViewModelCommand.cs",
-              "ToolTip": "C:\\Users\\LAPTOP\\OneDrive\\Desktop\\LTWD\\ViewModel\\BaseViewModelCommand.cs",
-              "RelativeToolTip": "ViewModel\\BaseViewModelCommand.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAQwCcAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-19T11:07:31.225Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Sale_Product_page.xaml",
-              "DocumentMoniker": "C:\\Users\\LAPTOP\\OneDrive\\Desktop\\LTWD\\Sale_Product_page.xaml",
-              "RelativeDocumentMoniker": "Sale_Product_page.xaml",
-              "ToolTip": "C:\\Users\\LAPTOP\\OneDrive\\Desktop\\LTWD\\Sale_Product_page.xaml",
-              "RelativeToolTip": "Sale_Product_page.xaml",
+              "DocumentIndex": 5,
+              "Title": "product.xaml",
+              "DocumentMoniker": "D:\\LTWD\\LTWD_FinalProject\\View\\product.xaml",
+              "RelativeDocumentMoniker": "View\\product.xaml",
+              "ToolTip": "D:\\LTWD\\LTWD_FinalProject\\View\\product.xaml",
+              "RelativeToolTip": "View\\product.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-03-19T11:07:20.181Z",
+              "WhenOpened": "2024-03-21T03:59:22.555Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "myAccount_page.xaml",
-              "DocumentMoniker": "C:\\Users\\LAPTOP\\OneDrive\\Desktop\\LTWD\\myAccount_page.xaml",
-              "RelativeDocumentMoniker": "myAccount_page.xaml",
-              "ToolTip": "C:\\Users\\LAPTOP\\OneDrive\\Desktop\\LTWD\\myAccount_page.xaml",
-              "RelativeToolTip": "myAccount_page.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-03-19T11:07:17.164Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "AssemblyInfo.cs",
-              "DocumentMoniker": "C:\\Users\\LAPTOP\\OneDrive\\Desktop\\LTWD\\AssemblyInfo.cs",
-              "RelativeDocumentMoniker": "AssemblyInfo.cs",
-              "ToolTip": "C:\\Users\\LAPTOP\\OneDrive\\Desktop\\LTWD\\AssemblyInfo.cs",
-              "RelativeToolTip": "AssemblyInfo.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-19T11:07:14.977Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 3,
               "Title": "product.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\LAPTOP\\OneDrive\\Desktop\\LTWD\\View\\product.xaml.cs",
+              "DocumentMoniker": "D:\\LTWD\\LTWD_FinalProject\\View\\product.xaml.cs",
               "RelativeDocumentMoniker": "View\\product.xaml.cs",
-              "ToolTip": "C:\\Users\\LAPTOP\\OneDrive\\Desktop\\LTWD\\View\\product.xaml.cs",
+              "ToolTip": "D:\\LTWD\\LTWD_FinalProject\\View\\product.xaml.cs",
               "RelativeToolTip": "View\\product.xaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEsAAAANAAAA",
+              "ViewState": "AQIAABAAAAAAAAAAAAAYwCMAAAA3AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-19T09:54:45.391Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "SpecificProductViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\LAPTOP\\OneDrive\\Desktop\\LTWD\\ViewModel\\ProductViewModel\\SpecificProductViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModel\\ProductViewModel\\SpecificProductViewModel.cs",
-              "ToolTip": "C:\\Users\\LAPTOP\\OneDrive\\Desktop\\LTWD\\ViewModel\\ProductViewModel\\SpecificProductViewModel.cs",
-              "RelativeToolTip": "ViewModel\\ProductViewModel\\SpecificProductViewModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-19T09:59:37.396Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "detail_product.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\LAPTOP\\OneDrive\\Desktop\\LTWD\\View\\detail_product.xaml.cs",
-              "RelativeDocumentMoniker": "View\\detail_product.xaml.cs",
-              "ToolTip": "C:\\Users\\LAPTOP\\OneDrive\\Desktop\\LTWD\\View\\detail_product.xaml.cs",
-              "RelativeToolTip": "View\\detail_product.xaml.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAEwB4AAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-19T10:32:46.472Z",
+              "WhenOpened": "2024-03-21T04:02:17.167Z",
               "EditorCaption": ""
             }
           ]

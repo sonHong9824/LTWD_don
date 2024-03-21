@@ -41,7 +41,7 @@ namespace WPF_Market.Model
             this.Discount = discount;
             this.Like_New = like_New;
             this.Type = type;
-            this.Rating = rating;
+            this.rating = rating;
             this.Number_Of_Product = number_Of_Product;
             this.Number_Sold = number_Sold;
             this.ImageList = imageList;
