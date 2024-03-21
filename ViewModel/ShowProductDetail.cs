@@ -11,6 +11,6 @@ namespace WPF_Market.ViewModel
 {
     public interface IShowProductDetail
     {
-        void ShowProductDetail(ProductModel productModel ,Window parentWindow);   
+        void ShowProductDetail(Product_ref_Shop productModel ,Window parentWindow);   
     }
 }

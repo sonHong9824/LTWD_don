@@ -30,7 +30,6 @@ namespace WPF_Market.View
         Window parentWindow;
         public product(Window parentWindow)
         {
-
             InitializeComponent();
             this.parentWindow = parentWindow;
             this.DataContext = new ListProductViewModel(parentWindow);

@@ -7,9 +7,6 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Checkout.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="View\Custom_mb.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -19,32 +16,17 @@
     <Compile Update="View\Main_Board.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="View\Main_page.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="myAccount_page.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="View\Manage_Product.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\product.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Sale_Product_page.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="View\Signup.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="Static_advertise_picture.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="Checkout.xaml">
-      <SubType>Designer</SubType>
-    </Page>
     <Page Update="View\Custom_mb.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -54,25 +36,13 @@
     <Page Update="View\Main_Board.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="View\Main_page.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="myAccount_page.xaml">
-      <SubType>Designer</SubType>
-    </Page>
     <Page Update="View\Manage_Product.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\product.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Sale_Product_page.xaml">
-      <SubType>Designer</SubType>
-    </Page>
     <Page Update="View\Signup.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Static_advertise_picture.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
