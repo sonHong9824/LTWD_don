@@ -28,6 +28,7 @@ namespace WPF_Market.Model
         string firstImage;
         public ProductModel()
         {
+
         }
 
         public ProductModel(int id_sanpham, int id_shop, string txt_NameProduct, 
@@ -61,4 +62,5 @@ namespace WPF_Market.Model
         public ObservableCollection<string> ImageList { get => imageList; set => imageList = value; }
         public string FirstImage { get => firstImage; set => firstImage = value; }
     }
+
 }

@@ -23,12 +23,12 @@ namespace WPF_Market.View
     /// </summary>
     public partial class detail_product : Window
     {
-        private ProductModel model = new ProductModel();
+        private Product_ref_Shop model = new Product_ref_Shop();
         public detail_product(object productdetail)
         {
             InitializeComponent();
-            model = (ProductModel)productdetail;
-            DetailProductViewModel viewModel = new DetailProductViewModel(model);
+            model = (Product_ref_Shop)productdetail;
+            DetailProductViewModel viewModel = new DetailProductViewModel(model);    
             this.DataContext = viewModel;
         }
 

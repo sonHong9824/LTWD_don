@@ -34,7 +34,8 @@
                     <Grid Grid.Column="0">
                             <StackPanel Orientation="Vertical">
                                 <Border BorderThickness="2">
-                                    <Image Source="{Binding DefaultImage}"
+                                    <Image x:Name="DefaultImage"
+                                        Source="{Binding DefaultImage, Mode=TwoWay}"
                                             VerticalAlignment="Top"
                                     ></Image>
                                 </Border>
@@ -42,15 +43,27 @@
                                         VerticalScrollBarVisibility="Hidden"
                                         Margin="0 5 0 0">
                                     <ItemsControl x:Name="ListImage"
-                                ItemsSource="{Binding Imagelist}">
+                                ItemsSource="{Binding Product.ImageList}">
                                         <ItemsControl.ItemTemplate>
                                             <DataTemplate>
-                                                <Image Source="{Binding}"
-                                                    Height="120"
-                                                    Width="120"
-                                                    Margin="5 0 0 10"
-                                                    Stretch="Uniform"
-                                                ></Image>
+                                                <Grid>
+                                                    <Image Source="{Binding}"
+                                                        Height="120"
+                                                        Width="120"
+                                                        Margin="5 0 0 10"
+                                                        Stretch="Uniform"
+                                                        IsEnabled="True"
+                                                        >
+                                                        <Image.InputBindings>
+                                                            <MouseBinding Gesture="LeftClick" 
+                                                                          Command="{Binding DataContext.ChangePicture,RelativeSource={RelativeSource AncestorType={x:Type Window}}}"
+                                                                    CommandParameter="{Binding}"/>
+                                                        </Image.InputBindings>
+                                                    </Image>
+
+                                                  
+                                                </Grid>
+                                               
                                             </DataTemplate>
 
                                         </ItemsControl.ItemTemplate>
@@ -61,33 +74,6 @@
                                         </ItemsControl.ItemsPanel>
 
                                     </ItemsControl>
-                                    <!--<Image Source="/images/moto.jpg"
-                    Height="120"
-                    Width="120"
-                    Margin="5 0"
-                    Stretch="Uniform"/>
-        <Image Source="/images/moto.jpg"
-                    Height="120"
-                    Width="120"
-                    Margin="5 0"
-                    Stretch="Uniform"/>
-        <Image Source="/images/moto.jpg"
-                    Height="120"
-                    Width="120"
-                    Margin="5 0"
-                    Stretch="Uniform"/>
-        <Image Source="/images/moto.jpg"
-                    Height="120"
-                    Width="120"
-                    Margin="5 0"
-                    Stretch="Uniform"/>
-        <Image Source="/images/moto.jpg"
-                    Height="120"
-                    Width="120"
-                    Margin="5 0"
-                    Stretch="Uniform"/>-->
-
-
                                 </ScrollViewer>
                             </StackPanel>
                             
@@ -96,7 +82,7 @@
                    
                     <Grid Grid.Column="1">
                         <StackPanel Orientation="Vertical" HorizontalAlignment="Left"  Margin="20 0 0 0" >
-                            <TextBlock Text="{Binding TenSanPham}"
+                                <TextBlock Text="{Binding Product.Txt_NameProduct}"
                                        FontSize="30"
                                        FontWeight="DemiBold"
                                        Margin="20 20 0 0"
@@ -108,7 +94,7 @@
                                 Max="5"
                                 Min="1"
                                 
-                                Value="{Binding RatingValue}"
+                                Value="{Binding Product.Rating}"
                                 IsReadOnly="True"
                                 Margin="15 5 0 5"/>
                             <StackPanel Orientation="Horizontal">
@@ -136,7 +122,8 @@
                                         Margin="20 0"
                                         FontWeight="Bold">
                                 <Run Foreground="#5F5D5C">Shop:</Run>
-                                <Run Foreground="#A6A0A1">HCM</Run> 
+                                <Run Foreground="#A6A0A1"
+                                     Text="{Binding Product.Address}"></Run> 
                             </TextBlock>
                             <TextBlock x:Name="like_new"
                                        FontSize="25"
@@ -144,7 +131,7 @@
                                        FontWeight="Bold">
                                 <Run Foreground="#5F5D5C">Like New:</Run>
                                 <Run Foreground="#A6A0A1"
-                                     Text="{Binding LikeNew}"></Run>
+                                     Text="{Binding Product.Like_New}"></Run>
                             </TextBlock>
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock Text="PRICE: "
@@ -156,7 +143,7 @@
                                            FontWeight="Bold"/>
                                 <TextBlock x:Name="price"
                                            FontSize="25"
-                                           Text="{Binding Price, StringFormat='c'}"
+                                           Text="{Binding Product.Txt_Price, StringFormat='c'}"
                                            Foreground="#0FC20F"
                                            VerticalAlignment="Center"
                                            FontFamily="Dubai"

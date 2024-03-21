@@ -98,8 +98,7 @@
                                                     TextTrimming="WordEllipsis"
                                                     HorizontalAlignment="Center"
                                                     Foreground="#696969">
-                                                <!--<Run Text="{Binding Txt_DiaDiem}"></Run>-->
-                                                <Run Text="HCM"></Run>
+                                                <Run Text="{Binding Address}"></Run>
                                             </TextBlock>
                                         </StackPanel>
                                     </StackPanel>

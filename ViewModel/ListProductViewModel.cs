@@ -14,7 +14,7 @@ namespace WPF_Market.ViewModel
 {
     public class ListProductViewModel : BaseViewModel
     {
-        private ObservableCollection<ProductModel> productList = new ObservableCollection<ProductModel>();
+        private ObservableCollection<Product_ref_Shop> productList = new ObservableCollection<Product_ref_Shop>();
         private IShowProductDetail showProductDetail;
         private Window parentWindow;
         public ListProductViewModel(Window parentWindow)
@@ -30,7 +30,7 @@ namespace WPF_Market.ViewModel
 
         }
 
-        public ObservableCollection<ProductModel> ProductList
+        public ObservableCollection<Product_ref_Shop> ProductList
         {
             get
             {
@@ -63,7 +63,18 @@ namespace WPF_Market.ViewModel
 
 
                 int idSanPham = Convert.ToInt32(reader["Id_sanpham"]);
-                int idShop = 1; // Se thay doi sau khi co database cua shop
+                int idShop = Convert.ToInt32(reader["Id_shop"].ToString().Trim()); // Se thay doi sau khi co database cua shop
+
+                string subcmd = string.Format("Select * from Shop where ID_shop = '{0}'", idShop);
+                SqlCommand subSqlCommand = new SqlCommand(subcmd, SQLConnection.conn);
+                SqlDataReader subReader = subSqlCommand.ExecuteReader();
+                string shopAddress = "";
+                if (subReader.Read())
+                {
+                   shopAddress = subReader["Address"].ToString();
+                }
+                
+
                 string nameProduct = "Product's name: " + reader["Ten"].ToString();
                 double price = Convert.ToDouble(reader["Gia"]);
                 double discount = Convert.ToDouble(reader["Discount"]);
@@ -71,21 +82,15 @@ namespace WPF_Market.ViewModel
                 string type = reader["Type"] as string;
                 double rating = Convert.ToDouble(reader["Rate"]);
                 int number = Convert.ToInt32(reader["Number"]);
-                int sold = Convert.ToInt32(reader["NumberSold"]);
-
-                string linkImage = filePath + "/" + idSanPham.ToString().Trim() + "/Images/";
-                filePath += "/" + reader["Id_sanpham"].ToString().Trim() + "/Images.txt";
-                StreamReader stream = new StreamReader(filePath);
+                int sold = Convert.ToInt32(reader["NumberSold"]);    
+                filePath += "/" + reader["Id_sanpham"].ToString().Trim() + "/Images";      
                 ObservableCollection<string> imageList = new ObservableCollection<string>();
-                while (!stream.EndOfStream)
+                string[] link = Directory.GetFiles(filePath);
+                foreach (string linkItem in link)
                 {
-                    var temp = linkImage + stream.ReadLine().Trim();
-
-                    imageList.Add(temp);
-
+                    imageList.Add(linkItem);
                 }
-                stream.Close();
-                ProductModel model = new ProductModel(idSanPham, idShop, nameProduct, price, discount, domoi, type, rating, number, sold, imageList);
+                Product_ref_Shop model = new Product_ref_Shop(idSanPham, idShop, nameProduct, price, discount, domoi, type, rating, number, sold, imageList, shopAddress);
                 ProductList.Add(model);
             }
             SQLConnection.conn.Close();
@@ -94,7 +99,7 @@ namespace WPF_Market.ViewModel
         private void ExecuteSeeDetailCommand(object obj)
         {
             showProductDetail = new DisplayDetailProduct(parentWindow);
-            showProductDetail.ShowProductDetail((ProductModel)obj, parentWindow);
+            showProductDetail.ShowProductDetail((Product_ref_Shop)obj, parentWindow);
         }
     }
     public class DisplayDetailProduct : IShowProductDetail
@@ -102,12 +107,12 @@ namespace WPF_Market.ViewModel
         private Window parentWindow;
         public DisplayDetailProduct(Window parentWindow)
         {
-            ParentWindow = parentWindow;
+            //ParentWindow = parentWindow;
         }
 
         public Window ParentWindow { get => parentWindow; set => parentWindow = value; }
 
-        public void ShowProductDetail(ProductModel productModel, Window parentWindow)
+        public void ShowProductDetail(Product_ref_Shop productModel, Window parentWindow)
         {
             detail_product product = new detail_product(productModel);
             product.Owner = parentWindow;
