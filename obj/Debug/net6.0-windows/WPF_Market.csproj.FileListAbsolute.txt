@@ -84,7 +84,6 @@ D:\HK2_23-24_LTwindows\15-3\obj\Debug\net6.0-windows\Sale_Product_page.g.cs
 D:\HK2_23-24_LTwindows\15-3\obj\Debug\net6.0-windows\Static_advertise_picture.g.cs
 D:\HK2_23-24_LTwindows\15-3\obj\Debug\net6.0-windows\View\Custom_mb.g.cs
 D:\HK2_23-24_LTwindows\15-3\obj\Debug\net6.0-windows\View\detail_product.g.cs
-D:\HK2_23-24_LTwindows\15-3\obj\Debug\net6.0-windows\View\Frame_Home.g.cs
 D:\HK2_23-24_LTwindows\15-3\obj\Debug\net6.0-windows\View\Login_new.g.cs
 D:\HK2_23-24_LTwindows\15-3\obj\Debug\net6.0-windows\View\Main_Board.g.cs
 D:\HK2_23-24_LTwindows\15-3\obj\Debug\net6.0-windows\View\Main_page.g.cs
@@ -97,7 +96,6 @@ D:\HK2_23-24_LTwindows\15-3\obj\Debug\net6.0-windows\Checkout.baml
 D:\HK2_23-24_LTwindows\15-3\obj\Debug\net6.0-windows\myAccount_page.baml
 D:\HK2_23-24_LTwindows\15-3\obj\Debug\net6.0-windows\Sale_Product_page.baml
 D:\HK2_23-24_LTwindows\15-3\obj\Debug\net6.0-windows\Static_advertise_picture.baml
-D:\HK2_23-24_LTwindows\15-3\obj\Debug\net6.0-windows\View\Frame_Home.baml
 D:\HK2_23-24_LTwindows\15-3\obj\Debug\net6.0-windows\View\Main_page.baml
 D:\HK2_23-24_LTwindows\15-3\obj\Debug\net6.0-windows\WPF_Market.g.resources
 D:\HK2_23-24_LTwindows\15-3\obj\Debug\net6.0-windows\WPF_Market.Properties.Resources.resources

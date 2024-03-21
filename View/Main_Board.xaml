@@ -8,6 +8,7 @@
         mc:Ignorable="d"
         Title="Main" Height="720" Width="1280"
         MouseEnter="Window_MouseEnter"
+        WindowStyle="None"
         WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Topmost="True">
     <Window.Resources>
         <Storyboard x:Key="CloseMenu">
@@ -40,12 +41,16 @@
         </EventTrigger>
     </Window.Triggers>
 
+
     <Window.DataContext>
         <vm:MainBoardViewModel></vm:MainBoardViewModel>
     </Window.DataContext>
-    <Grid>
+
+
+    <Grid Background="Transparent">
+
         <Grid.RowDefinitions>
-            <RowDefinition Height="50"/>
+            <RowDefinition Height="40"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid Grid.RowSpan="2">
@@ -54,7 +59,7 @@
                     Padding="3"
                     materialDesign:ElevationAssist.Elevation="Dp4"
                     ClipToBounds="False"
-                    CornerRadius="5"
+                    CornerRadius="0"
                     Background ="#07BF96">
                 <DockPanel>
                     <materialDesign:PopupBox
@@ -75,32 +80,7 @@
                         Margin="-5,0,0,0"
                         VerticalAlignment="Center"
                         Text="Category" />
-                    <StackPanel Orientation="Horizontal" Width="900">
-                        <Button Content="Home" 
-                                Background="Transparent" 
-                                Foreground="#ffffff" FontSize="18" 
-                                materialDesign:ButtonAssist.CornerRadius="15" 
-                                BorderThickness="0"
-                                Height="45" Margin="30 0" />
-                        <Button Content="Shop" 
-                                Background="Transparent" 
-                                Foreground="#ffffff" FontSize="18" 
-                                materialDesign:ButtonAssist.CornerRadius="15" 
-                                BorderThickness="0"
-                                Height="45" Margin="30 0" />
-                        <Button Content="My Cart" 
-                                Background="Transparent" 
-                                Foreground="#ffffff" FontSize="18" 
-                                materialDesign:ButtonAssist.CornerRadius="15" 
-                                BorderThickness="0"
-                                Height="45" Margin="30 0" />
-                        <Button Content="My Account" 
-                                Background="Transparent" 
-                                Foreground="#ffffff" FontSize="18" 
-                                materialDesign:ButtonAssist.CornerRadius="15" 
-                                BorderThickness="0"
-                                Height="45" Margin="30 0" />
-                    </StackPanel>
+                    
                 </DockPanel>
             </materialDesign:ColorZone>
 
@@ -109,8 +89,99 @@
                 x:Name="F_display"
                 VerticalAlignment="Center"
                 HorizontalAlignment="Center">
-
         </Frame>
+        <Grid Grid.Row="1" Grid.RowSpan="2">
+            <materialDesign:DrawerHost x:Name="DrawerHost"
+                                          Width="1280"
+                                          Height="655"
+                                          HorizontalAlignment="Center"
+                                          VerticalAlignment="Bottom"
+                                          BorderBrush="{DynamicResource MaterialDesignDivider}"
+                                          BorderThickness="2"
+                                          
+                                          BottomDrawerCornerRadius="20 20 0 0">
+                <materialDesign:DrawerHost.Style>
+                    <Style
+                        TargetType="materialDesign:DrawerHost"
+                        BasedOn="{StaticResource {x:Type materialDesign:DrawerHost}}">
+                        <Style.Triggers>
+                            <DataTrigger
+                                  Binding="{Binding IsChecked, ElementName=BackgroundToggle}"
+                                  Value="True">
+                                <Setter
+                                    Property="OverlayBackground"
+                                    Value="{DynamicResource PrimaryHueMidBrush}" />
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </materialDesign:DrawerHost.Style>
+                <materialDesign:DrawerHost.BottomDrawerContent>
+                    <StackPanel
+                          Margin="16"
+                          HorizontalAlignment="Center"
+                          Orientation="Horizontal">
+                        <TextBlock
+                            Margin="4"
+                            VerticalAlignment="Center"
+                            Foreground="{DynamicResource SecondaryHueMidForegroundBrush}"
+                            Text="TASKBAR" />
+                        <Button
+                            x:Name="btn_home"
+                            Margin="4"
+                            VerticalAlignment="Center"
+                            Command="{x:Static materialDesign:DrawerHost.CloseDrawerCommand}"
+                            Content="HOME"
+                            Style="{StaticResource MaterialDesignFlatButton}" />
+                        <Button
+                            x:Name="btn_shop"
+                            Margin="4"
+                            VerticalAlignment="Center"
+                            Command="{x:Static materialDesign:DrawerHost.CloseDrawerCommand}"
+                            Content="SHOP"
+                            Style="{StaticResource MaterialDesignFlatButton}" />
+                        <Button
+                            x:Name="btn_acc"
+                            Margin="4"
+                            VerticalAlignment="Center"
+                            Command="{x:Static materialDesign:DrawerHost.CloseDrawerCommand}"
+                            Content="ACCOUNT"
+                            Style="{StaticResource MaterialDesignFlatButton}" />
+                        <Button
+                            x:Name="btn_cart"
+                            Margin="4"
+                            VerticalAlignment="Center"
+                            Command="{x:Static materialDesign:DrawerHost.CloseDrawerCommand}"
+                            Content="CART"
+                            Style="{StaticResource MaterialDesignFlatButton}" />
+                        <Button
+                            Margin="4"
+                            VerticalAlignment="Center"
+                            Command="{x:Static materialDesign:DrawerHost.CloseDrawerCommand}"
+                            CommandParameter="{x:Static Dock.Bottom}"
+                            Content="CLOSE THIS"
+                            Style="{StaticResource MaterialDesignFlatButton}" />
+                    </StackPanel>
+                </materialDesign:DrawerHost.BottomDrawerContent>
+                <Grid>
+                    <Button
+                        Height="50"
+                        Width="50"
+                        Margin="20"
+                        Background="Transparent"
+                        BorderThickness="0"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Bottom"
+                        Command="{x:Static materialDesign:DrawerHost.OpenDrawerCommand}"
+                        CommandParameter="{x:Static Dock.Bottom}">
+                        <materialDesign:PackIcon Kind="ArrowUpDropCircle"
+                                                 HorizontalAlignment="Center"
+                                                 Foreground="Black"
+                                                 Height="40"
+                                                 Width="40"/>
+                    </Button>
+                </Grid>
+            </materialDesign:DrawerHost>
+        </Grid>
         <Border CornerRadius="20" Grid.RowSpan="2">
             <Grid x:Name="GridMenu" Width="250" HorizontalAlignment="Left" Margin="-250 0 0 0" Background="#F1F1F1" RenderTransformOrigin="0.5,0.5">
                 <Grid.RenderTransform>
