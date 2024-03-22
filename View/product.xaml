@@ -24,7 +24,8 @@
                 <RowDefinition Height="40"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <ScrollViewer Grid.Row="1">
+            <ScrollViewer Grid.Row="1"
+                          >
 
                 <ItemsControl ItemsSource="{Binding ProductList}"
                                   >
