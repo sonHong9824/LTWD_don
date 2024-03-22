@@ -17,9 +17,10 @@
     </Window.DataContext>
     <ScrollViewer >
     <Grid>
+        
         <Grid Background="Transparent">
-            <Grid.RowDefinitions>
-                <RowDefinition />
+                <Grid.RowDefinitions>
+                    <RowDefinition />
                     <RowDefinition MinHeight="120"/>
                     <RowDefinition Height="50"/>
                 </Grid.RowDefinitions>
@@ -83,45 +84,41 @@
                     </Grid>
                    
                     <Grid Grid.Column="1">
-                        <StackPanel Orientation="Vertical" HorizontalAlignment="Left"  Margin="20 0 0 0" >
+                        <StackPanel Orientation="Vertical" HorizontalAlignment="Left"  Margin="10" >
                                 <TextBlock Text="{Binding Product.Txt_NameProduct}"
                                        FontSize="30"
                                        FontWeight="DemiBold"
-                                       Margin="20 20 0 0"
+                                       Margin="0 10"
                                        Foreground="#5F5D5C"
                                        FontFamily="Dubai"/>
                             
                             <materialDesign:RatingBar
                                 x:Name="BasicRatingBarFractional"
-                                
-                                
-                                
                                 Value="{Binding Product.Rating}"
                                 IsReadOnly="True"
-                                Margin="15 5 0 5"/>
-                            <StackPanel Orientation="Horizontal">
+                                Margin="0 10"/>
+                            <StackPanel Orientation="Horizontal" Margin="0 10">
                                 <TextBlock x:Name="tbl_review"
                                            Text="999 reviews"
-                                           Margin="20 0"
                                            FontSize="20"
                                            Foreground="#B6A0B3"
                                            />
-                                <Button Background="Transparent">
+                                <Button Background="Transparent" Margin="20 0">
                                     <materialDesign:PackIcon Kind="CommentEye"
                                                              Height="25"
                                                              Width="25"
                                                              Foreground="Black"/>
                                 </Button>
                             </StackPanel>
-                            <TextBlock x:Name="Tong_quan"
+                            <TextBlock x:Name="Tong_quan" 
                                        Text="{Binding TongQuan}"
-                                       Margin="20"
+                                       Margin="0 10"
                                        FontSize="20"
                                        Foreground="#A6A0A1"
                                        TextWrapping="Wrap"/>
                             <TextBlock x:Name="txlb_addShop"
                                        FontSize="25"
-                                        Margin="20 0"
+                                       Margin="0 10"
                                         FontWeight="Bold">
                                 <Run Foreground="#5F5D5C">Shop:</Run>
                                 <Run Foreground="#A6A0A1"
@@ -129,79 +126,67 @@
                             </TextBlock>
                             <TextBlock x:Name="like_new"
                                        FontSize="25"
-                                       Margin="20 0"
+                                       Margin="0 10"
                                        FontWeight="Bold">
-                                <Run Foreground="#5F5D5C">Like New:</Run>
+                                <Run Foreground="#5F5D5C">Newness:</Run>
                                 <Run Foreground="#A6A0A1"
                                      Text="{Binding Product.Like_New}"></Run>
                             </TextBlock>
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock Text="PRICE: "
+                                <StackPanel Orientation="Horizontal" Margin="0 10">
+                                    <TextBlock Text="ORIGIN PRICE: "
+                                               FontSize="25"
+                                               VerticalAlignment="Center"
+                                               FontFamily="Dubai"
+                           
+                                               Foreground="#6B605E"
+                                               FontWeight="Bold"/>
+                                    <TextBlock x:Name="txbl_origin_price"
+                                               FontSize="25"
+                                               Text="{Binding Product.Txt_Price, StringFormat='c'}"
+                                               
+                                               Foreground="#0FC20F"
+                                               VerticalAlignment="Center"
+                                               FontFamily="Dubai"
+                                               FontWeight="Bold"/>
+                                    <TextBlock x:Name="txbl_discount"
+                                               Margin="20 0 0 0"
+                                               FontSize="25"
+                                               Text="{Binding Product.Discount}"
+                                               Foreground="#424242"
+                                               VerticalAlignment="Center"
+                                               FontFamily="Dubai"
+                                               FontWeight="Bold"/>
+                                    <TextBlock
+                                               FontSize="25"
+                                               Text="%"
+                                               Foreground="#424242"
+                                               VerticalAlignment="Center"
+                                               FontFamily="Dubai"
+                                               FontWeight="Bold"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Margin="0 10">
+                                <TextBlock Text="CUR PRICE: "
                                            FontSize="25"
                                            VerticalAlignment="Center"
                                            FontFamily="Dubai"
-                                           Margin="20 0"
                                            Foreground="#6B605E"
                                            FontWeight="Bold"/>
-                                <TextBlock x:Name="price"
+                                <TextBlock x:Name="txbl_cur_price"
                                            FontSize="25"
                                            Text="{Binding Product.Txt_Price, StringFormat='c'}"
                                            Foreground="#0FC20F"
                                            VerticalAlignment="Center"
                                            FontFamily="Dubai"
                                            FontWeight="Bold"/>
-                                
                             </StackPanel>
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock Text="SIZES: "
-                                           FontSize="25"
-                                           VerticalAlignment="Center"
-                                           FontFamily="Dubai"
-                                           Foreground="#6B605E"
-                                           Margin="20 0"
-                                           FontWeight="Bold"/>
-                                <Button Content="S"
-                                        VerticalContentAlignment="Center"
-                                        Foreground="Black"
-                                        FontFamily="Dubai"
-                                        materialDesign:ButtonAssist.CornerRadius="22" 
-                                        FontSize="25" Height="45" Width="55" 
-                                        HorizontalContentAlignment="Center" 
-                                        Style="{StaticResource MaterialDesignFlatButton}" />
-                                <Button Content="M"
-                                        Foreground="Black"
-                                        materialDesign:ButtonAssist.CornerRadius="22" 
-                                        FontSize="25" Height="45" Width="55" 
-                                        HorizontalContentAlignment="Center" 
-                                        Style="{StaticResource MaterialDesignFlatButton}" />
-                                <Button Content="L"
-                                        Foreground="Black"
-                                        materialDesign:ButtonAssist.CornerRadius="22" 
-                                        FontSize="25" Height="45" Width="55" 
-                                        HorizontalContentAlignment="Center" 
-                                        Style="{StaticResource MaterialDesignFlatButton}" />
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock Text="COLORS: "
-                                           FontSize="25"
-                                           Foreground="#6B605E"
-                                           VerticalAlignment="Center"
-                                           FontFamily="Dubai"
-                                           Margin="20 0"
-                                           FontWeight="Bold"/>
-                                <Button Background="Blue" Margin="20 0"/>
-                                <Button Background="Yellow" Margin="20 0"/>
-                                <Button Background="Red" Margin ="20 0"/>
 
 
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal">
+                                <StackPanel Orientation="Horizontal" Margin="0 10">
                                 <TextBlock Text="Number of Products: "
                                            FontSize="25"
                                            VerticalAlignment="Center"
                                            FontFamily="Dubai"
                                            Foreground="#6B605E"
-                                           Margin="20 0"
                                            FontWeight="Bold"/>
                                 <ComboBox x:Name="cbb_num"
                                           Height="27"

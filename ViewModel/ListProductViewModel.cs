@@ -13,7 +13,7 @@ using WPF_Market.View;
 namespace WPF_Market.ViewModel
 {
     public class ListProductViewModel : BaseViewModel
-    {
+    {  
         private ObservableCollection<Product_ref_Shop> productList = new ObservableCollection<Product_ref_Shop>();
         private IShowProductDetail showProductDetail;
         private Window parentWindow;
