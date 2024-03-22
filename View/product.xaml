@@ -77,7 +77,7 @@
                                        Foreground="LightYellow"                                  
                                        x:Name="mtr_ratingbar"
                                        Max="5"
-                                       Min="1"
+                                       Min="0"
                                        IsReadOnly="True"
                                        Value="{Binding Rating}"  
                                         />

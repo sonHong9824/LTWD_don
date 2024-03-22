@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -12,6 +13,11 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.IO;
+using Path = System.IO.Path;
+using static MaterialDesignThemes.Wpf.Theme;
+using System.Threading;
+using WPF_Market.ViewModel;
 
 namespace WPF_Market.View
 {
@@ -23,26 +29,8 @@ namespace WPF_Market.View
         public Manage_Product()
         {
             InitializeComponent();
-            btn_submitEdit.Visibility = Visibility.Collapsed;
+            btn_submitAdd.Visibility = Visibility.Visible;
         }
-
-        private void btnClose_Click(object sender, RoutedEventArgs e)
-        {
-            this.Hide();
-        }
-
-        private void btn_img_Click(object sender, RoutedEventArgs e)
-        {
-            string folderPath = @"D:\";
-
-            try
-            {
-                Process.Start("explorer.exe", folderPath);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"An error occurred: {ex.Message}");
-            }
-        }
+       
     }
 }

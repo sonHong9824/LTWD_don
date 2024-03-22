@@ -43,8 +43,6 @@ namespace WPF_Market.ViewModel
                 OnPropertyChanged(nameof(productList)); 
             }
         }
-    
-
         private void GetProductDataFromDataBase()
         {
             SQLConnection.conn.Open();
@@ -59,7 +57,7 @@ namespace WPF_Market.ViewModel
                 if (count == 11)
                     break;
 
-                string filePath = @"D:\LTWD\LTWD_FinalProject\SanPham\";
+                string filePath = @"D:\HK2_23-24_LTwindows\15-3\SanPham\";
 
 
                 int idSanPham = Convert.ToInt32(reader["Id_sanpham"]);

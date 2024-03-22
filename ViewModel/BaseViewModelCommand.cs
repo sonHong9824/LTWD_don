@@ -9,7 +9,12 @@ namespace WPF_Market.ViewModel
 {
     public class BaseViewModelCommand : ICommand
     {
-        public event EventHandler? CanExecuteChanged;
+        // event
+        public event EventHandler? CanExecuteChanged
+        {
+            add { CommandManager.RequerySuggested += value; }
+            remove { CommandManager.RequerySuggested -= value; }
+        }
 
         private readonly Action<object> _executeAction;
         private readonly Predicate<object> _canExecuteAction;
@@ -26,12 +31,9 @@ namespace WPF_Market.ViewModel
         }
 
 
-        // events
-        public event EventHandler canExecuteChanged
-        {
-            add { CommandManager.RequerySuggested += value; }
-            remove { CommandManager.RequerySuggested -= value; }
-        }
+      
+      
+      
         // neu field canExecuteAction la null thi tra ve true vi chua thuc hien ham tien doan xem action thuc hien dc khong, nguoc lai thi tra ve mot delegate de xu ly no
         public bool CanExecute(object? parameter)
         {
