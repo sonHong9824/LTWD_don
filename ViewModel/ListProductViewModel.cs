@@ -49,15 +49,15 @@ namespace WPF_Market.ViewModel
             string cmd = string.Format("Select * from Kho");
             SqlCommand sqlCommand = new SqlCommand(cmd, SQLConnection.conn);
             SqlDataReader reader = sqlCommand.ExecuteReader();
-            int count = 0;
+           /* int count = 0;*/
             while (reader.Read())
             {
 
-                count++;
+             /*   count++;
                 if (count == 11)
-                    break;
+                    break;*/
 
-                string filePath = @"D:\HK2_23-24_LTwindows\15-3\SanPham\";
+                string filePath = @"D:\LTWD\LTWD_FinalProject\SanPham\";
 
 
                 int idSanPham = Convert.ToInt32(reader["Id_sanpham"]);

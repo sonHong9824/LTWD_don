@@ -31,7 +31,14 @@
                 <RowDefinition Height="100"/>
             </Grid.RowDefinitions>
             <materialDesign:PackIcon Kind="Close" VerticalAlignment="Top" Width="20" Height="20" HorizontalAlignment="Right" Margin="0 13 14 0" Opacity="0.3"/>
-            <Button x:Name="btnClose" VerticalAlignment="Top" Width="20" Height="20" HorizontalAlignment="Right" Margin="0 13 14 0" Opacity="0.3" Background="Transparent" BorderThickness="0"></Button>
+            <Button x:Name="btnClose"
+                    VerticalAlignment="Top"
+                    Width="20" Height="20" 
+                    HorizontalAlignment="Right" 
+                    Margin="0 13 14 0" Opacity="0.3"
+                    Background="Transparent" 
+                    BorderThickness="0"
+                    Command="{Binding CloseForm}"></Button>
             <TextBlock Text="Manage Product" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="14 13 0 0"  Foreground="Black" FontWeight="Bold"></TextBlock>
             <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="13 0">
                 <TextBlock Text="ID SHOP: "/>

@@ -76,8 +76,7 @@
                                        materialDesign:ColorZoneAssist.Foreground="Yellow"
                                        Foreground="LightYellow"                                  
                                        x:Name="mtr_ratingbar"
-                                       Max="5"
-                                       Min="0"
+                                      
                                        IsReadOnly="True"
                                        Value="{Binding Rating}"  
                                         />
@@ -111,7 +110,9 @@
                             <WrapPanel></WrapPanel>
                         </ItemsPanelTemplate>
                     </ItemsControl.ItemsPanel>
+                    
                 </ItemsControl>
+                
             </ScrollViewer>
         </Grid>
     </Border>

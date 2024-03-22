@@ -43,7 +43,7 @@ namespace WPF_Market.ViewModel
 
         private void ReadTongQuan()
         {
-            string filepath = @"D:\HK2_23-24_LTwindows\15-3\SanPham\" + Product.Id_sanpham.ToString().Trim() + "/Tongquansanpham.txt";
+            string filepath = @"D:\LTWD\LTWD_FinalProject\SanPham\" + Product.Id_sanpham.ToString().Trim() + "/Tongquansanpham.txt";
             StreamReader reader = new StreamReader(filepath);
             while (!reader.EndOfStream)
             {
@@ -53,7 +53,7 @@ namespace WPF_Market.ViewModel
         }
         private void ReadTTThem()
         {
-            string filepath = @"D:\HK2_23-24_LTwindows\15-3\SanPham\" + Product.Id_sanpham.ToString().Trim() + "/Thongtinthem.txt";
+            string filepath = @"D:\LTWD\LTWD_FinalProject\SanPham\" + Product.Id_sanpham.ToString().Trim() + "/Thongtinthem.txt";
             StreamReader reader = new StreamReader(filepath);
             while (!reader.EndOfStream)
             {
@@ -63,7 +63,7 @@ namespace WPF_Market.ViewModel
         }
         private void ReadTThientai()
         {
-            string filepath = @"D:\HK2_23-24_LTwindows\15-3\SanPham\" + Product.Id_sanpham.ToString().Trim() + "/Tinhtranghientai.txt";
+            string filepath = @"D:\LTWD\LTWD_FinalProject\SanPham\" + Product.Id_sanpham.ToString().Trim() + "/Tinhtranghientai.txt";
             StreamReader reader = new StreamReader(filepath);
             while (!reader.EndOfStream)
             {
