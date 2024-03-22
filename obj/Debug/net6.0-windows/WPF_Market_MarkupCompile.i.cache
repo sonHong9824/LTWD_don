@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\LTWD\LTWD_FinalProject\obj\Debug\net6.0-windows\
+D:\HK2_23-24_LTwindows\15-3\obj\Debug\net6.0-windows\
 WPF_Market
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-D:\LTWD\LTWD_FinalProject\App.xaml
+D:\HK2_23-24_LTwindows\15-3\App.xaml
 7-255912938
 
-34-1150119127
-201-2036738670
+35-1656378606
+201-139637962
 View\Custom_mb.xaml;View\detail_product.xaml;View\Login_new.xaml;View\Main_Board.xaml;View\Manage_Product.xaml;View\product.xaml;View\Signup.xaml;
 
-False
+True
 
