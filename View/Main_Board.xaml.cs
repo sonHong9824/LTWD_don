@@ -34,7 +34,7 @@ namespace WPF_Market.View
             {
                 DragMove();
             }
-        }
+        }    
     }
     
 }

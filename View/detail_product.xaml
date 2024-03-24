@@ -103,7 +103,7 @@
                                            FontSize="20"
                                            Foreground="#B6A0B3"
                                            />
-                                <Button Background="Transparent" Margin="20 0">
+                                <Button Background="Transparent" Margin="20 0" BorderThickness="0">
                                     <materialDesign:PackIcon Kind="CommentEye"
                                                              Height="25"
                                                              Width="25"

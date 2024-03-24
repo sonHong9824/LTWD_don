@@ -86,9 +86,11 @@
 
         </Grid>
         <Frame Grid.Row="1"
-                x:Name="F_display"
-                VerticalAlignment="Center"
-                HorizontalAlignment="Center">
+               x:Name="F_display"
+               VerticalAlignment="Center"
+               HorizontalAlignment="Center"
+               NavigationUIVisibility="Hidden"
+               Content="{Binding CurrentContent, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}">
         </Frame>
         <Grid Grid.Row="1" Grid.RowSpan="2">
             <materialDesign:DrawerHost x:Name="DrawerHost"
@@ -146,13 +148,15 @@
                             Command="{x:Static materialDesign:DrawerHost.CloseDrawerCommand}"
                             Content="ACCOUNT"
                             Style="{StaticResource MaterialDesignFlatButton}" />
-                        <Button
+                        <Button    
                             x:Name="btn_cart"
                             Margin="4"
                             VerticalAlignment="Center"
-                            Command="{x:Static materialDesign:DrawerHost.CloseDrawerCommand}"
+                            Command="{Binding CartCommand}"
                             Content="CART"
-                            Style="{StaticResource MaterialDesignFlatButton}" />
+                            Style="{StaticResource MaterialDesignFlatButton}">
+                        </Button>
+            
                         <Button
                             Margin="4"
                             VerticalAlignment="Center"
