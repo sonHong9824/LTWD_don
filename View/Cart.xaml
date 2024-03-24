@@ -1,19 +1,72 @@
 ﻿<Page x:Class="WPF_Market.View.Cart"
-      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:WPF_Market.View"
-      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-      mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-        MinWidth="800"
-        MinHeight="450"
-      Title="Cart">
-
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    xmlns:local="clr-namespace:WPF_Market.View"
+    mc:Ignorable="d" 
+    d:DesignHeight="508.8" d:DesignWidth="932"
+    MinWidth="800"
+    MinHeight="450"
+    
+    ShowsNavigationUI="False">
     <Border CornerRadius="10"
-            BorderThickness="3"
             Background="White">
-        
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <Border BorderThickness="0 0 1 0"
+                    BorderBrush="Black">
+                <ListView ItemsSource="{Binding Items1}">
+                    <ListView.View>
+                        <GridView>
+
+                            <GridViewColumn/>
+                            <!--checkbox-->
+                            <GridViewColumn/>
+                            <!--image-->
+                            <GridViewColumn
+                                DisplayMemberBinding="{Binding Description}"
+                                Header="Product" />
+                            <GridViewColumn 
+                                DisplayMemberBinding="{Binding Description}"
+                                Header="Price" />
+                            <GridViewColumn
+                                DisplayMemberBinding="{Binding Description}"
+                                Header="Quantity" />
+                            <GridViewColumn
+                                DisplayMemberBinding="{Binding Description}"
+                                Header="Subtotal" />
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </Border>
+            <Grid Grid.Column="1">
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Center" >
+                    <Border BorderBrush="Black"
+                            BorderThickness="0 0 0 0.5" Width="250">
+                        <TextBlock Text="Cart total"
+                                   Margin="0 30 0 0"
+                                   FontSize="30"
+                                   FontFamily="Dubai"/>
+                    </Border>
+                    <Border BorderBrush="Black"
+                            BorderThickness="0 0 0 0.5" Width="250">
+                        <DockPanel>
+                            <TextBlock Text="Subtotal"
+                                        Margin="0 30 0 0"
+                                        FontSize="20"
+                                        FontFamily="Dubai"/>
+                            <TextBlock x:Name="txbl_subtotal"/>
+                        </DockPanel>
+                    </Border>
+
+
+                </StackPanel>
+            </Grid>
+        </Grid>
     </Border>
 </Page>

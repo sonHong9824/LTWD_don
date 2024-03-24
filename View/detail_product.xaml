@@ -34,10 +34,12 @@
                     
                     <Grid Grid.Column="0">
                             <StackPanel Orientation="Vertical">
-                                <Border BorderThickness="2">
+                                <Border BorderThickness="2"
+                                        Height="500">
                                     <Image x:Name="DefaultImage"
                                         Source="{Binding DefaultImage, Mode=TwoWay}"
                                             VerticalAlignment="Top"
+                                           
                                     ></Image>
                                 </Border>
                                 <ScrollViewer VerticalAlignment="Bottom" Height="120" HorizontalScrollBarVisibility="Visible"

@@ -46,6 +46,7 @@ namespace WPF_Market.ViewModel
             BtnImageClick = new BaseViewModelCommand(ExecuteImageClickCommand);
             IncreaseNumberButttonClick = new BaseViewModelCommand(ExecuteIncreaseNumberCommand);
             DecreaseNumberButttonClick = new BaseViewModelCommand(ExecuteDecreaseNumberCommand, CanExecuteDecreaseNumberCommand);
+            CloseForm = new BaseViewModelCommand(ExecuteCloseFormCommand);
             ShortStringList = new ObservableCollection<string>();
             ShortStringList.Add("Electronics");
             ShortStringList.Add("Fashion and Clothing");
@@ -58,6 +59,15 @@ namespace WPF_Market.ViewModel
             ShortStringList.Add("Home and Graden");
             ShortStringList.Add("Others");
         }
+
+        private void ExecuteCloseFormCommand(object obj)
+        {
+            if (Application.Current.MainWindow != null)
+            {
+                Application.Current.MainWindow.Close();
+            }
+        }
+
         public ManageProductViewModel(string nameProduct, double price, double discount, string newness, string type, string overview, string configuration, string additional)
         {
             this.nameProduct = nameProduct;
@@ -108,7 +118,7 @@ namespace WPF_Market.ViewModel
         {
             ImageLinks = "";
             //link thư mục sản phẩm
-            string destinationDirectory = @"D:\LTWD\LTWD_FinalProject\SanPham\" + idSanPham.ToString().Trim(); // Đường dẫn thư mục bạn muốn sao chép hình ảnh đến
+            string destinationDirectory = @"D:\LTWD\LTWD_FinalProject\SanPham\Images\" + idSanPham.ToString().Trim(); // Đường dẫn thư mục bạn muốn sao chép hình ảnh đến
             CopyImageToDirectory(destinationDirectory);
             string[] files = Directory.GetFiles(destinationDirectory);
             foreach (string file in files)
@@ -292,7 +302,7 @@ namespace WPF_Market.ViewModel
         public ICommand BtnImageClick { get; }
         public ICommand IncreaseNumberButttonClick { get; }
         public ICommand DecreaseNumberButttonClick { get; }
-
+        public ICommand CloseForm {  get; }
         public int IdSanPham { get => idSanPham; set => idSanPham = value; }
         public string ImageLinks
         {
