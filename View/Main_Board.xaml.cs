@@ -35,6 +35,11 @@ namespace WPF_Market.View
                 DragMove();
             }
         }
+
+        private void btn_cart_Click(object sender, RoutedEventArgs e)
+        {
+            F_display.Content = new Cart();
+        }
     }
     
 }

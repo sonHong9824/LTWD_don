@@ -6,10 +6,7 @@
     xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
     xmlns:local="clr-namespace:WPF_Market.View"
     mc:Ignorable="d" 
-    d:DesignHeight="508.8" d:DesignWidth="932"
-    MinWidth="800"
-    MinHeight="450"
-    
+    d:DesignHeight="600" d:DesignWidth="1200"
     ShowsNavigationUI="False">
     <Border CornerRadius="10"
             Background="White">
@@ -20,14 +17,27 @@
             </Grid.ColumnDefinitions>
             <Border BorderThickness="0 0 1 0"
                     BorderBrush="Black">
-                <ListView ItemsSource="{Binding Items1}">
+                <ListView x:Name="listView">
                     <ListView.View>
                         <GridView>
 
-                            <GridViewColumn/>
-                            <!--checkbox-->
-                            <GridViewColumn/>
-                            <!--image-->
+                            <GridViewColumn 
+                                Header="IsSeclect">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <CheckBox IsChecked="{Binding IsChecked, Mode=TwoWay}" />
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+
+                            <GridViewColumn>
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Image Source="{Binding ImagePath}" Width="50" Height="50" />
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+
                             <GridViewColumn
                                 DisplayMemberBinding="{Binding Description}"
                                 Header="Product" />
@@ -47,24 +57,83 @@
             <Grid Grid.Column="1">
                 <StackPanel Orientation="Vertical" HorizontalAlignment="Center" >
                     <Border BorderBrush="Black"
-                            BorderThickness="0 0 0 0.5" Width="250">
+                            BorderThickness="0 0 0 0.5"
+                            Margin="10 0" Width="300">
                         <TextBlock Text="Cart total"
                                    Margin="0 30 0 0"
-                                   FontSize="30"
+                                   FontSize="25"
                                    FontFamily="Dubai"/>
                     </Border>
                     <Border BorderBrush="Black"
-                            BorderThickness="0 0 0 0.5" Width="250">
-                        <DockPanel>
+                            BorderThickness="0 0 0 0.5"
+                            Margin="10 0">
+                        <DockPanel Height="70">
                             <TextBlock Text="Subtotal"
-                                        Margin="0 30 0 0"
+                                       VerticalAlignment="Center"
                                         FontSize="20"
+                                       HorizontalAlignment="Left"
                                         FontFamily="Dubai"/>
-                            <TextBlock x:Name="txbl_subtotal"/>
+                            <TextBlock x:Name="txbl_subtotal"
+                                       DockPanel.Dock="Right"
+                                       Text="$30"
+                                       FontSize="20"
+                                        FontFamily="Dubai"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Right"/>
+                        </DockPanel>
+
+                    </Border>
+                    <Border BorderBrush="Black"
+                            BorderThickness="0 0 0 0.5" Margin="10 0">
+                        <DockPanel Height="70">
+                            <TextBlock Text="Shipping"
+                                       VerticalAlignment="Center"
+                                       FontSize="20"
+                                       HorizontalAlignment="Left"
+                                       FontFamily="Dubai"/>
+                            <StackPanel VerticalAlignment="Center"
+                                        HorizontalAlignment="Right"
+                                        Width="90"
+                                        Orientation="Vertical">
+                                <DockPanel>
+                                    <RadioButton x:Name="btn_deli"
+                                                 DockPanel.Dock="Right"/>
+                                    <TextBlock Text="Delivery"
+                                               FontSize="18"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <RadioButton x:Name="btn_pickup"
+                                                DockPanel.Dock="Right"/>
+                                    <TextBlock Text="Pickup"
+                                               FontSize="18"/>
+                                </DockPanel>
+
+                            </StackPanel>
                         </DockPanel>
                     </Border>
+                    <Border Margin="10 0">
+                        <DockPanel Height="70">
+                            <TextBlock Text="Total"
+                                       VerticalAlignment="Center"
+                                       FontSize="20"
+                                       HorizontalAlignment="Left"
+                                       FontFamily="Dubai"/>
+                            <TextBlock x:Name="txbl_total"
+                                        DockPanel.Dock="Right"
+                                        Text="$300"
+                                        FontSize="20"
+                                        FontFamily="Dubai"
+                                        VerticalAlignment="Center"
+                                        HorizontalAlignment="Right"/>
+                        </DockPanel>
 
-
+                    </Border>
+                    <Button Content="Proceed to checkout" 
+                            Background="#05B790" Foreground="#ffffff" 
+                            FontSize="15" 
+                            Margin="10 30"
+                            materialDesign:ButtonAssist.CornerRadius="5" 
+                            Height="45"/>
                 </StackPanel>
             </Grid>
         </Grid>
