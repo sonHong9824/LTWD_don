@@ -132,14 +132,14 @@
                             VerticalAlignment="Center"
                             Command="{x:Static materialDesign:DrawerHost.CloseDrawerCommand}"
                             Content="HOME"
-                            Style="{StaticResource MaterialDesignFlatButton}" />
+                            Style="{StaticResource MaterialDesignFlatButton}" Click="btn_home_Click" />
                         <Button
                             x:Name="btn_shop"
                             Margin="4"
                             VerticalAlignment="Center"
                             Command="{x:Static materialDesign:DrawerHost.CloseDrawerCommand}"
                             Content="SHOP"
-                            Style="{StaticResource MaterialDesignFlatButton}" />
+                            Style="{StaticResource MaterialDesignFlatButton}" Click="btn_shop_Click" />
                         <Button
                             x:Name="btn_acc"
                             Margin="4"

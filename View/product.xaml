@@ -24,9 +24,7 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
             <ScrollViewer Grid.Row="1">
-
-                <ItemsControl ItemsSource="{Binding ProductList}"
-                                  >
+                <ItemsControl ItemsSource="{Binding ProductList}">
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
                             <Border BorderBrush="#37B89C"

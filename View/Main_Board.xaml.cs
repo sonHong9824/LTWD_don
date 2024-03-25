@@ -40,6 +40,17 @@ namespace WPF_Market.View
         {
             F_display.Content = new Cart();
         }
+
+        private void btn_home_Click(object sender, RoutedEventArgs e)
+        {
+            Window parentWindow = Window.GetWindow(this);
+            F_display.Content = new product(parentWindow);
+        }
+
+        private void btn_shop_Click(object sender, RoutedEventArgs e)
+        {
+            F_display.Content = new ShopUI();
+        }
     }
     
 }

@@ -12,7 +12,20 @@
     <Border CornerRadius="10"
             BorderThickness="3"
             Background="White">
-        
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Border BorderBrush="Black"
+                    BorderThickness="0 0 0 0.5">
+                <TextBlock Text="MY SHOP"
+                           FontSize="30"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center"></TextBlock>
+            </Border>
+            
+        </Grid>
 
     </Border>
 </UserControl>
