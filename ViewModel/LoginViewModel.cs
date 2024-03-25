@@ -9,14 +9,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
-using WPF_Market.Model;
 using WPF_Market.Models;
+using WPF_Market.Models.Model;
 using WPF_Market.View;
 namespace WPF_Market.ViewModel
 {
     public class LoginViewModel : BaseViewModel
     {
-        private Acccount userAccount = new Acccount();
+        private WPF_Market.Models.Account userAccount = new WPF_Market.Models.Account();
         public LoginViewModel()
         {
             LoginCommand = new BaseViewModelCommand(ExecuteLoginCommand, CanExecuteLoginCommand);
@@ -48,7 +48,7 @@ namespace WPF_Market.ViewModel
         private void ExecuteLoginCommand(object obj)
         {
             var ValidAccount = DataProvider.Instance.DB.Accounts.Where(p => p.UserName == UserAccount.UserName 
-            && p.Password == SecureStringProcess.ConvertToUnsecureString(UserAccount.Password)).Count();
+            && p.Password == UserAccount.Password).Count();
             if (ValidAccount > 0)
             {
                 new Custom_mb("Welcome back, " + UserName, Custom_mb.MessageType.Success, Custom_mb.MessageButtons.Ok).ShowDialog();
@@ -61,7 +61,7 @@ namespace WPF_Market.ViewModel
                 new Custom_mb("Your account does not exist!", Custom_mb.MessageType.Warning, Custom_mb.MessageButtons.Ok).ShowDialog();
             }
         }
-        public Acccount UserAccount
+        public WPF_Market.Models.Account UserAccount
         {
             get { return userAccount; }
             set
@@ -81,10 +81,10 @@ namespace WPF_Market.ViewModel
         }
         public SecureString Password
         {
-            get { return UserAccount?.Password; }
+            get { return SecureStringProcess.ConvertToSecureString(UserAccount?.Password); }
             set
             {
-                UserAccount.Password = value;
+                UserAccount.Password = SecureStringProcess.ConvertToUnsecureString(value);
                 OnPropertyChanged(nameof(Password));
             }
         }

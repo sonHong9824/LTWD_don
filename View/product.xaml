@@ -5,6 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       xmlns:vmProduct="clr-namespace:WPF_Market.ViewModel"
+      xmlns:pl ="clr-namespace:WPF_Market.ViewModel"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       MinWidth="800"
@@ -60,7 +61,7 @@
                                             HorizontalAlignment="Center"
                                             Foreground="#EE4D2D"
                                             FontSize="15">
-                                            <Run Text="{Binding Txt_NameProduct}"></Run>
+                                            <Run Text="{Binding Ten}"></Run>
                                         </TextBlock>
                                         <TextBlock 
                                                 TextTrimming="WordEllipsis"
@@ -69,7 +70,7 @@
                                                 Foreground="#EE4D2D"
                                                 HorizontalAlignment="Center">
                                                 <Run Text="Price:"></Run>
-                                                <Run Text="{Binding Txt_Price, StringFormat='c'}"></Run>
+                                                <Run Text="{Binding Gia, StringFormat='c'}"></Run>
                                         </TextBlock>
                                         <materialDesign:RatingBar               
                                        HorizontalAlignment="Center"  
@@ -78,16 +79,18 @@
                                        x:Name="mtr_ratingbar"
                                       
                                        IsReadOnly="True"
-                                       Value="{Binding Rating}"  
+                                       Value="{Binding Rate}"  
                                         />
                                         <TextBlock x:Name="txt_soluongdaban"
                                             TextTrimming="WordEllipsis"
                                             Margin="0,0,0,0"
+                                            VerticalAlignment="Center"
                                             HorizontalAlignment="Center"
-                                            Foreground="Black">
+                                            Foreground="Black"
+                                                   >
                                             
                                         <Run Text="Sold:"></Run>
-                                        <Run Text="{Binding Number_Sold}"></Run>
+                                        <Run Text="{Binding NumberSold}"></Run>
                                         </TextBlock>
                                         <StackPanel Orientation="Horizontal"
                                                 HorizontalAlignment="Center">

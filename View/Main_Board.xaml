@@ -8,7 +8,7 @@
         mc:Ignorable="d"
         Title="Main" Height="720" Width="1280"
         MouseEnter="Window_MouseEnter"
-       
+        x:Name="MainBoardWindow"
         WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Topmost="True">
     <Window.Resources>
         <Storyboard x:Key="CloseMenu">
@@ -129,7 +129,7 @@
                             x:Name="btn_home"
                             Margin="4"
                             VerticalAlignment="Center"
-                            Command="{x:Static materialDesign:DrawerHost.CloseDrawerCommand}"
+                            Command="{Binding HomeCommand}"                     
                             Content="HOME"
                             Style="{StaticResource MaterialDesignFlatButton}" />
                         <Button
@@ -201,9 +201,6 @@
                             materialDesign:HintAssist.Hint="Search"
                             Style="{StaticResource MaterialDesignOutlinedTextBox}"
                             TextWrapping="Wrap"/>
-
-
-
                     <ListView Foreground="#FF313131" FontFamily="Champagne &amp; Limousines" FontSize="18">
 
                         <ListViewItem Height="45" Padding="0">

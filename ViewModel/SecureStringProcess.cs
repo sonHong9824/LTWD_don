@@ -31,6 +31,8 @@ namespace WPF_Market.ViewModel
         // Chuyển đổi chuỗi (string) thành SecureString
         public static SecureString ConvertToSecureString(string unsecureString)
         {
+            if ((string.IsNullOrEmpty(unsecureString) || unsecureString.Length == 0))
+                return null;
             SecureString secureString = new SecureString();
             foreach (char c in unsecureString)
             {

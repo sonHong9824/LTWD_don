@@ -7,6 +7,25 @@ namespace WPF_Market.Models;
 
 public partial class Kho
 {
+    public Kho()
+    {
+    }
+
+    public Kho(int idSanpham, int idShop, string ten, float? gia, float? discount, string doMoi, string type, float? rate, int? number, int? numberSold, Shop idShopNavigation)
+    {
+        IdSanpham = idSanpham;
+        IdShop = idShop;
+        Ten = ten;
+        Gia = gia;
+        Discount = discount;
+        DoMoi = doMoi;
+        Type = type;
+        Rate = rate;
+        Number = number;
+        NumberSold = numberSold;
+        IdShopNavigation = idShopNavigation;
+    }
+
     public int IdSanpham { get; set; }
 
     public int IdShop { get; set; }
@@ -25,7 +44,7 @@ public partial class Kho
 
     public int? Number { get; set; }
 
-    public string NumberSold { get; set; }
+    public int? NumberSold { get; set; }
 
     public virtual Shop IdShopNavigation { get; set; }
 }

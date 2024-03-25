@@ -45,6 +45,9 @@
     <Page Update="View\Custom_mb.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="View\detail_product.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="View\Login_new.xaml">
       <SubType>Designer</SubType>
     </Page>

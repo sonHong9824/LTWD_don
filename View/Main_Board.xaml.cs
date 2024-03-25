@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using WPF_Market.View;
+using WPF_Market.ViewModel;
 
 namespace WPF_Market.View
 {
@@ -24,8 +25,7 @@ namespace WPF_Market.View
         {
            
             InitializeComponent();
-            Window parentWindow = Window.GetWindow(this);
-            F_display.Content = new product(parentWindow);
+            CurrentApplicationStatus.MainBoardWindow = Window.GetWindow(this);
         }
 
         private void Window_MouseEnter(object sender, MouseEventArgs e)

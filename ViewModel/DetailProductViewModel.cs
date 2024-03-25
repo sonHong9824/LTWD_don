@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using System.Windows.Media.Effects;
-using WPF_Market.Model;
+using WPF_Market.Models.Model;
 
 namespace WPF_Market.ViewModel
 {
@@ -18,7 +18,7 @@ namespace WPF_Market.ViewModel
         string tongQuan;
         string tTThem;
         string baoHanh;
-        
+        private double currentPrice;
         public DetailProductViewModel()
         {
 
@@ -43,7 +43,7 @@ namespace WPF_Market.ViewModel
 
         private void ReadTongQuan()
         {
-            string filepath = @"D:\HK2_23-24_LTwindows\15-3\SanPham\" + Product.Id_sanpham.ToString().Trim() + "/Tongquansanpham.txt";
+            string filepath = @"D:\LTWD\LTWD_FinalProject\SanPham\" + Product.IdSanpham.ToString().Trim() + "/Tongquansanpham.txt";
             StreamReader reader = new StreamReader(filepath);
             while (!reader.EndOfStream)
             {
@@ -53,7 +53,7 @@ namespace WPF_Market.ViewModel
         }
         private void ReadTTThem()
         {
-            string filepath = @"D:\HK2_23-24_LTwindows\15-3\SanPham\" + Product.Id_sanpham.ToString().Trim() + "/Thongtinthem.txt";
+            string filepath = @"D:\LTWD\LTWD_FinalProject\SanPham\" + Product.IdSanpham.ToString().Trim() + "/Thongtinthem.txt";
             StreamReader reader = new StreamReader(filepath);
             while (!reader.EndOfStream)
             {
@@ -63,7 +63,7 @@ namespace WPF_Market.ViewModel
         }
         private void ReadTThientai()
         {
-            string filepath = @"D:\HK2_23-24_LTwindows\15-3\SanPham\" + Product.Id_sanpham.ToString().Trim() + "/Tinhtranghientai.txt";
+            string filepath = @"D:\LTWD\LTWD_FinalProject\SanPham\" + Product.IdSanpham.ToString().Trim() + "/Tinhtranghientai.txt";
             StreamReader reader = new StreamReader(filepath);
             while (!reader.EndOfStream)
             {
@@ -94,5 +94,7 @@ namespace WPF_Market.ViewModel
                 OnPropertyChanged(nameof(DefaultImage));
             }
         }
+
+        public double CurrentPrice { get => (double)(Product.Gia *  (100 - Product.Discount)/100) ; set { currentPrice = value; OnPropertyChanged(nameof(CurrentPrice)); } }
     }
 }

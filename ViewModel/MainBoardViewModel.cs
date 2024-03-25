@@ -14,7 +14,7 @@ namespace WPF_Market.ViewModel
         // Fields
 
         // Constructor
-        private Object currentContent;
+        private Object currentContent = new product();
         public MainBoardViewModel()
         {
             HomeCommand = new BaseViewModelCommand(ExecuteHomeCommand);
@@ -33,12 +33,13 @@ namespace WPF_Market.ViewModel
 
         private void ExecuteHomeCommand(object obj)
         {
-
+            CloseDrawerHost(obj);
+            CurrentContent = new product();
         }
-
         // Commands
         public ICommand HomeCommand { get; }
         public ICommand CartCommand { get; }
+       
         public object CurrentContent
         {
             get { return currentContent; }
