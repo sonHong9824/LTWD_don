@@ -45,8 +45,6 @@
     <Window.DataContext>
         <vm:MainBoardViewModel></vm:MainBoardViewModel>
     </Window.DataContext>
-
-
     <Grid Background="Transparent">
 
         <Grid.RowDefinitions>

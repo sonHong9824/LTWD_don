@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 D:\LTWD\LTWD_FinalProject\App.xaml
-9-1973033901
+10468649937
 
-35-2006487493
-201-2036738670
-View\Cart.xaml;View\Custom_mb.xaml;View\detail_product.xaml;View\Login_new.xaml;View\Main_Board.xaml;View\Manage_Product.xaml;View\product.xaml;View\ShopUI.xaml;View\Signup.xaml;
+491118534746
+241-1674327244
+CustomControl\BindablePasswordBox.xaml;View\Cart.xaml;View\Custom_mb.xaml;View\detail_product.xaml;View\Login_new.xaml;View\Main_Board.xaml;View\Manage_Product.xaml;View\product.xaml;View\ShopUI.xaml;View\Signup.xaml;
 
 False
 

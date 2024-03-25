@@ -10,7 +10,7 @@ namespace WPF_Market.ViewModel
 {
     public static class Signup_DAO
     {
-        public static Acccount Check_input(string txt_user_name, string txt_email, string txt_password, string txt_repeat_password, bool is_checked)
+      /*  public static Acccount Check_input(string txt_user_name, string txt_email, string txt_password, string txt_repeat_password, bool is_checked)
         {
             if (!txt_email.Contains("@gmail.com") || txt_user_name==null || txt_password == null ||
                 txt_repeat_password == null || txt_repeat_password!=txt_password
@@ -54,6 +54,6 @@ namespace WPF_Market.ViewModel
             }
             SQLConnection.conn.Close();
             return false;
-        }
+        }*/
     }
 }
