@@ -69,7 +69,8 @@
                                  Text="{Binding UserName, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
 
                         <cc:BindablePasswordBox Margin="0,20,0,20" 
-                                                Password="{Binding Password, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}">
+                                                Password="{Binding Password, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+                                                materialDesign:HintAssist.Hint="Password" >
                         </cc:BindablePasswordBox>
                         <CheckBox x:Name="cb_remember_account"
                             Margin="0 40 0 20" FontSize="13">
@@ -91,7 +92,9 @@
                                     materialDesign:ButtonAssist.CornerRadius="22"
                                     FontSize="16" Height="45" Width="100"
                                     HorizontalContentAlignment="Center"
-                                    Style="{StaticResource MaterialDesignFlatButton}"/>
+                                    Style="{StaticResource MaterialDesignFlatButton}"
+                                    Command="{Binding SignUpCommand}"
+                                    CommandParameter="{Binding ElementName=LoginWindow}"/>
                         </StackPanel>
                     </StackPanel>
                 </Grid>

@@ -21,6 +21,14 @@ namespace WPF_Market.ViewModel
         {
             LoginCommand = new BaseViewModelCommand(ExecuteLoginCommand, CanExecuteLoginCommand);
             CloseCommand = new BaseViewModelCommand(ExecuteCloseCommand);
+            SignUpCommand = new BaseViewModelCommand(ExecuteSignUpCommand);
+        }
+
+        private void ExecuteSignUpCommand(object obj)
+        {
+            Window currentWindow = obj as Window;
+            new Signup().Show();
+            currentWindow.Close();
         }
 
         private void ExecuteCloseCommand(object obj)
@@ -31,6 +39,8 @@ namespace WPF_Market.ViewModel
         private bool CanExecuteLoginCommand(object obj)
         {
             if (Password is null || UserName is null)
+                return false;
+            if (Password.Length == 0 || string.IsNullOrEmpty(UserName))
                 return false;
             return true;
         }
@@ -80,5 +90,6 @@ namespace WPF_Market.ViewModel
         }
         public ICommand LoginCommand { get; }
         public ICommand CloseCommand { get; }
+        public ICommand SignUpCommand { get; }
     }
 }
