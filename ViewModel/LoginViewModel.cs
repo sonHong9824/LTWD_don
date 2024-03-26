@@ -1,4 +1,5 @@
 ﻿using MaterialDesignThemes.Wpf;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Identity.Client.NativeInterop;
 using System;
 using System.Collections.Generic;
@@ -47,12 +48,13 @@ namespace WPF_Market.ViewModel
 
         private void ExecuteLoginCommand(object obj)
         {
-            var ValidAccount = DataProvider.Instance.DB.Accounts.Where(p => p.UserName == UserAccount.UserName 
+            var ValidAccount = DataProvider.Instance.DB.Accounts.Where(p => p.UserName == UserAccount.UserName
             && p.Password == UserAccount.Password).Count();
             if (ValidAccount > 0)
             {
-                new Custom_mb("Welcome back, " + UserName, Custom_mb.MessageType.Success, Custom_mb.MessageButtons.Ok).ShowDialog();
+                var acc = DataProvider.Instance.DB.Shops.Include(p => p.Inventories).FirstOrDefault();           
                 new Main_Board().Show();
+                CurrentApplicationStatus.CurrentID = UserAccount.ID;
                 var currentWindow  = obj as Window;
                 currentWindow.Close();
             }

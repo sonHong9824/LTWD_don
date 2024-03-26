@@ -21,17 +21,15 @@ public partial class TraoDoiMuaBan : DbContext
 
     public virtual DbSet<Cart> Carts { get; set; }
 
-    public virtual DbSet<Helloworld> Helloworlds { get; set; }
-
     public virtual DbSet<ImageLink> ImageLinks { get; set; }
 
-    public virtual DbSet<Iventory> Iventories { get; set; }
-
-    public virtual DbSet<Kho> Khos { get; set; }
+    public virtual DbSet<Inventory> Inventories { get; set; }
 
     public virtual DbSet<Shop> Shops { get; set; }
 
     public virtual DbSet<User> Users { get; set; }
+
+    public virtual DbSet<helloworld> helloworlds { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
@@ -41,131 +39,115 @@ public partial class TraoDoiMuaBan : DbContext
     {
         modelBuilder.Entity<Account>(entity =>
         {
-            entity.HasKey(e => new { e.Id, e.UserName, e.Email });
+            entity.HasKey(e => e.ID).HasName("PK_Account_1");
 
             entity.ToTable("Account");
 
             entity.HasIndex(e => e.UserName, "UQ__Account__C9F2845681F2AFF2").IsUnique();
 
-            entity.Property(e => e.Id)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("ID");
-            entity.Property(e => e.UserName).HasMaxLength(50);
-            entity.Property(e => e.Email).HasMaxLength(50);
+            entity.Property(e => e.Email)
+                .IsRequired()
+                .HasMaxLength(50);
             entity.Property(e => e.Password).HasMaxLength(50);
+            entity.Property(e => e.UserName)
+                .IsRequired()
+                .HasMaxLength(50);
         });
 
         modelBuilder.Entity<Cart>(entity =>
         {
-            entity.HasKey(e => e.IdCart).HasName("PK__Cart__72140ECF91CB9802");
+            entity.HasKey(e => e.ID_Cart).HasName("PK__Cart__72140ECF91CB9802");
 
             entity.ToTable("Cart");
 
-            entity.Property(e => e.IdCart)
-                .ValueGeneratedNever()
-                .HasColumnName("ID_Cart");
-            entity.Property(e => e.IdProduct).HasColumnName("ID_Product");
-            entity.Property(e => e.IdShop).HasColumnName("ID_Shop");
-            entity.Property(e => e.IdUser).HasColumnName("ID_User");
-        });
-
-        modelBuilder.Entity<Helloworld>(entity =>
-        {
-            entity.HasKey(e => e.Id).HasName("PK__hellowor__3213E83F0246803C");
-
-            entity.ToTable("helloworld");
-
-            entity.Property(e => e.Id).HasColumnName("id");
+            entity.Property(e => e.ID_Cart).ValueGeneratedNever();
         });
 
         modelBuilder.Entity<ImageLink>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Image_li__3214EC07892C4E48");
+            entity.HasKey(e => new { e.IDProduct, e.ImageLink1 }).HasName("PK__ImageLin__EE67F8807B0D494F");
 
-            entity.ToTable("Image_link");
+            entity.ToTable("ImageLink");
 
-            entity.Property(e => e.Id).ValueGeneratedNever();
-            entity.Property(e => e.ImageLink1).HasColumnName("Image_link");
+            entity.Property(e => e.IDProduct).ValueGeneratedOnAdd();
+            entity.Property(e => e.ImageLink1)
+                .HasMaxLength(50)
+                .HasColumnName("ImageLink");
+            entity.Property(e => e.FirstImage).HasMaxLength(50);
+
+            entity.HasOne(d => d.IDProductNavigation).WithMany(p => p.ImageLinks)
+                .HasForeignKey(d => d.IDProduct)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__ImageLink__IDPro__625A9A57");
         });
 
-        modelBuilder.Entity<Iventory>(entity =>
+        modelBuilder.Entity<Inventory>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Iventory__3214EC074D33F9B3");
+            entity.HasKey(e => e.IDProduct).HasName("PK__tmp_ms_x__4290D179DD00F021");
 
-            entity.ToTable("Iventory");
+            entity.ToTable("Inventory");
 
-            entity.Property(e => e.Id).ValueGeneratedNever();
-        });
-
-        modelBuilder.Entity<Kho>(entity =>
-        {
-            entity.HasKey(e => e.IdSanpham).HasName("PK__Kho__0BC662859A87BDBD");
-
-            entity.ToTable("Kho");
-
-            entity.Property(e => e.IdSanpham)
-                .ValueGeneratedNever()
-                .HasColumnName("Id_sanpham");
-            entity.Property(e => e.DoMoi)
+            entity.Property(e => e.Newness)
                 .HasMaxLength(10)
                 .IsFixedLength();
-            entity.Property(e => e.IdShop).HasColumnName("Id_shop");
             entity.Property(e => e.Type).HasMaxLength(50);
 
-            entity.HasOne(d => d.IdShopNavigation).WithMany(p => p.Khos)
-                .HasForeignKey(d => d.IdShop)
+            entity.HasOne(d => d.IDShopNavigation).WithMany(p => p.Inventories)
+                .HasForeignKey(d => d.IDShop)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Kho_Shop");
+                .HasConstraintName("FK_IDShop");
         });
 
         modelBuilder.Entity<Shop>(entity =>
         {
-            entity.HasKey(e => e.IdShop).HasName("PK__tmp_ms_x__EB360B913B87F53C");
+            entity.HasKey(e => e.IDShop).HasName("PK__tmp_ms_x__EB360B913B87F53C");
 
             entity.ToTable("Shop");
 
-            entity.Property(e => e.IdShop)
-                .ValueGeneratedNever()
-                .HasColumnName("ID_Shop");
+            entity.Property(e => e.IDShop).ValueGeneratedNever();
             entity.Property(e => e.Address).HasMaxLength(50);
             entity.Property(e => e.Email).HasMaxLength(50);
-            entity.Property(e => e.NameShop)
-                .HasMaxLength(50)
-                .HasColumnName("Name_Shop");
-            entity.Property(e => e.PhoneNumber)
-                .HasMaxLength(50)
-                .HasColumnName("Phone_Number");
-            entity.Property(e => e.ShopAvatar).HasColumnName("Shop_Avatar");
+            entity.Property(e => e.NameShop).HasMaxLength(50);
+            entity.Property(e => e.PhoneNumber).HasMaxLength(50);
+
+            entity.HasOne(d => d.IDShopNavigation).WithOne(p => p.Shop)
+                .HasForeignKey<Shop>(d => d.IDShop)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_ShopID");
         });
 
         modelBuilder.Entity<User>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__User__3214EC07AB300865");
+            entity.HasKey(e => e.ID).HasName("PK__User__3214EC07AB300865");
 
             entity.ToTable("User");
 
-            entity.Property(e => e.Id).ValueGeneratedNever();
+            entity.Property(e => e.ID).ValueGeneratedNever();
             entity.Property(e => e.Address).HasMaxLength(50);
-            entity.Property(e => e.AvatarSource).HasColumnName("Avatar_Source");
-            entity.Property(e => e.Cmnd)
-                .HasMaxLength(50)
-                .HasColumnName("CMND");
             entity.Property(e => e.DoB).HasColumnType("datetime");
             entity.Property(e => e.Email).HasMaxLength(50);
-            entity.Property(e => e.IdFavProduct)
+            entity.Property(e => e.IDFavProduct)
                 .HasMaxLength(10)
-                .IsFixedLength()
-                .HasColumnName("Id_fav_product");
-            entity.Property(e => e.IdFavShop)
+                .IsFixedLength();
+            entity.Property(e => e.IDFavShop)
                 .HasMaxLength(10)
-                .IsFixedLength()
-                .HasColumnName("id_fav_shop");
-            entity.Property(e => e.IdShop).HasColumnName("Id_shop");
+                .IsFixedLength();
+            entity.Property(e => e.IdentityNum).HasMaxLength(50);
             entity.Property(e => e.Name).HasMaxLength(50);
-            entity.Property(e => e.PhoneNumber)
-                .HasMaxLength(50)
-                .HasColumnName("Phone_Number");
+            entity.Property(e => e.PhoneNumber).HasMaxLength(50);
             entity.Property(e => e.Sex).HasMaxLength(50);
+
+            entity.HasOne(d => d.IDNavigation).WithOne(p => p.User)
+                .HasForeignKey<User>(d => d.ID)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_UserID");
+        });
+
+        modelBuilder.Entity<helloworld>(entity =>
+        {
+            entity.HasKey(e => e.id).HasName("PK__hellowor__3213E83F0246803C");
+
+            entity.ToTable("helloworld");
         });
 
         OnModelCreatingPartial(modelBuilder);

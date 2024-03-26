@@ -11,13 +11,14 @@ namespace WPF_Market.ViewModel
 {
     public static class CurrentApplicationStatus
     {
+        public static int CurrentID;
         public static Window MainBoardWindow;
-        public static ObservableCollection<Kho> ProductList = new ObservableCollection<Kho>(
-            DataProvider.Instance.DB.Khos.ToList());
+        public static ObservableCollection<Inventory> ProductList = new ObservableCollection<Inventory>(
+            DataProvider.Instance.DB.Inventories.ToList());
         public static void UpdateProductList()
         {
-            ProductList = new ObservableCollection<Kho>(
-            DataProvider.Instance.DB.Khos.ToList());
+            ProductList = new ObservableCollection<Inventory>(
+            DataProvider.Instance.DB.Inventories.ToList());
         }
     }
 }

@@ -80,18 +80,18 @@ namespace WPF_Market.ViewModel
             SQLConnection.conn.Close();*/
            foreach (var item in CurrentApplicationStatus.ProductList)
             {
-                var shop = DataProvider.Instance.DB.Shops.Where(p=>p.IdShop == item.IdShop).FirstOrDefault();
+                var shop = DataProvider.Instance.DB.Shops.Where(p=>p.IDShop == item.IDShop).FirstOrDefault();
                 if (shop != null)
                 {
-                    string filePath = @"D:\LTWD\LTWD_FinalProject\SanPham\" + item.IdSanpham.ToString()+ "/Images";
+                    string filePath = @"D:\LTWD\LTWD_FinalProject\SanPham\" + item.IDProduct.ToString()+ "/Images";
                     ObservableCollection<string> imageList = new ObservableCollection<string>();
                     string[] link = Directory.GetFiles(filePath);
                     foreach (string linkItem in link)
                     {
                         imageList.Add(linkItem);
                     }
-                    ProductList.Add(new Product_ref_Shop(item.IdSanpham, item.IdShop, item.Ten,item.Gia, item.Discount, item.DoMoi, item.Type
-                        , item.Rate, item.Number, item.NumberSold, item.IdShopNavigation, shop.Address, imageList, imageList[0]));
+                    ProductList.Add(new Product_ref_Shop(item.IDProduct, item.IDShop, item.Name,item.Price, item.Discount, item.Newness, item.Type
+                        , item.Rating, item.Number, item.NumberSold, item.IDShopNavigation, shop.Address, imageList, imageList[0]));
                 }
             }
         }

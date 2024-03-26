@@ -12,7 +12,7 @@ using System.Windows;
 using System.Windows.Input;
 using WPF_Market.Models.Model;
 using WPF_Market.View;
-
+using WPF_Market.Models;
 namespace WPF_Market.ViewModel
 {
     public class ManageProductViewModel : BaseViewModel
@@ -183,13 +183,17 @@ namespace WPF_Market.ViewModel
             bool writeConfiguration = writeFile(pathTinhtrang, Configuration);
             if (writeOverview && writeAdditional && writeConfiguration)
             {
-                SQLConnection.conn.Open();
-                string sqlCmd = string.Format("Insert into Kho(Id_sanpham, Id_shop, Ten, Gia, Discount, DoMoi, Type, Rate, Number, NumberSold) values " + "('{0}', '{1}', '{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}')",idSanPham
-                    ,1,NameProduct,Price,Discount,Newness,Type,0,number,0);
-                SqlCommand cmd = new SqlCommand(sqlCmd,SQLConnection.conn);
-                if (cmd.ExecuteNonQuery()>0)
+                /*SQLConnection.conn.Open();
+                string sqlCmd = string.Format("Insert into Kho(Id_sanpham, Id_shop, Ten, Gia, Discount, DoMoi, Type, Rate, Number, NumberSold) values " + "('{0}', '{1}', '{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}')", idSanPham
+                    , 1, NameProduct, Price, Discount, Newness, Type, 0, number, 0);
+                SqlCommand cmd = new SqlCommand(sqlCmd, SQLConnection.conn);
+                if (cmd.ExecuteNonQuery() > 0)
                     new Custom_mb("Done", Custom_mb.MessageType.Success, Custom_mb.MessageButtons.Ok).ShowDialog();
-                SQLConnection.conn.Close();
+                SQLConnection.conn.Close();*/
+              
+                DataProvider.Instance.DB.Add(new Inventory { IDShop = CurrentApplicationStatus.CurrentID, Name = NameProduct, Price = (float)Price, Discount = (float)Discount, Newness = Newness, Type = Type
+                , Rating = 0, Number = Number, NumberSold=0});
+                DataProvider.Instance.DB.SaveChanges();
                 return;
             }
             new Custom_mb("Fail", Custom_mb.MessageType.Error, Custom_mb.MessageButtons.Ok).ShowDialog();
@@ -205,7 +209,6 @@ namespace WPF_Market.ViewModel
                     {
                         writer.WriteLine(content);
                     }
-
                 }
                 else
                 {

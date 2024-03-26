@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace WPF_Market.Models;
 
-public partial class Helloworld
+public partial class helloworld
 {
-    public int Id { get; set; }
+    public int id { get; set; }
 }

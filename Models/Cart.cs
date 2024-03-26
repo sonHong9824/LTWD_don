@@ -7,13 +7,13 @@ namespace WPF_Market.Models;
 
 public partial class Cart
 {
-    public int IdCart { get; set; }
+    public int ID_Cart { get; set; }
 
-    public int? IdUser { get; set; }
+    public int? ID_User { get; set; }
 
-    public int? IdShop { get; set; }
+    public int? ID_Shop { get; set; }
 
-    public int? IdProduct { get; set; }
+    public int? ID_Product { get; set; }
 
     public int? Number { get; set; }
 }

@@ -28,15 +28,11 @@
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[Image_link]",
+         "Name": "[dbo].[ImageLink]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[Iventory]",
-         "ObjectType": 0
-      },
-      {
-         "Name": "[dbo].[Kho]",
+         "Name": "[dbo].[Inventory]",
          "ObjectType": 0
       },
       {
@@ -51,7 +47,7 @@
    "UiHint": "meowww\\localdb#15988abf.LTWD_Final_Project.dbo",
    "UncountableWords": null,
    "UseBoolPropertiesWithoutDefaultSql": false,
-   "UseDatabaseNames": false,
+   "UseDatabaseNames": true,
    "UseDateOnlyTimeOnly": false,
    "UseDbContextSplitting": false,
    "UseDecimalDataAnnotationForSprocResult": true,

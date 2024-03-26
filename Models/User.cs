@@ -7,9 +7,9 @@ namespace WPF_Market.Models;
 
 public partial class User
 {
-    public int Id { get; set; }
+    public int ID { get; set; }
 
-    public string Cmnd { get; set; }
+    public string IdentityNum { get; set; }
 
     public string Name { get; set; }
 
@@ -19,17 +19,17 @@ public partial class User
 
     public DateTime? DoB { get; set; }
 
-    public string AvatarSource { get; set; }
-
     public string PhoneNumber { get; set; }
 
     public string Email { get; set; }
 
     public float? Budget { get; set; }
 
-    public int? IdShop { get; set; }
+    public int? IDShop { get; set; }
 
-    public string IdFavProduct { get; set; }
+    public string IDFavProduct { get; set; }
 
-    public string IdFavShop { get; set; }
+    public string IDFavShop { get; set; }
+
+    public virtual Account IDNavigation { get; set; }
 }

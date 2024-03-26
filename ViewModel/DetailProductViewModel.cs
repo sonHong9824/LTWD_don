@@ -43,7 +43,7 @@ namespace WPF_Market.ViewModel
 
         private void ReadTongQuan()
         {
-            string filepath = @"D:\LTWD\LTWD_FinalProject\SanPham\" + Product.IdSanpham.ToString().Trim() + "/Tongquansanpham.txt";
+            string filepath = @"D:\LTWD\LTWD_FinalProject\SanPham\" + Product.IDProduct.ToString().Trim() + "/Tongquansanpham.txt";
             StreamReader reader = new StreamReader(filepath);
             while (!reader.EndOfStream)
             {
@@ -53,7 +53,7 @@ namespace WPF_Market.ViewModel
         }
         private void ReadTTThem()
         {
-            string filepath = @"D:\LTWD\LTWD_FinalProject\SanPham\" + Product.IdSanpham.ToString().Trim() + "/Thongtinthem.txt";
+            string filepath = @"D:\LTWD\LTWD_FinalProject\SanPham\" + Product.IDProduct.ToString().Trim() + "/Thongtinthem.txt";
             StreamReader reader = new StreamReader(filepath);
             while (!reader.EndOfStream)
             {
@@ -63,7 +63,7 @@ namespace WPF_Market.ViewModel
         }
         private void ReadTThientai()
         {
-            string filepath = @"D:\LTWD\LTWD_FinalProject\SanPham\" + Product.IdSanpham.ToString().Trim() + "/Tinhtranghientai.txt";
+            string filepath = @"D:\LTWD\LTWD_FinalProject\SanPham\" + Product.IDProduct.ToString().Trim() + "/Tinhtranghientai.txt";
             StreamReader reader = new StreamReader(filepath);
             while (!reader.EndOfStream)
             {
@@ -95,6 +95,6 @@ namespace WPF_Market.ViewModel
             }
         }
 
-        public double CurrentPrice { get => (double)(Product.Gia *  (100 - Product.Discount)/100) ; set { currentPrice = value; OnPropertyChanged(nameof(CurrentPrice)); } }
+        public double CurrentPrice { get => (double)(Product.Price *  (100 - Product.Discount)/100) ; set { currentPrice = value; OnPropertyChanged(nameof(CurrentPrice)); } }
     }
 }

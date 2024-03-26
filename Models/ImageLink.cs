@@ -7,7 +7,11 @@ namespace WPF_Market.Models;
 
 public partial class ImageLink
 {
-    public int Id { get; set; }
+    public int IDProduct { get; set; }
 
     public string ImageLink1 { get; set; }
+
+    public string FirstImage { get; set; }
+
+    public virtual Inventory IDProductNavigation { get; set; }
 }

@@ -61,7 +61,7 @@
                                             HorizontalAlignment="Center"
                                             Foreground="#EE4D2D"
                                             FontSize="15">
-                                            <Run Text="{Binding Ten}"></Run>
+                                            <Run Text="{Binding Name}"></Run>
                                         </TextBlock>
                                         <TextBlock 
                                                 TextTrimming="WordEllipsis"
@@ -70,7 +70,7 @@
                                                 Foreground="#EE4D2D"
                                                 HorizontalAlignment="Center">
                                                 <Run Text="Price:"></Run>
-                                                <Run Text="{Binding Gia, StringFormat='c'}"></Run>
+                                                <Run Text="{Binding Price, StringFormat='c'}"></Run>
                                         </TextBlock>
                                         <materialDesign:RatingBar               
                                        HorizontalAlignment="Center"  
@@ -79,7 +79,7 @@
                                        x:Name="mtr_ratingbar"
                                       
                                        IsReadOnly="True"
-                                       Value="{Binding Rate}"  
+                                       Value="{Binding Rating}"  
                                         />
                                         <TextBlock x:Name="txt_soluongdaban"
                                             TextTrimming="WordEllipsis"

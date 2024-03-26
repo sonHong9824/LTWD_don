@@ -7,11 +7,15 @@ namespace WPF_Market.Models;
 
 public partial class Account
 {
-    public int Id { get; set; }
+    public int ID { get; set; }
 
     public string Email { get; set; }
 
     public string UserName { get; set; }
 
     public string Password { get; set; }
+
+    public virtual Shop Shop { get; set; }
+
+    public virtual User User { get; set; }
 }

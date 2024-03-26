@@ -148,7 +148,7 @@
                             </TextBlock>
                             <materialDesign:RatingBar
                                 x:Name="BasicRatingBarFractional"
-
+    
                                 Value="0"
                                 IsReadOnly="True"
                                 VerticalAlignment="Center"
