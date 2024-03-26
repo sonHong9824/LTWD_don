@@ -7,6 +7,9 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="CustomControl\BindablePasswordBox.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\Cart.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -33,10 +36,16 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="CustomControl\BindablePasswordBox.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="View\Cart.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\Custom_mb.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\detail_product.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\Login_new.xaml">

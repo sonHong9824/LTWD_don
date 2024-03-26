@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Data.SqlClient;
@@ -8,34 +9,27 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
-using WPF_Market.Model;
+using System.Windows.Media;
+using WPF_Market.Models;
+using WPF_Market.Models.Model;
 using WPF_Market.View;
 namespace WPF_Market.ViewModel
 {
     public class ListProductViewModel : BaseViewModel
-    {  
+    {
         private ObservableCollection<Product_ref_Shop> productList = new ObservableCollection<Product_ref_Shop>();
         private IShowProductDetail showProductDetail;
-        private Window parentWindow;
-        public ListProductViewModel(Window parentWindow)
-        {
-            GetProductDataFromDataBase();
-            this.parentWindow = parentWindow;
-            SeeDetailCommand = new BaseViewModelCommand(ExecuteSeeDetailCommand);
-          
-        }
-
+        private string address;
         public ListProductViewModel()
         {
-
-        }
-
+            GetProductDataFromDataBase();
+            SeeDetailCommand = new BaseViewModelCommand(ExecuteSeeDetailCommand);
+        }  
         public ObservableCollection<Product_ref_Shop> ProductList
         {
             get
             {
                 return productList;
-
             }
             set
             {
@@ -45,20 +39,14 @@ namespace WPF_Market.ViewModel
         }
         private void GetProductDataFromDataBase()
         {
-            SQLConnection.conn.Open();
+           /* SQLConnection.conn.Open();
             string cmd = string.Format("Select * from Kho");
             SqlCommand sqlCommand = new SqlCommand(cmd, SQLConnection.conn);
             SqlDataReader reader = sqlCommand.ExecuteReader();
-           /* int count = 0;*/
             while (reader.Read())
             {
 
-             /*   count++;
-                if (count == 11)
-                    break;*/
-
-                string filePath = @"D:\HK2_23-24_LTwindows\15-3\SanPham\";
-
+                string filePath = @"D:\LTWD\LTWD_FinalProject\SanPham\";
 
                 int idSanPham = Convert.ToInt32(reader["Id_sanpham"]);
                 int idShop = Convert.ToInt32(reader["Id_shop"].ToString().Trim()); // Se thay doi sau khi co database cua shop
@@ -91,32 +79,49 @@ namespace WPF_Market.ViewModel
                 Product_ref_Shop model = new Product_ref_Shop(idSanPham, idShop, nameProduct, price, discount, domoi, type, rating, number, sold, imageList, shopAddress);
                 ProductList.Add(model);
             }
-            SQLConnection.conn.Close();
+            SQLConnection.conn.Close();*/
+           foreach (var item in CurrentApplicationStatus.ProductList)
+            {
+                var shop = DataProvider.Instance.DB.Shops.Where(p=>p.IDShop == item.IDShop).FirstOrDefault();
+                if (shop != null)
+                {
+                    string filePath = @"D:\LTWD\LTWD_FinalProject\SanPham\" + item.IDProduct.ToString()+ "/Images";
+                    ObservableCollection<string> imageList = new ObservableCollection<string>();
+                    string[] link = Directory.GetFiles(filePath);
+                    foreach (string linkItem in link)
+                    {
+                        imageList.Add(linkItem);
+                    }
+                    
+                }
+            }
         }
         public ICommand SeeDetailCommand { get; }
+        public string Address { get => address; set { address = value; OnPropertyChanged(nameof(Address)); } }
+
         private void ExecuteSeeDetailCommand(object obj)
         {
-            showProductDetail = new DisplayDetailProduct(parentWindow);
-            showProductDetail.ShowProductDetail((Product_ref_Shop)obj, parentWindow);
+            showProductDetail = new DisplayDetailProduct();
+            showProductDetail.ShowProductDetail((Product_ref_Shop)obj);
         }
     }
     public class DisplayDetailProduct : IShowProductDetail
     {
         private Window parentWindow;
-        public DisplayDetailProduct(Window parentWindow)
+        public DisplayDetailProduct()
         {
-            //ParentWindow = parentWindow;
+
         }
 
         public Window ParentWindow { get => parentWindow; set => parentWindow = value; }
 
-        public void ShowProductDetail(Product_ref_Shop productModel, Window parentWindow)
+        public void ShowProductDetail(Product_ref_Shop productModel)
         {
-            detail_product product = new detail_product(productModel);
-            product.Owner = parentWindow;
-            parentWindow.Hide();
+            detail_product product = new detail_product(productModel);          
+            product.Owner = CurrentApplicationStatus.MainBoardWindow;
+            CurrentApplicationStatus.MainBoardWindow.Hide();
             product.ShowDialog();
-            parentWindow.Show();
+            CurrentApplicationStatus.MainBoardWindow.Show();
         }
     }
 }

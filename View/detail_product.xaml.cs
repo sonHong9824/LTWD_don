@@ -13,7 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using WPF_Market.Model;
+using WPF_Market.Models.Model;
 using WPF_Market.ViewModel;
 
 namespace WPF_Market.View

@@ -13,9 +13,7 @@
         FontSize="15"
         FontFamily="{DynamicResource MaterialDesignFont}"
         Title="Manage_Product" Height="700" Width="900">
-    <Window.DataContext>
-        <Vm:ManageProductViewModel></Vm:ManageProductViewModel>
-    </Window.DataContext>
+
 
     <Window.Resources>
         <BooleanToVisibilityConverter x:Key="BooleanToVisibility"></BooleanToVisibilityConverter>
@@ -148,7 +146,7 @@
                             </TextBlock>
                             <materialDesign:RatingBar
                                 x:Name="BasicRatingBarFractional"
-
+    
                                 Value="0"
                                 IsReadOnly="True"
                                 VerticalAlignment="Center"

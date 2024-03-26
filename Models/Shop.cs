@@ -7,15 +7,19 @@ namespace WPF_Market.Models;
 
 public partial class Shop
 {
-    public int ID_Shop { get; set; }
+    public int Idshop { get; set; }
 
-    public string Name_Shop { get; set; }
+    public string NameShop { get; set; }
 
     public string Address { get; set; }
 
-    public string Shop_Avatar { get; set; }
+    public string ShopAvatar { get; set; }
 
-    public string Phone_Number { get; set; }
+    public string PhoneNumber { get; set; }
 
     public string Email { get; set; }
+
+    public virtual Account IdshopNavigation { get; set; }
+
+    public virtual ICollection<Inventory> Inventories { get; set; } = new List<Inventory>();
 }

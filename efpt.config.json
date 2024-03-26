@@ -1,6 +1,6 @@
 ﻿{
    "CodeGenerationMode": 3,
-   "ContextClassName": "TraoDoiMuaBanContext",
+   "ContextClassName": "DataBaseContext",
    "ContextNamespace": null,
    "FilterSchemas": false,
    "IncludeConnectionString": false,
@@ -23,31 +23,19 @@
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[Image_link]",
+         "Name": "[dbo].[helloworld]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[Iventory]",
+         "Name": "[dbo].[ImageLink]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[Kho]",
-         "ObjectType": 0
-      },
-      {
-         "Name": "[dbo].[Owner]",
-         "ObjectType": 0
-      },
-      {
-         "Name": "[dbo].[Product]",
+         "Name": "[dbo].[Inventory]",
          "ObjectType": 0
       },
       {
          "Name": "[dbo].[Shop]",
-         "ObjectType": 0
-      },
-      {
-         "Name": "[dbo].[Table]",
          "ObjectType": 0
       },
       {
@@ -58,7 +46,7 @@
    "UiHint": null,
    "UncountableWords": null,
    "UseBoolPropertiesWithoutDefaultSql": false,
-   "UseDatabaseNames": true,
+   "UseDatabaseNames": false,
    "UseDateOnlyTimeOnly": false,
    "UseDbContextSplitting": false,
    "UseDecimalDataAnnotationForSprocResult": true,

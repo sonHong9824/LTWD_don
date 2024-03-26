@@ -9,7 +9,7 @@ public partial class User
 {
     public int Id { get; set; }
 
-    public string CMND { get; set; }
+    public string IdentityNum { get; set; }
 
     public string Name { get; set; }
 
@@ -19,17 +19,17 @@ public partial class User
 
     public DateTime? DoB { get; set; }
 
-    public string Avatar_Source { get; set; }
-
-    public string Phone_Number { get; set; }
+    public string PhoneNumber { get; set; }
 
     public string Email { get; set; }
 
     public float? Budget { get; set; }
 
-    public int? Id_shop { get; set; }
+    public int? Idshop { get; set; }
 
-    public string Id_fav_product { get; set; }
+    public string IdfavProduct { get; set; }
 
-    public string id_fav_shop { get; set; }
+    public string IdfavShop { get; set; }
+
+    public virtual Account IdNavigation { get; set; }
 }

@@ -16,7 +16,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using WPF_Market.Model;
+using WPF_Market.Models.Model;
 using WPF_Market.ViewModel;
 using static MaterialDesignThemes.Wpf.Theme;
 namespace WPF_Market.View
@@ -27,12 +27,9 @@ namespace WPF_Market.View
 
     public partial class product : Page
     {
-        Window parentWindow;
-        public product(Window parentWindow)
+        public product()
         {
             InitializeComponent();
-            this.parentWindow = parentWindow;
-            this.DataContext = new ListProductViewModel(parentWindow);
         }
       
     }

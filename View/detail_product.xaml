@@ -12,9 +12,7 @@
       MinHeight="670"
       MinWidth="1280"
       Title="detail_product">
-    <Window.DataContext>
-        <local:DetailProductViewModel></local:DetailProductViewModel>
-    </Window.DataContext>
+   
     <ScrollViewer >
     <Grid>
         
@@ -85,7 +83,7 @@
                    
                     <Grid Grid.Column="1">
                         <StackPanel Orientation="Vertical" HorizontalAlignment="Left"  Margin="10" >
-                                <TextBlock Text="{Binding Product.Txt_NameProduct}"
+                                <TextBlock Text="{Binding Product.Ten}"
                                        FontSize="30"
                                        FontWeight="DemiBold"
                                        Margin="0 10"
@@ -94,7 +92,7 @@
                             
                             <materialDesign:RatingBar
                                 x:Name="BasicRatingBarFractional"
-                                Value="{Binding Product.Rating}"
+                                Value="{Binding Product.Rate}"
                                 IsReadOnly="True"
                                 Margin="0 10"/>
                             <StackPanel Orientation="Horizontal" Margin="0 10">
@@ -130,7 +128,7 @@
                                        FontWeight="Bold">
                                 <Run Foreground="#5F5D5C">Newness:</Run>
                                 <Run Foreground="#A6A0A1"
-                                     Text="{Binding Product.Like_New}"></Run>
+                                     Text="{Binding Product.DoMoi}"></Run>
                             </TextBlock>
                                 <StackPanel Orientation="Horizontal" Margin="0 10">
                                     <TextBlock Text="ORIGIN PRICE: "
@@ -142,7 +140,7 @@
                                                FontWeight="Bold"/>
                                     <TextBlock x:Name="txbl_origin_price"
                                                FontSize="25"
-                                               Text="{Binding Product.Txt_Price, StringFormat='c'}"
+                                               Text="{Binding Product.Gia, StringFormat='c'}"
                                                
                                                Foreground="#0FC20F"
                                                VerticalAlignment="Center"
@@ -173,7 +171,7 @@
                                            FontWeight="Bold"/>
                                 <TextBlock x:Name="txbl_cur_price"
                                            FontSize="25"
-                                           Text="{Binding Product.Txt_Price, StringFormat='c'}"
+                                           Text="{Binding CurrentPrice, StringFormat='c'}"
                                            Foreground="#0FC20F"
                                            VerticalAlignment="Center"
                                            FontFamily="Dubai"
