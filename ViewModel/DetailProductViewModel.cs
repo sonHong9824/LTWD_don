@@ -5,29 +5,36 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Media.Effects;
+using WPF_Market.Models;
 using WPF_Market.Models.Model;
 
 namespace WPF_Market.ViewModel
 {
     class DetailProductViewModel: BaseViewModel
     {
-        private Product_ref_Shop _product;
+        private Inventory _product;
         private string defaultImage;
         string tongQuan;
         string tTThem;
         string baoHanh;
         private double currentPrice;
+        private ObservableCollection<string>  listImage = new ObservableCollection<string>();
         public DetailProductViewModel()
         {
 
         }
 
-        public DetailProductViewModel(Product_ref_Shop productViewModel)
+        public DetailProductViewModel(Inventory productViewModel)
         {
             Product = productViewModel;
-            DefaultImage = Product.FirstImage;
+            foreach (var item in Product.ImageLinks)
+            {
+                ListImage.Add(item.ImageLink1);
+            }
+            DefaultImage = Product.ImageLinks.FirstOrDefault().FirstImage;
             ReadTongQuan(); 
             ReadTTThem();
             ReadTThientai();
@@ -70,8 +77,9 @@ namespace WPF_Market.ViewModel
                 BaoHanh = reader.ReadToEnd();
             }
             reader.Close();
-        }
-        public Product_ref_Shop Product
+           
+        }   
+        public Inventory Product
         {
             get { return _product; }
             set
@@ -96,5 +104,7 @@ namespace WPF_Market.ViewModel
         }
 
         public double CurrentPrice { get => (double)(Product.Price *  (100 - Product.Discount)/100) ; set { currentPrice = value; OnPropertyChanged(nameof(CurrentPrice)); } }
+
+        public ObservableCollection<string> ListImage { get => listImage; set => listImage = value; }
     }
 }

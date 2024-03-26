@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 using System.Windows;
 using WPF_Market.Models.Model;
 using WPF_Market.View;
-
+using WPF_Market.Models;
 namespace WPF_Market.ViewModel
 {
     public interface IShowProductDetail
     {
-        void ShowProductDetail(Product_ref_Shop productModel);   
+        void ShowProductDetail(Inventory productModel);   
     }
 }

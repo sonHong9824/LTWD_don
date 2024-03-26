@@ -65,20 +65,21 @@ public partial class TraoDoiMuaBan : DbContext
 
         modelBuilder.Entity<ImageLink>(entity =>
         {
-            entity.HasKey(e => new { e.IDProduct, e.ImageLink1 }).HasName("PK__ImageLin__EE67F8807B0D494F");
+            entity.HasKey(e => new { e.IDProduct, e.ImageLink1 });
 
             entity.ToTable("ImageLink");
 
-            entity.Property(e => e.IDProduct).ValueGeneratedOnAdd();
             entity.Property(e => e.ImageLink1)
-                .HasMaxLength(50)
+                .HasMaxLength(255)
                 .HasColumnName("ImageLink");
-            entity.Property(e => e.FirstImage).HasMaxLength(50);
+            entity.Property(e => e.FirstImage)
+                .IsRequired()
+                .HasMaxLength(255);
 
             entity.HasOne(d => d.IDProductNavigation).WithMany(p => p.ImageLinks)
                 .HasForeignKey(d => d.IDProduct)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__ImageLink__IDPro__625A9A57");
+                .HasConstraintName("FK_ImageLink_Inventory");
         });
 
         modelBuilder.Entity<Inventory>(entity =>
