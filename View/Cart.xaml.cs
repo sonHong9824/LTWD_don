@@ -23,6 +23,9 @@ namespace WPF_Market.View
     /// </summary>
     public partial class Cart : Page
     {
-        
+        public Cart()
+        {
+            InitializeComponent();
+        }
     }
 }

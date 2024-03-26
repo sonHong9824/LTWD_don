@@ -34,6 +34,7 @@ namespace WPF_Market.View
             {
                 DragMove();
             }
+
         }
 
         private void btn_cart_Click(object sender, RoutedEventArgs e)
@@ -51,6 +52,7 @@ namespace WPF_Market.View
         {
             F_display.Content = new ShopUI();
         }
+
     }
     
 }
