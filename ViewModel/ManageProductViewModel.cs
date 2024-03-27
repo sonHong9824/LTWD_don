@@ -10,7 +10,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
-using WPF_Market.Models.Model;
 using WPF_Market.View;
 using WPF_Market.Models;
 namespace WPF_Market.ViewModel

@@ -5,6 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       xmlns:vmProduct="clr-namespace:WPF_Market.ViewModel"
+      xmlns:sys="clr-namespace:System;assembly=mscorlib"
       xmlns:pl ="clr-namespace:WPF_Market.ViewModel"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
@@ -13,6 +14,13 @@
       Title="product"
       ShowsNavigationUI="False">
 
+    <Page.DataContext>
+        <vmProduct:ListProductViewModel></vmProduct:ListProductViewModel>
+    </Page.DataContext>
+    <Page.Resources>
+        <sys:Single x:Key="MySingleValue">1.5</sys:Single>
+    </Page.Resources>
+    
     <Border CornerRadius="10"
             BorderThickness="3"
             Background="White">
@@ -46,7 +54,7 @@
                                     <StackPanel Orientation="Vertical">
                                         <Grid>
                                             <Image x:Name="Illustration"
-                                              Source="{Binding FirstImage}"
+                                              Source="{Binding ImageLinks[0].FirstImage}"
                                                MaxHeight="155"
                                                MaxWidth="160"
                                             Stretch="Fill"/>
@@ -97,7 +105,7 @@
                                                     TextTrimming="WordEllipsis"
                                                     HorizontalAlignment="Center"
                                                     Foreground="#696969">
-                                                <Run Text="{Binding Address}"></Run>
+                                                <Run Text="{Binding IDShopNavigation.Address}"></Run>
                                             </TextBlock>
                                         </StackPanel>
                                     </StackPanel>

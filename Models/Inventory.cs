@@ -7,9 +7,9 @@ namespace WPF_Market.Models;
 
 public partial class Inventory
 {
-    public int Idproduct { get; set; }
+    public int IDProduct { get; set; }
 
-    public int Idshop { get; set; }
+    public int IDShop { get; set; }
 
     public string Name { get; set; }
 
@@ -27,7 +27,7 @@ public partial class Inventory
 
     public int? NumberSold { get; set; }
 
-    public virtual Shop IdshopNavigation { get; set; }
+    public virtual Shop IDShopNavigation { get; set; }
 
     public virtual ICollection<ImageLink> ImageLinks { get; set; } = new List<ImageLink>();
 }

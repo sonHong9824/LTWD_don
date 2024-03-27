@@ -13,7 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using WPF_Market.Models.Model;
+using WPF_Market.Models;
 using WPF_Market.ViewModel;
 
 namespace WPF_Market.View
@@ -23,11 +23,16 @@ namespace WPF_Market.View
     /// </summary>
     public partial class detail_product : Window
     {
-        private Product_ref_Shop model = new Product_ref_Shop();
+        private Inventory model = new Inventory();
+
+        public detail_product()
+        {
+        }
+
         public detail_product(object productdetail)
         {
             InitializeComponent();
-            model = (Product_ref_Shop)productdetail;
+            model = (Inventory)productdetail;
             DetailProductViewModel viewModel = new DetailProductViewModel(model);    
             this.DataContext = viewModel;
         }

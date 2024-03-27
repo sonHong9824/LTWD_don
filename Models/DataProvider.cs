@@ -23,6 +23,10 @@ namespace WPF_Market.Models
                 instance = value;
             }
         }
-
+        public TraoDoiMuaBan DB { get; set; }
+        private DataProvider()
+        {
+            DB = new TraoDoiMuaBan();
+        }
     }
 }

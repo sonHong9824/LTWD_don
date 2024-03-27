@@ -16,55 +16,89 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="50"/>
                 <RowDefinition/>
+                <RowDefinition Height="50" />
             </Grid.RowDefinitions>
             <Border BorderBrush="Black"
                     BorderThickness="0 0 0 0.5">
                 <Grid>
                     <TextBlock Text="MY SHOP"
-                               FontSize="30"
+                               FontSize="20"
                                Margin="10 0 0 0"
                                VerticalAlignment="Center"
                                HorizontalAlignment="Left"></TextBlock>
                     <StackPanel Orientation="Vertical"
                                 HorizontalAlignment="Right"
                                 VerticalAlignment="Center">
-                        <TextBlock Text="2893472"
+                        <TextBlock 
                                    Margin="0 0 10 0"
                                    x:Name="txbl_idShop"
                                    FontSize="15">
                             <Run>ID Shop: </Run>
+                            <Run> asj93h3</Run>
                         </TextBlock>
                     </StackPanel>
                 </Grid>
             </Border>
-            <Grid Grid.Row="1">
-                <ListView x:Name="listView">
-                    <ListView.View>
-                        <GridView>
+            <ScrollViewer Grid.Row="1">
+                <Grid Grid.Row="1">
+                    <ListView x:Name="listView">
+                        <ListView.View>
+                            <GridView>
 
-                            <GridViewColumn
+                                <GridViewColumn
                                 DisplayMemberBinding="{Binding Description}"
                                 Header="ID Product"
                                 Width="130"/>
-                            <GridViewColumn 
+                                <GridViewColumn 
                                 DisplayMemberBinding="{Binding Description}"
                                 Header="Image"
                                 Width="130"/>
-                            <GridViewColumn
+                                <GridViewColumn
                                 DisplayMemberBinding="{Binding Description}"
                                 Header="Product's Name"
                                 Width="160"/>
-                            <GridViewColumn
+                                <GridViewColumn
                                 DisplayMemberBinding="{Binding Description}"
                                 Header="Overview"
                                 Width="150"/>
-                        </GridView>
-                    </ListView.View>
-                </ListView>
+                                <GridViewColumn
+                                DisplayMemberBinding="{Binding Description}"
+                                Header="Price"
+                                Width="150"/>
+                                <GridViewColumn
+                                DisplayMemberBinding="{Binding Description}"
+                                Header="Discount"
+                                Width="150"/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
 
+                </Grid>
+            </ScrollViewer>
+            <Grid Grid.Row="2">
+                <Grid Background="#47403E"
+                      Height="30"
+                      VerticalAlignment="Bottom">
+                    <TextBlock Text="Manage Product"
+                                Foreground="Wheat"
+                                FontFamily="dubai"
+                               FontSize="15" 
+                               Margin="10 0"
+                                VerticalAlignment="Center"/>
+                    
+                </Grid>
+                <Button HorizontalAlignment="Right"
+                        VerticalAlignment="Top"
+                        Margin="0 0 30 0"
+                        Height="40"
+                        Width="40"
+                        x:Name="btn_addProduct"
+                          Style="{StaticResource MaterialDesignFloatingActionSecondaryButton}"
+                          ToolTip="MaterialDesignFloatingActionSecondaryButton" Click="btn_addProduct_Click" >
+                    <materialDesign:PackIcon Kind="PencilPlus"
+                                             Width="20"/>
+                </Button>
             </Grid>
-            
         </Grid>
-
     </Border>
 </UserControl>

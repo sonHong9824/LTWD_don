@@ -13,12 +13,5 @@ namespace WPF_Market.ViewModel
     {
         public static int CurrentID;
         public static Window MainBoardWindow;
-        public static ObservableCollection<Inventory> ProductList = new ObservableCollection<Inventory>(
-            DataProvider.Instance.DB.Inventories.ToList());
-        public static void UpdateProductList()
-        {
-            ProductList = new ObservableCollection<Inventory>(
-            DataProvider.Instance.DB.Inventories.ToList());
-        }
     }
 }

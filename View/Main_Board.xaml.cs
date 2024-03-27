@@ -53,6 +53,10 @@ namespace WPF_Market.View
             F_display.Content = new ShopUI();
         }
 
+        private void btn_acc_Click(object sender, RoutedEventArgs e)
+        {
+            F_display.Content = new Myinf();
+        }
     }
     
 }

@@ -11,7 +11,6 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 using WPF_Market.Models;
-using WPF_Market.Models.Model;
 using WPF_Market.View;
 namespace WPF_Market.ViewModel
 {
@@ -48,11 +47,12 @@ namespace WPF_Market.ViewModel
 
         private void ExecuteLoginCommand(object obj)
         {
+
             var ValidAccount = DataProvider.Instance.DB.Accounts.Where(p => p.UserName == UserAccount.UserName
             && p.Password == UserAccount.Password).Count();
             if (ValidAccount > 0)
             {
-                var acc = DataProvider.Instance.DB.Shops.Include(p => p.Inventories).FirstOrDefault();           
+                new Custom_mb("Welcome back, " + UserName, Custom_mb.MessageType.Success, Custom_mb.MessageButtons.Ok).ShowDialog();
                 new Main_Board().Show();
                 CurrentApplicationStatus.CurrentID = UserAccount.ID;
                 var currentWindow  = obj as Window;

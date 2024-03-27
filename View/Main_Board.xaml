@@ -143,14 +143,14 @@
                             VerticalAlignment="Center"
                             Command="{x:Static materialDesign:DrawerHost.CloseDrawerCommand}"
                             Content="ACCOUNT"
-                            Style="{StaticResource MaterialDesignFlatButton}" />
+                            Style="{StaticResource MaterialDesignFlatButton}" Click="btn_acc_Click" />
                         <Button    
                             x:Name="btn_cart"
                             Margin="4"
                             VerticalAlignment="Center"
                             Command="{Binding CartCommand}"
                             Content="CART"
-                            Style="{StaticResource MaterialDesignFlatButton}">
+                            Style="{StaticResource MaterialDesignFlatButton}" Click="btn_cart_Click">
                         </Button>
             
                         <Button

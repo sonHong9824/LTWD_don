@@ -7,7 +7,7 @@ namespace WPF_Market.Models;
 
 public partial class User
 {
-    public int Id { get; set; }
+    public int ID { get; set; }
 
     public string IdentityNum { get; set; }
 
@@ -25,11 +25,11 @@ public partial class User
 
     public float? Budget { get; set; }
 
-    public int? Idshop { get; set; }
+    public int? IDShop { get; set; }
 
-    public string IdfavProduct { get; set; }
+    public string IDFavProduct { get; set; }
 
-    public string IdfavShop { get; set; }
+    public string IDFavShop { get; set; }
 
-    public virtual Account IdNavigation { get; set; }
+    public virtual Account IDNavigation { get; set; }
 }

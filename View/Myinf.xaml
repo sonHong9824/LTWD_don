@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="WPF_Market.View.Myinf"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPF_Market.View"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+            mc:Ignorable="d" 
+            d:DesignHeight="450" d:DesignWidth="800"
+            MinWidth="800"
+            MinHeight="450">
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Border BorderBrush="Black"
+            BorderThickness="0 0 0 0.5">
+            <Grid>
+                <TextBlock Text="MY INFORMATION"
+               FontSize="20"
+               Margin="10 0 0 0"
+               VerticalAlignment="Center"
+               HorizontalAlignment="Left"></TextBlock>
+                <StackPanel Orientation="Vertical"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center">
+                    <TextBlock 
+                   Margin="0 0 10 0"
+                   x:Name="txbl_idAcc"
+                   FontSize="15">
+            <Run>ID Account: </Run>
+            <Run> asj93h3</Run>
+                    </TextBlock>
+                </StackPanel>
+            </Grid>
+        </Border>
+        <Grid Grid.Row="1"
+              Width="650"
+              Margin="0 10 0 200">
+          
+        </Grid>
+    </Grid>
+</UserControl>
