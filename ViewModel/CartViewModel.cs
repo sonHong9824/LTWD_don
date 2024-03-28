@@ -79,14 +79,14 @@ namespace WPF_Market.ViewModel
             MoneyToPay = 0;
             IsCheckedPickup = true;
             isCheckedDelivery = false;        
-            carts = new ObservableCollection<CartWrapper>(tempLst);
+            Carts = new ObservableCollection<CartWrapper>(tempLst);
             // Se bo sung xuat hoa don
         }
 
         private void ExecuteDeleteProductCommand(object obj)
         {
             var cart = obj as CartWrapper;
-            Carts.Remove(cart);
+          
             if (cart.CartWrapperIsChecked)
             {
                 SubTotal -= cart.CartWrapperCurrentPrice * cart.CartWrapperNumber;
@@ -94,6 +94,7 @@ namespace WPF_Market.ViewModel
             }
             DataProvider.Instance.DB.Remove(cart.Cart);
             DataProvider.Instance.DB.SaveChanges();
+            Carts.Remove(cart);
         }
 
         private void ExecuteShowDetailCommand(object obj)

@@ -46,53 +46,25 @@ namespace WPF_Market.ViewModel
             IncreaseNumberButttonClick = new BaseViewModelCommand(ExecuteIncreaseNumberCommand);
             DecreaseNumberButttonClick = new BaseViewModelCommand(ExecuteDecreaseNumberCommand, CanExecuteDecreaseNumberCommand);
             CloseForm = new BaseViewModelCommand(ExecuteCloseFormCommand);
-            ShortStringList = new ObservableCollection<string>();
-            ShortStringList.Add("Electronics");
-            ShortStringList.Add("Fashion and Clothing");
-            ShortStringList.Add("Jewellery");
-            ShortStringList.Add("Health and Beauty");
-            ShortStringList.Add("Books");
-            ShortStringList.Add("Kids and Babies");
-            ShortStringList.Add("Sports");
-            ShortStringList.Add("Fruit and veg");
-            ShortStringList.Add("Home and Graden");
-            ShortStringList.Add("Others");
+            ShortStringList = new ObservableCollection<string>
+            {
+                "Electronics",
+                "Fashion and Clothing",
+                "Jewellery",
+                "Health and Beauty",
+                "Books",
+                "Kids and Babies",
+                "Sports",
+                "Fruit and veg",
+                "Home and Graden",
+                "Others"
+            };
         }
 
         private void ExecuteCloseFormCommand(object obj)
         {
-           /* if (Application.Current.MainWindow != null)
-            {
-                Application.Current.MainWindow.Close();
-            }*/
+            System.Windows.Forms.MessageBox.Show("Test");
         }
-
-        public ManageProductViewModel(string nameProduct, double price, double discount, string newness, string type, string overview, string configuration, string additional)
-        {
-            this.nameProduct = nameProduct;
-            this.price = price;
-            this.discount = discount;
-            this.newness = newness;
-            this.type = type;
-            this.overview = overview;
-            this.configuration = configuration;
-            this.additional = additional;
-            SubmitCommand = new BaseViewModelCommand(ExecuteSubmitCommand);
-            ShortStringList = new ObservableCollection<string>();
-            IncreaseNumberButttonClick = new BaseViewModelCommand(ExecuteIncreaseNumberCommand);
-            DecreaseNumberButttonClick = new BaseViewModelCommand(ExecuteDecreaseNumberCommand, CanExecuteDecreaseNumberCommand);
-            ShortStringList.Add("Electronics");
-            ShortStringList.Add("Fashion and Clothing");
-            ShortStringList.Add("Jewellery");
-            ShortStringList.Add("Health and Beauty");
-            ShortStringList.Add("Books");
-            ShortStringList.Add("Kids and Babies");
-            ShortStringList.Add("Sports");
-            ShortStringList.Add("Fruit and veg");
-            ShortStringList.Add("Home and Graden");
-            ShortStringList.Add("Others");
-        }
-
         private bool CanExecuteDecreaseNumberCommand(object obj)
         {
             if (Number==1)
@@ -182,14 +154,6 @@ namespace WPF_Market.ViewModel
             bool writeConfiguration = writeFile(pathTinhtrang, Configuration);
             if (writeOverview && writeAdditional && writeConfiguration)
             {
-                /*SQLConnection.conn.Open();
-                string sqlCmd = string.Format("Insert into Kho(Id_sanpham, Id_shop, Ten, Gia, Discount, DoMoi, Type, Rate, Number, NumberSold) values " + "('{0}', '{1}', '{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}')", idSanPham
-                    , 1, NameProduct, Price, Discount, Newness, Type, 0, number, 0);
-                SqlCommand cmd = new SqlCommand(sqlCmd, SQLConnection.conn);
-                if (cmd.ExecuteNonQuery() > 0)
-                    new Custom_mb("Done", Custom_mb.MessageType.Success, Custom_mb.MessageButtons.Ok).ShowDialog();
-                SQLConnection.conn.Close();*/
-              
                 DataProvider.Instance.DB.Add(new Inventory { IDShop = CurrentApplicationStatus.CurrentID, Name = NameProduct, Price = (float)Price, Discount = (float)Discount, Newness = Newness, Type = Type
                 , Rating = 0, Number = Number, NumberSold=0});
                 DataProvider.Instance.DB.SaveChanges();

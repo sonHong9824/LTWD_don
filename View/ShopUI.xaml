@@ -113,7 +113,8 @@
                         Width="40"
                         x:Name="btn_addProduct"
                           Style="{StaticResource MaterialDesignFloatingActionSecondaryButton}"
-                          ToolTip="MaterialDesignFloatingActionSecondaryButton" Click="btn_addProduct_Click" >
+                          ToolTip="MaterialDesignFloatingActionSecondaryButton" Click="btn_addProduct_Click"
+                        Command="{Binding EditProductCommand}">
                     <materialDesign:PackIcon Kind="PencilPlus"
                                              Width="20"/>
                 </Button>

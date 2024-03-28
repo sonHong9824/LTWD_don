@@ -18,9 +18,6 @@
     <Window.Resources>
         <BooleanToVisibilityConverter x:Key="BooleanToVisibility"></BooleanToVisibilityConverter>
     </Window.Resources>
-    <Window.Visibility>
-        <Binding Path="CanExecuteSubmitCommand" Mode="TwoWay" Converter="{StaticResource BooleanToVisibility}"></Binding>
-    </Window.Visibility>
     <Border Background="White" CornerRadius="5">
         <Grid>
             <Grid.RowDefinitions>
@@ -36,7 +33,7 @@
                     Margin="0 13 14 0" Opacity="0.3"
                     Background="Transparent" 
                     BorderThickness="0"
-                    Command="{Binding CloseForm}"></Button>
+                    Click="btnClose_Click"></Button>
             <TextBlock Text="Manage Product" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="14 13 0 0"  Foreground="Black" FontWeight="Bold"></TextBlock>
             <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="13 0">
                 <TextBlock Text="ID SHOP: "/>
@@ -193,22 +190,13 @@
                     CornerRadius="10 10 0 0">
                 <Grid>
                     <Button x:Name="btn_submitAdd"
-                            Content="Submit Add" 
+                            Content="Submit" 
                             Background="#05B790" 
                             Foreground="#ffffff" FontSize="18" 
                             materialDesign:ButtonAssist.CornerRadius="15" 
                             Height="45" Width="160" 
                             Command="{Binding SubmitCommand, UpdateSourceTrigger=PropertyChanged}" IsEnabled="True"
                             Visibility="Visible"/>
-                    <Button x:Name="btn_submitEdit"
-                            Content="Submit Edit" 
-                            Background="#05B790" 
-                            Foreground="#ffffff" FontSize="18" 
-                            materialDesign:ButtonAssist.CornerRadius="15" 
-                            Height="45" Width="160" 
-                            Command="{Binding SubmitCommand, UpdateSourceTrigger=PropertyChanged}"
-                            Visibility="Collapsed"
-                            IsEnabled="True"/>
                 </Grid>
             </Border>
         </Grid>
