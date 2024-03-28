@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 D:\HK2_23-24_LTwindows\15-3\App.xaml
-11-805499453
+12-390705066
 
-561736157895
+57515291776
 241-312089360
-CustomControl\BindablePasswordBox.xaml;View\Cart.xaml;View\Custom_mb.xaml;View\detail_product.xaml;View\Login_new.xaml;View\Main_Board.xaml;View\Manage_Product.xaml;View\Myinf.xaml;View\product.xaml;View\ShopUI.xaml;View\Signup.xaml;
+CustomControl\BindablePasswordBox.xaml;View\Cart.xaml;View\confirmPass.xaml;View\Custom_mb.xaml;View\detail_product.xaml;View\Login_new.xaml;View\Main_Board.xaml;View\Manage_Product.xaml;View\Myinf.xaml;View\product.xaml;View\ShopUI.xaml;View\Signup.xaml;
 
 True
 

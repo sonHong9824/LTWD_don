@@ -112,3 +112,5 @@ D:\HK2_23-24_LTwindows\15-3\obj\Debug\net6.0-windows\refint\WPF_Market.dll
 D:\HK2_23-24_LTwindows\15-3\obj\Debug\net6.0-windows\WPF_Market.pdb
 D:\HK2_23-24_LTwindows\15-3\obj\Debug\net6.0-windows\WPF_Market.genruntimeconfig.cache
 D:\HK2_23-24_LTwindows\15-3\obj\Debug\net6.0-windows\ref\WPF_Market.dll
+D:\HK2_23-24_LTwindows\15-3\obj\Debug\net6.0-windows\View\confirmPass.g.cs
+D:\HK2_23-24_LTwindows\15-3\obj\Debug\net6.0-windows\View\confirmPass.baml

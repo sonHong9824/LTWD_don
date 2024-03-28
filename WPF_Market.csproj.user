@@ -13,6 +13,9 @@
     <Compile Update="View\Cart.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\confirmPass.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\Custom_mb.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -43,6 +46,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\Cart.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\confirmPass.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\Custom_mb.xaml">
