@@ -48,9 +48,9 @@ namespace WPF_Market.ViewModel
         private void ExecuteLoginCommand(object obj)
         {
 
-            var ValidAccount = DataProvider.Instance.DB.Accounts.Where(p => p.UserName == UserAccount.UserName
-            && p.Password == UserAccount.Password).Count();
-            if (ValidAccount > 0)
+            UserAccount = DataProvider.Instance.DB.Accounts.Where(p => p.UserName == UserAccount.UserName
+            && p.Password == UserAccount.Password).FirstOrDefault();
+            if (UserAccount != null)
             {
                 new Custom_mb("Welcome back, " + UserName, Custom_mb.MessageType.Success, Custom_mb.MessageButtons.Ok).ShowDialog();
                 new Main_Board().Show();
@@ -86,8 +86,12 @@ namespace WPF_Market.ViewModel
             get { return SecureStringProcess.ConvertToSecureString(UserAccount?.Password); }
             set
             {
-                UserAccount.Password = SecureStringProcess.ConvertToUnsecureString(value);
-                OnPropertyChanged(nameof(Password));
+                if (UserAccount!=null) 
+                {
+                    UserAccount.Password = SecureStringProcess.ConvertToUnsecureString(value);
+                    OnPropertyChanged(nameof(Password));
+                }
+                
             }
         }
         public ICommand LoginCommand { get; }

@@ -137,7 +137,7 @@
                             Margin="4"
                             VerticalAlignment="Center"
                             Command="{x:Static materialDesign:DrawerHost.CloseDrawerCommand}"
-                            Content="SHOP"
+                            Content="MY SHOP"
                             Style="{StaticResource MaterialDesignFlatButton}" />
                         <Button
                             x:Name="btn_acc"

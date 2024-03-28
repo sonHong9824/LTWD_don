@@ -7,13 +7,17 @@ namespace WPF_Market.Models;
 
 public partial class Cart
 {
-    public int ID_Cart { get; set; }
+    public int IDUser { get; set; }
 
-    public int? ID_User { get; set; }
+    public int IDProduct { get; set; }
 
-    public int? ID_Shop { get; set; }
+    public int? NumberOfProduct { get; set; }
 
-    public int? ID_Product { get; set; }
+    public bool? IsChecked { get; set; }
 
-    public int? Number { get; set; }
+    public double? CurrentPrice { get; set; }
+
+    public virtual Inventory IDProductNavigation { get; set; }
+
+    public virtual User IDUserNavigation { get; set; }
 }
