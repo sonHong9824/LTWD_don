@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿D:\LTWD\LTWD_FinalProject\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.i.cs
 FD:\LTWD\LTWD_FinalProject\App.xaml;;
 FD:\LTWD\LTWD_FinalProject\CustomControl\BindablePasswordBox.xaml;;
@@ -10,4 +11,19 @@ FD:\LTWD\LTWD_FinalProject\View\Myinf.xaml;;
 FD:\LTWD\LTWD_FinalProject\View\product.xaml;;
 FD:\LTWD\LTWD_FinalProject\View\ShopUI.xaml;;
 FD:\LTWD\LTWD_FinalProject\View\Signup.xaml;;
+=======
+﻿D:\HK2_23-24_LTwindows\15-3\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.i.cs
+FD:\HK2_23-24_LTwindows\15-3\App.xaml;;
+FD:\HK2_23-24_LTwindows\15-3\CustomControl\BindablePasswordBox.xaml;;
+FD:\HK2_23-24_LTwindows\15-3\View\Cart.xaml;;
+FD:\HK2_23-24_LTwindows\15-3\View\confirmPass.xaml;;
+FD:\HK2_23-24_LTwindows\15-3\View\detail_product.xaml;;
+FD:\HK2_23-24_LTwindows\15-3\View\Login_new.xaml;;
+FD:\HK2_23-24_LTwindows\15-3\View\Main_Board.xaml;;
+FD:\HK2_23-24_LTwindows\15-3\View\Manage_Product.xaml;;
+FD:\HK2_23-24_LTwindows\15-3\View\Myinf.xaml;;
+FD:\HK2_23-24_LTwindows\15-3\View\product.xaml;;
+FD:\HK2_23-24_LTwindows\15-3\View\ShopUI.xaml;;
+FD:\HK2_23-24_LTwindows\15-3\View\Signup.xaml;;
+>>>>>>> b7db5b1d7aea6f1dfd97c2724f164658b485b9c4
 

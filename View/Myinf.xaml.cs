@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MaterialDesignThemes.Wpf;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,5 +25,13 @@ namespace WPF_Market.View
         {
             InitializeComponent();
         }
+
+        private void btn_change_Click(object sender, RoutedEventArgs e)
+        {
+            var newUserControl = new confirmPass();
+            grid_showUC.Children.Clear();
+            grid_showUC.Children.Add(newUserControl);
+        }
+
     }
 }

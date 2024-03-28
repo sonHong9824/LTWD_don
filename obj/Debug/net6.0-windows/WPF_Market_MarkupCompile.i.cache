@@ -9,12 +9,21 @@ WPF_Market
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
+<<<<<<< HEAD
 D:\LTWD\LTWD_FinalProject\App.xaml
 11-805499453
 
 462107395931
 241-1887009266
 CustomControl\BindablePasswordBox.xaml;View\Cart.xaml;View\Custom_mb.xaml;View\detail_product.xaml;View\Login_new.xaml;View\Main_Board.xaml;View\Manage_Product.xaml;View\Myinf.xaml;View\product.xaml;View\ShopUI.xaml;View\Signup.xaml;
+=======
+D:\HK2_23-24_LTwindows\15-3\App.xaml
+12-390705066
+
+57515291776
+241-312089360
+CustomControl\BindablePasswordBox.xaml;View\Cart.xaml;View\confirmPass.xaml;View\Custom_mb.xaml;View\detail_product.xaml;View\Login_new.xaml;View\Main_Board.xaml;View\Manage_Product.xaml;View\Myinf.xaml;View\product.xaml;View\ShopUI.xaml;View\Signup.xaml;
+>>>>>>> b7db5b1d7aea6f1dfd97c2724f164658b485b9c4
 
 True
 
