@@ -20,6 +20,13 @@ namespace WPF_Market.ViewModel
             HomeCommand = new BaseViewModelCommand(ExecuteHomeCommand);
             CartCommand = new BaseViewModelCommand(ExecuteCartCommand);
             ShopCommand = new BaseViewModelCommand(ExecuteShopCommand);
+            AccountCommand = new BaseViewModelCommand(ExecuteAccountCommand);
+        }
+
+        private void ExecuteAccountCommand(object obj)
+        {
+            CloseDrawerHost(obj);
+            CurrentContent = new Myinf();
         }
 
         private void ExecuteShopCommand(object obj)
@@ -48,7 +55,7 @@ namespace WPF_Market.ViewModel
         public ICommand HomeCommand { get; }
         public ICommand CartCommand { get; }
         public ICommand ShopCommand { get; }
-       
+        public ICommand AccountCommand { get; }
         public object CurrentContent
         {
             get { return currentContent; }

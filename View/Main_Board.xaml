@@ -166,7 +166,7 @@
                             x:Name="btn_acc"
                             Margin="4"
                             VerticalAlignment="Center"
-                            Command="{x:Static materialDesign:DrawerHost.CloseDrawerCommand}"
+                            Command="{Binding AccountCommand}"
                             Content="ACCOUNT"
                             Style="{StaticResource MaterialDesignFlatButton}" Click="btn_acc_Click" />
                         <Button    
