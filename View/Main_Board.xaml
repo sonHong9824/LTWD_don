@@ -158,7 +158,7 @@
                             Command="{x:Static materialDesign:DrawerHost.CloseDrawerCommand}"
                             Content="SHOP"
                             Style="{StaticResource MaterialDesignFlatButton}" Click="btn_shop_Click" />
-                        <Button
+                            <Button
                             x:Name="btn_acc"
                             Margin="4"
                             VerticalAlignment="Center"

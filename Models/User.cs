@@ -31,5 +31,7 @@ public partial class User
 
     public string IDFavShop { get; set; }
 
+    public virtual ICollection<Cart> Carts { get; set; } = new List<Cart>();
+
     public virtual Account IDNavigation { get; set; }
 }

@@ -4,10 +4,15 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
     xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-    xmlns:local="clr-namespace:WPF_Market.View"
+    xmlns:vm="clr-namespace:WPF_Market.ViewModel"
     mc:Ignorable="d" 
     d:DesignHeight="600" d:DesignWidth="1200"
     ShowsNavigationUI="False">
+    
+    <Page.DataContext>
+        <vm:CartViewModel></vm:CartViewModel>
+    </Page.DataContext>
+    
     <Border CornerRadius="10"
             Background="White">
         <Grid>
@@ -17,39 +22,67 @@
             </Grid.ColumnDefinitions>
             <Border BorderThickness="0 0 1 0"
                     BorderBrush="Black">
-                <ListView x:Name="listView">
+                <ListView x:Name="listView"
+                          ItemsSource="{Binding Carts, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+                          >
+                    <ListView.ItemContainerStyle>
+                        <Style TargetType="ListViewItem">
+                            <Setter Property="vm:ContextMenuBehavior.IsContextMenuEnabled" Value="True" />
+                            <Setter Property="vm:ContextMenuBehavior.ShowDetailCommand" Value="{Binding DataContext.ShowDetailCommand, RelativeSource={RelativeSource AncestorType=ListView}}"/>
+                            <Setter Property="vm:ContextMenuBehavior.DeleteItemCommand" Value="{Binding DataContext.DeleteProductCommand, RelativeSource={RelativeSource AncestorType=ListView}}" />
+                            
+                            <!--<Setter Property="vm:InputBindingBehavior.InputBindings">
+                                <Setter.Value>
+                                    <InputBindingCollection>
+                                        <MouseBinding Gesture="LeftDoubleClick" Command="{Binding DataContext.ShowDetailCommand, RelativeSource={RelativeSource AncestorType=ListView}}"
+                                                      CommandParameter="{Binding}"/>
+                                    </InputBindingCollection>
+                                </Setter.Value>
+                            </Setter>-->
+
+                        </Style>
+                    </ListView.ItemContainerStyle>
                     <ListView.View>
                         <GridView>
-
                             <GridViewColumn 
                                 Header="IsSeclect">
                                 <GridViewColumn.CellTemplate>
                                     <DataTemplate>
-                                        <CheckBox IsChecked="{Binding IsChecked, Mode=TwoWay}" />
+                                        <CheckBox x:Name="cbSelect"
+                                                  IsChecked ="{Binding CartWrapperIsChecked, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                                  HorizontalAlignment="Center"
+                                                  VerticalAlignment="Center"
+                                                  Command="{Binding DataContext.IsCheckedCommand, RelativeSource={RelativeSource AncestorType={x:Type ListView}}}"
+                                                  CommandParameter="{Binding}">
+                                        </CheckBox>
                                     </DataTemplate>
                                 </GridViewColumn.CellTemplate>
                             </GridViewColumn>
 
-                            <GridViewColumn>
+                            <GridViewColumn
+                                Header="Illustration">
                                 <GridViewColumn.CellTemplate>
                                     <DataTemplate>
-                                        <Image Source="{Binding ImagePath}" Width="50" Height="50" />
+                                        <Image Source="{Binding CartWrapperIllustration}" Width="50" Height="50"
+                                               VerticalAlignment="Center"
+                                               HorizontalAlignment="Center"/>
                                     </DataTemplate>
                                 </GridViewColumn.CellTemplate>
                             </GridViewColumn>
 
                             <GridViewColumn
-                                DisplayMemberBinding="{Binding Description}"
+                                DisplayMemberBinding="{Binding CartWrapperName}"
                                 Header="Product" />
                             <GridViewColumn 
-                                DisplayMemberBinding="{Binding Description}"
+                                DisplayMemberBinding="{Binding CartWrapperPrice}"
                                 Header="Price" />
                             <GridViewColumn
-                                DisplayMemberBinding="{Binding Description}"
+                                DisplayMemberBinding="{Binding CartWrapperNumber}"
                                 Header="Quantity" />
                             <GridViewColumn
-                                DisplayMemberBinding="{Binding Description}"
-                                Header="Subtotal" />
+                                DisplayMemberBinding="{Binding CartWrapperCurrentPrice, UpdateSourceTrigger=PropertyChanged}"
+                                Header="CurrentPrice" />
+                            
                         </GridView>
                     </ListView.View>
                 </ListView>
@@ -68,16 +101,16 @@
                             BorderThickness="0 0 0 0.5"
                             Margin="10 0">
                         <DockPanel Height="70">
-                            <TextBlock Text="Subtotal"
+                            <TextBlock Text="Subtotal ($)"
                                        VerticalAlignment="Center"
                                         FontSize="20"
                                        HorizontalAlignment="Left"
                                         FontFamily="Dubai"/>
                             <TextBlock x:Name="txbl_subtotal"
                                        DockPanel.Dock="Right"
-                                       Text="$30"
+                                       Text="{Binding SubTotal, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
                                        FontSize="20"
-                                        FontFamily="Dubai"
+                                       FontFamily="Dubai"
                                        VerticalAlignment="Center"
                                        HorizontalAlignment="Right"/>
                         </DockPanel>
@@ -93,17 +126,21 @@
                                        FontFamily="Dubai"/>
                             <StackPanel VerticalAlignment="Center"
                                         HorizontalAlignment="Right"
-                                        Width="90"
+                                        Width="130"
                                         Orientation="Vertical">
                                 <DockPanel>
                                     <RadioButton x:Name="btn_deli"
-                                                 DockPanel.Dock="Right"/>
-                                    <TextBlock Text="Delivery"
+                                                 DockPanel.Dock="Right"
+                                                 IsChecked="{Binding IsCheckedDelivery, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+                                                 Command="{Binding Delivery}"/>
+                                    <TextBlock Text="Delivery (15$)"
                                                FontSize="18"/>
                                 </DockPanel>
                                 <DockPanel>
                                     <RadioButton x:Name="btn_pickup"
-                                                DockPanel.Dock="Right"/>
+                                                DockPanel.Dock="Right"
+                                                 IsChecked="{Binding IsCheckedPickup, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+                                                 Command="{Binding Pickup}"/>
                                     <TextBlock Text="Pickup"
                                                FontSize="18"/>
                                 </DockPanel>
@@ -120,7 +157,7 @@
                                        FontFamily="Dubai"/>
                             <TextBlock x:Name="txbl_total"
                                         DockPanel.Dock="Right"
-                                        Text="$300"
+                                        Text="{Binding MoneyToPay, UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}"
                                         FontSize="20"
                                         FontFamily="Dubai"
                                         VerticalAlignment="Center"

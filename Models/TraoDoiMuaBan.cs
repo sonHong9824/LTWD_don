@@ -54,11 +54,20 @@ public partial class TraoDoiMuaBan : DbContext
 
         modelBuilder.Entity<Cart>(entity =>
         {
-            entity.HasKey(e => e.ID_Cart).HasName("PK__Cart__72140ECFA605C967");
+
+            entity.HasKey(e => new { e.IDUser, e.IDProduct });
 
             entity.ToTable("Cart");
 
-            entity.Property(e => e.ID_Cart).ValueGeneratedNever();
+            entity.HasOne(d => d.IDProductNavigation).WithMany(p => p.Carts)
+                .HasForeignKey(d => d.IDProduct)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__Cart__IDProduct__1C873BEC");
+
+            entity.HasOne(d => d.IDUserNavigation).WithMany(p => p.Carts)
+                .HasForeignKey(d => d.IDUser)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Cart_Product_User");
         });
 
         modelBuilder.Entity<ImageLink>(entity =>

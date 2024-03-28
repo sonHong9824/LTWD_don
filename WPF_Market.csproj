@@ -21,6 +21,7 @@
   <ItemGroup>
     <Compile Remove="Login.xaml.cs" />
     <Compile Remove="MainWindow.xaml.cs" />
+    <Compile Remove="ViewModel\DataBaseProcess.cs" />
     <Compile Remove="ViewModel\Frame_Home_DAO.cs" />
     <Compile Remove="ViewModel\SQLProcessViewModel.cs" />
     <Compile Remove="View\Frame_Home.xaml.cs" />
