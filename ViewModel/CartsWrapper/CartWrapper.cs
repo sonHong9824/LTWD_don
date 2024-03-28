@@ -10,6 +10,7 @@ namespace WPF_Market.ViewModel.CartsWrapper
     public class CartWrapper : BaseViewModel
     {
         private Cart cart;
+        private bool isCheck = false;
         public CartWrapper()
         {
         }
@@ -18,7 +19,7 @@ namespace WPF_Market.ViewModel.CartsWrapper
             this.Cart = cart;
         }
         public Cart Cart { get => cart; set { cart = value; OnPropertyChanged(nameof(Cart)); } }
-        public bool CartWrapperIsChecked { get => (bool)cart.IsChecked; set { cart.IsChecked = value;  OnPropertyChanged(nameof(CartWrapperIsChecked)); } }
+        public bool CartWrapperIsChecked { get => isCheck; set { isCheck = value;  OnPropertyChanged(nameof(CartWrapperIsChecked)); } }
         public double CartWrapperPrice { get => (double)cart.IDProductNavigation.Price; }
         public string CartWrapperName { get => cart.IDProductNavigation.Name; }
         public string CartWrapperIllustration { get => cart.IDProductNavigation.ImageLinks.FirstOrDefault().ImageLink1; }

@@ -34,7 +34,29 @@ namespace WPF_Market.View
             {
                 DragMove();
             }
-        }    
+
+        }
+
+        private void btn_cart_Click(object sender, RoutedEventArgs e)
+        {
+           /* F_display.Content = new Cart();*/
+        }
+
+        private void btn_home_Click(object sender, RoutedEventArgs e)
+        {
+            Window parentWindow = Window.GetWindow(this);
+            //F_display.Content = new product(parentWindow);
+        }
+
+        private void btn_shop_Click(object sender, RoutedEventArgs e)
+        {
+           /* F_display.Content = new ShopUI();*/
+        }
+
+        private void btn_acc_Click(object sender, RoutedEventArgs e)
+        {
+           /* F_display.Content = new Myinf();*/
+        }
     }
     
 }

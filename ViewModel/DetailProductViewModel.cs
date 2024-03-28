@@ -9,8 +9,7 @@ using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Media.Effects;
 using WPF_Market.Models;
-using WPF_Market.Models.Model;
-
+using WPF_Market.View;
 namespace WPF_Market.ViewModel
 {
     class DetailProductViewModel: BaseViewModel
@@ -21,6 +20,7 @@ namespace WPF_Market.ViewModel
         string tTThem;
         string baoHanh;
         private double currentPrice;
+        private int number = 1;
         private ObservableCollection<string>  listImage = new ObservableCollection<string>();
         public DetailProductViewModel()
         {
@@ -39,6 +39,46 @@ namespace WPF_Market.ViewModel
             ReadTTThem();
             ReadTThientai();
             ChangePicture = new BaseViewModelCommand(SelectImageCommand);
+            AddProduct = new BaseViewModelCommand(ExecuteAddProductCommand);
+            IncreaseNumberButttonClick = new BaseViewModelCommand(ExecuteIncreaseNumberCommand);
+            DecreaseNumberButttonClick = new BaseViewModelCommand(ExecuteDecreaseNumberCommand, CanExecuteDecreaseNumberCommand);
+        }
+        private void ExecuteDecreaseNumberCommand(object obj)
+        {
+
+            Number--;
+        }
+
+        private void ExecuteIncreaseNumberCommand(object obj)
+        {
+            Number++;
+        }
+        private bool CanExecuteDecreaseNumberCommand(object obj)
+        {
+            if (Number == 1)
+            {
+                return false;
+            }
+            return true;
+        }
+     
+
+        private void ExecuteAddProductCommand(object obj)
+        {
+            var temp = DataProvider.Instance.DB.Carts.Where(p=> p.IDProduct == Product.IDProduct).FirstOrDefault();
+            if (temp != null)
+            {
+                temp.NumberOfProduct += Number;
+                DataProvider.Instance.DB.SaveChanges();
+                new Custom_mb("Succesfully add to your cart!", Custom_mb.MessageType.Confirmation, Custom_mb.MessageButtons.Ok).ShowDialog();
+                return;
+            }
+            DataProvider.Instance.DB.Carts.Add(new Models.Cart { IDProduct = Product.IDProduct, CurrentPrice = CurrentPrice, 
+                IDUser = CurrentApplicationStatus.CurrentID, 
+                NumberOfProduct = Number });
+            DataProvider.Instance.DB.SaveChanges();
+
+            new Custom_mb("Succesfully add to your cart!", Custom_mb.MessageType.Success, Custom_mb.MessageButtons.Ok).ShowDialog();
         }
 
         private void SelectImageCommand(object obj)
@@ -93,6 +133,7 @@ namespace WPF_Market.ViewModel
         public string BaoHanh { get => baoHanh; set => baoHanh = value; }
         
         public ICommand ChangePicture {  get;}
+        public ICommand AddProduct { get;}
         public string DefaultImage
         {
             get => defaultImage;
@@ -106,5 +147,19 @@ namespace WPF_Market.ViewModel
         public double CurrentPrice { get => (double)(Product.Price *  (100 - Product.Discount)/100) ; set { currentPrice = value; OnPropertyChanged(nameof(CurrentPrice)); } }
 
         public ObservableCollection<string> ListImage { get => listImage; set => listImage = value; }
+        public ICommand IncreaseNumberButttonClick { get; }
+        public ICommand DecreaseNumberButttonClick { get; }
+        public int Number
+        {
+            get
+            {
+                return number;
+            }
+            set
+            {
+                number = value;
+                OnPropertyChanged(nameof(number));
+            }
+        }
     }
 }

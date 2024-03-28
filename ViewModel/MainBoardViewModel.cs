@@ -19,7 +19,15 @@ namespace WPF_Market.ViewModel
         {
             HomeCommand = new BaseViewModelCommand(ExecuteHomeCommand);
             CartCommand = new BaseViewModelCommand(ExecuteCartCommand);
+            ShopCommand = new BaseViewModelCommand(ExecuteShopCommand);
         }
+
+        private void ExecuteShopCommand(object obj)
+        {
+            CloseDrawerHost(obj);
+            CurrentContent = new ShopUI();
+        }
+
         private void CloseDrawerHost(object obj)
         {
             DrawerHost drawerHost = obj as DrawerHost;
@@ -39,6 +47,7 @@ namespace WPF_Market.ViewModel
         // Commands
         public ICommand HomeCommand { get; }
         public ICommand CartCommand { get; }
+        public ICommand ShopCommand { get; }
        
         public object CurrentContent
         {

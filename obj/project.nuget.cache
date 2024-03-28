@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "XKjPUoBlql+JQ03aZuBnfizhpoHFUS0vRKGFoj14Fr8a3Zuib+y920hkffEuCdImsAQED3xhX1Cq+w/jnVkeDA==",
+  "dgSpecHash": "GAfqIOqn3ASVN8PUqoRHh46Dk8jJhHEt+EaeTt6jxRFIuPte8aYeY2aoG8784rKMElh87+NKmYnsIBJmfCRJWw==",
   "success": true,
   "projectFilePath": "D:\\LTWD\\LTWD_FinalProject\\WPF_Market.csproj",
   "expectedPackageFiles": [
@@ -22,6 +22,7 @@
     "C:\\Users\\LAPTOP\\.nuget\\packages\\microsoft.entityframeworkcore.design\\7.0.0\\microsoft.entityframeworkcore.design.7.0.0.nupkg.sha512",
     "C:\\Users\\LAPTOP\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\7.0.16\\microsoft.entityframeworkcore.relational.7.0.16.nupkg.sha512",
     "C:\\Users\\LAPTOP\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\7.0.16\\microsoft.entityframeworkcore.sqlserver.7.0.16.nupkg.sha512",
+    "C:\\Users\\LAPTOP\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\7.0.0\\microsoft.entityframeworkcore.tools.7.0.0.nupkg.sha512",
     "C:\\Users\\LAPTOP\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0\\microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\LAPTOP\\.nuget\\packages\\microsoft.extensions.caching.memory\\7.0.0\\microsoft.extensions.caching.memory.7.0.0.nupkg.sha512",
     "C:\\Users\\LAPTOP\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",

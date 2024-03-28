@@ -10,7 +10,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
-using WPF_Market.Models.Model;
 using WPF_Market.View;
 using WPF_Market.Models;
 namespace WPF_Market.ViewModel
@@ -62,10 +61,10 @@ namespace WPF_Market.ViewModel
 
         private void ExecuteCloseFormCommand(object obj)
         {
-            if (Application.Current.MainWindow != null)
+           /* if (Application.Current.MainWindow != null)
             {
                 Application.Current.MainWindow.Close();
-            }
+            }*/
         }
 
         public ManageProductViewModel(string nameProduct, double price, double discount, string newness, string type, string overview, string configuration, string additional)

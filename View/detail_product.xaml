@@ -186,20 +186,36 @@
                                            FontFamily="Dubai"
                                            Foreground="#6B605E"
                                            FontWeight="Bold"/>
-                                <ComboBox x:Name="cbb_num"
-                                          Height="27"
-                                          Width="150"
-                                          materialDesign:HintAssist.Hint="How many do you want?"
-                                          materialDesign:HintAssist.FontFamily="Dubai"
-                                          materialDesign:HintAssist.HintOpacity=".26"
-                                          IsEditable="True">
-                                    
-                                    <ComboBoxItem Content="1" />
-                                    <ComboBoxItem Content="2" />
-                                    <ComboBoxItem Content="3" />
-                                    <ComboBoxItem Content="4" />
-                                </ComboBox>
-                            </StackPanel>
+                                    <Button
+                                        Command="{Binding DecreaseNumberButttonClick, UpdateSourceTrigger=PropertyChanged}"
+                                        Style="{StaticResource MaterialDesignIconForegroundButton}"
+                                        ToolTip="MaterialDesignIconForegroundButton"
+                                         Margin="250 0 0 0">
+                                        <materialDesign:PackIcon
+                                            Kind="ArrowDownThick" 
+                                            VerticalAlignment="Center"
+                                            VerticalContentAlignment="Center"  
+                                            />
+                                    </Button>
+                                    <TextBox x:Name="txt_number"
+                                        Width="100"
+                                        Height="50"
+                                        materialDesign:HintAssist.Hint="Number"
+                                        HorizontalContentAlignment="Center"
+                                        Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                                        Text="{Binding Number, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
+                                        <Button
+                                        Command="{Binding IncreaseNumberButttonClick, UpdateSourceTrigger=PropertyChanged}"
+                                            Style="{StaticResource MaterialDesignIconForegroundButton}"
+                                            ToolTip="MaterialDesignIconForegroundButton"
+                                            >
+                                        <materialDesign:PackIcon
+                                            Kind="ArrowUPThick" 
+                                            VerticalAlignment="Center"
+                                            VerticalContentAlignment="Center"
+                                        />
+                                    </Button>
+                                </StackPanel>
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                                 <Button 
                                         Background="#FE9E1A" 
@@ -219,7 +235,8 @@
                                         FontFamily="Dubai"
                                         FontWeight="Bold"
                                         materialDesign:ButtonAssist.CornerRadius="15" 
-                                        Height="70" Width="200"/>
+                                        Height="70" Width="200"
+                                        Command="{Binding AddProduct}"/>
                                 
                             </StackPanel>
                         </StackPanel>

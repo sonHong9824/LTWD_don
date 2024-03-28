@@ -20,8 +20,8 @@ namespace WPF_Market.ViewModel
         private double subTotal = 0;
 
         private double moneyToPay = 0;
-        private bool isCheckedPickup;
-        private bool isCheckedDelivery;
+        private bool isCheckedPickup = true;
+        private bool isCheckedDelivery = false;
         private CartWrapper selectedChanged;
         public CartViewModel()
         {
@@ -38,12 +38,60 @@ namespace WPF_Market.ViewModel
             ShowContextMenu = new BaseViewModelCommand(ExecuteShowContextMenu);
             ShowDetailCommand = new BaseViewModelCommand(ExecuteShowDetailCommand);
             DeleteProductCommand = new BaseViewModelCommand(ExecuteDeleteProductCommand);
+            ProceedToCheckOutCommand = new BaseViewModelCommand(ExecuteProceedToCheckOutCommand, CanProceedToCheckOutCommand);
+        }
+
+        private bool CanProceedToCheckOutCommand(object obj)
+        {
+            foreach (var item in carts)
+            {
+                if (item.CartWrapperIsChecked)
+                    return true;
+            }
+            return false;
+        }
+
+        private void ExecuteProceedToCheckOutCommand(object obj)
+        {
+            var tempLst = carts.ToList();
+            foreach (var item in tempLst)
+            {
+                if (item.CartWrapperIsChecked)
+                {
+                    if (item.Cart.IDProductNavigation.Number >= item.CartWrapperNumber)
+                    {
+                        item.Cart.IDProductNavigation.Number -= item.CartWrapperNumber;
+                        item.Cart.IDProductNavigation.NumberSold += item.CartWrapperNumber;
+                        DataProvider.Instance.DB.Remove(item.Cart);
+                        DataProvider.Instance.DB.SaveChanges();
+                        carts.Remove(item);
+                        new Custom_mb("Thanks for your support! Hope to see you later!", Custom_mb.MessageType.Success, Custom_mb.MessageButtons.Ok).ShowDialog();
+                    }
+                    else
+                    {
+                        new Custom_mb("Something went wrong! Please try again", Custom_mb.MessageType.Error, Custom_mb.MessageButtons.Ok).ShowDialog();
+                        item.CartWrapperIsChecked = false;
+                        break;
+                    }
+                }
+            }
+            SubTotal = 0;
+            MoneyToPay = 0;
+            IsCheckedPickup = true;
+            isCheckedDelivery = false;        
+            carts = new ObservableCollection<CartWrapper>(tempLst);
+            // Se bo sung xuat hoa don
         }
 
         private void ExecuteDeleteProductCommand(object obj)
         {
             var cart = obj as CartWrapper;
             Carts.Remove(cart);
+            if (cart.CartWrapperIsChecked)
+            {
+                SubTotal -= cart.CartWrapperCurrentPrice * cart.CartWrapperNumber;
+                MoneyToPay -= cart.CartWrapperCurrentPrice * cart.CartWrapperNumber;
+            }
             DataProvider.Instance.DB.Remove(cart.Cart);
             DataProvider.Instance.DB.SaveChanges();
         }
@@ -81,8 +129,14 @@ namespace WPF_Market.ViewModel
 
         private void ExecuteDeliveryCommand(object obj)
         {
+
+            if (IsCheckedPickup == true)
+            {
+                MoneyToPay += 15;
+            }
+
             IsCheckedPickup = false;
-            MoneyToPay += 15;
+           
         }
 
         public ObservableCollection<CartWrapper> Carts { get => carts; set { carts = value; 
@@ -92,13 +146,13 @@ namespace WPF_Market.ViewModel
         {
             if (cart.CartWrapperIsChecked == true)
             {
-                SubTotal += cart.CartWrapperCurrentPrice;
-                MoneyToPay += SubTotal;
+                SubTotal += cart.CartWrapperCurrentPrice * cart.CartWrapperNumber;
+                MoneyToPay += cart.CartWrapperCurrentPrice * cart.CartWrapperNumber;
             }
             else
             {
-                SubTotal -= cart.CartWrapperCurrentPrice;
-                MoneyToPay -= SubTotal;
+                SubTotal -= cart.CartWrapperCurrentPrice * cart.CartWrapperNumber;
+                MoneyToPay -= cart.CartWrapperCurrentPrice * cart.CartWrapperNumber;
             }
             return;
         }
@@ -113,7 +167,8 @@ namespace WPF_Market.ViewModel
         public ICommand ShowContextMenu { get; }
         public ICommand ShowDetailCommand { get; }
         public ICommand DeleteProductCommand { get; }   
-        public CartWrapper SelectedChanged { get => selectedChanged; set { selectedChanged = value;/* System.Windows.Forms.MessageBox.Show("Test");*/ OnPropertyChanged(nameof(SelectedChanged)); } }
+        public ICommand ProceedToCheckOutCommand { get; }
+        public CartWrapper SelectedChanged { get => selectedChanged; set { selectedChanged = value; OnPropertyChanged(nameof(SelectedChanged)); } }
       
     }
 

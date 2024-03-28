@@ -11,7 +11,6 @@ using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
 using WPF_Market.Models;
-using WPF_Market.Models.Model;
 using WPF_Market.View;
 namespace WPF_Market.ViewModel
 {

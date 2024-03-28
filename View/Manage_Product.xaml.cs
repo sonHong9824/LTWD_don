@@ -29,7 +29,7 @@ namespace WPF_Market.View
         public Manage_Product()
         {
             InitializeComponent();
-            btn_submitAdd.Visibility = Visibility.Visible;
+            //btn_submitAdd.Visibility = Visibility.Visible;
         }
        
     }

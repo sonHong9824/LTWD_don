@@ -14,7 +14,6 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WPF_Market.Models;
-using WPF_Market.Models.Model;
 using WPF_Market.ViewModel;
 
 namespace WPF_Market.View

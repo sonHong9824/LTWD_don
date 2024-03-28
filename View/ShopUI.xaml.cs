@@ -24,5 +24,16 @@ namespace WPF_Market.View
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btn_addProduct_Click(object sender, RoutedEventArgs e)
+        {
+         /*   Manage_Product manage_Product = new Manage_Product();
+            manage_Product.ShowDialog();*/
+        }
     }
 }

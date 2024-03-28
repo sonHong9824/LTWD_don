@@ -13,8 +13,6 @@ public partial class Cart
 
     public int? NumberOfProduct { get; set; }
 
-    public bool? IsChecked { get; set; }
-
     public double? CurrentPrice { get; set; }
 
     public virtual Inventory IDProductNavigation { get; set; }
