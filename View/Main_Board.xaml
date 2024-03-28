@@ -9,6 +9,7 @@
         Title="Main" Height="720" Width="1280"
         MouseEnter="Window_MouseEnter"
         x:Name="MainBoardWindow"
+        WindowStyle="None"
         WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Topmost="True">
     <Window.Resources>
         <Storyboard x:Key="CloseMenu">
@@ -44,12 +45,16 @@
 
 
     <Grid Background="Transparent">
-
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="91*"/>
+            <ColumnDefinition Width="165*"/>
+        </Grid.ColumnDefinitions>
+        
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Grid Grid.RowSpan="2">
+        <Grid Grid.RowSpan="2" Grid.ColumnSpan="2">
             <Grid x:Name="GridBackground" Background="#55313131" Opacity="0" Grid.RowSpan="1"/>
             <materialDesign:ColorZone
                     Padding="3"
@@ -66,29 +71,30 @@
                             <ListBoxItem Content="Exit"/>
                         </ListBox>
                     </materialDesign:PopupBox>
+
                     <StackPanel Orientation="Horizontal">
                         <Button x:Name="ButtonOpen" Background="Transparent" BorderThickness="0">
                             <materialDesign:PackIcon Kind="Menu" 
                                                      FontSize="50"/>
                         </Button>
                     </StackPanel>
-                    <TextBlock
-                        Margin="-5,0,0,0"
-                        VerticalAlignment="Center"
-                        Text="Category" />
-                    
+                    <StackPanel Orientation="Horizontal"
+                                HorizontalAlignment="Left">
+
+
+                    </StackPanel>
                 </DockPanel>
             </materialDesign:ColorZone>
-
         </Grid>
+        
         <Frame Grid.Row="1"
                x:Name="F_display"
                VerticalAlignment="Center"
-               HorizontalAlignment="Center"
+               HorizontalAlignment="Left"
                NavigationUIVisibility="Hidden"
-               Content="{Binding CurrentContent, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}">
+               Content="{Binding CurrentContent, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Grid.Column="1" Margin="185,0,0,0">
         </Frame>
-        <Grid Grid.Row="1" Grid.RowSpan="2">
+        <Grid Grid.Row="1" Grid.ColumnSpan="2">
             <materialDesign:DrawerHost x:Name="DrawerHost"
                                           Width="1280"
                                           Height="655"
@@ -113,6 +119,34 @@
                         </Style.Triggers>
                     </Style>
                 </materialDesign:DrawerHost.Style>
+                <materialDesign:DrawerHost.RightDrawerContent>
+                    <StackPanel Margin="16">
+                        <TextBlock
+                            Margin="4"
+                            HorizontalAlignment="Center"
+                            Foreground="{DynamicResource SecondaryHueMidForegroundBrush}"
+                            Text="SORT" />
+                        <TreeView Margin="4" 
+                                    HorizontalAlignment="Center">
+                            <TreeViewItem Header="PRODUCT" >
+                                <TreeViewItem Header="A -> Z"/>
+                                <TreeViewItem Header="Z -> A"/>
+                            </TreeViewItem>
+
+                            <TreeViewItem Header="Price" >
+                                <TreeViewItem Header="MAX -> MIN"/>
+                                <TreeViewItem Header="MIN -> MAX"/>
+                            </TreeViewItem>
+                        </TreeView>
+                        <Button
+                            Margin="4"
+                            HorizontalAlignment="Center"
+                            Command="{x:Static materialDesign:DrawerHost.CloseDrawerCommand}"
+                            CommandParameter="{x:Static Dock.Right}"
+                            Content="CLOSE THIS"
+                            Style="{StaticResource MaterialDesignFlatButton}" />
+                    </StackPanel>
+                </materialDesign:DrawerHost.RightDrawerContent>
                 <materialDesign:DrawerHost.BottomDrawerContent>
                     <StackPanel
                           Margin="16"
@@ -152,7 +186,7 @@
                             Content="CART"
                             Style="{StaticResource MaterialDesignFlatButton}" Click="btn_cart_Click">
                         </Button>
-            
+
                         <Button
                             Margin="4"
                             VerticalAlignment="Center"
@@ -164,8 +198,8 @@
                 </materialDesign:DrawerHost.BottomDrawerContent>
                 <Grid>
                     <Button
-                        Height="50"
-                        Width="50"
+                        Height="60"
+                        Width="60"
                         Margin="20"
                         Background="Transparent"
                         BorderThickness="0"
@@ -173,16 +207,32 @@
                         VerticalAlignment="Bottom"
                         Command="{x:Static materialDesign:DrawerHost.OpenDrawerCommand}"
                         CommandParameter="{x:Static Dock.Bottom}">
-                        <materialDesign:PackIcon Kind="ArrowUpDropCircle"
+                        <materialDesign:PackIcon Kind="ArrowUpBold"
                                                  HorizontalAlignment="Center"
                                                  Foreground="Black"
                                                  Height="40"
                                                  Width="40"/>
                     </Button>
+                    <Button Height="60"
+                            Width="60"
+                            Margin="0"
+                            Background="Transparent"
+                            BorderThickness="0"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Center"
+                            Command="{x:Static materialDesign:DrawerHost.OpenDrawerCommand}"
+                            CommandParameter="{x:Static Dock.Right}">
+                        <materialDesign:PackIcon Kind="ArrowLeftDropCircle"
+                                                 HorizontalAlignment="Center"
+                                                 Foreground="Wheat"
+                                                 Height="40"
+                                                 Width="40"/>
+                        
+                    </Button>
                 </Grid>
             </materialDesign:DrawerHost>
         </Grid>
-        <Border CornerRadius="20" Grid.RowSpan="2">
+        <Border CornerRadius="20" Grid.RowSpan="2" Grid.ColumnSpan="2">
             <Grid x:Name="GridMenu" Width="250" HorizontalAlignment="Left" Margin="-250 0 0 0" Background="#F1F1F1" RenderTransformOrigin="0.5,0.5">
                 <Grid.RenderTransform>
                     <TransformGroup>
@@ -279,9 +329,9 @@
                     <materialDesign:PackIcon Kind="MenuOpen" />
                 </Button>
             </Grid>
-            
+
         </Border>
-        
+
 
     </Grid>
 
