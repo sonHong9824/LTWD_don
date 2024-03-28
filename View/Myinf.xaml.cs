@@ -1,6 +1,7 @@
 ﻿using MaterialDesignThemes.Wpf;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,5 +34,16 @@ namespace WPF_Market.View
             grid_showUC.Children.Add(newUserControl);
         }
 
+        private void btn_changeAva_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Process.Start("explorer.exe", "D:/");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error opening folder: " + ex.Message);
+            }
+        }
     }
 }
