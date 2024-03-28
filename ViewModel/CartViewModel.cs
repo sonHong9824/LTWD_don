@@ -72,12 +72,17 @@ namespace WPF_Market.ViewModel
         }   
         private void ExecutePickupCommand(object obj)
         {
+            if (IsCheckedDelivery == true)
+            {
+                MoneyToPay -= 15;
+            }
             IsCheckedDelivery = false;
         }
 
         private void ExecuteDeliveryCommand(object obj)
         {
             IsCheckedPickup = false;
+            MoneyToPay += 15;
         }
 
         public ObservableCollection<CartWrapper> Carts { get => carts; set { carts = value; 
@@ -88,10 +93,12 @@ namespace WPF_Market.ViewModel
             if (cart.CartWrapperIsChecked == true)
             {
                 SubTotal += cart.CartWrapperCurrentPrice;
+                MoneyToPay += SubTotal;
             }
             else
             {
                 SubTotal -= cart.CartWrapperCurrentPrice;
+                MoneyToPay -= SubTotal;
             }
             return;
         }

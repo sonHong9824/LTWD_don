@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "D:\\LTWD\\LTWD_FinalProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|d:\\ltwd\\ltwd_finalproject\\view\\cart.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|solutionrelative:view\\cart.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|d:\\ltwd\\ltwd_finalproject\\viewmodel\\cartviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|solutionrelative:viewmodel\\cartviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|d:\\ltwd\\ltwd_finalproject\\view\\cart.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{DD014743-7588-40DB-9B6A-6B67B87FFF91}|WPF_Market.csproj|solutionrelative:view\\cart.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,7 +30,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Cart.xaml",
               "DocumentMoniker": "D:\\LTWD\\LTWD_FinalProject\\View\\Cart.xaml",
               "RelativeDocumentMoniker": "View\\Cart.xaml",
@@ -42,13 +42,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "CartViewModel.cs",
               "DocumentMoniker": "D:\\LTWD\\LTWD_FinalProject\\ViewModel\\CartViewModel.cs",
               "RelativeDocumentMoniker": "ViewModel\\CartViewModel.cs",
-              "ToolTip": "D:\\LTWD\\LTWD_FinalProject\\ViewModel\\CartViewModel.cs",
-              "RelativeToolTip": "ViewModel\\CartViewModel.cs",
-              "ViewState": "AQIAADYAAAAAAAAAAAAmwEoAAAAmAAAA",
+              "ToolTip": "D:\\LTWD\\LTWD_FinalProject\\ViewModel\\CartViewModel.cs*",
+              "RelativeToolTip": "ViewModel\\CartViewModel.cs*",
+              "ViewState": "AQIAAGoAAAAAAAAAAAA7wHMAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-27T17:26:50.484Z",
               "EditorCaption": ""
