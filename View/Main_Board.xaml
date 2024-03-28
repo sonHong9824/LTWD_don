@@ -45,10 +45,7 @@
 
 
     <Grid Background="Transparent">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="91*"/>
-            <ColumnDefinition Width="165*"/>
-        </Grid.ColumnDefinitions>
+
         
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
