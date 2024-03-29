@@ -33,12 +33,11 @@
                     <StackPanel Orientation="Vertical"
                                 HorizontalAlignment="Right"
                                 VerticalAlignment="Center">
-                        <TextBlock 
+                        <TextBlock Text="{Binding IDShop, StringFormat='IDShop: {0}'}"
                                    Margin="0 0 10 0"
                                    x:Name="txbl_idShop"
                                    FontSize="15">
-                            <Run>ID Shop: </Run>
-                            <Run> asj93h3</Run>
+                           
                         </TextBlock>
                     </StackPanel>
                 </Grid>
@@ -66,7 +65,7 @@
                                 <GridViewColumn Header="Illustration">
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
-                                            <Image Source="{Binding ImageLinks[0].FirstImage}" Width="50" Height="50"
+                                            <Image Source="{Binding ImageLinks[0].ImageLink1}" Width="50" Height="50"
                                                 VerticalAlignment="Center"
                                                 HorizontalAlignment="Center"/>
                                         </DataTemplate>

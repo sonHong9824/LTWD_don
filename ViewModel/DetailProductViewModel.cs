@@ -34,7 +34,7 @@ namespace WPF_Market.ViewModel
             {
                 ListImage.Add(item.ImageLink1);
             }
-            DefaultImage = Product.ImageLinks.FirstOrDefault().FirstImage;
+            DefaultImage = Product.ImageLinks.FirstOrDefault().ImageLink1;
             ReadTongQuan(); 
             ReadTTThem();
             ReadTThientai();

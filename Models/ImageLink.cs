@@ -11,7 +11,5 @@ public partial class ImageLink
 
     public string ImageLink1 { get; set; }
 
-    public string FirstImage { get; set; }
-
     public virtual Inventory IDProductNavigation { get; set; }
 }

@@ -6,18 +6,23 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:Vm ="clr-namespace:WPF_Market.ViewModel"
         mc:Ignorable="d"
-        WindowStyle="None"
+
         WindowStartupLocation="CenterScreen"
         Background="Transparent"
-        AllowsTransparency="True"
+
         FontSize="15"
         FontFamily="{DynamicResource MaterialDesignFont}"
-        Title="Manage_Product" Height="700" Width="900">
+        Title="Manage_Product" Height="700" Width="900"
+        MouseEnter="Window_MouseEnter"
+        x:Name="ManageProductWindow">
 
 
     <Window.Resources>
         <BooleanToVisibilityConverter x:Key="BooleanToVisibility"></BooleanToVisibilityConverter>
     </Window.Resources>
+    <Window.DataContext>
+        <Vm:ManageProductViewModel></Vm:ManageProductViewModel>
+    </Window.DataContext>
     <Border Background="White" CornerRadius="5">
         <Grid>
             <Grid.RowDefinitions>
@@ -44,7 +49,7 @@
                     <StackPanel Orientation="Vertical" Margin="20" HorizontalAlignment="Center">
                         <StackPanel Orientation="Horizontal" Height="50" Margin="0 10">
                             <TextBox x:Name="txt_idSP"
-                                     Text="{Binding IdSanPham,UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+                                     Text="{Binding IDProduct}"
                                      IsEnabled="False"
                                      Width="400" Margin="0 0 10 0"
                                      materialDesign:HintAssist.Hint="ID Product"
@@ -70,7 +75,7 @@
                         <StackPanel Orientation="Horizontal" Height="50" Margin="0 0 0 10">
                             <TextBox x:Name="txt_new"
                                  Width="400" Margin="0 0 10 0"
-                                 materialDesign:HintAssist.Hint="Newness"
+                                 materialDesign:HintAssist.Hint="Newness (%)"
                                  Style="{StaticResource MaterialDesignOutlinedTextBox}"
                                  Text="{Binding Newness,UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
                             <ComboBox x:Name="cbb_type"
@@ -196,6 +201,7 @@
                             materialDesign:ButtonAssist.CornerRadius="15" 
                             Height="45" Width="160" 
                             Command="{Binding SubmitCommand, UpdateSourceTrigger=PropertyChanged}" IsEnabled="True"
+                            CommandParameter="{Binding ElementName=ManageProductWindow}"
                             Visibility="Visible"/>
                 </Grid>
             </Border>
