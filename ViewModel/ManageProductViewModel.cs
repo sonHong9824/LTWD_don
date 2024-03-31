@@ -12,13 +12,16 @@ using System.Windows;
 using System.Windows.Input;
 using WPF_Market.View;
 using WPF_Market.Models;
+using System.Reflection;
 namespace WPF_Market.ViewModel
 {
     public class ManageProductViewModel : BaseViewModel
     {
+        
+        string g_destinationDirectory;
         private string nameProduct;
-        private double price;
-        private double discount;
+        private double originalPrice;
+        private double currentPrice;
         private float newness;
         private string type;
         private string overview;
@@ -29,7 +32,8 @@ namespace WPF_Market.ViewModel
         private int iDProduct;
         private Inventory inventory = new Inventory();
         public ObservableCollection<string> shortStringList;
-
+        private bool isCompleteAddProduct = false;
+        private DateTime dateBought = DateTime.Now;
         public ObservableCollection<string> ShortStringList
         {
             get { return shortStringList; }
@@ -39,9 +43,59 @@ namespace WPF_Market.ViewModel
                 OnPropertyChanged(nameof(shortStringList));
             }
         }
+        public ManageProductViewModel(int value)
+        {
+          
+            // Tao cac the loai, co the sau nay se them database de de quan ly
+            ShortStringList = new ObservableCollection<string>
+            {
+                "Electronics",
+                "Fashion and Clothing",
+                "Jewellery",
+                "Health and Beauty",
+                "Books",
+                "Kids and Babies",
+                "Sports",
+                "Fruit and veg",
+                "Home and Graden",
+                "Others"
+            };
+            IncreaseNumberButttonClick = new BaseViewModelCommand(ExecuteIncreaseNumberCommand);
+            DecreaseNumberButttonClick = new BaseViewModelCommand(ExecuteDecreaseNumberCommand, CanExecuteDecreaseNumberCommand);
+            if (value == 0)
+            {
+                SubmitCommand = new BaseViewModelCommand(ExecuteSubmitCommand, CanExecuteSubmitCommand);
+                BtnImageClick = new BaseViewModelCommand(ExecuteImageClickCommand);
+                CloseForm = new BaseViewModelCommand(ExecuteCloseFormAddCommand);
+                Inventory = new Inventory { IDShop = CurrentApplicationStatus.CurrentID };
+                DataProvider.Instance.DB.Inventories.Add(Inventory);
+                DataProvider.Instance.DB.SaveChanges();
+            }
+            string projectDirectory = AppDomain.CurrentDomain.BaseDirectory;
+            string parentDirectory1 = Directory.GetParent(projectDirectory).FullName;
+            string parentDirectory2 = Directory.GetParent(parentDirectory1).FullName;
+            string parentDirectory3 = Directory.GetParent(parentDirectory2).FullName;
+            g_destinationDirectory = Path.Combine(Directory.GetParent(parentDirectory3).FullName, "SanPham", Inventory.IDProduct.ToString().Trim());
+        }
+
+        private void ExecuteCloseFormAddCommand(object obj)
+        {
+            var currentWindow = obj as Window;
+            if (!isCompleteAddProduct)
+            {
+                // Neu User thoat ra luc chua hoan thanh them san pham thi xoa
+                DataProvider.Instance.DB.Inventories.Remove(Inventory);
+                DataProvider.Instance.DB.SaveChanges();
+                new Custom_mb("Your operation has not finished yet!\n          All data will be removed!", Custom_mb.MessageType.Warning, Custom_mb.MessageButtons.Ok).ShowDialog(); 
+                currentWindow.Close();
+                return;
+            }
+            currentWindow.Close();
+            new Custom_mb("Successfully adding new product!", Custom_mb.MessageType.Success, Custom_mb.MessageButtons.Ok).ShowDialog();
+        }
+
         public ManageProductViewModel()
         {
-
             SubmitCommand = new BaseViewModelCommand(ExecuteSubmitCommand, CanExecuteSubmitCommand);
             BtnImageClick = new BaseViewModelCommand(ExecuteImageClickCommand);
             IncreaseNumberButttonClick = new BaseViewModelCommand(ExecuteIncreaseNumberCommand);
@@ -60,6 +114,7 @@ namespace WPF_Market.ViewModel
                 "Home and Graden",
                 "Others"
             };
+            // xu ly identity
             var newestID = DataProvider.Instance.DB.Inventories.Max(e => e.IDProduct);
             var item = DataProvider.Instance.DB.Inventories.Where(p => p.IDProduct == newestID).FirstOrDefault();
             IDProduct = item.IDProduct + 1;
@@ -93,14 +148,14 @@ namespace WPF_Market.ViewModel
         {
             ImageLinks = "";
             //link thư mục sản phẩm
-            string destinationDirectory = @"D:\LTWD\LTWD_FinalProject\SanPham\" + IDProduct.ToString().Trim() + @"\Images"; // Đường dẫn thư mục bạn muốn sao chép hình ảnh đến
+            string destinationDirectory = @"D:\LTWD\LTWD_FinalProject\SanPham\" + Inventory.IDProduct.ToString().Trim() + @"\Images"; // Đường dẫn thư mục bạn muốn sao chép hình ảnh đến
             CopyImageToDirectory(destinationDirectory);
-            string[] files = Directory.GetFiles(destinationDirectory);    
+            string[] files = Directory.GetFiles(destinationDirectory);
             foreach (string file in files)
             {
-                ImageLinks += file + "\n";               
+                ImageLinks += file + "\n";
             }
-          
+
         }
         private void CopyImageToDirectory(string destinationDirectory)
         {
@@ -108,7 +163,7 @@ namespace WPF_Market.ViewModel
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "Image Files (*.jpg; *.jpeg; *.png; *.gif; *.bmp)|*.jpg; *.jpeg; *.png; *.gif; *.bmp|All files (*.*)|*.*";
             openFileDialog.Title = "Select one picture";
-            
+
             if (openFileDialog.ShowDialog() == true)
             {
                 try
@@ -124,7 +179,7 @@ namespace WPF_Market.ViewModel
                     //Copy
                     File.Copy(sourceFilePath, destinationFilePath, true);
                     new Custom_mb("Operation successfully!", Custom_mb.MessageType.Success, Custom_mb.MessageButtons.Ok).ShowDialog();
-                   
+
                 }
                 catch (Exception ex)
                 {
@@ -143,43 +198,44 @@ namespace WPF_Market.ViewModel
                 return false; 
             }
             return true;
+          
         }
 
      
         private void ExecuteSubmitCommand(object obj)
         {
-            string pathOver = string.Format(@"D:\LTWD\LTWD_FinalProject\SanPham\{0}\Tongquansanpham.txt", IDProduct.ToString().Trim());
-            string pathTinhtrang = string.Format(@"D:\LTWD\LTWD_FinalProject\SanPham\{0}\Tinhtranghientai.txt", IDProduct.ToString().Trim());
-            string pathThem = string.Format(@"D:\LTWD\LTWD_FinalProject\SanPham\{0}\Thongtinthem.txt", IDProduct.ToString().Trim());
+            string pathOver = string.Format(@"D:\LTWD\LTWD_FinalProject\SanPham\{0}\Tongquansanpham.txt", Inventory.IDProduct.ToString().Trim());
+            string pathTinhtrang = string.Format(@"D:\LTWD\LTWD_FinalProject\SanPham\{0}\Tinhtranghientai.txt", Inventory.IDProduct.ToString().Trim());
+            string pathThem = string.Format(@"D:\LTWD\LTWD_FinalProject\SanPham\{0}\Thongtinthem.txt", Inventory.IDProduct.ToString().Trim());
             bool writeOverview = writeFile(pathOver, Overview);
             bool writeAdditional = writeFile(pathThem, Additional);
             bool writeConfiguration = writeFile(pathTinhtrang, Configuration);
             if (writeOverview && writeAdditional && writeConfiguration)
             {
-                Inventory.IDShop = CurrentApplicationStatus.CurrentID;
+                
+                //Inventory.IDShop = CurrentApplicationStatus.CurrentID;
                 Inventory.Name = NameProduct;
-                Inventory.Price = (float)Price;
-                Inventory.Discount = (float)Discount;
+                Inventory.OriginalPrice = (float)OriginalPrice;
+                Inventory.CurrentPrice = (float)CurrentPrice;
+                Inventory.Save = (float)(CurrentPrice/OriginalPrice * 100);
                 Inventory.Newness = Newness;
                 Inventory.Type = Type;
-                Inventory.Rating = 0;
-                Inventory.Number = Number;
-                Inventory.NumberSold = 0;
-                DataProvider.Instance.DB.Inventories.Add(Inventory);
+                Inventory.NumberInput = Number;
+                Inventory.NumberLeft = Number;
+                Inventory.BoughtTime = DateBought;
                 DataProvider.Instance.DB.SaveChanges();
-
                 string[] ListImageLink = ImageLinks.Split('\n');
                 foreach (string imageLink in ListImageLink)
                 {
                     if (string.IsNullOrEmpty(imageLink)) continue;
-                    DataProvider.Instance.DB.ImageLinks.Add(new ImageLink { IDProduct = IDProduct, ImageLink1 = imageLink });
+                    DataProvider.Instance.DB.ImageLinks.Add(new ImageLink { IDProduct = Inventory.IDProduct, ImageLink1 = imageLink });
                 }
-
                 DataProvider.Instance.DB.SaveChanges();
                 new Custom_mb("Succesfully add new item!", Custom_mb.MessageType.Success, Custom_mb.MessageButtons.Ok).ShowDialog();
 
                 var currentWindow = obj as Window;
                 currentWindow.Close();
+                isCompleteAddProduct = true;
                 return;
             }
             new Custom_mb("Fail", Custom_mb.MessageType.Error, Custom_mb.MessageButtons.Ok).ShowDialog();
@@ -222,24 +278,8 @@ namespace WPF_Market.ViewModel
                 OnPropertyChanged(nameof(nameProduct));
             }
         }
-        public double Price
-        {
-            get { return price; }
-            set
-            {
-                price = value;
-                OnPropertyChanged(nameof(price));
-            }
-        }
-        public double Discount
-        {
-            get => discount;
-            set
-            {
-                discount = value;
-                OnPropertyChanged(nameof(discount));
-            }
-        }
+     
+     
         public float Newness
         {
             get
@@ -292,7 +332,7 @@ namespace WPF_Market.ViewModel
         public ICommand IncreaseNumberButttonClick { get; }
         public ICommand DecreaseNumberButttonClick { get; }
         public ICommand CloseForm {  get; }
-       
+        public Inventory Inventory { get => inventory; set { inventory = value; OnPropertyChanged(nameof(Inventory)); } }
         public string ImageLinks
         {
             get { return imageLinks; }
@@ -316,8 +356,13 @@ namespace WPF_Market.ViewModel
             }
         }
 
-        public Inventory Inventory { get => inventory; set { inventory = value; OnPropertyChanged(nameof(Inventory)); } }
+      
 
         public int IDProduct { get => iDProduct; set { iDProduct = value; OnPropertyChanged(nameof(IDProduct)); } }
+
+        public DateTime DateBought { get => dateBought; set { dateBought = value; OnPropertyChanged(nameof(DateBought)); } }
+
+        public double CurrentPrice { get => currentPrice; set { currentPrice = value; OnPropertyChanged(nameof(CurrentPrice)); } }
+        public double OriginalPrice { get => originalPrice; set { originalPrice = value; OnPropertyChanged(nameof(OriginalPrice)); } }
     }
 }

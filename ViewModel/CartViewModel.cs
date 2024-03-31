@@ -4,9 +4,11 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
+using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
+using System.Windows.Forms;
 using System.Windows.Input;
 using WPF_Market.Models;
 using WPF_Market.View;
@@ -39,6 +41,21 @@ namespace WPF_Market.ViewModel
             ShowDetailCommand = new BaseViewModelCommand(ExecuteShowDetailCommand);
             DeleteProductCommand = new BaseViewModelCommand(ExecuteDeleteProductCommand);
             ProceedToCheckOutCommand = new BaseViewModelCommand(ExecuteProceedToCheckOutCommand, CanProceedToCheckOutCommand);
+            OpenContextMenuFromButton = new BaseViewModelCommand(ExecuteOpenContextMenuFromButton);
+        }
+
+        private void ExecuteOpenContextMenuFromButton(object obj)
+        {
+            var contextMenu = new ContextMenu();
+            var menuItemShowDetail = new MenuItem { Header = "Show detail" };
+            menuItemShowDetail.Command = ShowDetailCommand;
+            menuItemShowDetail.CommandParameter = obj as CartWrapper;
+            contextMenu.Items.Add(menuItemShowDetail);
+            var menuItemDeleteItem = new MenuItem { Header = "Delete item" };
+            menuItemDeleteItem.Command = DeleteProductCommand;
+            menuItemDeleteItem.CommandParameter = obj as CartWrapper;               
+            contextMenu.Items.Add(menuItemDeleteItem);
+            contextMenu.IsOpen = true;
         }
 
         private bool CanProceedToCheckOutCommand(object obj)
@@ -59,10 +76,10 @@ namespace WPF_Market.ViewModel
             {
                 if (item.CartWrapperIsChecked)
                 {
-                    if (item.Cart.IDProductNavigation.Number >= item.CartWrapperNumber)
+                    if (item.Cart.IDProductNavigation.NumberLeft >= item.CartWrapperNumber)
                     {
-                        item.Cart.IDProductNavigation.Number -= item.CartWrapperNumber;
-                        item.Cart.IDProductNavigation.NumberSold += item.CartWrapperNumber;
+                        item.Cart.IDProductNavigation.NumberLeft -= item.CartWrapperNumber;
+                        //item.Cart.IDProductNavigation.NumberSold += item.CartWrapperNumber;
                         DataProvider.Instance.DB.Remove(item.Cart);
                         DataProvider.Instance.DB.SaveChanges();
                         carts.Remove(item);
@@ -175,6 +192,7 @@ namespace WPF_Market.ViewModel
         public ICommand ShowDetailCommand { get; }
         public ICommand DeleteProductCommand { get; }   
         public ICommand ProceedToCheckOutCommand { get; }
+        public ICommand OpenContextMenuFromButton { get; }
         public CartWrapper SelectedChanged { get => selectedChanged; set { selectedChanged = value; OnPropertyChanged(nameof(SelectedChanged)); } }
       
     }

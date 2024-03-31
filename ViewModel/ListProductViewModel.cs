@@ -18,7 +18,7 @@ namespace WPF_Market.ViewModel
     {
         private ObservableCollection<Inventory> productList = new ObservableCollection<Inventory>();
         private IShowProductDetail showProductDetail;
-        private string address;
+   
         public ListProductViewModel()
         {
             GetProductDataFromDataBase();
@@ -39,10 +39,10 @@ namespace WPF_Market.ViewModel
         private void GetProductDataFromDataBase()
         {
             var lst = DataProvider.Instance.DB.Inventories.Include(p=>p.IDShopNavigation).Include(p=>p.ImageLinks).ToList();
-            productList = new ObservableCollection<Inventory>(lst);
+            ProductList = new ObservableCollection<Inventory>(lst);
         }
         public ICommand SeeDetailCommand { get; }
-        public string Address { get => address; set { address = value; OnPropertyChanged(nameof(Address)); } }
+        
 
         private void ExecuteSeeDetailCommand(object obj)
         {

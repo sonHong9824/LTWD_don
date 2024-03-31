@@ -28,18 +28,12 @@
                     <ListView.ItemContainerStyle>
                         <Style TargetType="ListViewItem">
                             <Setter Property="vm:ContextMenuBehavior.IsContextMenuEnabled" Value="True" />
-                            <Setter Property="vm:ContextMenuBehavior.ShowDetailCommand" Value="{Binding DataContext.ShowDetailCommand, RelativeSource={RelativeSource AncestorType=ListView}}"/>
-                            <Setter Property="vm:ContextMenuBehavior.DeleteItemCommand" Value="{Binding DataContext.DeleteProductCommand, RelativeSource={RelativeSource AncestorType=ListView}}" />
-                            
-                            <!--<Setter Property="vm:InputBindingBehavior.InputBindings">
-                                <Setter.Value>
-                                    <InputBindingCollection>
-                                        <MouseBinding Gesture="LeftDoubleClick" Command="{Binding DataContext.ShowDetailCommand, RelativeSource={RelativeSource AncestorType=ListView}}"
-                                                      CommandParameter="{Binding}"/>
-                                    </InputBindingCollection>
-                                </Setter.Value>
-                            </Setter>-->
-
+                            <Setter Property="vm:ContextMenuBehavior.ShowDetailCommand" 
+                                    Value="{Binding DataContext.ShowDetailCommand, 
+                                RelativeSource={RelativeSource AncestorType=ListView}}"/>
+                            <Setter Property="vm:ContextMenuBehavior.DeleteItemCommand" 
+                                    Value="{Binding DataContext.DeleteProductCommand, 
+                                RelativeSource={RelativeSource AncestorType=ListView}}" />
                         </Style>
                     </ListView.ItemContainerStyle>
                     <ListView.View>
@@ -73,16 +67,29 @@
                             <GridViewColumn
                                 DisplayMemberBinding="{Binding CartWrapperName}"
                                 Header="Product" />
-                            <GridViewColumn 
-                                DisplayMemberBinding="{Binding CartWrapperPrice}"
-                                Header="Price" />
+                            
                             <GridViewColumn
                                 DisplayMemberBinding="{Binding CartWrapperNumber}"
                                 Header="Quantity" />
                             <GridViewColumn
-                                DisplayMemberBinding="{Binding CartWrapperCurrentPrice, UpdateSourceTrigger=PropertyChanged}"
-                                Header="CurrentPrice" />
-                            
+                                DisplayMemberBinding="{Binding CartWrapperOrigingalPrice, UpdateSourceTrigger=PropertyChanged}"
+                                Header="Original Price" />
+                            <GridViewColumn 
+                                DisplayMemberBinding="{Binding CartWrapperCurrentPrice}"
+                                Header="Currrent Price" />
+                            <GridViewColumn Header="">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button
+                                            Style="{StaticResource MaterialDesignIconButton}"
+                                            Content="{materialDesign:PackIcon DotsVertical}"
+                                            Command="{Binding DataContext.OpenContextMenuFromButton
+                                            , RelativeSource={RelativeSource AncestorType=ListView}}"
+                                            CommandParameter="{Binding}">
+                                        </Button>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
                         </GridView>
                     </ListView.View>
                 </ListView>

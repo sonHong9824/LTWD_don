@@ -24,7 +24,8 @@ namespace WPF_Market.View
     public partial class detail_product : Window
     {
         private Inventory model = new Inventory();
-
+        private bool isDragging = false;
+        private Point startPoint;
         public detail_product()
         {
         }
@@ -36,6 +37,30 @@ namespace WPF_Market.View
             DetailProductViewModel viewModel = new DetailProductViewModel(model);    
             this.DataContext = viewModel;
         }
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == MouseButton.Left)
+            {
+                isDragging = true;
+                startPoint = e.GetPosition(this);
+            }
+        }
 
+        private void Window_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (isDragging && e.LeftButton == MouseButtonState.Pressed)
+            {
+                Point endPoint = e.GetPosition(this);
+                double dx = endPoint.X - startPoint.X;
+                double dy = endPoint.Y - startPoint.Y;
+
+                Left += dx;
+                Top += dy;
+            }
+            else
+            {
+                isDragging = false;
+            }
+        }
     }
 }

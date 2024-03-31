@@ -17,7 +17,7 @@ namespace WPF_Market.ViewModel
         public ShopViewModel()
         {
             ShopInventory = new ObservableCollection<Inventory>(DataProvider.Instance.DB.Inventories.Where(p=> p.IDShop == CurrentApplicationStatus.CurrentID));
-            EditProductCommand = new BaseViewModelCommand(ExecuteEditProductCommand);
+            AddProductCommand = new BaseViewModelCommand(ExecuteAddProductCommand);
             DeleteProductCommand = new BaseViewModelCommand(ExecuteDeleteProductCommand);
         }
 
@@ -26,15 +26,15 @@ namespace WPF_Market.ViewModel
             System.Windows.Forms.MessageBox.Show("Test form delete");
         }
 
-        private void ExecuteEditProductCommand(object obj)
+        private void ExecuteAddProductCommand(object obj)
         {
-            var newWindow = new Manage_Product();
+            var newWindow = new Manage_Product(0);
             newWindow.Owner = CurrentApplicationStatus.MainBoardWindow;
             newWindow.Show();
         }
 
         public ObservableCollection<Inventory> ShopInventory { get => shopInventory; set => shopInventory = value; }
-        public ICommand EditProductCommand { get; }
+        public ICommand AddProductCommand { get; }
         public ICommand DeleteProductCommand { get; }
         public int IDShop { get => iDShop; set => iDShop = value; }
     }

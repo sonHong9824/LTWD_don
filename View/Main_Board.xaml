@@ -7,16 +7,16 @@
         xmlns:vm="clr-namespace:WPF_Market.ViewModel"
         mc:Ignorable="d"
         Title="Main" Height="720" Width="1280"
-        MouseEnter="Window_MouseEnter"
+        WindowStyle="None"
         x:Name="MainBoardWindow"
-  
-        WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Topmost="True">
+        WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Topmost="True" MouseDown="MainBoardWindow_MouseDown">
     <Window.DataContext>
         <vm:MainBoardViewModel></vm:MainBoardViewModel>
     </Window.DataContext>
+
     <Grid Background="Transparent">
         <Grid.RowDefinitions>
-            <RowDefinition Height="40"/>
+            <RowDefinition Height="50"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid Grid.RowSpan="2" Grid.ColumnSpan="2">
@@ -26,198 +26,120 @@
                     materialDesign:ElevationAssist.Elevation="Dp4"
                     ClipToBounds="False"
                     CornerRadius="0"
-                    Background ="#07BF96">
-                <DockPanel>
-                    <materialDesign:PopupBox
-                          DockPanel.Dock="Right"
-                          PlacementMode="BottomAndAlignRightEdges">
-                        <ListBox>
-                            <ListBoxItem Content="Log out" />
-                            <ListBoxItem Content="Exit"/>
-                        </ListBox>
-                    </materialDesign:PopupBox>
-
-                    <StackPanel Orientation="Horizontal">
-                        <Button x:Name="ButtonOpen" Background="Transparent" BorderThickness="0">
-                            <materialDesign:PackIcon Kind="Menu" 
-                                                     FontSize="50"/>
-                        </Button>
-                    </StackPanel>
-                    <StackPanel Orientation="Horizontal"
-                                HorizontalAlignment="Left">
-                    </StackPanel>
-                </DockPanel>
-            </materialDesign:ColorZone>
-        </Grid>
-        <Frame Grid.Row="1"
-               x:Name="F_display"
-               VerticalAlignment="Center"
-               HorizontalAlignment="Left"
-               NavigationUIVisibility="Hidden"
-               Content="{Binding CurrentContent, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Grid.Column="1" Margin="185,0,0,0">
-        </Frame>
-        <Grid Grid.Row="1" Grid.ColumnSpan="2">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="27*"/>
-                <ColumnDefinition Width="1253*"/>
-            </Grid.ColumnDefinitions>
-            <materialDesign:DrawerHost x:Name="DrawerHost"
-                                          Width="1280"
-                                          Height="655"
-                                          HorizontalAlignment="Left"
-                                          VerticalAlignment="Bottom"
-                                          BorderBrush="{DynamicResource MaterialDesignDivider}"
-                                          BorderThickness="2"
-                                          
-                                          BottomDrawerCornerRadius="20 20 0 0" Grid.ColumnSpan="2">
-                <materialDesign:DrawerHost.Style>
-                    <Style
-                        TargetType="materialDesign:DrawerHost"
-                        BasedOn="{StaticResource {x:Type materialDesign:DrawerHost}}">
-                        <Style.Triggers>
-                            <DataTrigger
-                                  Binding="{Binding IsChecked, ElementName=BackgroundToggle}"
-                                  Value="True">
-                                <Setter
-                                    Property="OverlayBackground"
-                                    Value="{DynamicResource PrimaryHueMidBrush}" />
-                            </DataTrigger>
-                        </Style.Triggers>
-                    </Style>
-                </materialDesign:DrawerHost.Style>
-                <materialDesign:DrawerHost.RightDrawerContent>
-                    <StackPanel Margin="16">
-                        <TextBox x:Name="txt_search"
-                              VerticalAlignment="Center"
-                              materialDesign:HintAssist.Hint="Search"
-                              Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-                        <TreeView Margin="4" 
-                                    HorizontalAlignment="Center">
-                            <TreeViewItem Header="PRODUCT" >
-                                <TreeViewItem Header="A -> Z"/>
-                                <TreeViewItem Header="Z -> A"/>
-                            </TreeViewItem>
-
-                            <TreeViewItem Header="PRICE" >
-                                <TreeViewItem Header="MAX -> MIN"/>
-                                <TreeViewItem Header="MIN -> MAX"/>
-                            </TreeViewItem>
-                        </TreeView>
-                        <CheckBox x:Name="cb_elec"
-                                  Content="Electronics"
-                                  Margin="4"/>
-                        <CheckBox x:Name="cb_fasAclo"
-                                  Content="Fashion and Clothing"
-                                  Margin="4"/>
-                        <CheckBox x:Name="cb_jewell"
-                                  Content="Jewellery"
-                                  Margin="4"/>
-                        <CheckBox x:Name="cb_heAbea"
-                                  Content="Health and Beauty"
-                                  Margin="4"/>
-                        <CheckBox x:Name="cb_book"
-                                  Content="Books"
-                                  Margin="4"/>
-                        <CheckBox x:Name="cb_kidAbaby"
-                                  Content="Kids and Babies"
-                                  Margin="4"/>
-                        <CheckBox x:Name="cb_sport"
-                                  Content="Sports"
-                                  Margin="4"/>
-                        <CheckBox x:Name="cb_home"
-                                  Content="Home and Graden"
-                                  Margin="4"/>
-
-                        <Button
-                            Margin="4"
-                            HorizontalAlignment="Center"
-                            Command="{x:Static materialDesign:DrawerHost.CloseDrawerCommand}"
-                            CommandParameter="{x:Static Dock.Right}"
-                            Content="CLOSE THIS"
-                            Style="{StaticResource MaterialDesignFlatButton}" />
-                    </StackPanel>
-                </materialDesign:DrawerHost.RightDrawerContent>
-                <materialDesign:DrawerHost.BottomDrawerContent>
-                    <StackPanel
-                          Margin="16"
+                    Background ="White">
+                <StackPanel
+                          Margin="20 0"
                           HorizontalAlignment="Center"
                           Orientation="Horizontal">
-                        <TextBlock
-                            Margin="4"
-                            VerticalAlignment="Center"
-                            Foreground="{DynamicResource SecondaryHueMidForegroundBrush}"
-                            Text="TASKBAR" />
-                        <Button
-                            x:Name="btn_home"
-                            Margin="4"
-                            VerticalAlignment="Center"
-                            Command="{Binding HomeCommand}"                     
-                            Content="HOME"
-                            Style="{StaticResource MaterialDesignFlatButton}" Click="btn_home_Click" />
-                        <Button
-                            x:Name="btn_shop"
-                            Margin="4"
-                            VerticalAlignment="Center"
-                            Command="{Binding ShopCommand}"
-                            Content="SHOP"
-                            
-                            Style="{StaticResource MaterialDesignFlatButton}" Click="btn_shop_Click" />
-                            <Button
-                            x:Name="btn_acc"
-                            Margin="4"
-                            VerticalAlignment="Center"
-                            Command="{Binding AccountCommand}"
-                            Content="ACCOUNT"
-                            Style="{StaticResource MaterialDesignFlatButton}" Click="btn_acc_Click" />
-                        <Button    
-                            x:Name="btn_cart"
-                            Margin="4"
-                            VerticalAlignment="Center"
-                            Command="{Binding CartCommand}"
-                            Content="CART"
-                            Style="{StaticResource MaterialDesignFlatButton}" Click="btn_cart_Click">
-                        </Button>
-
-                        <Button
-                            Margin="4"
-                            VerticalAlignment="Center"
-                            Command="{x:Static materialDesign:DrawerHost.CloseDrawerCommand}"
-                            CommandParameter="{x:Static Dock.Bottom}"
-                            Content="CLOSE THIS"
-                            Style="{StaticResource MaterialDesignFlatButton}" />
-                    </StackPanel>
-                </materialDesign:DrawerHost.BottomDrawerContent>
-                <Grid>
+                    <TextBlock
+                        Margin="15 4"
+                        VerticalAlignment="Center"
+                        Foreground="{DynamicResource SecondaryHueMidForegroundBrush}"
+                        Text="MENU" />
                     <Button
-                        Height="20"
-                        Width="360"
-                        BorderThickness="0 5 0 0"
-                        BorderBrush="Gray"
-                        Background="Transparent"
-                        HorizontalAlignment="Center"
-                        VerticalAlignment="Bottom"
-                        Command="{x:Static materialDesign:DrawerHost.OpenDrawerCommand}"
-                        CommandParameter="{x:Static Dock.Bottom}">
-                        0
+                        x:Name="btn_home"
+                        Margin="15 4"
+                        VerticalAlignment="Center"
+                        Command="{Binding HomeCommand}"                     
+                        Content="HOME"
+                        Style="{StaticResource MaterialDesignFlatButton}" Click="btn_home_Click" />
+                    <Button
+                        x:Name="btn_shop"
+                        Margin="15 4"
+                        VerticalAlignment="Center"
+                        Command="{Binding ShopCommand}"
+                        Content="SHOP"
+        
+                        Style="{StaticResource MaterialDesignFlatButton}" Click="btn_shop_Click" />
+                    <Button
+                        x:Name="btn_acc"
+                        Margin="15 4"
+                        VerticalAlignment="Center"
+                        Command="{Binding AccountCommand}"
+                        Content="ACCOUNT"
+                        Style="{StaticResource MaterialDesignFlatButton}" Click="btn_acc_Click" />
+                    <Button    
+                        x:Name="btn_cart"
+                        Margin="15 4"
+                        VerticalAlignment="Center"
+                        Command="{Binding CartCommand}"
+                        Content="CART"
+                        Style="{StaticResource MaterialDesignFlatButton}" Click="btn_cart_Click">
                     </Button>
-                    <Button Height="60"
-                            Width="60"
-                            Margin="0"
-                            Background="Transparent"
-                            BorderThickness="0"
-                            HorizontalAlignment="Right"
-                            VerticalAlignment="Center"
-                            Command="{x:Static materialDesign:DrawerHost.OpenDrawerCommand}"
-                            CommandParameter="{x:Static Dock.Right}">
-                        <materialDesign:PackIcon Kind="ArrowLeftDropCircle"
-                                                 HorizontalAlignment="Center"
-                                                 Foreground="Wheat"
-                                                 Height="40"
-                                                 Width="40"/>
+                </StackPanel>
+            </materialDesign:ColorZone>
+            <materialDesign:PackIcon Kind="Close" VerticalAlignment="Top" Width="20" Height="20" HorizontalAlignment="Right" Margin="0 13 14 0" Opacity="0.3"/>
+            <Button x:Name="btnClose" 
+                    VerticalAlignment="Top" 
+                    Width="20" Height="20" 
+                    HorizontalAlignment="Right" 
+                    Margin="0 13 14 0" Opacity="0.3" 
+                    Background="Transparent" 
+                    BorderThickness="0" 
+                    Command="{Binding CloseCommand}"></Button>
+        </Grid>
 
-                    </Button>
-                </Grid>
-            </materialDesign:DrawerHost>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Frame
+               x:Name="F_display"
+               VerticalAlignment="Center"
+               HorizontalAlignment="Center"
+               NavigationUIVisibility="Hidden"
+               Content="{Binding CurrentContent, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Grid.Column="1"/>
+            <Border BorderThickness="0 0 0 0" 
+                    BorderBrush="Black">
+                <Border.Effect>
+                    <DropShadowEffect BlurRadius="10" ShadowDepth="2" />
+                </Border.Effect>
+                <StackPanel  Background="White" Margin="10">
+                    <TextBox x:Name="txt_search" Margin="10 0"
+                          VerticalAlignment="Center"
+                          materialDesign:HintAssist.Hint="Search"
+                          Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                    <TreeView Margin="4" 
+                                 HorizontalAlignment="Left" RenderTransformOrigin="-0.01,0.571">
+                        <TreeViewItem Header="PRODUCT" >
+                            <TreeViewItem Header="A -> Z"/>
+                            <TreeViewItem Header="Z -> A"/>
+                        </TreeViewItem>
+
+                        <TreeViewItem Header="PRICE" >
+                            <TreeViewItem Header="MAX -> MIN"/>
+                            <TreeViewItem Header="MIN -> MAX"/>
+                        </TreeViewItem>
+                    </TreeView>
+                    <CheckBox x:Name="cb_elec"
+                          Content="Electronics"
+                          Margin="4"/>
+                    <CheckBox x:Name="cb_fasAclo"
+                          Content="Fashion and Clothing"
+                          Margin="4"/>
+                    <CheckBox x:Name="cb_jewell"
+                          Content="Jewellery"
+                          Margin="4"/>
+                    <CheckBox x:Name="cb_heAbea"
+                          Content="Health and Beauty"
+                          Margin="4"/>
+                    <CheckBox x:Name="cb_book"
+                          Content="Books"
+                          Margin="4"/>
+                    <CheckBox x:Name="cb_kidAbaby"
+                          Content="Kids and Babies"
+                          Margin="4"/>
+                    <CheckBox x:Name="cb_sport"
+                          Content="Sports"
+                          Margin="4"/>
+                    <CheckBox x:Name="cb_home"
+                          Content="Home and Graden"
+                          Margin="4"/>
+
+                </StackPanel>
+            </Border>
+
         </Grid>
     </Grid>
 

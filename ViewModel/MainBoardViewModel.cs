@@ -20,7 +20,13 @@ namespace WPF_Market.ViewModel
             HomeCommand = new BaseViewModelCommand(ExecuteHomeCommand);
             CartCommand = new BaseViewModelCommand(ExecuteCartCommand);
             ShopCommand = new BaseViewModelCommand(ExecuteShopCommand);
+            CloseCommand = new BaseViewModelCommand(ExecuteCloseCommand);
             AccountCommand = new BaseViewModelCommand(ExecuteAccountCommand);
+        }
+
+        private void ExecuteCloseCommand(object obj)
+        {
+            App.Current.Shutdown();
         }
 
         private void ExecuteAccountCommand(object obj)
@@ -55,6 +61,7 @@ namespace WPF_Market.ViewModel
         public ICommand HomeCommand { get; }
         public ICommand CartCommand { get; }
         public ICommand ShopCommand { get; }
+        public ICommand CloseCommand { get; }
         public ICommand AccountCommand { get; }
         public object CurrentContent
         {

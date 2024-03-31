@@ -16,34 +16,27 @@ namespace WPF_Market.ViewModel
                 typeof(ICommand),
                 typeof(ContextMenuBehavior),
                 new PropertyMetadata(null));
-
         public static ICommand GetShowDetailCommand(DependencyObject obj)
         {
             return (ICommand)obj.GetValue(ShowDetailCommandProperty);
         }
-
         public static void SetShowDetailCommand(DependencyObject obj, ICommand value)
         {
             obj.SetValue(ShowDetailCommandProperty, value);
         }
-
-
         public static readonly DependencyProperty DeleteItemCommandProperty =
         DependencyProperty.RegisterAttached("DeleteItemCommand",
         typeof(ICommand),
         typeof(ContextMenuBehavior),
         new PropertyMetadata(null));
-
         public static ICommand GetDeleteItemCommand(DependencyObject obj)
         {
             return (ICommand)obj.GetValue(DeleteItemCommandProperty);
         }
-
         public static void SetDeleteItemCommand(DependencyObject obj, ICommand value)
         {
             obj.SetValue(DeleteItemCommandProperty, value);
         }
-
         public static readonly DependencyProperty IsContextMenuEnabledProperty =
             DependencyProperty.RegisterAttached("IsContextMenuEnabled",
                 typeof(bool),

@@ -28,14 +28,6 @@ namespace WPF_Market.View
             CurrentApplicationStatus.MainBoardWindow = Window.GetWindow(this);
         }
 
-        private void Window_MouseEnter(object sender, MouseEventArgs e)
-        {
-            if (e.LeftButton == MouseButtonState.Pressed)
-            {
-                DragMove();
-            }
-
-        }
 
         private void btn_cart_Click(object sender, RoutedEventArgs e)
         {
@@ -56,6 +48,12 @@ namespace WPF_Market.View
         private void btn_acc_Click(object sender, RoutedEventArgs e)
         {
            /* F_display.Content = new Myinf();*/
+        }
+
+        private void MainBoardWindow_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == MouseButton.Left)
+                this.DragMove();
         }
     }
     
