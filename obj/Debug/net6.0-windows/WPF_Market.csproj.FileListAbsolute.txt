@@ -1,3 +1,9 @@
+D:\LTWD_project\Debug\net6.0-windows\WPF_Market.exe
+D:\LTWD_project\Debug\net6.0-windows\WPF_Market.dll.config
+D:\LTWD_project\Debug\net6.0-windows\WPF_Market.deps.json
+D:\LTWD_project\Debug\net6.0-windows\WPF_Market.runtimeconfig.json
+D:\LTWD_project\Debug\net6.0-windows\WPF_Market.dll
+D:\LTWD_project\Debug\net6.0-windows\WPF_Market.pdb
 D:\LTWD\LTWD_FinalProject\bin\Debug\net6.0-windows\WPF_Market.exe
 D:\LTWD\LTWD_FinalProject\bin\Debug\net6.0-windows\WPF_Market.dll.config
 D:\LTWD\LTWD_FinalProject\bin\Debug\net6.0-windows\WPF_Market.deps.json

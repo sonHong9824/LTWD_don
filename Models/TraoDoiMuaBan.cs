@@ -32,8 +32,6 @@ public partial class TraoDoiMuaBan : DbContext
 
     public virtual DbSet<User> Users { get; set; }
 
-    public virtual DbSet<helloworld> helloworlds { get; set; }
-
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Account>(entity =>
@@ -62,7 +60,7 @@ public partial class TraoDoiMuaBan : DbContext
             entity.HasOne(d => d.IDProductNavigation).WithMany(p => p.Carts)
                 .HasForeignKey(d => d.IDProduct)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Cart__IDProduct__1C873BEC");
+                .HasConstraintName("FK__Cart__IDProduct__2F9A1060");
 
             entity.HasOne(d => d.IDUserNavigation).WithMany(p => p.Carts)
                 .HasForeignKey(d => d.IDUser)
@@ -88,10 +86,11 @@ public partial class TraoDoiMuaBan : DbContext
 
         modelBuilder.Entity<Inventory>(entity =>
         {
-            entity.HasKey(e => e.IDProduct).HasName("PK__tmp_ms_x__4290D179DD00F021");
+            entity.HasKey(e => e.IDProduct).HasName("PK__tmp_ms_x__4290D179EFAA8E55");
 
             entity.ToTable("Inventory");
 
+            entity.Property(e => e.BoughtTime).HasColumnType("datetime");
             entity.Property(e => e.Type).HasMaxLength(50);
 
             entity.HasOne(d => d.IDShopNavigation).WithMany(p => p.Inventories)
@@ -143,13 +142,6 @@ public partial class TraoDoiMuaBan : DbContext
                 .HasForeignKey<User>(d => d.ID)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_UserID");
-        });
-
-        modelBuilder.Entity<helloworld>(entity =>
-        {
-            entity.HasKey(e => e.id).HasName("PK__hellowor__3213E83F0246803C");
-
-            entity.ToTable("helloworld");
         });
 
         OnModelCreatingPartial(modelBuilder);

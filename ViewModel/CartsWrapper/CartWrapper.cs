@@ -20,10 +20,10 @@ namespace WPF_Market.ViewModel.CartsWrapper
         }
         public Cart Cart { get => cart; set { cart = value; OnPropertyChanged(nameof(Cart)); } }
         public bool CartWrapperIsChecked { get => isCheck; set { isCheck = value;  OnPropertyChanged(nameof(CartWrapperIsChecked)); } }
-        public double CartWrapperPrice { get => (double)cart.IDProductNavigation.Price; }
+        public double CartWrapperOrigingalPrice { get => (double)cart.IDProductNavigation.OriginalPrice; }
         public string CartWrapperName { get => cart.IDProductNavigation.Name; }
         public string CartWrapperIllustration { get => cart.IDProductNavigation.ImageLinks.FirstOrDefault().ImageLink1; }
-        public double CartWrapperCurrentPrice { get => (double)cart.CurrentPrice; }
+        public double CartWrapperCurrentPrice { get => (double)cart.IDProductNavigation.CurrentPrice; }
         public int CartWrapperNumber { get => (int)cart.NumberOfProduct; }
         
     }

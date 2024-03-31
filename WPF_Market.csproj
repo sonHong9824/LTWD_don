@@ -5,17 +5,27 @@
     <TargetFramework>net6.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
+    <BaseOutputPath></BaseOutputPath>
+    <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="SanPham\1\Images\.vs\**" />
     <Compile Remove="MaterialDesignInXamlToolkit-master\**" />
     <Compile Remove="NewFolder1\**" />
+    <Compile Remove="SanPham\1\Images\.vs\**" />
+    <EmbeddedResource Remove="SanPham\1\Images\.vs\**" />
     <EmbeddedResource Remove="MaterialDesignInXamlToolkit-master\**" />
     <EmbeddedResource Remove="NewFolder1\**" />
+    <EmbeddedResource Remove="SanPham\1\Images\.vs\**" />
+    <None Remove="SanPham\1\Images\.vs\**" />
     <None Remove="MaterialDesignInXamlToolkit-master\**" />
     <None Remove="NewFolder1\**" />
+    <None Remove="SanPham\1\Images\.vs\**" />
+    <Page Remove="SanPham\1\Images\.vs\**" />
     <Page Remove="MaterialDesignInXamlToolkit-master\**" />
     <Page Remove="NewFolder1\**" />
+    <Page Remove="SanPham\1\Images\.vs\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -35,6 +45,24 @@
     <None Remove="SanPham\10\Images\mypham3.jpg" />
     <None Remove="SanPham\10\Images\mypham4.jpg" />
     <None Remove="SanPham\10\Images\mypham5.jpg" />
+    <None Remove="SanPham\11\Images\maxresdefault %281%29.jpg" />
+    <None Remove="SanPham\11\Images\maxresdefault.jpg" />
+    <None Remove="SanPham\11\Images\OIP %281%29.jpg" />
+    <None Remove="SanPham\11\Images\OIP %282%29.jpg" />
+    <None Remove="SanPham\11\Images\OIP.jpg" />
+    <None Remove="SanPham\12\Images\432041522_803478641797498_7128876628545447927_n.jpg" />
+    <None Remove="SanPham\12\Images\Tite.jpg" />
+    <None Remove="SanPham\12\Images\vn-11134207-7r98o-lo9yjj9mwz2j5f.jpg" />
+    <None Remove="SanPham\12\Images\vn-11134207-7r98o-lqswwejdkrp3ab.jpg" />
+    <None Remove="SanPham\13\Images\vn-11134207-7r98o-lo9yjj9mix2vd1.jpg" />
+    <None Remove="SanPham\13\Images\vn-11134207-7r98o-lo9yjj9mn4s7ad.jpg" />
+    <None Remove="SanPham\13\Images\vn-11134207-7r98o-lo9yjj9mwz2j5f.jpg" />
+    <None Remove="SanPham\13\Images\vn-11134207-7r98o-lqswwejdkrp3ab.jpg" />
+    <None Remove="SanPham\14\Images\maxresdefault %281%29.jpg" />
+    <None Remove="SanPham\14\Images\maxresdefault.jpg" />
+    <None Remove="SanPham\14\Images\OIP %281%29.jpg" />
+    <None Remove="SanPham\14\Images\OIP %282%29.jpg" />
+    <None Remove="SanPham\14\Images\OIP.jpg" />
     <None Remove="SanPham\1\Images\maytinh1.jpg" />
     <None Remove="SanPham\1\Images\maytinh2.jpg" />
     <None Remove="SanPham\1\Images\maytinh3.jpg" />
@@ -60,6 +88,7 @@
     <None Remove="SanPham\5\Images\ao3.jpg" />
     <None Remove="SanPham\5\Images\ao4.jpg" />
     <None Remove="SanPham\5\Images\ao5.jpg" />
+    <None Remove="SanPham\68\Images\starrailstation-warp-11.png" />
     <None Remove="SanPham\6\Images\quanao1.jpg" />
     <None Remove="SanPham\6\Images\quanao2.jpg" />
     <None Remove="SanPham\6\Images\quanao3.jpg" />
@@ -92,6 +121,25 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="SanPham\11\Images\maxresdefault (1).jpg" />
+    <Resource Include="SanPham\11\Images\maxresdefault.jpg" />
+    <Resource Include="SanPham\11\Images\OIP (1).jpg" />
+    <Resource Include="SanPham\11\Images\OIP (2).jpg" />
+    <Resource Include="SanPham\11\Images\OIP.jpg" />
+    <Resource Include="SanPham\12\Images\432041522_803478641797498_7128876628545447927_n.jpg" />
+    <Resource Include="SanPham\12\Images\Tite.jpg" />
+    <Resource Include="SanPham\12\Images\vn-11134207-7r98o-lo9yjj9mwz2j5f.jpg" />
+    <Resource Include="SanPham\12\Images\vn-11134207-7r98o-lqswwejdkrp3ab.jpg" />
+    <Resource Include="SanPham\13\Images\vn-11134207-7r98o-lo9yjj9mix2vd1.jpg" />
+    <Resource Include="SanPham\13\Images\vn-11134207-7r98o-lo9yjj9mn4s7ad.jpg" />
+    <Resource Include="SanPham\13\Images\vn-11134207-7r98o-lo9yjj9mwz2j5f.jpg" />
+    <Resource Include="SanPham\13\Images\vn-11134207-7r98o-lqswwejdkrp3ab.jpg" />
+    <Resource Include="SanPham\14\Images\maxresdefault (1).jpg" />
+    <Resource Include="SanPham\14\Images\maxresdefault.jpg" />
+    <Resource Include="SanPham\14\Images\OIP (1).jpg" />
+    <Resource Include="SanPham\14\Images\OIP (2).jpg" />
+    <Resource Include="SanPham\14\Images\OIP.jpg" />
+    <Resource Include="SanPham\68\Images\starrailstation-warp-11.png" />
     <Resource Include="SanPham\9\Images\mypham1.jpg" />
   </ItemGroup>
 
@@ -196,6 +244,10 @@
 
   <ItemGroup>
     <Service Include="{3259aa49-8aa1-44d3-9025-a0b520596a8c}" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="bin\Debug\net6.0-windows\" />
   </ItemGroup>
 
 </Project>

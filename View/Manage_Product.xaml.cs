@@ -26,14 +26,10 @@ namespace WPF_Market.View
     /// </summary>
     public partial class Manage_Product : Window
     {
-        public Manage_Product()
+        public Manage_Product(int value)
         {
             InitializeComponent();
-           
-        }
-        private void btnClose_Click(object sender, RoutedEventArgs e)
-        {
-           Close();
+            this.DataContext = new ManageProductViewModel(value);   
         }
         private void Window_MouseEnter(object sender, MouseEventArgs e)
         {

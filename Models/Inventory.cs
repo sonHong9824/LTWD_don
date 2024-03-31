@@ -13,19 +13,21 @@ public partial class Inventory
 
     public string Name { get; set; }
 
-    public float? Price { get; set; }
+    public float? OriginalPrice { get; set; }
 
-    public float? Discount { get; set; }
+    public float? CurrentPrice { get; set; }
+
+    public float? Save { get; set; }
 
     public float? Newness { get; set; }
 
     public string Type { get; set; }
 
-    public float? Rating { get; set; }
+    public int? NumberInput { get; set; }
 
-    public int? Number { get; set; }
+    public int? NumberLeft { get; set; }
 
-    public int? NumberSold { get; set; }
+    public DateTime? BoughtTime { get; set; }
 
     public virtual ICollection<Cart> Carts { get; set; } = new List<Cart>();
 

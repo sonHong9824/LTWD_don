@@ -73,7 +73,7 @@ namespace WPF_Market.ViewModel
                 new Custom_mb("Succesfully add to your cart!", Custom_mb.MessageType.Confirmation, Custom_mb.MessageButtons.Ok).ShowDialog();
                 return;
             }
-            DataProvider.Instance.DB.Carts.Add(new Models.Cart { IDProduct = Product.IDProduct, CurrentPrice = CurrentPrice, 
+            DataProvider.Instance.DB.Carts.Add(new Models.Cart { IDProduct = Product.IDProduct,
                 IDUser = CurrentApplicationStatus.CurrentID, 
                 NumberOfProduct = Number });
             DataProvider.Instance.DB.SaveChanges();
@@ -144,7 +144,7 @@ namespace WPF_Market.ViewModel
             }
         }
 
-        public double CurrentPrice { get => (double)(Product.Price *  (100 - Product.Discount)/100) ; set { currentPrice = value; OnPropertyChanged(nameof(CurrentPrice)); } }
+        public double CurrentPrice { get => (double)(Product.CurrentPrice) ; set { currentPrice = value; OnPropertyChanged(nameof(CurrentPrice)); } }
 
         public ObservableCollection<string> ListImage { get => listImage; set => listImage = value; }
         public ICommand IncreaseNumberButttonClick { get; }

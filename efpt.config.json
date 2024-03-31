@@ -24,10 +24,6 @@
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[helloworld]",
-         "ObjectType": 0
-      },
-      {
          "Name": "[dbo].[ImageLink]",
          "ObjectType": 0
       },
