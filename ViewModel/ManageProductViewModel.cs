@@ -19,14 +19,15 @@ namespace WPF_Market.ViewModel
         private string nameProduct;
         private double price;
         private double discount;
-        private string newness;
+        private float newness;
         private string type;
         private string overview;
         private string configuration;
         private string additional;
-        private int idSanPham;
         private string imageLinks;
         private int number = 1;
+        private int iDProduct;
+        private Inventory inventory = new Inventory();
         public ObservableCollection<string> shortStringList;
 
         public ObservableCollection<string> ShortStringList
@@ -40,59 +41,34 @@ namespace WPF_Market.ViewModel
         }
         public ManageProductViewModel()
         {
-            idSanPham = new Random().Next(1000, 9999);
+
             SubmitCommand = new BaseViewModelCommand(ExecuteSubmitCommand, CanExecuteSubmitCommand);
             BtnImageClick = new BaseViewModelCommand(ExecuteImageClickCommand);
             IncreaseNumberButttonClick = new BaseViewModelCommand(ExecuteIncreaseNumberCommand);
             DecreaseNumberButttonClick = new BaseViewModelCommand(ExecuteDecreaseNumberCommand, CanExecuteDecreaseNumberCommand);
             CloseForm = new BaseViewModelCommand(ExecuteCloseFormCommand);
-            ShortStringList = new ObservableCollection<string>();
-            ShortStringList.Add("Electronics");
-            ShortStringList.Add("Fashion and Clothing");
-            ShortStringList.Add("Jewellery");
-            ShortStringList.Add("Health and Beauty");
-            ShortStringList.Add("Books");
-            ShortStringList.Add("Kids and Babies");
-            ShortStringList.Add("Sports");
-            ShortStringList.Add("Fruit and veg");
-            ShortStringList.Add("Home and Graden");
-            ShortStringList.Add("Others");
+            ShortStringList = new ObservableCollection<string>
+            {
+                "Electronics",
+                "Fashion and Clothing",
+                "Jewellery",
+                "Health and Beauty",
+                "Books",
+                "Kids and Babies",
+                "Sports",
+                "Fruit and veg",
+                "Home and Graden",
+                "Others"
+            };
+            var newestID = DataProvider.Instance.DB.Inventories.Max(e => e.IDProduct);
+            var item = DataProvider.Instance.DB.Inventories.Where(p => p.IDProduct == newestID).FirstOrDefault();
+            IDProduct = item.IDProduct + 1;
         }
 
         private void ExecuteCloseFormCommand(object obj)
         {
-           /* if (Application.Current.MainWindow != null)
-            {
-                Application.Current.MainWindow.Close();
-            }*/
+            System.Windows.Forms.MessageBox.Show("Test");
         }
-
-        public ManageProductViewModel(string nameProduct, double price, double discount, string newness, string type, string overview, string configuration, string additional)
-        {
-            this.nameProduct = nameProduct;
-            this.price = price;
-            this.discount = discount;
-            this.newness = newness;
-            this.type = type;
-            this.overview = overview;
-            this.configuration = configuration;
-            this.additional = additional;
-            SubmitCommand = new BaseViewModelCommand(ExecuteSubmitCommand);
-            ShortStringList = new ObservableCollection<string>();
-            IncreaseNumberButttonClick = new BaseViewModelCommand(ExecuteIncreaseNumberCommand);
-            DecreaseNumberButttonClick = new BaseViewModelCommand(ExecuteDecreaseNumberCommand, CanExecuteDecreaseNumberCommand);
-            ShortStringList.Add("Electronics");
-            ShortStringList.Add("Fashion and Clothing");
-            ShortStringList.Add("Jewellery");
-            ShortStringList.Add("Health and Beauty");
-            ShortStringList.Add("Books");
-            ShortStringList.Add("Kids and Babies");
-            ShortStringList.Add("Sports");
-            ShortStringList.Add("Fruit and veg");
-            ShortStringList.Add("Home and Graden");
-            ShortStringList.Add("Others");
-        }
-
         private bool CanExecuteDecreaseNumberCommand(object obj)
         {
             if (Number==1)
@@ -117,12 +93,12 @@ namespace WPF_Market.ViewModel
         {
             ImageLinks = "";
             //link thư mục sản phẩm
-            string destinationDirectory = @"D:\LTWD\LTWD_FinalProject\SanPham\Images\" + idSanPham.ToString().Trim(); // Đường dẫn thư mục bạn muốn sao chép hình ảnh đến
+            string destinationDirectory = @"D:\LTWD\LTWD_FinalProject\SanPham\" + IDProduct.ToString().Trim() + @"\Images"; // Đường dẫn thư mục bạn muốn sao chép hình ảnh đến
             CopyImageToDirectory(destinationDirectory);
-            string[] files = Directory.GetFiles(destinationDirectory);
+            string[] files = Directory.GetFiles(destinationDirectory);    
             foreach (string file in files)
             {
-                ImageLinks += Path.GetFileName(file) + "\n";
+                ImageLinks += file + "\n";               
             }
           
         }
@@ -132,7 +108,7 @@ namespace WPF_Market.ViewModel
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "Image Files (*.jpg; *.jpeg; *.png; *.gif; *.bmp)|*.jpg; *.jpeg; *.png; *.gif; *.bmp|All files (*.*)|*.*";
             openFileDialog.Title = "Select one picture";
-
+            
             if (openFileDialog.ShowDialog() == true)
             {
                 try
@@ -145,7 +121,6 @@ namespace WPF_Market.ViewModel
                     string sourceFilePath = openFileDialog.FileName;
 
                     string destinationFilePath = Path.Combine(destinationDirectory, Path.GetFileName(sourceFilePath));
-
                     //Copy
                     File.Copy(sourceFilePath, destinationFilePath, true);
                     new Custom_mb("Operation successfully!", Custom_mb.MessageType.Success, Custom_mb.MessageButtons.Ok).ShowDialog();
@@ -163,7 +138,7 @@ namespace WPF_Market.ViewModel
             if (string.IsNullOrEmpty(imageLinks) || string.IsNullOrEmpty(type) ||
                 string.IsNullOrEmpty(overview) || string.IsNullOrEmpty(Additional) ||
                 string.IsNullOrEmpty(Configuration) || string.IsNullOrEmpty(NameProduct) ||
-                string.IsNullOrEmpty(Newness))
+                string.IsNullOrEmpty(Newness.ToString()))
             {    
                 return false; 
             }
@@ -173,26 +148,38 @@ namespace WPF_Market.ViewModel
      
         private void ExecuteSubmitCommand(object obj)
         {
-
-            string pathOver = string.Format(@"D:\LTWD\LTWD_FinalProject\SanPham\{0}\Tongquansanpham.txt", idSanPham.ToString().Trim());
-            string pathTinhtrang = string.Format(@"D:\LTWD\LTWD_FinalProject\SanPham\{0}\Tinhtranghientai.txt", idSanPham.ToString().Trim());
-            string pathThem = string.Format(@"D:\LTWD\LTWD_FinalProject\SanPham\{0}\Thongtinthem.txt", idSanPham.ToString().Trim());
+            string pathOver = string.Format(@"D:\LTWD\LTWD_FinalProject\SanPham\{0}\Tongquansanpham.txt", IDProduct.ToString().Trim());
+            string pathTinhtrang = string.Format(@"D:\LTWD\LTWD_FinalProject\SanPham\{0}\Tinhtranghientai.txt", IDProduct.ToString().Trim());
+            string pathThem = string.Format(@"D:\LTWD\LTWD_FinalProject\SanPham\{0}\Thongtinthem.txt", IDProduct.ToString().Trim());
             bool writeOverview = writeFile(pathOver, Overview);
             bool writeAdditional = writeFile(pathThem, Additional);
             bool writeConfiguration = writeFile(pathTinhtrang, Configuration);
             if (writeOverview && writeAdditional && writeConfiguration)
             {
-                /*SQLConnection.conn.Open();
-                string sqlCmd = string.Format("Insert into Kho(Id_sanpham, Id_shop, Ten, Gia, Discount, DoMoi, Type, Rate, Number, NumberSold) values " + "('{0}', '{1}', '{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}')", idSanPham
-                    , 1, NameProduct, Price, Discount, Newness, Type, 0, number, 0);
-                SqlCommand cmd = new SqlCommand(sqlCmd, SQLConnection.conn);
-                if (cmd.ExecuteNonQuery() > 0)
-                    new Custom_mb("Done", Custom_mb.MessageType.Success, Custom_mb.MessageButtons.Ok).ShowDialog();
-                SQLConnection.conn.Close();*/
-              
-                DataProvider.Instance.DB.Add(new Inventory { IDShop = CurrentApplicationStatus.CurrentID, Name = NameProduct, Price = (float)Price, Discount = (float)Discount, Newness = Newness, Type = Type
-                , Rating = 0, Number = Number, NumberSold=0});
+                Inventory.IDShop = CurrentApplicationStatus.CurrentID;
+                Inventory.Name = NameProduct;
+                Inventory.Price = (float)Price;
+                Inventory.Discount = (float)Discount;
+                Inventory.Newness = Newness;
+                Inventory.Type = Type;
+                Inventory.Rating = 0;
+                Inventory.Number = Number;
+                Inventory.NumberSold = 0;
+                DataProvider.Instance.DB.Inventories.Add(Inventory);
                 DataProvider.Instance.DB.SaveChanges();
+
+                string[] ListImageLink = ImageLinks.Split('\n');
+                foreach (string imageLink in ListImageLink)
+                {
+                    if (string.IsNullOrEmpty(imageLink)) continue;
+                    DataProvider.Instance.DB.ImageLinks.Add(new ImageLink { IDProduct = IDProduct, ImageLink1 = imageLink });
+                }
+
+                DataProvider.Instance.DB.SaveChanges();
+                new Custom_mb("Succesfully add new item!", Custom_mb.MessageType.Success, Custom_mb.MessageButtons.Ok).ShowDialog();
+
+                var currentWindow = obj as Window;
+                currentWindow.Close();
                 return;
             }
             new Custom_mb("Fail", Custom_mb.MessageType.Error, Custom_mb.MessageButtons.Ok).ShowDialog();
@@ -253,7 +240,7 @@ namespace WPF_Market.ViewModel
                 OnPropertyChanged(nameof(discount));
             }
         }
-        public string Newness
+        public float Newness
         {
             get
             { return newness; }
@@ -305,7 +292,7 @@ namespace WPF_Market.ViewModel
         public ICommand IncreaseNumberButttonClick { get; }
         public ICommand DecreaseNumberButttonClick { get; }
         public ICommand CloseForm {  get; }
-        public int IdSanPham { get => idSanPham; set => idSanPham = value; }
+       
         public string ImageLinks
         {
             get { return imageLinks; }
@@ -328,5 +315,9 @@ namespace WPF_Market.ViewModel
                 OnPropertyChanged(nameof(number));
             }
         }
+
+        public Inventory Inventory { get => inventory; set { inventory = value; OnPropertyChanged(nameof(Inventory)); } }
+
+        public int IDProduct { get => iDProduct; set { iDProduct = value; OnPropertyChanged(nameof(IDProduct)); } }
     }
 }

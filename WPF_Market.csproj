@@ -60,7 +60,6 @@
     <None Remove="SanPham\5\Images\ao3.jpg" />
     <None Remove="SanPham\5\Images\ao4.jpg" />
     <None Remove="SanPham\5\Images\ao5.jpg" />
-    <None Remove="SanPham\6376\maxresdefault %281%29.jpg" />
     <None Remove="SanPham\6\Images\quanao1.jpg" />
     <None Remove="SanPham\6\Images\quanao2.jpg" />
     <None Remove="SanPham\6\Images\quanao3.jpg" />
@@ -93,7 +92,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="SanPham\6376\Images\maxresdefault %281%29.jpg" />
     <Resource Include="SanPham\9\Images\mypham1.jpg" />
   </ItemGroup>
 

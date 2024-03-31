@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\HK2_23-24_LTwindows\15-3\obj\Debug\net6.0-windows\
+D:\LTWD\LTWD_FinalProject\obj\Debug\net6.0-windows\
 WPF_Market
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-D:\HK2_23-24_LTwindows\15-3\App.xaml
+D:\LTWD\LTWD_FinalProject\App.xaml
 12-390705066
 
 47886529812
-241-312089360
+241-1887009266
 CustomControl\BindablePasswordBox.xaml;View\Cart.xaml;View\confirmPass.xaml;View\Custom_mb.xaml;View\detail_product.xaml;View\Login_new.xaml;View\Main_Board.xaml;View\Manage_Product.xaml;View\Myinf.xaml;View\product.xaml;View\ShopUI.xaml;View\Signup.xaml;
 
-True
+False
 

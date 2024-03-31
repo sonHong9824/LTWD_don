@@ -17,7 +17,7 @@ public partial class Inventory
 
     public float? Discount { get; set; }
 
-    public string Newness { get; set; }
+    public float? Newness { get; set; }
 
     public string Type { get; set; }
 

@@ -79,9 +79,6 @@ public partial class TraoDoiMuaBan : DbContext
             entity.Property(e => e.ImageLink1)
                 .HasMaxLength(255)
                 .HasColumnName("ImageLink");
-            entity.Property(e => e.FirstImage)
-                .IsRequired()
-                .HasMaxLength(255);
 
             entity.HasOne(d => d.IDProductNavigation).WithMany(p => p.ImageLinks)
                 .HasForeignKey(d => d.IDProduct)
@@ -95,9 +92,6 @@ public partial class TraoDoiMuaBan : DbContext
 
             entity.ToTable("Inventory");
 
-            entity.Property(e => e.Newness)
-                .HasMaxLength(10)
-                .IsFixedLength();
             entity.Property(e => e.Type).HasMaxLength(50);
 
             entity.HasOne(d => d.IDShopNavigation).WithMany(p => p.Inventories)

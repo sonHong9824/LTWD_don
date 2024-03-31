@@ -13,6 +13,7 @@ namespace WPF_Market.ViewModel
     public class ShopViewModel : BaseViewModel
     {
         private ObservableCollection<Inventory> shopInventory;
+        private int iDShop = CurrentApplicationStatus.CurrentID;
         public ShopViewModel()
         {
             ShopInventory = new ObservableCollection<Inventory>(DataProvider.Instance.DB.Inventories.Where(p=> p.IDShop == CurrentApplicationStatus.CurrentID));
@@ -35,5 +36,6 @@ namespace WPF_Market.ViewModel
         public ObservableCollection<Inventory> ShopInventory { get => shopInventory; set => shopInventory = value; }
         public ICommand EditProductCommand { get; }
         public ICommand DeleteProductCommand { get; }
+        public int IDShop { get => iDShop; set => iDShop = value; }
     }
 }

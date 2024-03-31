@@ -54,7 +54,7 @@
                                     <StackPanel Orientation="Vertical">
                                         <Grid>
                                             <Image x:Name="Illustration"
-                                              Source="{Binding ImageLinks[0].FirstImage}"
+                                              Source="{Binding ImageLinks[0].ImageLink1}"
                                                MaxHeight="155"
                                                MaxWidth="160"
                                             Stretch="Fill"/>

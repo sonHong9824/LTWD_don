@@ -54,6 +54,7 @@ namespace WPF_Market.ViewModel
         private void ExecuteProceedToCheckOutCommand(object obj)
         {
             var tempLst = carts.ToList();
+            bool isbought = false;
             foreach (var item in tempLst)
             {
                 if (item.CartWrapperIsChecked)
@@ -65,7 +66,7 @@ namespace WPF_Market.ViewModel
                         DataProvider.Instance.DB.Remove(item.Cart);
                         DataProvider.Instance.DB.SaveChanges();
                         carts.Remove(item);
-                        new Custom_mb("Thanks for your support! Hope to see you later!", Custom_mb.MessageType.Success, Custom_mb.MessageButtons.Ok).ShowDialog();
+                        isbought = true;
                     }
                     else
                     {
@@ -74,19 +75,24 @@ namespace WPF_Market.ViewModel
                         break;
                     }
                 }
+                
+            }
+            if (isbought)
+            {
+                new Custom_mb("Thanks for your support! Hope to see you later!", Custom_mb.MessageType.Success, Custom_mb.MessageButtons.Ok).ShowDialog();
             }
             SubTotal = 0;
             MoneyToPay = 0;
             IsCheckedPickup = true;
-            isCheckedDelivery = false;        
-            carts = new ObservableCollection<CartWrapper>(tempLst);
+            IsCheckedDelivery = false;        
+
             // Se bo sung xuat hoa don
         }
 
         private void ExecuteDeleteProductCommand(object obj)
         {
             var cart = obj as CartWrapper;
-            Carts.Remove(cart);
+          
             if (cart.CartWrapperIsChecked)
             {
                 SubTotal -= cart.CartWrapperCurrentPrice * cart.CartWrapperNumber;
@@ -94,6 +100,7 @@ namespace WPF_Market.ViewModel
             }
             DataProvider.Instance.DB.Remove(cart.Cart);
             DataProvider.Instance.DB.SaveChanges();
+            Carts.Remove(cart);
         }
 
         private void ExecuteShowDetailCommand(object obj)
