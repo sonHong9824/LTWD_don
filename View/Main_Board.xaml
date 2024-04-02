@@ -16,7 +16,7 @@
 
     <Grid Background="Transparent">
         <Grid.RowDefinitions>
-            <RowDefinition Height="50"/>
+            <RowDefinition Height="48"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid Grid.RowSpan="2" Grid.ColumnSpan="2">
@@ -79,7 +79,7 @@
                     Command="{Binding CloseCommand}"></Button>
         </Grid>
 
-        <Grid Grid.Row="1">
+        <Grid Grid.Row="1" >
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="200"/>
                 <ColumnDefinition />
@@ -91,7 +91,9 @@
                NavigationUIVisibility="Hidden"
                Content="{Binding CurrentContent, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Grid.Column="1"/>
             <Border BorderThickness="0 0 0 0" 
-                    BorderBrush="Black">
+                    BorderBrush="Black"
+                    Background="#DADADA"
+                    CornerRadius="0 10 10 0">
                 <Border.Effect>
                     <DropShadowEffect BlurRadius="10" ShadowDepth="2" />
                 </Border.Effect>
@@ -114,28 +116,28 @@
                     </TreeView>
                     <CheckBox x:Name="cb_elec"
                           Content="Electronics"
-                          Margin="4"/>
+                          Margin="4 10"/>
                     <CheckBox x:Name="cb_fasAclo"
                           Content="Fashion and Clothing"
-                          Margin="4"/>
+                          Margin="4 10"/>
                     <CheckBox x:Name="cb_jewell"
                           Content="Jewellery"
-                          Margin="4"/>
+                          Margin="4 10"/>
                     <CheckBox x:Name="cb_heAbea"
                           Content="Health and Beauty"
-                          Margin="4"/>
+                          Margin="4 10"/>
                     <CheckBox x:Name="cb_book"
                           Content="Books"
-                          Margin="4"/>
+                          Margin="4 10"/>
                     <CheckBox x:Name="cb_kidAbaby"
                           Content="Kids and Babies"
-                          Margin="4"/>
+                          Margin="4 10"/>
                     <CheckBox x:Name="cb_sport"
                           Content="Sports"
-                          Margin="4"/>
+                          Margin="4 10"/>
                     <CheckBox x:Name="cb_home"
                           Content="Home and Graden"
-                          Margin="4"/>
+                          Margin="4 10"/>
 
                 </StackPanel>
             </Border>
